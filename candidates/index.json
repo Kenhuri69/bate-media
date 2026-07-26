@@ -141,16 +141,16 @@
           "fichier": "cand_01.ogg",
           "seed": 1053,
           "description": "A young male voice, around 16 years old, with a calm and introspective tone, slightly hesitant yet determined, carrying a subtle emotional depth with a soft and warm timbre, very clear and close-sounding, no background noise.",
-          "retenu": true,
-          "retenu_par": "auto"
+          "retenu": false,
+          "retenu_par": null
         },
         {
           "n": 2,
           "fichier": "cand_02.ogg",
           "seed": 1060,
           "description": "A young male voice, around 16 years old, with a calm and introspective tone, slightly hesitant yet determined, carrying a subtle emotional depth with a soft and warm timbre, very clear and close-sounding, no background noise.",
-          "retenu": false,
-          "retenu_par": null
+          "retenu": true,
+          "retenu_par": "2026-07-26T17:35:23"
         },
         {
           "n": 3,

@@ -1,0 +1,29 @@
+{
+  "personnage": "Arthur",
+  "voix": "candidates/arthur/cand_02.ogg",
+  "texte": "Maman ! J'ai trouvé de l'eau !",
+  "replique": "arthur_ch08_03",
+  "objectif": "trouver l'énergie et la passion du héros sans changer de timbre",
+  "note": "exaggeration pousse l'intensité émotionnelle ; baisser cfg_weight en même temps est déterminant — il bride la liberté prosodique, donc le monter annule l'effet de l'exagération.",
+  "variantes": [
+    {
+      "nom": "A_actuel",
+      "exaggeration": 0.6,
+      "cfg_weight": 0.5,
+      "rendu": "réglage de la distribution : posé, neutre"
+    },
+    {
+      "nom": "B_passionne",
+      "exaggeration": 0.85,
+      "cfg_weight": 0.35,
+      "rendu": "intensité montée, prosodie plus libre"
+    },
+    {
+      "nom": "C_intense",
+      "exaggeration": 1.0,
+      "cfg_weight": 0.3,
+      "rendu": "emphase maximale, débit plus emporté"
+    }
+  ],
+  "recommandation": "pour les 713 répliques de `narrator` (introspection, pas action), garder un réglage plus sobre que celui des dialogues : même voix, deux registres."
+}
