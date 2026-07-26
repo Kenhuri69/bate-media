@@ -1,0 +1,20 @@
+# Les médias ne sont PAS versionnés : ils sont distribués comme artefacts de Release
+# (voir README). Le dépôt reste léger et clonable ; les packs sont immuables et vérifiés
+# par somme de contrôle. Cela évite aussi Git LFS, dont une initialisation ratée avait
+# déjà écrit des pointeurs à la place des blobs sur ce projet.
+voices/*/
+video/*
+animation/*
+!*/.gitkeep
+!*/README.md
+
+# Packs construits localement
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
