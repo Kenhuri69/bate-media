@@ -67,11 +67,17 @@ def main() -> int:
                 # Ne recopie que si le contenu diffère : un resync doit être bon marché.
                 if not destination.exists() or destination.stat().st_size != source.stat().st_size:
                     shutil.copy2(source, destination)
+            # Le manifeste VERSIONNÉ ne porte pas les textes : ce sont des répliques
+            # adaptées d'une œuvre protégée, et ce dépôt est public. Les textes vivent
+            # dans le manifeste par personnage, qui n'est pas suivi par Git mais voyage
+            # dans le pack (cf. NOTICE.md et .gitignore).
             fichiers.append({"id": entree["id"], "fichier": entree["fichier"],
-                             "texte": entree["texte"],
                              "sha256": _sha256(source)[:16] if not args.dry_run else None})
         if not fichiers:
             continue
+        if not args.dry_run:
+            # Manifeste local complet (avec les textes), pour le pack et pour le jeu.
+            shutil.copy2(manifeste, cible / "manifest.json")
         voix[cle] = {"nom": nom, "repliques": len(fichiers),
                      "format": donnees.get("format", "ogg"), "fichiers": fichiers}
         total += len(fichiers)

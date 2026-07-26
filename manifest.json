@@ -11,19 +11,16 @@
         {
           "id": "alice_ch01_01",
           "fichier": "alice_ch01_01.ogg",
-          "texte": "Chéri, il vient tout juste de naître.",
           "sha256": "5a77723876bdd114"
         },
         {
           "id": "alice_ch02_01",
           "fichier": "alice_ch02_01.ogg",
-          "texte": "Tu veux te lever, mon cœur ? Allez, viens.",
           "sha256": "17de6871c7f79ede"
         },
         {
           "id": "alice_ch02_02",
           "fichier": "alice_ch02_02.ogg",
-          "texte": "Chaque enfant s'éveille à son rythme, Reynolds. Ne t'inquiète pas déjà.",
           "sha256": "2c8357243149a502"
         }
       ]
@@ -33,7 +30,7 @@
     "video": [],
     "animation": []
   },
-  "construit": "2026-07-26T17:07:14",
+  "construit": "2026-07-26T17:08:37",
   "contenu": [
     "voices"
   ]
