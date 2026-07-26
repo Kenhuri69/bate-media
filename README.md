@@ -23,9 +23,14 @@ Un pack immuable, horodaté et vérifiable par somme de contrôle règle le prob
 
     voices/<personnage>/     # présent en local, ignoré par Git (voir .gitignore)
     video/  animation/       # idem
+    candidates/              # EXCEPTION : les voix candidates sont versionnées (~5 Mo)
     manifest.json            # index versionné : ce que le pack DOIT contenir
     tools/                   # assemblage, vérification, installation
     docs/                    # production des voix, intégration Dialogic
+
+`candidates/` est la seule exception à la règle : quelques dizaines d'extraits de quelques
+kilooctets, qui gardent la trace du casting — quel timbre a été retenu pour chaque
+personnage, et lesquels ont été écartés. Voir [`candidates/README.md`](candidates/README.md).
 
 ## Utilisation
 

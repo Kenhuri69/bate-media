@@ -1,0 +1,920 @@
+{
+  "source": "voice-agent forge",
+  "personnages": {
+    "adam": {
+      "slug": "bate-adam",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1133,
+          "description": "A deep, resonant baritone with a calm and commanding presence, speaking in a measured and encouraging tone, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1140,
+          "description": "A deep, resonant baritone with a calm and commanding presence, speaking in a measured and encouraging tone, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1147,
+          "description": "A deep, resonant baritone with a calm and commanding presence, speaking in a measured and encouraging tone, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "agent": {
+      "slug": "bate-agent",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1075,
+          "description": "A gravelly, low-pitched voice with a hardened edge, carrying the weight of years spent in secrecy and conflict, speaking with controlled intensity and a touch of weary cynicism, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1082,
+          "description": "A gravelly, low-pitched voice with a hardened edge, carrying the weight of years spent in secrecy and conflict, speaking with controlled intensity and a touch of weary cynicism, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1089,
+          "description": "A gravelly, low-pitched voice with a hardened edge, carrying the weight of years spent in secrecy and conflict, speaking with controlled intensity and a touch of weary cynicism, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "alice": {
+      "slug": "bate-alice",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1001,
+          "description": "A soft, warm female voice in her early 30s, with a gentle and nurturing tone, slightly anxious undertones, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1002,
+          "description": "A mid-range female voice in her late 20s, rich and comforting, with a subtle sense of worry, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1003,
+          "description": "A lower, soothing female voice in her early 30s, full-bodied and caring, with a restrained concern, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 4,
+          "fichier": "cand_04.ogg",
+          "seed": 1004,
+          "description": "A higher-pitched, tender female voice in her mid-20s, warm and protective, with a hint of restrained anxiety, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 5,
+          "fichier": "cand_05.ogg",
+          "seed": 1005,
+          "description": "A deep, calm female voice in her late 30s, warm and reassuring, with a quiet sense of worry, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "antiquaire": {
+      "slug": "bate-antiquaire",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1389,
+          "description": "A gravelly, mid-50s voice with a smooth and slightly smug tone, delivering each word with a measured cadence and a hint of amusement, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1396,
+          "description": "A gravelly, mid-50s voice with a smooth and slightly smug tone, delivering each word with a measured cadence and a hint of amusement, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1403,
+          "description": "A gravelly, mid-50s voice with a smooth and slightly smug tone, delivering each word with a measured cadence and a hint of amusement, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "arthur": {
+      "slug": "bate-arthur",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1053,
+          "description": "A young male voice, around 16 years old, with a calm and introspective tone, slightly hesitant yet determined, carrying a subtle emotional depth with a soft and warm timbre, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1060,
+          "description": "A young male voice, around 16 years old, with a calm and introspective tone, slightly hesitant yet determined, carrying a subtle emotional depth with a soft and warm timbre, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1067,
+          "description": "A young male voice, around 16 years old, with a calm and introspective tone, slightly hesitant yet determined, carrying a subtle emotional depth with a soft and warm timbre, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "as": {
+      "slug": "bate-as",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1105,
+          "description": "A deep, resonant baritone with a commanding and measured tone, exuding confidence and a touch of arrogance, with a slightly gravelly edge that hints at experience and intensity, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1112,
+          "description": "A deep, resonant baritone with a commanding and measured tone, exuding confidence and a touch of arrogance, with a slightly gravelly edge that hints at experience and intensity, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1119,
+          "description": "A deep, resonant baritone with a commanding and measured tone, exuding confidence and a touch of arrogance, with a slightly gravelly edge that hints at experience and intensity, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "aventurier": {
+      "slug": "bate-aventurier",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1391,
+          "description": "A gruff, mid-40s voice with a dry, gravelly timbre and a measured, contemplative cadence, delivering each line with a tone of seasoned skepticism and quiet urgency, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1398,
+          "description": "A gruff, mid-40s voice with a dry, gravelly timbre and a measured, contemplative cadence, delivering each line with a tone of seasoned skepticism and quiet urgency, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1405,
+          "description": "A gruff, mid-40s voice with a dry, gravelly timbre and a measured, contemplative cadence, delivering each line with a tone of seasoned skepticism and quiet urgency, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "capitaine-de-milice": {
+      "slug": "bate-capitaine-de-milice",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1123,
+          "description": "A rough, gravelly voice with a deep, commanding tone, slightly hoarse from years of shouting and battle, carrying the weight of experience and a gruff, no-nonsense attitude, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1130,
+          "description": "A rough, gravelly voice with a deep, commanding tone, slightly hoarse from years of shouting and battle, carrying the weight of experience and a gruff, no-nonsense attitude, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1137,
+          "description": "A rough, gravelly voice with a deep, commanding tone, slightly hoarse from years of shouting and battle, carrying the weight of experience and a gruff, no-nonsense attitude, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "captive": {
+      "slug": "bate-captive",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1214,
+          "description": "A deep, resonant voice with a commanding yet measured tone, carrying the weight of experience and a subtle edge of authority, speaking in a calm yet firm manner, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1221,
+          "description": "A deep, resonant voice with a commanding yet measured tone, carrying the weight of experience and a subtle edge of authority, speaking in a calm yet firm manner, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1228,
+          "description": "A deep, resonant voice with a commanding yet measured tone, carrying the weight of experience and a subtle edge of authority, speaking in a calm yet firm manner, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "committee": {
+      "slug": "bate-committee",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1332,
+          "description": "A gravelly, low-pitched voice with a steady and commanding tone, carrying the weight of authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1339,
+          "description": "A gravelly, low-pitched voice with a steady and commanding tone, carrying the weight of authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1346,
+          "description": "A gravelly, low-pitched voice with a steady and commanding tone, carrying the weight of authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "corentin": {
+      "slug": "bate-corentin",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1343,
+          "description": "A deep, gravelly voice with a firm and commanding tone, carrying the weight of experience and a steady, measured pace, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1350,
+          "description": "A deep, gravelly voice with a firm and commanding tone, carrying the weight of experience and a steady, measured pace, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1357,
+          "description": "A deep, gravelly voice with a firm and commanding tone, carrying the weight of experience and a steady, measured pace, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "durden": {
+      "slug": "bate-durden",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1393,
+          "description": "A deep, gravelly voice with a rough and commanding tone, carrying the weight of a seasoned leader in his late forties, speaking with a steady and measured cadence, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1400,
+          "description": "A deep, gravelly voice with a rough and commanding tone, carrying the weight of a seasoned leader in his late forties, speaking with a steady and measured cadence, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1407,
+          "description": "A deep, gravelly voice with a rough and commanding tone, carrying the weight of a seasoned leader in his late forties, speaking with a steady and measured cadence, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "examinateur": {
+      "slug": "bate-examinateur",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1090,
+          "description": "A deep, gravelly voice with a commanding and measured tone, slightly roughened by age but still carrying authority and a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1097,
+          "description": "A deep, gravelly voice with a commanding and measured tone, slightly roughened by age but still carrying authority and a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1104,
+          "description": "A deep, gravelly voice with a commanding and measured tone, slightly roughened by age but still carrying authority and a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "faye": {
+      "slug": "bate-faye",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1086,
+          "description": "A deep, resonant voice with a calm and authoritative tone, carrying the weight of experience and a steady confidence, speaking in a measured pace with a slight edge of command, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1093,
+          "description": "A deep, resonant voice with a calm and authoritative tone, carrying the weight of experience and a steady confidence, speaking in a measured pace with a slight edge of command, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1100,
+          "description": "A deep, resonant voice with a calm and authoritative tone, carrying the weight of experience and a steady confidence, speaking in a measured pace with a slight edge of command, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "gardien": {
+      "slug": "bate-gardien",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1119,
+          "description": "Deep, resonant baritone with a commanding yet measured tone, carrying the weight of ancient wisdom and quiet authority, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1126,
+          "description": "Deep, resonant baritone with a commanding yet measured tone, carrying the weight of ancient wisdom and quiet authority, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1133,
+          "description": "Deep, resonant baritone with a commanding yet measured tone, carrying the weight of ancient wisdom and quiet authority, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "heraut": {
+      "slug": "bate-heraut",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1142,
+          "description": "A deep, resonant baritone with a commanding presence, slightly gravelly edges suggesting authority and wear, yet carrying an undercurrent of solemnity and intensity, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1149,
+          "description": "A deep, resonant baritone with a commanding presence, slightly gravelly edges suggesting authority and wear, yet carrying an undercurrent of solemnity and intensity, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1156,
+          "description": "A deep, resonant baritone with a commanding presence, slightly gravelly edges suggesting authority and wear, yet carrying an undercurrent of solemnity and intensity, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "instructrice": {
+      "slug": "bate-instructrice",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1372,
+          "description": "A calm, measured voice with a firm yet composed tone, carrying the weight of authority and precision, speaking in a steady, controlled rhythm with a slight edge of scrutiny, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1379,
+          "description": "A calm, measured voice with a firm yet composed tone, carrying the weight of authority and precision, speaking in a steady, controlled rhythm with a slight edge of scrutiny, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1386,
+          "description": "A calm, measured voice with a firm yet composed tone, carrying the weight of authority and precision, speaking in a steady, controlled rhythm with a slight edge of scrutiny, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "intendant": {
+      "slug": "bate-intendant",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1236,
+          "description": "A deep, gravelly voice with a commanding tone, slightly raspy and deliberate, carrying an air of authority and dry wit, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1243,
+          "description": "A deep, gravelly voice with a commanding tone, slightly raspy and deliberate, carrying an air of authority and dry wit, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1250,
+          "description": "A deep, gravelly voice with a commanding tone, slightly raspy and deliberate, carrying an air of authority and dry wit, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "jasmine": {
+      "slug": "bate-jasmine",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1340,
+          "description": "A strong, confident voice with a steady and commanding tone, mid-30s female, speaking with a crisp, slightly gravelly timbre that conveys authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1347,
+          "description": "A strong, confident voice with a steady and commanding tone, mid-30s female, speaking with a crisp, slightly gravelly timbre that conveys authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1354,
+          "description": "A strong, confident voice with a steady and commanding tone, mid-30s female, speaking with a crisp, slightly gravelly timbre that conveys authority and experience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "lilia": {
+      "slug": "bate-lilia",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1363,
+          "description": "A young woman in her late twenties with a warm, melodic tone, slightly playful yet confident, speaking with a gentle yet firm authority, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1370,
+          "description": "A young woman in her late twenties with a warm, melodic tone, slightly playful yet confident, speaking with a gentle yet firm authority, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1377,
+          "description": "A young woman in her late twenties with a warm, melodic tone, slightly playful yet confident, speaking with a gentle yet firm authority, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "maitre-du-culte": {
+      "slug": "bate-maitre-du-culte",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1405,
+          "description": "A deep, resonant baritone with a commanding and ancient authority, layered with a chilling calm and a touch of theatrical gravitas, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1412,
+          "description": "A deep, resonant baritone with a commanding and ancient authority, layered with a chilling calm and a touch of theatrical gravitas, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1419,
+          "description": "A deep, resonant baritone with a commanding and ancient authority, layered with a chilling calm and a touch of theatrical gravitas, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "maitre-orwin": {
+      "slug": "bate-maitre-orwin",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1046,
+          "description": "A deep, resonant baritone with a commanding and measured tone, slightly gravelly yet refined, exuding authority and practiced control, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1053,
+          "description": "A deep, resonant baritone with a commanding and measured tone, slightly gravelly yet refined, exuding authority and practiced control, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1060,
+          "description": "A deep, resonant baritone with a commanding and measured tone, slightly gravelly yet refined, exuding authority and practiced control, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "perrin": {
+      "slug": "bate-perrin",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1075,
+          "description": "A warm, slightly gravelly voice with a calm and steady tone, carrying a subtle edge of humor and quiet intensity, speaking in a mid-range pitch with a natural, conversational rhythm, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1082,
+          "description": "A warm, slightly gravelly voice with a calm and steady tone, carrying a subtle edge of humor and quiet intensity, speaking in a mid-range pitch with a natural, conversational rhythm, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1089,
+          "description": "A warm, slightly gravelly voice with a calm and steady tone, carrying a subtle edge of humor and quiet intensity, speaking in a mid-range pitch with a natural, conversational rhythm, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "professeure": {
+      "slug": "bate-professeure",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1347,
+          "description": "A deep, resonant voice with a calm and authoritative tone, slightly gravelly yet refined, speaking with measured precision and a touch of intellectual gravitas, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1354,
+          "description": "A deep, resonant voice with a calm and authoritative tone, slightly gravelly yet refined, speaking with measured precision and a touch of intellectual gravitas, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1361,
+          "description": "A deep, resonant voice with a calm and authoritative tone, slightly gravelly yet refined, speaking with measured precision and a touch of intellectual gravitas, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "receptionniste": {
+      "slug": "bate-receptionniste",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1286,
+          "description": "A mid-30s woman with a calm, slightly weary tone, her voice carries a mix of authority and warmth, with a subtle French accent and a measured pace that suggests experience and patience, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1293,
+          "description": "A mid-30s woman with a calm, slightly weary tone, her voice carries a mix of authority and warmth, with a subtle French accent and a measured pace that suggests experience and patience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1300,
+          "description": "A mid-30s woman with a calm, slightly weary tone, her voice carries a mix of authority and warmth, with a subtle French accent and a measured pace that suggests experience and patience, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "reynolds": {
+      "slug": "bate-reynolds",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1135,
+          "description": "A warm, soft-spoken voice with a gentle and patient tone, carrying a sense of calm authority and affection, with a slightly gravelly edge that suggests experience and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1142,
+          "description": "A warm, soft-spoken voice with a gentle and patient tone, carrying a sense of calm authority and affection, with a slightly gravelly edge that suggests experience and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1149,
+          "description": "A warm, soft-spoken voice with a gentle and patient tone, carrying a sense of calm authority and affection, with a slightly gravelly edge that suggests experience and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "sylvia": {
+      "slug": "bate-sylvia",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1336,
+          "description": "A low, gravelly voice with a commanding yet weary tone, carrying the weight of ancient wisdom and solitude, speaking in measured, deliberate words with a hint of sorrow beneath the surface, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1343,
+          "description": "A low, gravelly voice with a commanding yet weary tone, carrying the weight of ancient wisdom and solitude, speaking in measured, deliberate words with a hint of sorrow beneath the surface, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1350,
+          "description": "A low, gravelly voice with a commanding yet weary tone, carrying the weight of ancient wisdom and solitude, speaking in measured, deliberate words with a hint of sorrow beneath the surface, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "tabitha": {
+      "slug": "bate-tabitha",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1165,
+          "description": "A warm, calm, and slightly amused tone with a soft, mature voice, around late twenties to early thirties, with a gentle and welcoming timbre that exudes confidence and comfort, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1172,
+          "description": "A warm, calm, and slightly amused tone with a soft, mature voice, around late twenties to early thirties, with a gentle and welcoming timbre that exudes confidence and comfort, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1179,
+          "description": "A warm, calm, and slightly amused tone with a soft, mature voice, around late twenties to early thirties, with a gentle and welcoming timbre that exudes confidence and comfort, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "tessia": {
+      "slug": "bate-tessia",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1194,
+          "description": "A soft, slightly breathy voice with a gentle and somewhat uncertain tone, hinting at a young adult female in her late teens or early twenties, with a calm yet weary timbre that suggests quiet strength and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1201,
+          "description": "A soft, slightly breathy voice with a gentle and somewhat uncertain tone, hinting at a young adult female in her late teens or early twenties, with a calm yet weary timbre that suggests quiet strength and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1208,
+          "description": "A soft, slightly breathy voice with a gentle and somewhat uncertain tone, hinting at a young adult female in her late teens or early twenties, with a calm yet weary timbre that suggests quiet strength and emotional depth, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "vincent": {
+      "slug": "bate-vincent",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1187,
+          "description": "A deep, gravelly voice with a rough yet warm timbre, mid-40s, carrying a commanding yet approachable tone with a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1194,
+          "description": "A deep, gravelly voice with a rough yet warm timbre, mid-40s, carrying a commanding yet approachable tone with a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1201,
+          "description": "A deep, gravelly voice with a rough yet warm timbre, mid-40s, carrying a commanding yet approachable tone with a hint of dry humor, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    },
+    "virion": {
+      "slug": "bate-virion",
+      "candidats": [
+        {
+          "n": 1,
+          "fichier": "cand_01.ogg",
+          "seed": 1269,
+          "description": "A deep, resonant baritone with a commanding and slightly roughened tone, conveying both authority and a hint of weariness, with a firm and deliberate cadence that suggests a seasoned leader, very clear and close-sounding, no background noise.",
+          "retenu": true,
+          "retenu_par": "auto"
+        },
+        {
+          "n": 2,
+          "fichier": "cand_02.ogg",
+          "seed": 1276,
+          "description": "A deep, resonant baritone with a commanding and slightly roughened tone, conveying both authority and a hint of weariness, with a firm and deliberate cadence that suggests a seasoned leader, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        },
+        {
+          "n": 3,
+          "fichier": "cand_03.ogg",
+          "seed": 1283,
+          "description": "A deep, resonant baritone with a commanding and slightly roughened tone, conveying both authority and a hint of weariness, with a firm and deliberate cadence that suggests a seasoned leader, very clear and close-sounding, no background noise.",
+          "retenu": false,
+          "retenu_par": null
+        }
+      ]
+    }
+  }
+}
