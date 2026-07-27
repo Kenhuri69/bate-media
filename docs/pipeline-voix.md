@@ -4,6 +4,11 @@ Tout est généré **localement**, sans service en ligne, par la pipeline `voice
 (dépôt `voice-agent`). Ce dépôt-ci ne fait que collecter, indexer et empaqueter le résultat :
 la forge reste la source de vérité reproductible.
 
+> **Un second moteur existe depuis le 2026-07-27 : Qwen3-TTS.** Il donne l'émotion d'une
+> réplique par une **phrase en français** au lieu des deux curseurs Chatterbox, et va trois
+> fois plus vite. Les voix décrites ci-dessous sont celles produites par Chatterbox, qui
+> reste le moteur par défaut. Verdict, mesures et pièges : [`qwen3-tts.md`](qwen3-tts.md).
+
 ## Chaîne
 
 1. **Description** — une demande en français (« une femme d'une trentaine d'années, douce et
