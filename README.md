@@ -23,14 +23,15 @@ Un pack immuable, horodaté et vérifiable par somme de contrôle règle le prob
 
     voices/<personnage>/     # présent en local, ignoré par Git (voir .gitignore)
     video/  animation/       # idem
-    candidates/              # EXCEPTION : les voix candidates sont versionnées (~5 Mo)
     manifest.json            # index versionné : ce que le pack DOIT contenir
     tools/                   # assemblage, vérification, installation
     docs/                    # production des voix, intégration Dialogic
 
-`candidates/` est la seule exception à la règle : quelques dizaines d'extraits de quelques
-kilooctets, qui gardent la trace du casting — quel timbre a été retenu pour chaque
-personnage, et lesquels ont été écartés. Voir [`candidates/README.md`](candidates/README.md).
+Le jeu d'écoute de `docs/ecoute-qwen3-tts/` (1 Mo) est la seule exception à la règle : il
+garde les clips qui documentent une décision **encore en vigueur** — la voix en service,
+l'A/B qui a fait changer de moteur, l'étalon de mesure. Les candidats de casting et les
+clips d'audit en faisaient partie jusqu'au 2026-08-08 ; ils ont été retirés, les décisions
+qu'ils justifiaient vivant dans `voice-agent/training/forge/*/choice.json`.
 
 ## Utilisation
 
@@ -47,13 +48,20 @@ Assembler un pack depuis les voix produites localement :
 
 ## Production des voix
 
-Les voix sont créées avec la pipeline `voice-agent forge` (dépôt `voice-agent`, 100 % local) :
-une description en français → candidats Parler-TTS → validation à l'écoute → clonage
-Chatterbox de la voix retenue sur chaque réplique. Détail dans
-[`docs/pipeline-voix.md`](docs/pipeline-voix.md).
+Les voix sont créées avec la pipeline `voice-agent forge` (dépôt `voice-agent`, 100 % local).
+Depuis la 0.3.0, le moteur est **Qwen3-TTS** : un timbre premium — ou un mélange pondéré de
+plusieurs — choisi à l'écoute, et une émotion donnée par une phrase en français attachée à
+chaque réplique. Verdict et mesures : [`docs/qwen3-tts.md`](docs/qwen3-tts.md).
+
+Ce que la 0.3.0 contient — **Arthur, chapitres 0 à 5, 72 répliques** — est ce qui a été
+produit et validé avec cette méthode. Les 1570 répliques Chatterbox des trente autres
+personnages, livrées jusqu'à la 0.2.0, ne sont plus distribuées : elles restent
+téléchargeables dans cette version-là, et leurs textes sources sont conservés pour être
+reproduits (`voice-agent/training/forge/*/lines.json`).
 
 Aucune voix ne reproduit celle d'une personne réelle : chaque timbre est synthétisé depuis
-une **description écrite**, pas cloné d'un enregistrement humain.
+une **description écrite** ou choisi parmi les timbres premium du modèle, jamais cloné d'un
+enregistrement humain.
 
 ## Statut juridique
 
