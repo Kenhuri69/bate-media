@@ -8,6 +8,13 @@ animation/*
 !*/.gitkeep
 !*/README.md
 
+# Candidats de casting et clips d'audit : retirés le 2026-08-08, les choix sont faits
+# et l'audit est clos. Ce qu'il fallait en garder, ce sont les DÉCISIONS — elles vivent
+# dans `voice-agent/training/forge/*/choice.json` — pas les 95 essais qui y ont mené.
+# Récupérables par git si un casting doit être rouvert.
+candidates/
+audit/
+
 # Packs construits localement
 dist/
 
