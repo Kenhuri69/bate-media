@@ -94,9 +94,95 @@ cohésion de timbre ne se dégrade pas systématiquement — elle peut **s'amél
 | *repère Chatterbox* | *0,941* | *0,824* | *176–211 Hz* |
 
 `aiden:0.7+serena:0.3` bat le timbre pur ET Chatterbox. Mais **ça dépend du couple** :
-`+vivian` retombe sous Chatterbox. Un mélange se mesure, il ne se suppose pas. Arbitrage
-ouvert pour Arthur : `+serena` est le plus stable, `+vivian` le plus proche en hauteur de
-l'Arthur actuel (183 vs 176–211 Hz).
+`+vivian` retombe sous Chatterbox. Un mélange se mesure, il ne se suppose pas.
+
+Cet arbitrage — `+serena` le plus stable contre `+vivian` le plus proche en hauteur — a
+été instruit par le balayage ci-dessous, qui désignait `aiden:0.5+serena:0.5`. **L'écoute
+a retenu `aiden:0.5+ryan:0.5`** (2026-08-08) : c'est la convention de la forge, la mesure
+écarte mais ne choisit pas. Ce timbre-là sort à ~131 Hz, le plus grave des mélanges —
+plus mûr que le banc ne le recommandait, et c'est un parti pris assumé sur un roi
+réincarné. Sa déclinaison par âge est plus bas.
+
+## Le balayage du 2026-08-08 : ce que la mesure recommandait
+
+Banc : `tools/tournoi_timbre_arthur.py`, sept timbres × les huit mêmes répliques réelles,
+registres et graines de production. Repère Chatterbox **recalculé** sur les `.ogg` livrés
+dans `voices/arthur/` — donc au même format que les candidats, ce qui n'était pas le cas
+du tableau précédent (mesuré sur des `.wav`). Les deux séries de chiffres ne se comparent
+pas ; seul le classement interne à chaque banc vaut.
+
+| timbre | F0 médian | **plage F0** | cohésion | ambitus | verdict |
+|---|---|---|---|---|---|
+| **aiden:0.5+serena:0.5** | **183 Hz** | **41 Hz** | 0,942 | 3,6 st | **recommandé par la mesure** |
+| aiden:0.7+serena:0.3 | 172 Hz | 62 Hz | 0,936 | 5,1 st | trop grave, trop dispersé |
+| aiden:0.9+vivian:0.1 | 153 Hz | 78 Hz | 0,923 | 5,6 st | écarté |
+| aiden pur | 147 Hz | 95 Hz | 0,934 | 5,8 st | écarté |
+| aiden:0.8+vivian:0.2 | 189 Hz | 105 Hz | 0,929 | 5,6 st | change d'âge |
+| aiden:0.6+serena:0.3+vivian:0.1 | 172 Hz | 119 Hz | 0,845 | 4,5 st | écarté |
+| aiden:0.7+vivian:0.3 | 195 Hz | 158 Hz | 0,895 | 4,8 st | change d'âge |
+| *repère Chatterbox* | *190 Hz* | *38 Hz* | *0,941* | — | — |
+
+**Ce n'est pas la cohésion qui départage, et c'est la leçon du banc.** Les sept candidats
+tiennent en un dixième de cohésion, le premier ne devance le repère que de 0,001 — du
+bruit. Pire, le critère est biaisé : une voix qui varie peu à l'intérieur d'une réplique
+marque mécaniquement mieux, si bien que la porte de cohésion récompense le timbre le plus
+**plat**. Le gagnant a d'ailleurs le plus petit ambitus du lot (3,6 st contre 5,1–5,8) :
+il est stable en partie parce qu'il joue moins. C'est la contrepartie assumée du choix,
+et c'est précisément ce que l'oreille doit vérifier.
+
+Ce qui sépare vraiment, c'est la **dispersion de la hauteur d'un clip à l'autre**. Et la
+médiane du lot la masque : `aiden:0.7+vivian:0.3` affiche 195 Hz, pile dans la cible —
+mais c'est la moyenne d'une voix qui passe de **138 Hz à 296 Hz** selon la réplique, soit
+un homme mûr au chapitre 3 et un enfant au chapitre 4. Ce n'est pas un personnage, c'en
+est trois. `+serena:0.5` tient 164–205 Hz, une plage de 41 Hz — celle de Chatterbox (38).
+
+Aucun clip n'a déclenché le garde-fou `_suspect()` : ces dérives-là ne sont pas des
+dégénérescences de génération (durée, niveau, souffle), ce sont des clips parfaitement
+normaux qui ne se ressemblent pas entre eux. Un contrôle par clip ne pouvait pas les voir.
+
+À écouter avant d'entériner : `bash docs/ecoute-qwen3-tts/ecouter.sh 5`.
+
+## Les âges d'Arthur — deux stades sur cinq tiennent (2026-08-08)
+
+Arthur est le seul rôle qui traverse quatre âges **en parlant** : trois ans au chapitre 2,
+quinze à l'académie. Les stades sont ceux du jeu (`bate/tools/assets/character_plan.json`),
+pour que la voix et le sprite du même personnage changent aux mêmes chapitres. La
+narration vieillit avec lui — c'est sa voix intérieure — sauf au prologue, où celui qui
+pense est encore le roi d'avant la réincarnation. Banc : `tools/voix_age_arthur.py`.
+
+| stade | mélange | F0 | cible | plage | état |
+|---|---|---|---|---|---|
+| `prologue` (ch0-1) | `aiden:0.5+ryan:0.5` (base pure) | 131 Hz | 132 | 37 | tient |
+| `s02_toddler` (3 ans) | `+serena:0.8` | 245 Hz | 270 | 37 | tient |
+| `s03_child` (6 ans) | `+ono_anna:0.45` | 226 Hz | 240 | 63 | passe |
+| `s04_teen` (13 ans) | `+vivian:0.6` | 225 Hz | 200 | 94 | **non résolu** |
+| `s05_academy` (15 ans) | `+vivian:0.55` | 194 Hz | 175 | 72 | **non résolu** |
+
+Défaut le plus audible : `s03_child` et `s04_teen` sortent à la même hauteur (226 et
+225 Hz) alors que sept ans les séparent.
+
+**Le mélange sature**, et c'est ce qui force la main. Une seule composante dosée en
+croissant aurait donné une mue continue ; `vivian` était la candidate, seule monotone au
+premier balayage — mais elle plafonne (0,6 → 206 Hz, 0,8 → 226, 0,9 → 220). Impossible de
+tirer une base à 131 Hz jusqu'aux stades jeunes avec elle : d'où trois composantes
+différentes, et le risque d'entendre trois personnes au lieu d'un enfant qui grandit.
+
+**La dose ne contrôle pas la hauteur au-delà du gros grain.** La relation est en ESCALIER,
+pas en pente, et ne s'interpole pas même à stade et répliques constants : `s05_academy`
+donne 156 Hz à 0,45 et 194 à 0,55, donc 0,50 devait tomber vers 175 — il rend **150**,
+plus bas que 0,45. Ne rien régler au centième.
+
+**Un calibrage n'est pas transférable d'un stade à l'autre** : la hauteur dépend du texte
+prononcé autant que du mélange (`vivian:0.6` = 206 Hz sur des répliques d'enfant, 225 sur
+celles d'adolescent). Calibrer sur les répliques du stade visé, ou ne pas calibrer.
+
+**Et deux pièges de mesure, à corriger avant tout resserrage :** comparer les plages de
+lots de tailles différentes n'a pas de sens (c'est un écart entre extrêmes, il croît avec
+le nombre de clips) ; et la F0 médiane d'un clip de deux secondes repose sur trop peu de
+trames voisées — dans `s05_academy`, les deux clips courts sortent 50 à 80 Hz au-dessus
+des quatre longs. Une part de la dispersion mesurée est du bruit, pas de la dérive.
+
+À écouter : `bash docs/ecoute-qwen3-tts/ecouter.sh 6`.
 
 **Le piège à ne pas reproduire.** Le mélange se fait en substituant le vecteur au seul
 **premier** accès de forme (1,1) à la table d'embedding — celui du speaker dans

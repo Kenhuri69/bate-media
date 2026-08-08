@@ -1,0 +1,456 @@
+{
+  "repliques": [
+    "arthur_ch03_01",
+    "arthur_ch03_02",
+    "arthur_ch04_01",
+    "arthur_ch04_02",
+    "arthur_ch04_03",
+    "arthur_ch05_01",
+    "narrator_ch00_01",
+    "narrator_ch00_02"
+  ],
+  "cible_f0_hz": [
+    176.0,
+    211.0
+  ],
+  "chatterbox": {
+    "clips": 8,
+    "cohesion_moyenne": 0.9409380395421995,
+    "cohesion_min": 0.8236840942303417,
+    "paires": 28,
+    "f0_median": 189.7974493623406,
+    "f0_min": 172.66187050359713,
+    "f0_max": 210.52631578947367,
+    "f0_plage": 37.86444528587654,
+    "ambitus_st": 5.195495477410738,
+    "par_clip": {
+      "arthur_ch03_01": {
+        "f0": 176,
+        "duree": 2.7,
+        "ambitus_st": 5.0
+      },
+      "arthur_ch03_02": {
+        "f0": 200,
+        "duree": 2.6,
+        "ambitus_st": 6.2
+      },
+      "arthur_ch04_01": {
+        "f0": 211,
+        "duree": 0.8,
+        "ambitus_st": 5.5
+      },
+      "arthur_ch04_02": {
+        "f0": 186,
+        "duree": 3.4,
+        "ambitus_st": 4.7
+      },
+      "arthur_ch04_03": {
+        "f0": 173,
+        "duree": 3.3,
+        "ambitus_st": 3.0
+      },
+      "arthur_ch05_01": {
+        "f0": 194,
+        "duree": 3.1,
+        "ambitus_st": 6.8
+      },
+      "arthur_ch05_02": {
+        "f0": 176,
+        "duree": 1.1,
+        "ambitus_st": 4.2
+      },
+      "arthur_ch06_01": {
+        "f0": 210,
+        "duree": 2.5,
+        "ambitus_st": 6.1
+      }
+    }
+  },
+  "candidats": {
+    "aiden": {
+      "cohesion_moyenne": 0.9335869819690706,
+      "cohesion_min": 0.7690908784056606,
+      "paires": 28,
+      "f0_median": 147.02135631322594,
+      "f0_min": 131.86813186813185,
+      "f0_max": 226.41509433962264,
+      "f0_plage": 94.54696247149079,
+      "ambitus_st": 5.760267567168858,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 226,
+          "duree": 4.2,
+          "ambitus_st": 5.9
+        },
+        "arthur_ch03_02": {
+          "f0": 134,
+          "duree": 2.7,
+          "ambitus_st": 5.4
+        },
+        "arthur_ch04_01": {
+          "f0": 211,
+          "duree": 0.3,
+          "ambitus_st": 6.8
+        },
+        "arthur_ch04_02": {
+          "f0": 153,
+          "duree": 4.4,
+          "ambitus_st": 6.6
+        },
+        "arthur_ch04_03": {
+          "f0": 141,
+          "duree": 3.2,
+          "ambitus_st": 3.9
+        },
+        "arthur_ch05_01": {
+          "f0": 161,
+          "duree": 2.2,
+          "ambitus_st": 5.5
+        },
+        "narrator_ch00_01": {
+          "f0": 132,
+          "duree": 3.3,
+          "ambitus_st": 5.5
+        },
+        "narrator_ch00_02": {
+          "f0": 135,
+          "duree": 12.1,
+          "ambitus_st": 6.4
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden"
+    },
+    "aiden:0.7+serena:0.3": {
+      "cohesion_moyenne": 0.9356718291809719,
+      "cohesion_min": 0.7769782051483511,
+      "paires": 28,
+      "f0_median": 172.0967442263413,
+      "f0_min": 141.1764705882353,
+      "f0_max": 203.38983050847457,
+      "f0_plage": 62.21335992023927,
+      "ambitus_st": 5.132898738143446,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 190,
+          "duree": 3.1,
+          "ambitus_st": 5.0
+        },
+        "arthur_ch03_02": {
+          "f0": 162,
+          "duree": 2.2,
+          "ambitus_st": 5.6
+        },
+        "arthur_ch04_01": {
+          "f0": 183,
+          "duree": 0.6,
+          "ambitus_st": 6.3
+        },
+        "arthur_ch04_02": {
+          "f0": 203,
+          "duree": 5.2,
+          "ambitus_st": 2.6
+        },
+        "arthur_ch04_03": {
+          "f0": 186,
+          "duree": 2.6,
+          "ambitus_st": 3.1
+        },
+        "arthur_ch05_01": {
+          "f0": 152,
+          "duree": 2.2,
+          "ambitus_st": 7.6
+        },
+        "narrator_ch00_01": {
+          "f0": 159,
+          "duree": 4.5,
+          "ambitus_st": 5.7
+        },
+        "narrator_ch00_02": {
+          "f0": 141,
+          "duree": 12.8,
+          "ambitus_st": 5.2
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-7_serena-0-3"
+    },
+    "aiden:0.5+serena:0.5": {
+      "cohesion_moyenne": 0.9422885619040472,
+      "cohesion_min": 0.8292851084129197,
+      "paires": 28,
+      "f0_median": 182.53325621746674,
+      "f0_min": 164.3835616438356,
+      "f0_max": 205.12820512820514,
+      "f0_plage": 40.74464348436953,
+      "ambitus_st": 3.6495728603881714,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 197,
+          "duree": 2.5,
+          "ambitus_st": 3.5
+        },
+        "arthur_ch03_02": {
+          "f0": 205,
+          "duree": 2.6,
+          "ambitus_st": 4.5
+        },
+        "arthur_ch04_01": {
+          "f0": 176,
+          "duree": 0.5,
+          "ambitus_st": 5.3
+        },
+        "arthur_ch04_02": {
+          "f0": 189,
+          "duree": 9.6,
+          "ambitus_st": 2.2
+        },
+        "arthur_ch04_03": {
+          "f0": 164,
+          "duree": 2.9,
+          "ambitus_st": 3.8
+        },
+        "arthur_ch05_01": {
+          "f0": 185,
+          "duree": 3.0,
+          "ambitus_st": 3.9
+        },
+        "narrator_ch00_01": {
+          "f0": 166,
+          "duree": 3.8,
+          "ambitus_st": 2.7
+        },
+        "narrator_ch00_02": {
+          "f0": 180,
+          "duree": 14.2,
+          "ambitus_st": 3.3
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-5_serena-0-5"
+    },
+    "aiden:0.8+vivian:0.2": {
+      "cohesion_moyenne": 0.9287476272913995,
+      "cohesion_min": 0.8181321258617097,
+      "paires": 28,
+      "f0_median": 189.02325581395348,
+      "f0_min": 123.71134020618557,
+      "f0_max": 228.57142857142858,
+      "f0_plage": 104.86008836524302,
+      "ambitus_st": 5.5888165760688135,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 192,
+          "duree": 2.6,
+          "ambitus_st": 5.5
+        },
+        "arthur_ch03_02": {
+          "f0": 144,
+          "duree": 1.9,
+          "ambitus_st": 5.8
+        },
+        "arthur_ch04_01": {
+          "f0": 207,
+          "duree": 0.3,
+          "ambitus_st": 8.4
+        },
+        "arthur_ch04_02": {
+          "f0": 220,
+          "duree": 5.2,
+          "ambitus_st": 6.0
+        },
+        "arthur_ch04_03": {
+          "f0": 148,
+          "duree": 3.0,
+          "ambitus_st": 3.4
+        },
+        "arthur_ch05_01": {
+          "f0": 229,
+          "duree": 2.2,
+          "ambitus_st": 4.4
+        },
+        "narrator_ch00_01": {
+          "f0": 186,
+          "duree": 3.6,
+          "ambitus_st": 5.3
+        },
+        "narrator_ch00_02": {
+          "f0": 124,
+          "duree": 17.1,
+          "ambitus_st": 6.0
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-8_vivian-0-2"
+    },
+    "aiden:0.9+vivian:0.1": {
+      "cohesion_moyenne": 0.9229562394527904,
+      "cohesion_min": 0.7315203248211614,
+      "paires": 28,
+      "f0_median": 152.9220779220779,
+      "f0_min": 123.71134020618557,
+      "f0_max": 201.68067226890756,
+      "f0_plage": 77.96933206272199,
+      "ambitus_st": 5.578549638739083,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 156,
+          "duree": 2.6,
+          "ambitus_st": 6.4
+        },
+        "arthur_ch03_02": {
+          "f0": 150,
+          "duree": 2.0,
+          "ambitus_st": 4.7
+        },
+        "arthur_ch04_01": {
+          "f0": 194,
+          "duree": 0.3,
+          "ambitus_st": 8.7
+        },
+        "arthur_ch04_02": {
+          "f0": 202,
+          "duree": 5.3,
+          "ambitus_st": 5.7
+        },
+        "arthur_ch04_03": {
+          "f0": 145,
+          "duree": 3.1,
+          "ambitus_st": 5.1
+        },
+        "arthur_ch05_01": {
+          "f0": 173,
+          "duree": 2.5,
+          "ambitus_st": 4.1
+        },
+        "narrator_ch00_01": {
+          "f0": 124,
+          "duree": 3.7,
+          "ambitus_st": 5.7
+        },
+        "narrator_ch00_02": {
+          "f0": 127,
+          "duree": 11.4,
+          "ambitus_st": 4.2
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-9_vivian-0-1"
+    },
+    "aiden:0.7+vivian:0.3": {
+      "cohesion_moyenne": 0.8953699129528632,
+      "cohesion_min": 0.7749601866766589,
+      "paires": 28,
+      "f0_median": 195.23809523809524,
+      "f0_min": 137.93103448275863,
+      "f0_max": 296.3414634146342,
+      "f0_plage": 158.41042893187554,
+      "ambitus_st": 4.760583508834264,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 159,
+          "duree": 2.4,
+          "ambitus_st": 5.2
+        },
+        "arthur_ch03_02": {
+          "f0": 233,
+          "duree": 2.0,
+          "ambitus_st": 4.1
+        },
+        "arthur_ch04_01": {
+          "f0": 296,
+          "duree": 0.4,
+          "ambitus_st": 8.2
+        },
+        "arthur_ch04_02": {
+          "f0": 190,
+          "duree": 6.3,
+          "ambitus_st": 5.1
+        },
+        "arthur_ch04_03": {
+          "f0": 138,
+          "duree": 2.5,
+          "ambitus_st": 3.7
+        },
+        "arthur_ch05_01": {
+          "f0": 231,
+          "duree": 2.0,
+          "ambitus_st": 4.9
+        },
+        "narrator_ch00_01": {
+          "f0": 200,
+          "duree": 4.3,
+          "ambitus_st": 3.6
+        },
+        "narrator_ch00_02": {
+          "f0": 147,
+          "duree": 14.6,
+          "ambitus_st": 3.4
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-7_vivian-0-3"
+    },
+    "aiden:0.6+serena:0.3+vivian:0.1": {
+      "cohesion_moyenne": 0.8445875208654867,
+      "cohesion_min": 0.43045315908620463,
+      "paires": 28,
+      "f0_median": 172.43277111698166,
+      "f0_min": 121.21212121212122,
+      "f0_max": 240.0,
+      "f0_plage": 118.78787878787878,
+      "ambitus_st": 4.528253959121704,
+      "par_clip": {
+        "arthur_ch03_01": {
+          "f0": 180,
+          "duree": 2.6,
+          "ambitus_st": 4.4
+        },
+        "arthur_ch03_02": {
+          "f0": 240,
+          "duree": 2.0,
+          "ambitus_st": 3.4
+        },
+        "arthur_ch04_01": {
+          "f0": 164,
+          "duree": 0.6,
+          "ambitus_st": 7.0
+        },
+        "arthur_ch04_02": {
+          "f0": 197,
+          "duree": 4.0,
+          "ambitus_st": 3.8
+        },
+        "arthur_ch04_03": {
+          "f0": 145,
+          "duree": 2.9,
+          "ambitus_st": 3.7
+        },
+        "arthur_ch05_01": {
+          "f0": 216,
+          "duree": 1.8,
+          "ambitus_st": 4.3
+        },
+        "narrator_ch00_01": {
+          "f0": 121,
+          "duree": 4.7,
+          "ambitus_st": 5.9
+        },
+        "narrator_ch00_02": {
+          "f0": 124,
+          "duree": 13.1,
+          "ambitus_st": 3.7
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "dossier": "docs/ecoute-qwen3-tts/5-tournoi-arthur/aiden-0-6_serena-0-3_vivian-0-1"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "base": {
+    "spec": "aiden:0.5+ryan:0.5",
+    "f0_median": 124.7158933466463,
+    "f0_plage": 53.68206454179304,
+    "cohesion_moyenne": 0.9410730421275025,
+    "cohesion_min": 0.8698688227263078,
+    "paires": 6
+  },
+  "vivian:0.15": {
+    "spec": "aiden:0.425+ryan:0.425+vivian:0.150",
+    "f0_median": 127.79661016949153,
+    "f0_plage": 54.59059867805061,
+    "cohesion_moyenne": 0.9104082797073564,
+    "cohesion_min": 0.780476601147111,
+    "paires": 6
+  },
+  "vivian:0.3": {
+    "spec": "aiden:0.350+ryan:0.350+vivian:0.300",
+    "f0_median": 142.2481606223191,
+    "f0_plage": 52.14651138510018,
+    "cohesion_moyenne": 0.8668240913441575,
+    "cohesion_min": 0.7511987286639801,
+    "paires": 6
+  },
+  "vivian:0.45": {
+    "spec": "aiden:0.275+ryan:0.275+vivian:0.450",
+    "f0_median": 163.8244338831423,
+    "f0_plage": 8.654496281271122,
+    "cohesion_moyenne": 0.8825897697494395,
+    "cohesion_min": 0.7437512110890714,
+    "paires": 6
+  },
+  "vivian:0.6": {
+    "spec": "aiden:0.200+ryan:0.200+vivian:0.600",
+    "f0_median": 206.46215353861533,
+    "f0_plage": 25.500910746812394,
+    "cohesion_moyenne": 0.8499803627319178,
+    "cohesion_min": 0.6753411070044468,
+    "paires": 6
+  },
+  "serena:0.15": {
+    "spec": "aiden:0.425+ryan:0.425+serena:0.150",
+    "f0_median": 134.0823970037453,
+    "f0_plage": 34.82556344550788,
+    "cohesion_moyenne": 0.8850151345550458,
+    "cohesion_min": 0.7114535515732725,
+    "paires": 6
+  },
+  "serena:0.3": {
+    "spec": "aiden:0.350+ryan:0.350+serena:0.300",
+    "f0_median": 165.52511415525112,
+    "f0_plage": 51.21505095374965,
+    "cohesion_moyenne": 0.8677373256862055,
+    "cohesion_min": 0.7557649026852653,
+    "paires": 6
+  },
+  "serena:0.45": {
+    "spec": "aiden:0.275+ryan:0.275+serena:0.450",
+    "f0_median": 162.21738527915838,
+    "f0_plage": 106.2874251497006,
+    "cohesion_moyenne": 0.8409811372634693,
+    "cohesion_min": 0.6386447536473924,
+    "paires": 6
+  },
+  "serena:0.6": {
+    "spec": "aiden:0.200+ryan:0.200+serena:0.600",
+    "f0_median": 275.8985200845666,
+    "f0_plage": 86.70056194808669,
+    "cohesion_moyenne": 0.9140295401679617,
+    "cohesion_min": 0.8557195555732957,
+    "paires": 6
+  },
+  "ono_anna:0.15": {
+    "spec": "aiden:0.425+ryan:0.425+ono_anna:0.150",
+    "f0_median": 173.76380189077267,
+    "f0_plage": 51.69827044435982,
+    "cohesion_moyenne": 0.8435331406048787,
+    "cohesion_min": 0.6152783727305312,
+    "paires": 6
+  },
+  "ono_anna:0.3": {
+    "spec": "aiden:0.350+ryan:0.350+ono_anna:0.300",
+    "f0_median": 164.95040151157298,
+    "f0_plage": 104.41633837860253,
+    "cohesion_moyenne": 0.8092726705134358,
+    "cohesion_min": 0.5847071612182437,
+    "paires": 6
+  },
+  "ono_anna:0.45": {
+    "spec": "aiden:0.275+ryan:0.275+ono_anna:0.450",
+    "f0_median": 235.2941176470588,
+    "f0_plage": 28.13852813852816,
+    "cohesion_moyenne": 0.9053892147301483,
+    "cohesion_min": 0.7736165903015568,
+    "paires": 6
+  },
+  "ono_anna:0.6": {
+    "spec": "aiden:0.200+ryan:0.200+ono_anna:0.600",
+    "f0_median": 240.2161945751176,
+    "f0_plage": 37.881029890500145,
+    "cohesion_moyenne": 0.8927512549498093,
+    "cohesion_min": 0.7212403012020389,
+    "paires": 6
+  },
+  "vivian:0.7": {
+    "spec": "aiden:0.150+ryan:0.150+vivian:0.700",
+    "f0_median": 219.18265221017515,
+    "f0_plage": 100.91843752964616,
+    "cohesion_moyenne": 0.8361699716933849,
+    "cohesion_min": 0.6862480153684386,
+    "paires": 6
+  },
+  "vivian:0.8": {
+    "spec": "aiden:0.100+ryan:0.100+vivian:0.800",
+    "f0_median": 225.89616343804317,
+    "f0_plage": 41.94082138007374,
+    "cohesion_moyenne": 0.8738028846085916,
+    "cohesion_min": 0.8016909150682596,
+    "paires": 6
+  },
+  "vivian:0.9": {
+    "spec": "aiden:0.050+ryan:0.050+vivian:0.900",
+    "f0_median": 220.2020202020202,
+    "f0_plage": 27.3794002607562,
+    "cohesion_moyenne": 0.8652388569448655,
+    "cohesion_min": 0.6909905724881353,
+    "paires": 6
+  },
+  "serena:0.7": {
+    "spec": "aiden:0.150+ryan:0.150+serena:0.700",
+    "f0_median": 243.66110080395794,
+    "f0_plage": 61.415220293724985,
+    "cohesion_moyenne": 0.8778676029268478,
+    "cohesion_min": 0.7367847526962614,
+    "paires": 6
+  },
+  "serena:0.75": {
+    "spec": "aiden:0.125+ryan:0.125+serena:0.750",
+    "f0_median": 252.74359827070168,
+    "f0_plage": 62.94256490952006,
+    "cohesion_moyenne": 0.9060382144098211,
+    "cohesion_min": 0.7951132489691684,
+    "paires": 6
+  },
+  "serena:0.8": {
+    "spec": "aiden:0.100+ryan:0.100+serena:0.800",
+    "f0_median": 250.0,
+    "f0_plage": 28.69780990398101,
+    "cohesion_moyenne": 0.9140224281687442,
+    "cohesion_min": 0.7999622119579978,
+    "paires": 6
+  }
+}
