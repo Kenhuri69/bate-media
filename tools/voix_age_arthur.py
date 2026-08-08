@@ -7,23 +7,26 @@ comment on sait qu'on a réussi ? » par un homme de trente ans. Les stades sont
 que le jeu utilise déjà pour ses sprites (`bate/tools/assets/character_plan.json`) —
 les inventer ici ferait diverger la voix et l'image du même personnage.
 
-Le timbre de base est `aiden:0.5+ryan:0.5`, validé à l'oreille. Il sort à ~132 Hz, soit
-la voix la plus grave des mélanges essayés : c'est l'ancrage ADULTE, celui du prologue
-où King Grey meurt avant de renaître. Les stades jeunes se construisent en montant
-depuis lui, par ajout dosé d'une composante aiguë au mélange d'embeddings.
+Le timbre est `aiden:0.5+ryan:0.5`, validé à l'oreille, et il ne bouge JAMAIS : l'âge se
+fait par le prompt (`PROMPTS_AGE`). La première version le diluait dans une composante
+aiguë pour monter en hauteur ; à trois ans il n'en restait que 20 %, et ce n'était plus la
+voix choisie. Le prompt seul fait aussi bien que la dilution à 30 % (164 Hz contre 162) en
+gardant le timbre entier — voir `tools/age_par_prompt_arthur.py` et le lot d'écoute 7.
 
-Deux étapes, parce que la dose ne se devine pas :
+**La narration ne suit pas l'âge** : une seule voix de narrateur sur tout le jeu. Seules
+les 149 répliques parlées d'Arthur portent un prompt d'âge, pas les 713 narrations.
 
-    python tools/voix_age_arthur.py calibrer   # courbe dose -> F0, à lire avant de choisir
-    python tools/voix_age_arthur.py produire   # le lot d'écoute par stade
+    python tools/voix_age_arthur.py livrer prologue,s02_toddler   # génère pour de bon
+    python tools/voix_age_arthur.py verifier prologue,s02_toddler # contrôle qualité
+    python tools/voix_age_arthur.py reprendre prologue,s02_toddler # régénère les ratés
 
-`calibrer` balaie plusieurs composantes aiguës à plusieurs doses et mesure ce qui sort
-vraiment. Sans lui on choisirait « 0,3 de vivian » au jugé, alors que le rapport entre la
-dose et la hauteur obtenue n'a aucune raison d'être linéaire — et qu'il dépend du couple
-(mesuré au lot 4 : +serena stabilise, +vivian monte, +ryan descend).
+`calibrer` et `ajuster` restent pour explorer le MÉLANGE — ils n'appliquent pas le prompt
+d'âge, justement pour isoler l'effet de la dose. Ce sont des outils d'analyse, plus le
+chemin de production.
 
-La contrainte qui prime sur la hauteur : la **plage F0 intra-stade**. Un stade dont les
-clips vont de 138 à 296 Hz n'est pas un âge, c'est trois personnages — voir le lot 5.
+La contrainte qui prime sur la hauteur : la **plage F0**. Un lot dont les clips vont de
+138 à 296 Hz n'est pas un personnage, c'en est trois — voir le lot 5. Et le contrôle se
+fait sur l'énergie spectrale, pas sur la F0, qui se trompe d'octave (lot 6).
 """
 import json
 import re
@@ -124,13 +127,34 @@ def _echantillon(lot: list, n: int) -> list:
     return (parles + autres)[:n]
 
 
-def _genere_lot(modele, qwen3tts, spec: str, lignes: list, dossier: Path) -> list:
+def _instruct(qwen3tts, sid: str, ligne: dict) -> str:
+    """Prompt d'âge du stade + registre de jeu, SAUF pour la narration.
+
+    **La narration ne suit pas l'âge** (décision du 2026-08-08) : une seule voix de
+    narrateur du premier chapitre au dernier. C'est plus simple, et c'est aussi ce que la
+    mesure disait déjà — le registre narration (« posé, presque murmuré, sans emphase »)
+    annulait le prompt enfantin, qui tenait pourtant sur les répliques parlées : 164 Hz
+    pour Arthur, 127 Hz pour ses narrations du même stade. Plutôt que de forcer un prompt
+    contre un registre qui le contredit, on assume qu'Arthur PARLE jeune et RACONTE d'une
+    voix posée.
+    """
+    registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"], qwen3tts.REGISTRE_DEFAUT)
+    age = "" if ligne["role"] == "narrator" else PROMPTS_AGE.get(sid, "")
+    return f"{age} {qwen3tts.REGISTRES[registre]}".strip()
+
+
+def _genere_lot(modele, qwen3tts, spec: str, lignes: list, dossier: Path,
+                sid: str = None) -> list:
+    """Un lot de répliques. Avec `sid`, applique le prompt d'âge du stade ; sans, le seul
+    registre — c'est ce que veulent `calibrer` et `ajuster`, qui explorent le MÉLANGE et
+    doivent donc isoler son effet du prompt."""
     faits = []
     for i, ligne in enumerate(lignes):
         registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"], qwen3tts.REGISTRE_DEFAUT)
+        instruct = (_instruct(qwen3tts, sid, ligne) if sid
+                    else qwen3tts.REGISTRES[registre])
         cible = dossier / f"{ligne['id']}.ogg"
-        onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"],
-                                   qwen3tts.REGISTRES[registre], spec,
+        onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"], instruct, spec,
                                    seed=2000 + i, temperature=0.7)
         qwen3tts._ecrit(onde, modele.sample_rate, cible, "ogg")
         faits.append(cible)
@@ -199,28 +223,43 @@ def calibrer(aigues=None, doses=None) -> int:
     return 0
 
 
-# Retenus sur la courbe de calibrage du 2026-08-08 (`calibrage/courbe.json`), jamais au
-# jugé. Critère : la plage F0 d'abord, la hauteur ensuite — un stade dispersé n'est pas un
-# âge. D'où des écarts assumés à la cible quand le point le plus juste était le plus sale.
+# L'ÂGE SE FAIT PAR LE PROMPT, PAS PAR LE MÉLANGE — décision du 2026-08-08.
 #
-# Trois composantes différentes, et c'est le point faible du lot : chacune est celle qui
-# tenait à cette hauteur-là. Panacher n'était pas le plan — `vivian` seule aurait donné une
-# mue continue — mais elle SATURE à ~226 Hz (0,6 → 206, 0,8 → 226, 0,9 → 220), donc elle
-# ne peut pas jouer les deux stades jeunes. C'est ce que l'oreille doit vérifier en
-# priorité : un enfant qui grandit, ou trois personnes différentes.
-DOSES_RETENUES = {
-    "prologue": (None, 0.0),        # 125 Hz — King Grey, la base validée telle quelle
-    "s02_toddler": ("serena", 0.8),  # 250 Hz, plage 29 — le plus aigu qui tienne
-    "s03_child": ("ono_anna", 0.45),  # 235 Hz, plage 28
-    # Ces deux-là ne sont PAS résolus, et les valeurs ci-dessous sont les moins mauvaises
-    # effectivement mesurées — surtout pas interpolées. La tentative d'interpolation a
-    # échoué de façon instructive : sur leurs propres répliques, academy donnait 156 Hz à
-    # 0,45 et 194 à 0,55, donc 0,50 devait tomber vers 175 — il a rendu **150**, plus bas
-    # que 0,45. Et teen, visé à 0,53 pour 200 Hz, a rendu 163 comme à 0,45 alors que 0,60
-    # rend 225. La relation dose -> hauteur est en ESCALIER, pas en pente : elle ne
-    # s'interpole pas, même à stade et répliques constants. Ne rien y régler au centième.
-    "s04_teen": ("vivian", 0.6),     # 225 Hz pour 200 visés, plage 94 — trop haut, dispersé
-    "s05_academy": ("vivian", 0.55),  # 194 Hz pour 175 visés, plage 72
+# La première approche déclinait l'âge en diluant le timbre validé dans une composante
+# plus aiguë. Elle atteignait la hauteur (245 Hz au stade toddler) mais réduisait
+# `aiden:0.5+ryan:0.5` à 20 % du mélange : ce n'était plus la voix choisie, seulement son
+# nom. Refusée, et à raison — une validation porte sur une voix entendue, pas sur une
+# formule.
+#
+# Mesuré ensuite sur les sept répliques parlées du stade toddler
+# (`tools/age_par_prompt_arthur.py`, lot d'écoute 7) : le prompt seul fait AUSSI BIEN que
+# la dilution à 30 % — 164 Hz contre 162 — en gardant le timbre à 100 %. À hauteur égale
+# il est donc strictement meilleur, et c'est le levier qui aurait dû être essayé en
+# premier.
+#
+# Ce qu'il ne fait pas : atteindre les 270 Hz d'un enfant de trois ans. Cette cible était
+# un repère physiologique que je m'étais fixé, pas une exigence : elle ne vaut pas de
+# dénaturer la voix du personnage. Arthur parle jeune, il ne change pas de gorge.
+TIMBRE = BASE                        # le même à tous les âges, sans exception
+
+PROMPTS_AGE = {
+    # Le prologue garde le timbre nu, sans prompt d'âge : c'est déjà la voix d'un homme
+    # mûr, et il tombait à 131 Hz pour 132 visés. Ne pas réparer ce qui marche.
+    "prologue": "",
+    # Formulation « enfant-insistant », la meilleure des quatre essayées (164 Hz). Les plus
+    # sobres montaient moins, et « enfant-jeu » RETOMBAIT à 130 : plus insistant ne veut
+    # pas dire plus haut, la formulation se mesure elle aussi.
+    "s02_toddler": ("Parle exactement comme un très jeune enfant de trois ans : voix "
+                    "haut perchée, fluette et claire, intonation montante, mots détachés, "
+                    "comme un petit garçon qui découvre le monde."),
+    # Les trois suivants NE SONT PAS MESURÉS — ils reprennent la formulation qui a marché
+    # en changeant l'âge. À passer au banc avant toute livraison.
+    "s03_child": ("Parle comme un garçon de six ans : voix claire et légère, un peu "
+                  "haut perchée, curieuse, phrases nettes."),
+    "s04_teen": ("Parle comme un garçon de treize ans : voix jeune qui commence à muer, "
+                 "plus posée, encore claire mais moins aiguë."),
+    "s05_academy": ("Parle comme un adolescent de quinze ans : voix presque adulte, "
+                    "assurée et posée, sans rondeur enfantine."),
 }
 
 
@@ -275,15 +314,38 @@ def _part_bande(chemin: Path, cible: float) -> float:
     return float(bande / total) if total > 0 else 0.0
 
 
-def _douteux(clips: list, cible: float) -> list:
-    """Les clips dont l'énergie n'est pas là où elle devrait, comparés à LEUR stade.
+CIBLE_NARRATION = 132.0              # la narration ne suit pas l'âge : voix nue partout
 
-    Seuil relatif à la médiane du lot, pas absolu : la part d'énergie dans la bande dépend
-    du timbre et du texte, et un seuil fixe rejetterait tout un stade ou aucun.
+
+def _cible(sid: str, role: str) -> float:
+    """Hauteur attendue d'un clip — elle dépend du RÔLE autant que du stade.
+
+    Piège rencontré : contrôler les narrations d'un stade jeune avec la cible de ce stade
+    signalait 13 clips sur 13 comme défectueux, alors qu'ils étaient parfaitement sains —
+    la narration ne suit pas l'âge, elle DOIT rester à ~130 Hz. Un contrôle qui applique
+    la mauvaise attente ne détecte pas des défauts, il en invente.
     """
-    parts = [(_part_bande(c, cible), c) for c in clips]
-    mediane = float(np.median([p for p, _ in parts]))
-    return [(p, c) for p, c in parts if p < 0.5 * mediane], mediane
+    return CIBLE_NARRATION if role == "narrator" else CIBLES.get(sid, CIBLE_NARRATION)
+
+
+def _douteux(clips_roles: list, sid: str) -> tuple:
+    """Les clips dont l'énergie n'est pas là où elle devrait, à rôle comparable.
+
+    Seuil relatif à la médiane, pas absolu : la part d'énergie dans la bande dépend du
+    timbre et du texte, et un seuil fixe rejetterait tout un lot ou aucun. Médiane calculée
+    PAR RÔLE, parce que narration et réplique parlée n'ont ni la même cible ni la même
+    distribution — les mélanger ferait juger les unes à l'aune des autres.
+    """
+    mauvais, medianes = [], {}
+    for role in {r for _, r in clips_roles}:
+        cible = _cible(sid, role)
+        parts = [(_part_bande(c, cible), c) for c, r in clips_roles if r == role]
+        if not parts:
+            continue
+        mediane = float(np.median([p for p, _ in parts]))
+        medianes[role] = mediane
+        mauvais += [(p, c) for p, c in parts if p < 0.5 * mediane]
+    return sorted(mauvais), medianes
 
 
 def verifier(stades: list) -> int:
@@ -291,13 +353,16 @@ def verifier(stades: list) -> int:
     sortie = MEDIA / "voices/arthur-qwen3"
     lots = _repliques_par_stade()
     for sid in stades:
-        cible = CIBLES[sid]
-        clips = [sortie / f"{l['id']}.ogg" for l in lots[sid]]
-        clips = [c for c in clips if c.exists()]
-        mauvais, mediane = _douteux(clips, cible)
-        print(f"\n=== {sid} : {len(clips)} clips, médiane d'énergie en bande "
-              f"{mediane:.0%}, {len(mauvais)} douteux", flush=True)
-        for part, c in sorted(mauvais):
+        clips_roles = [(sortie / f"{l['id']}.ogg", l["role"]) for l in lots[sid]
+                       if (sortie / f"{l['id']}.ogg").exists()]
+        role_par_clip = {c: r for c, r in clips_roles}
+        mauvais, medianes = _douteux(clips_roles, sid)
+        detail = ", ".join(f"{r} {m:.0%} (cible {_cible(sid, r):.0f} Hz)"
+                           for r, m in sorted(medianes.items()))
+        print(f"\n=== {sid} : {len(clips_roles)} clips — médiane d'énergie par rôle : "
+              f"{detail} — {len(mauvais)} douteux", flush=True)
+        for part, c in mauvais:
+            cible = _cible(sid, role_par_clip[c])
             print(f"    {c.stem:22s} {part:5.1%} de l'énergie dans "
                   f"{0.6 * cible:.0f}-{1.4 * cible:.0f} Hz", flush=True)
     return 0
@@ -318,22 +383,21 @@ def reprendre(stades: list, essais: int = 4) -> int:
     modele = qwen3tts._charge("customvoice")
     bilan = {}
     for sid in stades:
-        cible, (aigue, dose) = CIBLES[sid], DOSES_RETENUES[sid]
-        spec = _melange(dose, aigue)
+        spec = TIMBRE
         par_id = {l["id"]: l for l in lots[sid]}
-        clips = [sortie / f"{i}.ogg" for i in par_id if (sortie / f"{i}.ogg").exists()]
-        mauvais, mediane = _douteux(clips, cible)
-        print(f"\n=== {sid} : {len(mauvais)} clips à reprendre (seuil "
-              f"{0.5 * mediane:.0%})", flush=True)
+        clips_roles = [(sortie / f"{i}.ogg", l["role"]) for i, l in par_id.items()
+                       if (sortie / f"{i}.ogg").exists()]
+        mauvais, medianes = _douteux(clips_roles, sid)
+        print(f"\n=== {sid} : {len(mauvais)} clips à reprendre", flush=True)
         bilan[sid] = {"repris": 0, "sauves": 0, "restants": []}
-        for part0, chemin in sorted(mauvais):
+        for part0, chemin in mauvais:
             ligne = par_id[chemin.stem]
-            registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"],
-                                                      qwen3tts.REGISTRE_DEFAUT)
+            cible = _cible(sid, ligne["role"])
+            seuil = 0.5 * medianes[ligne["role"]]
             meilleur, meilleure_part = None, part0
             for essai in range(essais):
                 onde, _ = qwen3tts._genere(
-                    modele, "customvoice", ligne["texte"], qwen3tts.REGISTRES[registre],
+                    modele, "customvoice", ligne["texte"], _instruct(qwen3tts, sid, ligne),
                     spec, seed=7000 + essai * 613, temperature=0.7)
                 tmp = chemin.with_suffix(".essai.ogg")
                 qwen3tts._ecrit(onde, modele.sample_rate, tmp, "ogg")
@@ -341,13 +405,13 @@ def reprendre(stades: list, essais: int = 4) -> int:
                 if part > meilleure_part:
                     meilleur, meilleure_part = onde, part
                 tmp.unlink()
-                if meilleure_part >= 0.5 * mediane:
+                if meilleure_part >= seuil:
                     break
             bilan[sid]["repris"] += 1
             if meilleur is not None:
                 qwen3tts._ecrit(meilleur, modele.sample_rate, chemin, "ogg")
-            etat = "OK" if meilleure_part >= 0.5 * mediane else "encore douteux"
-            if meilleure_part >= 0.5 * mediane:
+            etat = "OK" if meilleure_part >= seuil else "encore douteux"
+            if meilleure_part >= seuil:
                 bilan[sid]["sauves"] += 1
             else:
                 bilan[sid]["restants"].append(chemin.stem)
@@ -385,17 +449,16 @@ def livrer(stades: list) -> int:
     modele = qwen3tts._charge("customvoice")
     rapport = {"base": BASE, "sortie": str(sortie.relative_to(MEDIA)), "stades": {}}
     for sid in stades:
-        aigue, dose = DOSES_RETENUES[sid]
-        spec = _melange(dose, aigue)
+        spec = TIMBRE                    # le timbre validé, à tous les âges
         lot = lots.get(sid) or []
-        print(f"\n=== {sid} : {len(lot)} répliques  ({spec})", flush=True)
+        age = PROMPTS_AGE.get(sid, "")
+        print(f"\n=== {sid} : {len(lot)} répliques  ({spec})"
+              f"{'  + prompt d âge' if age else '  (sans prompt d âge)'}", flush=True)
         faits, relances, debut = [], 0, time.time()
         for i, ligne in enumerate(lot):
-            registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"],
-                                                      qwen3tts.REGISTRE_DEFAUT)
             cible = sortie / f"{ligne['id']}.ogg"
             onde, essais = qwen3tts._genere(modele, "customvoice", ligne["texte"],
-                                            qwen3tts.REGISTRES[registre], spec,
+                                            _instruct(qwen3tts, sid, ligne), spec,
                                             seed=2000 + i, temperature=0.7)
             relances += essais
             qwen3tts._ecrit(onde, modele.sample_rate, cible, "ogg")
@@ -422,19 +485,15 @@ def livrer(stades: list) -> int:
 
 
 def produire() -> int:
-    """Le lot d'écoute : chaque stade sur SES répliques, avec le mélange retenu."""
+    """Le lot d'écoute : chaque stade sur SES répliques, timbre validé + prompt d'âge."""
     import bench_qwen3tts as mesures
     import qwen3tts
-
-    if not DOSES_RETENUES:
-        print("DOSES_RETENUES est vide — lancer `calibrer` d'abord.", file=sys.stderr)
-        return 1
 
     lots = _repliques_par_stade()
     modele = qwen3tts._charge("customvoice")
     rapport = {"base": BASE, "cibles_f0": CIBLES, "stades": {}}
-    for sid, (aigue, dose) in DOSES_RETENUES.items():
-        spec = _melange(dose, aigue)
+    for sid in PROMPTS_AGE:
+        spec = TIMBRE
         lot = lots.get(sid) or []
         if not lot:
             print(f"  {sid} : aucune réplique", flush=True)
@@ -442,7 +501,7 @@ def produire() -> int:
         echantillon = _echantillon(lot, 6)
         dossier = ECOUTE / sid
         print(f"\n=== {sid}  ({spec})  {len(echantillon)} répliques", flush=True)
-        clips = _genere_lot(modele, qwen3tts, spec, echantillon, dossier)
+        clips = _genere_lot(modele, qwen3tts, spec, echantillon, dossier, sid=sid)
         rapport["stades"][sid] = {
             "spec": spec, "repliques_du_stade": len(lot),
             "dossier": str(dossier.relative_to(MEDIA)), **_mesure(clips, mesures),

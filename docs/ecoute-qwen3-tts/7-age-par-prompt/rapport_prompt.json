@@ -1,0 +1,60 @@
+{
+  "base": "aiden:0.5+ryan:0.5",
+  "cible_f0": 270.0,
+  "variantes": {
+    "nu": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "instruct": "Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 1.0,
+      "f0_median": 125.0,
+      "f0_plage": 39.66813585688358,
+      "ambitus_st": 6.597225181901981,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/nu"
+    },
+    "enfant-sobre": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "instruct": "Voix d'un petit garçon de trois ans. Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 1.0,
+      "f0_median": 149.06832298136646,
+      "f0_plage": 45.21316651605193,
+      "ambitus_st": 7.561101112549584,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/enfant-sobre"
+    },
+    "enfant-jeu": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "instruct": "Voix d'un petit garçon de trois ans, aiguë et légère, débit rapide et enjoué, phrases courtes, souffle court. Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 1.0,
+      "f0_median": 130.43478260869566,
+      "f0_plage": 72.79839835620768,
+      "ambitus_st": 6.246658387498635,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/enfant-jeu"
+    },
+    "enfant-insistant": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "instruct": "Parle exactement comme un très jeune enfant de trois ans : voix haut perchée, fluette et claire, intonation montante, mots détachés, comme un petit garçon qui découvre le monde. Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 1.0,
+      "f0_median": 164.3835616438356,
+      "f0_plage": 67.0,
+      "ambitus_st": 5.568967531978698,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/enfant-insistant"
+    },
+    "dilution-refusee (serena 0.8)": {
+      "spec": "aiden:0.100+ryan:0.100+serena:0.800",
+      "instruct": "Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 0.2,
+      "f0_median": 242.42424242424244,
+      "f0_plage": 37.32116939664107,
+      "ambitus_st": 2.9814264895872475,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/dilution-refusee"
+    },
+    "dilution-douce (serena 0.3)": {
+      "spec": "aiden:0.350+ryan:0.350+serena:0.300",
+      "instruct": "Ton naturel de conversation, engagé et vivant.",
+      "part_timbre_valide": 0.7,
+      "f0_median": 162.16216216216216,
+      "f0_plage": 70.1866814386895,
+      "ambitus_st": 4.890706594663515,
+      "dossier": "docs/ecoute-qwen3-tts/7-age-par-prompt/dilution-douce"
+    }
+  }
+}

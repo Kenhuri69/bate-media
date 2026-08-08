@@ -47,6 +47,25 @@ if [ "$lot" = 5b ]; then
   echo "    reste-t-il le même personnage entre « Prêt. » et 14 s de narration ?"
   for f in 5-tournoi-arthur/aiden-0-5_serena-0-5/*.ogg; do jouer "$f"; done
 fi
+if [ "$lot" = 7 ] || [ "$lot" = 0 ]; then
+  # L'âge par le PROMPT, timbre validé intact — contre la dilution qui l'écrase.
+  # Même réplique enchaînée : c'est la comparaison qui tranche.
+  echo "=== 7. ÂGE PAR PROMPT (timbre aiden:0.5+ryan:0.5 INTACT) vs dilution"
+  for id in arthur_ch03_02 arthur_ch04_03; do
+    echo "  --- $id"
+    for v in nu enfant-sobre enfant-jeu enfant-insistant dilution-refusee dilution-douce; do
+      case $v in
+        nu)               t="ton timbre nu ...................... 125 Hz  100%";;
+        enfant-sobre)     t="prompt sobre ....................... 149 Hz  100%";;
+        enfant-jeu)       t="prompt jeu ......................... 130 Hz  100%";;
+        enfant-insistant) t="prompt insistant ................... 164 Hz  100%";;
+        dilution-refusee) t="serena 0.8 (refusée) ............... 242 Hz   20%";;
+        dilution-douce)   t="serena 0.3 ......................... 162 Hz   70%";;
+      esac
+      echo "     [$t]"; jouer "7-age-par-prompt/$v/$id.ogg"
+    done
+  done
+fi
 if [ "$lot" = 6 ] || [ "$lot" = 0 ]; then
   # Dans l'ordre de la VIE d'Arthur, pas dans celui des dossiers : le prologue est
   # chronologiquement premier (King Grey meurt) et vocalement le plus grave.

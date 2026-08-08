@@ -1,5 +1,24 @@
 # Lot 6 — la voix d'Arthur par âge (2026-08-08)
 
+> **Refondu le même jour.** Ce lot déclinait d'abord l'âge en DILUANT le timbre validé
+> dans une composante plus aiguë. Ça atteignait la hauteur (245 Hz à trois ans) au prix de
+> réduire `aiden:0.5+ryan:0.5` à **20 %** du mélange : ce n'était plus la voix choisie,
+> seulement son nom. Refusé, et à raison — une validation porte sur une voix entendue, pas
+> sur une formule, et les 270 Hz visés n'étaient qu'un repère physiologique que je m'étais
+> fixé.
+>
+> **L'âge se fait désormais par le PROMPT, timbre intact à 100 %** (lot 7). Mesuré : le
+> prompt seul fait aussi bien que la dilution à 30 % — 164 Hz contre 162 — donc à hauteur
+> égale il est strictement meilleur. C'est le levier qui aurait dû être essayé en premier.
+>
+> **Et la narration ne suit pas l'âge** : une seule voix de narrateur sur tout le jeu.
+> Décision de simplicité, appuyée par la mesure — le registre narration annulait déjà le
+> prompt enfantin (127 Hz contre 164 pour le parlé du même stade). Arthur PARLE jeune et
+> RACONTE d'une voix posée. Seules 149 répliques parlées sur 1065 portent un âge.
+>
+> Les tableaux de dilution ci-dessous sont conservés comme trace de ce qui a été essayé,
+> pas comme configuration en service.
+
 Arthur est le seul rôle de BATE qui traverse quatre âges en parlant : trois ans au
 chapitre 2, quinze à l'académie. Une voix unique sur tout le jeu ferait dire « Papa,
 comment on sait qu'on a réussi ? » par un homme de trente ans.
