@@ -94,9 +94,49 @@ cohésion de timbre ne se dégrade pas systématiquement — elle peut **s'amél
 | *repère Chatterbox* | *0,941* | *0,824* | *176–211 Hz* |
 
 `aiden:0.7+serena:0.3` bat le timbre pur ET Chatterbox. Mais **ça dépend du couple** :
-`+vivian` retombe sous Chatterbox. Un mélange se mesure, il ne se suppose pas. Arbitrage
-ouvert pour Arthur : `+serena` est le plus stable, `+vivian` le plus proche en hauteur de
-l'Arthur actuel (183 vs 176–211 Hz).
+`+vivian` retombe sous Chatterbox. Un mélange se mesure, il ne se suppose pas.
+
+Cet arbitrage — `+serena` le plus stable contre `+vivian` le plus proche en hauteur — est
+tranché plus bas : **`aiden:0.5+serena:0.5`**, et par un critère que ce tableau-ci n'a pas.
+
+## Le timbre d'Arthur : `aiden:0.5+serena:0.5` (balayage du 2026-08-08)
+
+Banc : `tools/tournoi_timbre_arthur.py`, sept timbres × les huit mêmes répliques réelles,
+registres et graines de production. Repère Chatterbox **recalculé** sur les `.ogg` livrés
+dans `voices/arthur/` — donc au même format que les candidats, ce qui n'était pas le cas
+du tableau précédent (mesuré sur des `.wav`). Les deux séries de chiffres ne se comparent
+pas ; seul le classement interne à chaque banc vaut.
+
+| timbre | F0 médian | **plage F0** | cohésion | ambitus | verdict |
+|---|---|---|---|---|---|
+| **aiden:0.5+serena:0.5** | **183 Hz** | **41 Hz** | 0,942 | 3,6 st | **RETENU** |
+| aiden:0.7+serena:0.3 | 172 Hz | 62 Hz | 0,936 | 5,1 st | trop grave, trop dispersé |
+| aiden:0.9+vivian:0.1 | 153 Hz | 78 Hz | 0,923 | 5,6 st | écarté |
+| aiden pur | 147 Hz | 95 Hz | 0,934 | 5,8 st | écarté |
+| aiden:0.8+vivian:0.2 | 189 Hz | 105 Hz | 0,929 | 5,6 st | change d'âge |
+| aiden:0.6+serena:0.3+vivian:0.1 | 172 Hz | 119 Hz | 0,845 | 4,5 st | écarté |
+| aiden:0.7+vivian:0.3 | 195 Hz | 158 Hz | 0,895 | 4,8 st | change d'âge |
+| *repère Chatterbox* | *190 Hz* | *38 Hz* | *0,941* | — | — |
+
+**Ce n'est pas la cohésion qui départage, et c'est la leçon du banc.** Les sept candidats
+tiennent en un dixième de cohésion, le premier ne devance le repère que de 0,001 — du
+bruit. Pire, le critère est biaisé : une voix qui varie peu à l'intérieur d'une réplique
+marque mécaniquement mieux, si bien que la porte de cohésion récompense le timbre le plus
+**plat**. Le gagnant a d'ailleurs le plus petit ambitus du lot (3,6 st contre 5,1–5,8) :
+il est stable en partie parce qu'il joue moins. C'est la contrepartie assumée du choix,
+et c'est précisément ce que l'oreille doit vérifier.
+
+Ce qui sépare vraiment, c'est la **dispersion de la hauteur d'un clip à l'autre**. Et la
+médiane du lot la masque : `aiden:0.7+vivian:0.3` affiche 195 Hz, pile dans la cible —
+mais c'est la moyenne d'une voix qui passe de **138 Hz à 296 Hz** selon la réplique, soit
+un homme mûr au chapitre 3 et un enfant au chapitre 4. Ce n'est pas un personnage, c'en
+est trois. `+serena:0.5` tient 164–205 Hz, une plage de 41 Hz — celle de Chatterbox (38).
+
+Aucun clip n'a déclenché le garde-fou `_suspect()` : ces dérives-là ne sont pas des
+dégénérescences de génération (durée, niveau, souffle), ce sont des clips parfaitement
+normaux qui ne se ressemblent pas entre eux. Un contrôle par clip ne pouvait pas les voir.
+
+À écouter avant d'entériner : `bash docs/ecoute-qwen3-tts/ecouter.sh 5`.
 
 **Le piège à ne pas reproduire.** Le mélange se fait en substituant le vecteur au seul
 **premier** accès de forme (1,1) à la table d'embedding — celui du speaker dans
