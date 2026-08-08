@@ -1,0 +1,62 @@
+{
+  "base": "aiden:0.5+ryan:0.5",
+  "cibles_f0": {
+    "s02_toddler": 270.0,
+    "s03_child": 240.0,
+    "s04_teen": 200.0,
+    "s05_academy": 175.0,
+    "prologue": 132.0
+  },
+  "stades": {
+    "prologue": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 26,
+      "dossier": "docs/ecoute-qwen3-tts/6-ages-arthur/prologue",
+      "f0_median": 131.00904331270823,
+      "f0_plage": 37.14752068441493,
+      "cohesion_moyenne": 0.9866515594817995,
+      "cohesion_min": 0.9650194515071366,
+      "paires": 15
+    },
+    "s02_toddler": {
+      "spec": "aiden:0.100+ryan:0.100+serena:0.800",
+      "repliques_du_stade": 46,
+      "dossier": "docs/ecoute-qwen3-tts/6-ages-arthur/s02_toddler",
+      "f0_median": 245.0,
+      "f0_plage": 37.32116939664107,
+      "cohesion_moyenne": 0.8641028456828241,
+      "cohesion_min": 0.5690355603960409,
+      "paires": 15
+    },
+    "s03_child": {
+      "spec": "aiden:0.275+ryan:0.275+ono_anna:0.450",
+      "repliques_du_stade": 332,
+      "dossier": "docs/ecoute-qwen3-tts/6-ages-arthur/s03_child",
+      "f0_median": 225.75516693163752,
+      "f0_plage": 63.31976481230214,
+      "cohesion_moyenne": 0.9315494581554751,
+      "cohesion_min": 0.7736165903015568,
+      "paires": 15
+    },
+    "s04_teen": {
+      "spec": "aiden:0.200+ryan:0.200+vivian:0.600",
+      "repliques_du_stade": 137,
+      "dossier": "docs/ecoute-qwen3-tts/6-ages-arthur/s04_teen",
+      "f0_median": 225.39682539682542,
+      "f0_plage": 94.33581939125176,
+      "cohesion_moyenne": 0.9332557029366522,
+      "cohesion_min": 0.8245810524750727,
+      "paires": 15
+    },
+    "s05_academy": {
+      "spec": "aiden:0.225+ryan:0.225+vivian:0.550",
+      "repliques_du_stade": 310,
+      "dossier": "docs/ecoute-qwen3-tts/6-ages-arthur/s05_academy",
+      "f0_median": 194.48818897637796,
+      "f0_plage": 71.63790296320417,
+      "cohesion_moyenne": 0.9334609221831839,
+      "cohesion_min": 0.7807308525487324,
+      "paires": 15
+    }
+  }
+}

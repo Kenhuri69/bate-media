@@ -15,6 +15,7 @@ pas dans le dépôt — elles sont distribuées en Release (voir le README racin
     bash docs/ecoute-qwen3-tts/ecouter.sh 4    # mélanges de timbres
     bash docs/ecoute-qwen3-tts/ecouter.sh 5    # tournoi : 7 timbres sur la même réplique
     bash docs/ecoute-qwen3-tts/ecouter.sh 5b   # le timbre retenu sur les 8 répliques
+    bash docs/ecoute-qwen3-tts/ecouter.sh 6    # les âges d'Arthur, du prologue à l'académie
 
 `ecouter.sh` utilise `afplay` (macOS). Ailleurs, n'importe quel lecteur fait l'affaire.
 
@@ -25,6 +26,7 @@ pas dans le dépôt — elles sont distribuées en Release (voir le README racin
 | `3-ab/` | A = Chatterbox en service, B = Qwen3-TTS, sur 4 répliques identiques |
 | `4-melanges/` | mélanges pondérés de timbres, + les 7 registres sur le meilleur |
 | `5-tournoi-arthur/` | balayage des doses pour trancher le timbre d'Arthur ([détail](5-tournoi-arthur/README.md)) |
+| `6-ages-arthur/` | la voix retenue déclinée par âge, du prologue à l'académie ([détail](6-ages-arthur/README.md)) |
 | `rapport.json`, `rapport_speakers.json` | mesures brutes du banc (`tools/bench_qwen3tts.py`) |
 
 Les lots 1 à 4 sont en `.wav`, le lot 5 en `.ogg` — le format de production, celui des

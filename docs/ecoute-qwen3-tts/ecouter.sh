@@ -47,3 +47,13 @@ if [ "$lot" = 5b ]; then
   echo "    reste-t-il le même personnage entre « Prêt. » et 14 s de narration ?"
   for f in 5-tournoi-arthur/aiden-0-5_serena-0-5/*.ogg; do jouer "$f"; done
 fi
+if [ "$lot" = 6 ] || [ "$lot" = 0 ]; then
+  # Dans l'ordre de la VIE d'Arthur, pas dans celui des dossiers : le prologue est
+  # chronologiquement premier (King Grey meurt) et vocalement le plus grave.
+  echo "=== 6. ÂGES : la voix d'Arthur stade par stade, base aiden:0.5+ryan:0.5"
+  echo "    131 Hz -> 245 -> 226 -> 225 -> 194   (enfant et ado sortent pareil : le défaut)"
+  for s in prologue s02_toddler s03_child s04_teen s05_academy; do
+    echo "  --- $s"
+    for f in 6-ages-arthur/$s/*.ogg; do jouer "$f"; done
+  done
+fi

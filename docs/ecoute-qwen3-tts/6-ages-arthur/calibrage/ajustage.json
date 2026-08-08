@@ -1,0 +1,30 @@
+{
+  "s04_teen-vivian-0-35": {
+    "f0_median": 144.043,
+    "f0_plage": 85.167,
+    "cohesion_moyenne": 0.971,
+    "cohesion_min": 0.949,
+    "paires": 15
+  },
+  "s04_teen-vivian-0-45": {
+    "f0_median": 162.729,
+    "f0_plage": 73.483,
+    "cohesion_moyenne": 0.964,
+    "cohesion_min": 0.928,
+    "paires": 15
+  },
+  "s05_academy-vivian-0-55": {
+    "f0_median": 194.488,
+    "f0_plage": 71.638,
+    "cohesion_moyenne": 0.933,
+    "cohesion_min": 0.781,
+    "paires": 15
+  },
+  "s05_academy-vivian-0-65": {
+    "f0_median": 243.661,
+    "f0_plage": 37.321,
+    "cohesion_moyenne": 0.932,
+    "cohesion_min": 0.871,
+    "paires": 15
+  }
+}
