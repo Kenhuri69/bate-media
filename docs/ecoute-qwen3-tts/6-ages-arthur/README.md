@@ -57,6 +57,47 @@ repose sur peu de trames voisées. Dans `s05_academy`, les deux clips les plus c
 (2,0 et 2,3 s) sortent à 207 et 232 Hz quand les quatre longs sont à 133-157. Avant de
 resserrer un stade, exclure ou pondérer les clips courts — sinon on optimise du bruit.
 
+## Livré : prologue et toddler (72 répliques)
+
+```bash
+python tools/voix_age_arthur.py livrer prologue,s02_toddler   # 72 clips, ~8 min
+python tools/voix_age_arthur.py verifier prologue,s02_toddler # contrôle qualité
+python tools/voix_age_arthur.py reprendre prologue,s02_toddler # régénère les défectueux
+```
+
+Sortie dans **`voices/arthur-qwen3/`** et non `voices/arthur/`, qui contient les 1065
+répliques Chatterbox en service — celles qui font tourner le jeu et qui servent d'étalon
+aux bancs (`_repere_chatterbox`). Les deux jeux cohabitent tant que les trois stades
+restants ne sont pas résolus. Dossier non versionné (`voices/*/` est dans .gitignore) :
+les médias partent en Release.
+
+**Un échantillon de six clips ne prédit pas un lot de quarante-six.** Les deux stades
+affichaient 37 Hz de plage à l'écoute ; livrés en entier, 298 et 127 Hz. Le défaut est
+rare — 9 clips sur 72, soit 12,5 % — donc six tirages passent facilement à côté. Contrôler
+le lot complet, jamais l'échantillon qui a servi à choisir.
+
+**Le garde-fou `_suspect()` n'a rien vu** (0 relance sur 72) : ces clips avaient une durée
+plausible, un niveau au-dessus de son seuil et une part de trames voisées normale. Ce
+qu'ils avaient d'anormal, c'est que leur énergie n'était pas à la bonne hauteur — 4 à 18 %
+dans la bande du fondamental attendu, contre 50 à 69 % pour le lot. D'où le contrôle
+`verifier`, fondé sur l'énergie spectrale et non sur la F0.
+
+**Et pourquoi pas sur la F0 : elle se trompe d'octave.** `narrator_ch00_08` est mesuré à
+400 Hz — la borne même du détecteur — alors que la moitié de son énergie est en 80-200 Hz.
+Le clip est sain, c'est la mesure qui est fausse : l'autocorrélation attrape une
+harmonique quand le fondamental est faible. La plage de 298 Hz encore affichée pour le
+prologue vient entièrement de ce seul clip. **Ne pas juger un clip sur sa F0 seule.**
+
+Après reprise (jusqu'à 4 graines, on garde le meilleur essai au sens de l'énergie) :
+**9 clips sur 9 récupérés**, de 3,6 % à 71 %, de 17 % à 90 %. C'étaient donc bien des
+accidents de génération, pas une fatalité du texte.
+
+Réserve sur le critère lui-même : son seuil est **relatif à la médiane du lot**, donc
+réparer les mauvais clips relève la médiane et resserre le seuil — un clip du prologue
+(`narrator_ch01_01`, 29 %) est passé « douteux » après coup sans avoir bougé. Ce critère
+ne converge pas vers zéro et ne doit pas être itéré jusque-là ; il sert à isoler les
+accidents francs, pas à trier la queue de distribution.
+
 ## Écouter
 
 ```bash

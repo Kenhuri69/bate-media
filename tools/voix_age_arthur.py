@@ -253,6 +253,174 @@ def ajuster(sid: str, aigue: str, doses: list) -> int:
     return 0
 
 
+def _part_bande(chemin: Path, cible: float) -> float:
+    """Part de l'énergie vocale située dans la bande du fondamental attendu.
+
+    Critère de contrôle VOLONTAIREMENT distinct de la F0, parce que la F0 est le mouchard
+    peu fiable ici : l'autocorrélation attrape régulièrement une harmonique quand le
+    fondamental est faible, et rend 400 Hz — la borne même du détecteur — sur des clips
+    dont l'énergie est en réalité à 100 Hz. Mesurer où est l'énergie ne se trompe pas
+    d'octave. Un clip sain met la moitié ou plus de son énergie vocale dans cette bande ;
+    les clips cassés du prologue tombaient à 4-14 %.
+    """
+    import soundfile as sf
+
+    x, sr = sf.read(str(chemin))
+    if x.ndim > 1:
+        x = x.mean(axis=1)
+    spectre = np.abs(np.fft.rfft(x * np.hanning(len(x)))) ** 2
+    f = np.fft.rfftfreq(len(x), 1 / sr)
+    total = spectre[(f > 60) & (f < 2000)].sum()
+    bande = spectre[(f >= 0.6 * cible) & (f < 1.4 * cible)].sum()
+    return float(bande / total) if total > 0 else 0.0
+
+
+def _douteux(clips: list, cible: float) -> list:
+    """Les clips dont l'énergie n'est pas là où elle devrait, comparés à LEUR stade.
+
+    Seuil relatif à la médiane du lot, pas absolu : la part d'énergie dans la bande dépend
+    du timbre et du texte, et un seuil fixe rejetterait tout un stade ou aucun.
+    """
+    parts = [(_part_bande(c, cible), c) for c in clips]
+    mediane = float(np.median([p for p, _ in parts]))
+    return [(p, c) for p, c in parts if p < 0.5 * mediane], mediane
+
+
+def verifier(stades: list) -> int:
+    """Contrôle qualité du lot livré, sans rien régénérer."""
+    sortie = MEDIA / "voices/arthur-qwen3"
+    lots = _repliques_par_stade()
+    for sid in stades:
+        cible = CIBLES[sid]
+        clips = [sortie / f"{l['id']}.ogg" for l in lots[sid]]
+        clips = [c for c in clips if c.exists()]
+        mauvais, mediane = _douteux(clips, cible)
+        print(f"\n=== {sid} : {len(clips)} clips, médiane d'énergie en bande "
+              f"{mediane:.0%}, {len(mauvais)} douteux", flush=True)
+        for part, c in sorted(mauvais):
+            print(f"    {c.stem:22s} {part:5.1%} de l'énergie dans "
+                  f"{0.6 * cible:.0f}-{1.4 * cible:.0f} Hz", flush=True)
+    return 0
+
+
+def reprendre(stades: list, essais: int = 4) -> int:
+    """Régénère les clips douteux sur d'autres graines, en gardant le meilleur essai.
+
+    « Meilleur » au sens du critère d'énergie, pas de la F0 : c'est celui qui a détecté le
+    défaut, c'est celui qui doit valider la reprise. On garde le meilleur essai même s'il
+    reste sous le seuil — un clip amélioré vaut mieux qu'un clip cassé conservé par
+    principe — et on journalise ceux qui n'ont pas pu être sauvés.
+    """
+    import qwen3tts
+
+    sortie = MEDIA / "voices/arthur-qwen3"
+    lots = _repliques_par_stade()
+    modele = qwen3tts._charge("customvoice")
+    bilan = {}
+    for sid in stades:
+        cible, (aigue, dose) = CIBLES[sid], DOSES_RETENUES[sid]
+        spec = _melange(dose, aigue)
+        par_id = {l["id"]: l for l in lots[sid]}
+        clips = [sortie / f"{i}.ogg" for i in par_id if (sortie / f"{i}.ogg").exists()]
+        mauvais, mediane = _douteux(clips, cible)
+        print(f"\n=== {sid} : {len(mauvais)} clips à reprendre (seuil "
+              f"{0.5 * mediane:.0%})", flush=True)
+        bilan[sid] = {"repris": 0, "sauves": 0, "restants": []}
+        for part0, chemin in sorted(mauvais):
+            ligne = par_id[chemin.stem]
+            registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"],
+                                                      qwen3tts.REGISTRE_DEFAUT)
+            meilleur, meilleure_part = None, part0
+            for essai in range(essais):
+                onde, _ = qwen3tts._genere(
+                    modele, "customvoice", ligne["texte"], qwen3tts.REGISTRES[registre],
+                    spec, seed=7000 + essai * 613, temperature=0.7)
+                tmp = chemin.with_suffix(".essai.ogg")
+                qwen3tts._ecrit(onde, modele.sample_rate, tmp, "ogg")
+                part = _part_bande(tmp, cible)
+                if part > meilleure_part:
+                    meilleur, meilleure_part = onde, part
+                tmp.unlink()
+                if meilleure_part >= 0.5 * mediane:
+                    break
+            bilan[sid]["repris"] += 1
+            if meilleur is not None:
+                qwen3tts._ecrit(meilleur, modele.sample_rate, chemin, "ogg")
+            etat = "OK" if meilleure_part >= 0.5 * mediane else "encore douteux"
+            if meilleure_part >= 0.5 * mediane:
+                bilan[sid]["sauves"] += 1
+            else:
+                bilan[sid]["restants"].append(chemin.stem)
+            print(f"    {chemin.stem:22s} {part0:5.1%} -> {meilleure_part:5.1%}  {etat}",
+                  flush=True)
+    del modele
+
+    print("\n" + "=" * 70)
+    for sid, b in bilan.items():
+        print(f"{sid:14s} {b['sauves']}/{b['repris']} récupérés"
+              + (f", restants : {', '.join(b['restants'])}" if b["restants"] else ""))
+    return 0
+
+
+def livrer(stades: list) -> int:
+    """Génère TOUTES les répliques des stades donnés, pour de bon.
+
+    Sortie dans `voices/arthur-qwen3/` et NON dans `voices/arthur/`, qui contient les 1065
+    répliques Chatterbox en service : ce sont elles qui font tourner le jeu aujourd'hui, et
+    ce sont elles que les bancs prennent pour repère (`_repere_chatterbox`). Les écraser
+    ferait perdre à la fois la voix en production et l'étalon des mesures, pour un lot qui
+    ne couvre que deux stades sur cinq. Les deux jeux cohabitent jusqu'à ce que les trois
+    stades restants soient résolus. Le dossier n'est pas versionné (`voices/*/` est dans
+    .gitignore) : les médias partent en Release, pas dans l'arborescence.
+    """
+    import bench_qwen3tts as mesures
+    import qwen3tts
+
+    sortie = MEDIA / "voices/arthur-qwen3"
+    lots = _repliques_par_stade()
+    total = sum(len(lots.get(s) or []) for s in stades)
+    print(f"livraison de {total} répliques ({', '.join(stades)}) vers "
+          f"{sortie.relative_to(MEDIA)}", flush=True)
+
+    modele = qwen3tts._charge("customvoice")
+    rapport = {"base": BASE, "sortie": str(sortie.relative_to(MEDIA)), "stades": {}}
+    for sid in stades:
+        aigue, dose = DOSES_RETENUES[sid]
+        spec = _melange(dose, aigue)
+        lot = lots.get(sid) or []
+        print(f"\n=== {sid} : {len(lot)} répliques  ({spec})", flush=True)
+        faits, relances, debut = [], 0, time.time()
+        for i, ligne in enumerate(lot):
+            registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"],
+                                                      qwen3tts.REGISTRE_DEFAUT)
+            cible = sortie / f"{ligne['id']}.ogg"
+            onde, essais = qwen3tts._genere(modele, "customvoice", ligne["texte"],
+                                            qwen3tts.REGISTRES[registre], spec,
+                                            seed=2000 + i, temperature=0.7)
+            relances += essais
+            qwen3tts._ecrit(onde, modele.sample_rate, cible, "ogg")
+            faits.append(cible)
+            if (i + 1) % 10 == 0 or i + 1 == len(lot):
+                print(f"    {i + 1}/{len(lot)}  ({time.time() - debut:.0f}s, "
+                      f"{relances} relances)", flush=True)
+        rapport["stades"][sid] = {"spec": spec, "clips": len(faits), "relances": relances,
+                                  "secondes": round(time.time() - debut, 1),
+                                  **_mesure(faits, mesures)}
+        r = rapport["stades"][sid]
+        print(f"    F0 {r['f0_median']:5.0f} Hz (cible {CIBLES.get(sid, 0):.0f})   "
+              f"plage {r['f0_plage']:4.0f} Hz", flush=True)
+    del modele
+
+    (sortie / "rapport_livraison.json").write_text(
+        json.dumps(rapport, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
+    print("\n" + "=" * 70)
+    for sid, r in rapport["stades"].items():
+        print(f"{sid:14s} {r['clips']:4d} clips  {r['secondes']:6.0f}s  "
+              f"{r['relances']} relances  F0 {r['f0_median']:.0f}Hz  plage {r['f0_plage']:.0f}Hz")
+    print(f"\nÉcrit dans {sortie}")
+    return 0
+
+
 def produire() -> int:
     """Le lot d'écoute : chaque stade sur SES répliques, avec le mélange retenu."""
     import bench_qwen3tts as mesures
@@ -304,6 +472,13 @@ if __name__ == "__main__":
         doses = ([float(d) for d in sys.argv[3].split(",")] if len(sys.argv) > 3
                  else DOSES_HAUTES)
         sys.exit(calibrer(aigues=[aigue], doses=doses))
+    if action in ("verifier", "reprendre"):
+        # Contrôle qualité du lot livré, puis reprise ciblée des clips défectueux.
+        cibles = sys.argv[2].split(",")
+        sys.exit(verifier(cibles) if action == "verifier" else reprendre(cibles))
+    if action == "livrer":
+        # `livrer <stade>[,<stade>...]` — toutes les répliques, pour de bon.
+        sys.exit(livrer(sys.argv[2].split(",")))
     if action == "ajuster":
         # `ajuster <stade> <composante> <doses>` — rebalaye un stade sur ses répliques.
         sys.exit(ajuster(sys.argv[2], sys.argv[3],
