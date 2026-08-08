@@ -108,11 +108,24 @@ def _repliques(n_dialogue: int = 6, n_narration: int = 2) -> list:
 
 
 def _repere_chatterbox(mesures) -> dict:
-    """Cohésion et hauteur du Chatterbox RÉELLEMENT livré — pas le chiffre de la note."""
-    clips = sorted((MEDIA / "voices/arthur").glob("arthur_ch0*.ogg"))[:8]
+    """Cohésion et hauteur du Chatterbox RÉELLEMENT livré — pas le chiffre de la note.
+
+    Lit `docs/ecoute-qwen3-tts/repere-chatterbox/` en priorité, et non `voices/arthur/` :
+    depuis l'intégration du lot Qwen3 (2026-08-08), sept des huit clips qui servaient de
+    repère y ont été REMPLACÉS. Les relire là mesurerait du Qwen3 en croyant mesurer du
+    Chatterbox — une mesure fausse qui ne signale rien. Les originaux ont été copiés dans
+    le dossier d'écoute, versionné, précisément pour que les chiffres publiés restent
+    reproductibles. Repli sur `voices/arthur/` si cette copie n'existe pas (dépôt frais,
+    intégration pas encore faite).
+    """
+    fige = MEDIA / "docs/ecoute-qwen3-tts/repere-chatterbox"
+    clips = sorted(fige.glob("*.ogg"))[:8]
+    if not clips:
+        clips = sorted((MEDIA / "voices/arthur").glob("arthur_ch0*.ogg"))[:8]
     if not clips:
         return {}
-    return {"clips": len(clips), **_mesure_lot(clips, mesures)}
+    return {"clips": len(clips), "source": str(clips[0].parent.relative_to(MEDIA)),
+            **_mesure_lot(clips, mesures)}
 
 
 def _dossier(spec: str) -> Path:

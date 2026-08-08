@@ -1,78 +1,32 @@
 #!/bin/bash
-# Écoute guidée des essais Qwen3-TTS pour Arthur. Usage : bash ecouter.sh [1|2|3|4|5|5b]
+# Écoute guidée des voix d'Arthur. Usage : bash ecouter.sh [1|2|3]
+#
+# Ne restent ici que les clips qui documentent une décision ENCORE EN VIGUEUR : la voix
+# en service, la comparaison qui a fait changer de moteur, et le repère de mesure. Les
+# variantes écartées (9 timbres du premier balayage, 7 du tournoi, les 5 stades produits
+# par dilution, les prompts perdants) ont été supprimées le 2026-08-08 — leurs mesures
+# restent dans les README et les rapports JSON, et `git log` les rend si besoin.
 cd "$(dirname "$0")"
 lot=${1:-0}
 jouer() { echo "  ▶ $1"; afplay "$1"; sleep 0.4; }
+
 if [ "$lot" = 1 ] || [ "$lot" = 0 ]; then
-  echo "=== 1. TIMBRES : « Je... je le sens. C'est comme une petite flamme, tout au fond. »"
-  echo "    (les 4 masculins d'abord — les 5 autres sont féminins/âgés)"
-  for s in aiden dylan eric ryan; do jouer 1-timbres/speaker_$s.wav; done
+  echo "=== 1. LA VOIX D'ARTHUR — aiden:0.5+ryan:0.5, timbre en service (~131 Hz)"
+  jouer 4-melanges/aiden_0-5-ryan_0-5.wav
+  echo "  --- le même timbre sur les répliques du stade toddler, sans prompt d'âge"
+  for f in 7-age-par-prompt/nu/*.ogg; do jouer "$f"; done
 fi
+
 if [ "$lot" = 2 ] || [ "$lot" = 0 ]; then
-  echo "=== 2. REGISTRES sur aiden : « Papa, comment on sait qu'on a réussi ? »"
-  for r in narration dialogue emu colere peur joie determination; do
-    jouer 2-registres/registre_$r.wav; done
+  echo "=== 2. L'ÂGE PAR LE PROMPT — même timbre, « enfant-insistant » (164 Hz)"
+  echo "    à comparer au lot 1 : c'est la seule différence, le timbre est identique"
+  for f in 7-age-par-prompt/enfant-insistant/*.ogg; do jouer "$f"; done
 fi
+
 if [ "$lot" = 3 ] || [ "$lot" = 0 ]; then
-  echo "=== 3. A/B : A = Chatterbox actuel, B = Qwen3-TTS (aiden)"
+  echo "=== 3. A/B MOTEUR : A = Chatterbox, B = Qwen3-TTS — ce qui a fait basculer"
   for f in 3-ab/*_A-chatterbox.ogg; do
     id=$(basename "$f" _A-chatterbox.ogg)
     echo "  --- $id"; jouer "$f"; jouer "3-ab/${id}_B-qwen3.ogg"
-  done
-fi
-if [ "$lot" = 4 ] || [ "$lot" = 0 ]; then
-  echo "=== 4. MÉLANGES de timbres : « Je... je le sens. C'est comme une petite flamme... »"
-  echo "    cohésion mesurée : aiden 0,948 | +serena.3 0,959 (la meilleure)"
-  echo "                       +ryan.5 0,926 | +vivian.2 0,899 (mais la plus proche en hauteur)"
-  for f in 4-melanges/*.wav; do jouer "$f"; done
-  echo "  --- les 7 registres sur aiden:0.7+serena:0.3"
-  for r in narration dialogue emu colere peur joie determination; do
-    jouer "4-melanges/registres/registre_$r.wav"; done
-fi
-# Les timbres du lot 5, du moins dispersé au plus dispersé — l'ordre du verdict.
-TOURNOI="aiden-0-5_serena-0-5 aiden-0-7_serena-0-3 aiden-0-9_vivian-0-1 aiden \
-         aiden-0-8_vivian-0-2 aiden-0-6_serena-0-3_vivian-0-1 aiden-0-7_vivian-0-3"
-if [ "$lot" = 5 ] || [ "$lot" = 0 ]; then
-  # La même réplique enchaînée sur les 7 timbres : c'est la comparaison qui s'entend.
-  # Deux répliques, parce qu'un timbre peut tenir sur l'une et s'écrouler sur l'autre —
-  # c'est exactement ce que mesure la plage F0 (138 Hz sur l'une, 296 Hz sur l'autre).
-  echo "=== 5. TOURNOI : 7 timbres, du plus stable au plus dispersé"
-  for id in arthur_ch04_02 narrator_ch00_01; do
-    echo "  --- $id"
-    for t in $TOURNOI; do echo "     [$t]"; jouer "5-tournoi-arthur/$t/$id.ogg"; done
-  done
-fi
-if [ "$lot" = 5b ]; then
-  echo "=== 5b. TIMBRE RETENU (aiden:0.5+serena:0.5) sur les 8 répliques"
-  echo "    reste-t-il le même personnage entre « Prêt. » et 14 s de narration ?"
-  for f in 5-tournoi-arthur/aiden-0-5_serena-0-5/*.ogg; do jouer "$f"; done
-fi
-if [ "$lot" = 7 ] || [ "$lot" = 0 ]; then
-  # L'âge par le PROMPT, timbre validé intact — contre la dilution qui l'écrase.
-  # Même réplique enchaînée : c'est la comparaison qui tranche.
-  echo "=== 7. ÂGE PAR PROMPT (timbre aiden:0.5+ryan:0.5 INTACT) vs dilution"
-  for id in arthur_ch03_02 arthur_ch04_03; do
-    echo "  --- $id"
-    for v in nu enfant-sobre enfant-jeu enfant-insistant dilution-refusee dilution-douce; do
-      case $v in
-        nu)               t="ton timbre nu ...................... 125 Hz  100%";;
-        enfant-sobre)     t="prompt sobre ....................... 149 Hz  100%";;
-        enfant-jeu)       t="prompt jeu ......................... 130 Hz  100%";;
-        enfant-insistant) t="prompt insistant ................... 164 Hz  100%";;
-        dilution-refusee) t="serena 0.8 (refusée) ............... 242 Hz   20%";;
-        dilution-douce)   t="serena 0.3 ......................... 162 Hz   70%";;
-      esac
-      echo "     [$t]"; jouer "7-age-par-prompt/$v/$id.ogg"
-    done
-  done
-fi
-if [ "$lot" = 6 ] || [ "$lot" = 0 ]; then
-  # Dans l'ordre de la VIE d'Arthur, pas dans celui des dossiers : le prologue est
-  # chronologiquement premier (King Grey meurt) et vocalement le plus grave.
-  echo "=== 6. ÂGES : la voix d'Arthur stade par stade, base aiden:0.5+ryan:0.5"
-  echo "    131 Hz -> 245 -> 226 -> 225 -> 194   (enfant et ado sortent pareil : le défaut)"
-  for s in prologue s02_toddler s03_child s04_teen s05_academy; do
-    echo "  --- $s"
-    for f in 6-ages-arthur/$s/*.ogg; do jouer "$f"; done
   done
 fi

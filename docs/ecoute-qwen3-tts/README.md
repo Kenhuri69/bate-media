@@ -1,38 +1,40 @@
-# Jeu d'écoute — Qwen3-TTS pour la voix d'Arthur
+# Jeu d'écoute — la voix d'Arthur
 
-Les clips qui ont servi à trancher entre Chatterbox (le moteur en service) et Qwen3-TTS,
-et à choisir le timbre d'Arthur. Verdict et mesures : [`../qwen3-tts.md`](../qwen3-tts.md).
-
-Ils sont versionnés à titre de **pièces justificatives** : les chiffres du verdict (cohésion
-de timbre, ambitus par registre) ne remplacent pas l'oreille, et un choix de voix qu'on ne
-peut plus réécouter n'est pas un choix vérifiable. Les voix de production, elles, ne sont
-pas dans le dépôt — elles sont distribuées en Release (voir le README racine).
+Les clips qui documentent les décisions **encore en vigueur** sur la voix d'Arthur :
+le timbre en service, l'âge par le prompt, et la comparaison qui a fait changer de moteur.
+Verdicts et mesures : [`../qwen3-tts.md`](../qwen3-tts.md).
 
     bash docs/ecoute-qwen3-tts/ecouter.sh      # tout, dans l'ordre
-    bash docs/ecoute-qwen3-tts/ecouter.sh 1    # timbres premium
-    bash docs/ecoute-qwen3-tts/ecouter.sh 2    # registres de jeu
-    bash docs/ecoute-qwen3-tts/ecouter.sh 3    # A/B contre Chatterbox
-    bash docs/ecoute-qwen3-tts/ecouter.sh 4    # mélanges de timbres
-    bash docs/ecoute-qwen3-tts/ecouter.sh 5    # tournoi : 7 timbres sur la même réplique
-    bash docs/ecoute-qwen3-tts/ecouter.sh 5b   # le timbre retenu sur les 8 répliques
-    bash docs/ecoute-qwen3-tts/ecouter.sh 6    # les âges d'Arthur, du prologue à l'académie
+    bash docs/ecoute-qwen3-tts/ecouter.sh 1    # la voix en service
+    bash docs/ecoute-qwen3-tts/ecouter.sh 2    # l'âge par le prompt, même timbre
+    bash docs/ecoute-qwen3-tts/ecouter.sh 3    # A/B Chatterbox contre Qwen3-TTS
 
 `ecouter.sh` utilise `afplay` (macOS). Ailleurs, n'importe quel lecteur fait l'affaire.
 
 | dossier | contenu |
 |---|---|
-| `1-timbres/` | les 9 timbres premium sur une même réplique d'Arthur |
-| `2-registres/` | les 7 registres de jeu sur `aiden` |
-| `3-ab/` | A = Chatterbox en service, B = Qwen3-TTS, sur 4 répliques identiques |
-| `4-melanges/` | mélanges pondérés de timbres, + les 7 registres sur le meilleur |
-| `5-tournoi-arthur/` | balayage des doses pour trancher le timbre d'Arthur ([détail](5-tournoi-arthur/README.md)) |
-| `6-ages-arthur/` | la voix retenue déclinée par âge, du prologue à l'académie ([détail](6-ages-arthur/README.md)) |
-| `rapport.json`, `rapport_speakers.json` | mesures brutes du banc (`tools/bench_qwen3tts.py`) |
+| `4-melanges/aiden_0-5-ryan_0-5.wav` | **le timbre en service**, validé à l'oreille |
+| `7-age-par-prompt/` | l'âge par le prompt, timbre intact ([détail](7-age-par-prompt/README.md)) |
+| `3-ab/` | A = Chatterbox, B = Qwen3-TTS, sur 4 répliques identiques |
+| `repere-chatterbox/` | les 7 clips Chatterbox qui servent d'étalon aux bancs |
+| `5-tournoi-arthur/`, `6-ages-arthur/` | README et mesures seuls — clips supprimés |
 
-Les lots 1 à 4 sont en `.wav`, le lot 5 en `.ogg` — le format de production, celui des
-voix livrées. C'est voulu : le lot 5 se compare à l'Arthur Chatterbox en service, et une
-comparaison entre deux formats n'aurait rien prouvé. En revanche ses chiffres ne se
-comparent pas à ceux des lots précédents.
+## Ce qui a été supprimé, et pourquoi c'est sans perte
+
+Le 2026-08-08, les **variantes écartées** ont été retirées : les 9 timbres du premier
+balayage, les 7 du tournoi, les 5 stades produits par dilution du timbre, les prompts
+perdants. De 9,8 Mo à 1,0 Mo.
+
+Les **mesures** de tous ces essais restent — dans les README de chaque lot et dans les
+rapports JSON (`rapport_tournoi.json`, `rapport_ages.json`, `rapport_prompt.json`,
+`calibrage/*.json`). Ce sont elles qui portent les conclusions, pas les fichiers audio.
+Et les clips eux-mêmes sont dans l'historique Git : `git log --diff-filter=D --name-only`
+les retrouve, `git checkout <commit>^ -- <chemin>` les rend.
+
+`repere-chatterbox/` est conservé pour une raison précise : sept des huit clips qui
+servaient d'étalon aux bancs ont été **remplacés** dans `voices/arthur/` par le lot
+Qwen3. Sans cette copie, `_repere_chatterbox` mesurerait du Qwen3 en croyant mesurer du
+Chatterbox — une mesure fausse qui ne signale rien.
 
 Le texte prononcé vient des timelines Dialogic du jeu — ce sont de vraies répliques, pas
 des phrases de démonstration : un timbre qui tient sur « Bonjour, je suis une voix de
