@@ -1,0 +1,129 @@
+{
+  "candidates": [
+    "serena",
+    "vivian",
+    "ono_anna",
+    "sohee"
+  ],
+  "repliques": [
+    {
+      "id": "tessia_ch11_09",
+      "chapitre": "ch11",
+      "texte": "Tout le monde va à l'école. L'histoire, lire, écrire. Après, quand on s'éveille, on nous donne un maître, et on devient son disciple. Et puis c'est lui qui t'apprend le reste.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch14_08",
+      "chapitre": "ch14",
+      "texte": "Et entre nobles, un duel comme celui-là n'est pas un combat. On montre sa magie, chacun son tour, et on compte les points. C'est tout. Tu m'entends ?",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch11_01",
+      "chapitre": "ch11",
+      "texte": "Les bêtes n'ont peur que des grands. Mes parents disent que les enfants se font manger par les chiens, ou par les golems d'arbre.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch12_06",
+      "chapitre": "ch12",
+      "texte": "...Tu es la première personne dont je me sois approchée. Vraiment approchée. Je ne sais pas comment on fait, après.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch45_03",
+      "chapitre": "ch45",
+      "texte": "Et puisque j'ai eu le privilège d'être ici un an avant vous, je vais dire ce que j'y ai vu : il existe dans cette académie un mépris installé, ancien, des élèves de la filière de combat envers les élèves de la filière érudite.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch50_03",
+      "chapitre": "ch50",
+      "texte": "Là où le conseil aide la directrice à faire tourner l'école et ses évènements, ce groupe-ci est autorisé à employer la magie pour maintenir la paix et la sécurité de chacun — que la menace vienne d'un élève ou de l'extérieur.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch45_11",
+      "chapitre": "ch45",
+      "texte": "Il a été bruyant, soit, mais il n'a enfreint aucune règle en duel. Et il est en filière de combat quand vous êtes en filière érudite. Vous n'avez donc rien entendu de mon discours ? Le premier jour, et c'est déjà vous.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch45_05",
+      "chapitre": "ch45",
+      "texte": "À partir de cette année, et quelles que soient vos filières, vos deux premières années seront un tronc commun obligatoire, mêlant cours érudits et cours de combat. On ne méprise pas longtemps ceux avec qui on récite.",
+      "age": "adolescente"
+    }
+  ],
+  "timbres": {
+    "serena": {
+      "f0_median": 228.5921625544267,
+      "f0_min": 205.12820512820514,
+      "f0_max": 269.6629213483146,
+      "f0_plage": 64.53471622010949,
+      "duree_totale": 105.12,
+      "par_age": {
+        "enfant": 226.41509433962264,
+        "adolescente": 236.5967365967366
+      },
+      "barycentre_median": 364.3747460886245,
+      "barycentre_plage": 148.96541952101717,
+      "barycentre_par_age": {
+        "enfant": 334.73406553113193,
+        "adolescente": 409.876006963799
+      }
+    },
+    "vivian": {
+      "f0_median": 240.0,
+      "f0_min": 200.0,
+      "f0_max": 258.06451612903226,
+      "f0_plage": 58.064516129032256,
+      "duree_totale": 118.56,
+      "par_age": {
+        "enfant": 223.3766233766234,
+        "adolescente": 251.3709146742707
+      },
+      "barycentre_median": 337.5207800567364,
+      "barycentre_plage": 142.29687028015604,
+      "barycentre_par_age": {
+        "enfant": 313.08010040254396,
+        "adolescente": 383.59678610473765
+      }
+    },
+    "ono_anna": {
+      "f0_median": 254.54545454545456,
+      "f0_min": 235.2941176470588,
+      "f0_max": 303.7974683544304,
+      "f0_plage": 68.5033507073716,
+      "duree_totale": 93.76,
+      "par_age": {
+        "enfant": 284.1131969739423,
+        "adolescente": 240.02400240024002
+      },
+      "barycentre_median": 353.9268431531353,
+      "barycentre_plage": 98.16053536298716,
+      "barycentre_par_age": {
+        "enfant": 359.54363550824337,
+        "adolescente": 348.25899105614184
+      }
+    },
+    "sohee": {
+      "f0_median": 209.6429661275557,
+      "f0_min": 205.12820512820514,
+      "f0_max": 218.1818181818182,
+      "f0_plage": 13.053613053613049,
+      "duree_totale": 100.08,
+      "par_age": {
+        "enfant": 206.89655172413794,
+        "adolescente": 215.28559935639584
+      },
+      "barycentre_median": 362.7059310615616,
+      "barycentre_plage": 97.68275821262125,
+      "barycentre_par_age": {
+        "enfant": 342.63438234501405,
+        "adolescente": 365.35111800305486
+      }
+    }
+  },
+  "note_metrique": "Les deux grandeurs ne classent pas pareil : la F0 donne sohee le plus stable, le barycentre donne ono_anna. Voir le README."
+}

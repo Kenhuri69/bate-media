@@ -1,5 +1,5 @@
 #!/bin/bash
-# Écoute guidée des voix d'Arthur. Usage : bash ecouter.sh [1|2|3|4]
+# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5]
 #
 # Ne restent ici que les clips qui documentent une décision ENCORE EN VIGUEUR : la voix
 # en service, la comparaison qui a fait changer de moteur, et le repère de mesure. Les
@@ -40,5 +40,15 @@ if [ "$lot" = 4 ] || [ "$lot" = 0 ]; then
     [ -d "8-ages-par-prompt/$d" ] || continue
     echo "  --- $d"
     for f in 8-ages-par-prompt/"$d"/*.ogg; do jouer "$f"; done
+  done
+fi
+
+if [ "$lot" = 5 ] || [ "$lot" = 0 ]; then
+  echo "=== 5. CASTING DE TESSIA — les 4 timbres féminins sur ses vraies répliques"
+  echo "    Chaque timbre dit d'abord l'enfant de 5 ans (ch10-18), puis l'adolescente (ch44-60)."
+  for t in serena vivian ono_anna sohee; do
+    [ -d "9-casting-tessia/$t" ] || continue
+    echo "  --- $t"
+    for f in 9-casting-tessia/"$t"/*.ogg; do jouer "$f"; done
   done
 fi
