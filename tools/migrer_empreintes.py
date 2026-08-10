@@ -32,6 +32,15 @@ qu'un pack plus petit n'est pas un pack incomplet.
 
 Ce que le script NE fait pas : produire les voix manquantes. Il dit combien il en reste, ce qui
 est déjà ce que l'ancienne convention rendait impossible.
+
+DEUX OUTILS FONT CETTE MIGRATION, ET LE CHOIX ENTRE EUX N'EST PAS UNE PRÉFÉRENCE.
+`reconcile_voices.py` s'applique quand le lien entre un fichier et son texte est **perdu** : il
+le RECONSTITUE par le compte de répliques puis la durée, ce qui est une présomption et se
+termine à l'oreille. Celui-ci s'applique quand ce lien est **conservé** — `lines.json` est
+l'extraction qui a produit les clips, elle dit ce que chacun prononce — et il ne devine donc
+rien. À lien conservé, ne pas se rabattre sur la présomption : ce serait jeter une preuve pour
+un indice. Les deux implémentations de l'empreinte ont été confrontées sur les 4401 clips livrés,
+elles rendent le même identifiant partout.
 """
 import argparse
 import json

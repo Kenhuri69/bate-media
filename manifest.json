@@ -35218,6 +35218,11 @@
           "chapitre": "ch55",
           "texte": "Soupir. Qu'aviez-vous en tête, professeur ?"
         }
+      ],
+      "roles": [
+        "arthur",
+        "narrator",
+        "note"
       ]
     }
   },
@@ -35225,8 +35230,26 @@
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-10T13:05:32",
+  "construit": "2026-08-10T13:13:48",
   "contenu": [
     "voices"
-  ]
+  ],
+  "nommage": "<role>_<empreinte>  — empreinte du TEXTE, cf. tools/empreinte.py",
+  "casting": {
+    "arthur": {
+      "timbre": "aiden:0.5+ryan:0.5",
+      "valide": true,
+      "le": "2026-08-08"
+    },
+    "tessia": {
+      "candidats": [
+        "serena",
+        "vivian",
+        "ono_anna",
+        "sohee"
+      ],
+      "valide": false,
+      "ecoute": "docs/ecoute-qwen3-tts/9-casting-tessia"
+    }
+  }
 }
