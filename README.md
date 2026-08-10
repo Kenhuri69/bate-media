@@ -53,11 +53,17 @@ Depuis la 0.3.0, le moteur est **Qwen3-TTS** : un timbre premium — ou un méla
 plusieurs — choisi à l'écoute, et une émotion donnée par une phrase en français attachée à
 chaque réplique. Verdict et mesures : [`docs/qwen3-tts.md`](docs/qwen3-tts.md).
 
-Ce que la 0.3.0 contient — **Arthur, chapitres 0 à 5, 72 répliques** — est ce qui a été
-produit et validé avec cette méthode. Les 1570 répliques Chatterbox des trente autres
-personnages, livrées jusqu'à la 0.2.0, ne sont plus distribuées : elles restent
+Ce que la 0.4.0 contient — **Arthur et le narrateur, chapitres 0 à 60, 4401 répliques** — est
+ce qui a été produit et validé avec cette méthode. Les 1570 répliques Chatterbox des trente
+autres personnages, livrées jusqu'à la 0.2.0, ne sont plus distribuées : elles restent
 téléchargeables dans cette version-là, et leurs textes sources sont conservés pour être
 reproduits (`voice-agent/training/forge/*/lines.json`).
+
+**Un clip est nommé par le TEXTE qu'il dit**, pas par sa place :
+`<rôle>_<empreinte>` (`narrator_c03132187d`). Une réplique déplacée garde sa voix ; une réplique
+réécrite perd la sienne et se tait, au lieu de décaler silencieusement toutes les suivantes. La
+règle est partagée avec le jeu et vérifiable : `python3 tools/empreinte.py --selftest` rejoue les
+vecteurs que `bate` publie.
 
 Aucune voix ne reproduit celle d'une personne réelle : chaque timbre est synthétisé depuis
 une **description écrite** ou choisi parmi les timbres premium du modèle, jamais cloné d'un

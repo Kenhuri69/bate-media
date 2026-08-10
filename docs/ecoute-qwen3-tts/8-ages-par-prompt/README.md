@@ -40,6 +40,9 @@ tirage à l'autre parce que les distributions sont larges et plates. L'intervall
 | `s03_child` | 6 ans | narration | 602 | 213 Hz | ±8 |
 | `s04_teen` | 13 ans | **Arthur parlé** | 272 | **292 Hz** | ±12 |
 | `s04_teen` | 13 ans | narration | 868 | 212 Hz | ±6 |
+| `s05_academy` | 15 ans | **Arthur parlé** | 31 | **299 Hz** | ±26 |
+| `s05_academy` | 15 ans | **« Note » parlé** | 467 | **301 Hz** | ±8 |
+| `s05_academy` | 15 ans | narration | 1024 | 213 Hz | ±6 |
 
 Trois choses s'y lisent, et elles sont nettes.
 
@@ -48,14 +51,19 @@ d'écart, dix fois les intervalles de confiance. C'est bien le fondamental qui m
 brillance — sous 110 Hz il ne reste que 3 à 6 % de l'énergie des répliques parlées, contre 12 à
 20 % en narration.
 
-**2. Les stades ne se distinguent pas entre eux.** 289 ±39, 294 ±13, 308 ±20, 292 ±12 : tous les
-intervalles se recouvrent, et l'ordre n'est même pas celui des âges. Un garçon de treize ans sort
-au même endroit qu'un enfant de trois ans.
+**2. Les stades ne se distinguent pas entre eux.** 289 ±39, 294 ±13, 308 ±20, 292 ±12, 299 ±26 :
+tous les intervalles se recouvrent, et l'ordre n'est même pas celui des âges. Un garçon de quinze
+ans sort au même endroit qu'un enfant de trois ans.
 
-**3. La narration est remarquablement stable** : 209, 214, 213, 212 Hz sur 2249 clips, à ±6-14.
-La décision « une seule voix de narrateur sur tout le jeu » est tenue à la mesure. Le prologue
-s'en écarte de peu, vers le bas (195 ±18) — c'est le seul lot sans prompt d'âge, et c'est King
-Grey : conforme à l'intention.
+**3. La narration est remarquablement stable** : 209, 214, 213, 212, 213 Hz sur **3273 clips**,
+à ±6-14. La décision « une seule voix de narrateur sur tout le jeu » est tenue à la mesure, ce
+qui n'allait pas de soi sur un corpus de cette taille. Le prologue s'en écarte de peu, vers le
+bas (195 ±18) — c'est le seul lot sans prompt d'âge, et c'est King Grey : conforme à l'intention.
+
+**4. Le regroupement des rôles tient.** « Note », le pseudonyme d'aventurier d'Arthur, sort à
+301 Hz ±8 sur 467 clips, contre 299 ±26 pour ses répliques sous son propre nom dans le même
+stade. Les deux se superposent : le personnage ne change pas de voix en changeant de nom, ce que
+la table de `pipeline-voix.md` postulait sans l'avoir jamais vérifié à cette échelle.
 
 Le témoin — mêmes répliques, mêmes graines, sans la consigne d'âge — le confirme au barycentre
 spectral, grandeur insensible aux erreurs d'octave :

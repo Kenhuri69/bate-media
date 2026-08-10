@@ -511,69 +511,6 @@ def reprendre(stades: list, essais: int = 4) -> int:
     return 0
 
 
-def integrer(stades: list) -> int:
-    """Verse le lot dans `voices/arthur/`, met à jour le manifeste, retire le temporaire.
-
-    C'est l'étape qui rend les voix consommables par le jeu : `build_pack.py` empaquette
-    `voices/` tel quel et `AudioManager.ResolveClip` cherche `voice/<personnage>/<id>`, si
-    bien qu'un dossier `voices/arthur-qwen3/` produirait la clé `voice/arthur-qwen3/…` que
-    personne n'appelle. Le pack serait construit sans erreur et le jeu resterait muet.
-
-    Deux précautions avant d'écraser :
-
-    * les .ogg de `voices/` ne sont PAS versionnés (voir .gitignore) — un Chatterbox
-      remplacé est perdu, pas récupérable par git. On ne remplace donc que les ids du lot ;
-    * sept des huit clips qui servent de REPÈRE Chatterbox aux bancs sont dans le lot. Les
-      écraser ferait mesurer du Qwen3 en croyant mesurer du Chatterbox — le pire des cas,
-      une mesure qui ment sans rien signaler. Ils sont copiés dans le dossier d'écoute,
-      versionné, avant remplacement, et `_repere_chatterbox` y est redirigé.
-    """
-    import shutil
-
-    source = MEDIA / "voices/arthur-qwen3"
-    cible = MEDIA / "voices/arthur"
-    repere = MEDIA / "docs/ecoute-qwen3-tts/repere-chatterbox"
-    clips = sorted(source.glob("*.ogg"))
-    if not clips:
-        print(f"rien à intégrer dans {source}", file=sys.stderr)
-        return 1
-
-    # 1. Sauver le repère Chatterbox AVANT tout écrasement.
-    repere.mkdir(parents=True, exist_ok=True)
-    sauves = 0
-    for nom in sorted(p.name for p in cible.glob("arthur_ch0*.ogg"))[:8]:
-        if (source / nom).exists() and not (repere / nom).exists():
-            shutil.copy2(cible / nom, repere / nom)
-            sauves += 1
-    print(f"repère Chatterbox : {sauves} clips sauvés dans "
-          f"{repere.relative_to(MEDIA)}", flush=True)
-
-    # 2. Remplacer.
-    for c in clips:
-        shutil.copy2(c, cible / c.name)
-    print(f"{len(clips)} clips versés dans {cible.relative_to(MEDIA)}", flush=True)
-
-    # 3. Réaligner le manifeste : ses sha256 décrivent les anciens fichiers.
-    chemin = MEDIA / "manifest.json"
-    manifeste = json.loads(chemin.read_text(encoding="utf-8"))
-    remplaces = {c.stem for c in clips}
-    touches = 0
-    for entree in manifeste["voix"]["arthur"]["fichiers"]:
-        if entree["id"] in remplaces:
-            entree["sha256"] = _sha256(cible / entree["fichier"])[:16]
-            entree["moteur"] = "qwen3-tts"
-            touches += 1
-    manifeste["voix"]["arthur"]["moteur_par_defaut"] = "chatterbox"
-    chemin.write_text(json.dumps(manifeste, ensure_ascii=False, indent=2),
-                      encoding="utf-8")
-    print(f"manifeste : {touches} empreintes réalignées", flush=True)
-
-    # 4. Retirer le temporaire, qui n'a plus de raison d'être et polluerait le pack.
-    shutil.rmtree(source)
-    print(f"{source.relative_to(MEDIA)} supprimé", flush=True)
-    return 0
-
-
 def _sha256(chemin: Path) -> str:
     import hashlib
 
@@ -582,7 +519,6 @@ def _sha256(chemin: Path) -> str:
         for bloc in iter(lambda: f.read(1 << 20), b""):
             h.update(bloc)
     return h.hexdigest()
-
 
 def livrer(stades: list) -> int:
     """Génère TOUTES les répliques des stades donnés, pour de bon.
@@ -649,6 +585,111 @@ def livrer(stades: list) -> int:
         print(f"{sid:14s} {r['clips']:4d} clips  {r['secondes']:6.0f}s  "
               f"{r['relances']} relances  F0 {r['f0_median']:.0f}Hz  plage {r['f0_plage']:.0f}Hz")
     print(f"\nÉcrit dans {sortie}")
+    return 0
+
+def integrer(stades: list) -> int:
+    """Verse le lot dans `voices/arthur/` et RECONSTRUIT le manifeste à partir de lui.
+
+    C'est l'étape qui rend les voix consommables par le jeu : `build_pack.py` empaquette
+    `voices/` tel quel et `AudioManager.ResolveClip` cherche `voice/<personnage>/<id>`, si
+    bien qu'un dossier `voices/arthur-qwen3/` produirait la clé `voice/arthur-qwen3/…` que
+    personne n'appelle. Le pack serait construit sans erreur et le jeu resterait muet.
+
+    **Le manifeste se reconstruit, il ne se rafraîchit pas** (corrigé le 2026-08-10). La
+    version précédente ne réalignait que les entrées DÉJÀ présentes : elle convenait quand le
+    lot remplaçait à l'identique les 72 clips du pack 0.3.0, mais sur les 4433 des ch0-60 elle
+    aurait laissé 4361 fichiers hors du manifeste. Or le manifeste est l'index qui dit ce que
+    le pack DOIT contenir, et c'est lui que `verify_pack.py` confronte à l'archive : un pack
+    quinze fois trop gros y serait passé pour complet.
+
+    **Les clips périmés sont supprimés.** Une réplique disparue d'une timeline laisse son .ogg
+    derrière elle, et comme un identifiant ne dit que le RANG d'une réplique, ce fichier
+    orphelin sera joué sur la réplique qui a pris sa place. C'est le pire mode de défaillance
+    du pack : un son sort, il ne correspond à rien, et rien ne le signale. Ils sont listés
+    avant d'être retirés.
+
+    Deux précautions conservées :
+
+    * les .ogg de `voices/` ne sont PAS versionnés (voir .gitignore) — un Chatterbox
+      remplacé est perdu, pas récupérable par git ;
+    * sept des huit clips qui servent de REPÈRE Chatterbox aux bancs sont dans le lot. Les
+      écraser ferait mesurer du Qwen3 en croyant mesurer du Chatterbox — le pire des cas,
+      une mesure qui ment sans rien signaler. Ils sont copiés dans le dossier d'écoute,
+      versionné, avant remplacement, et `_repere_chatterbox` y est redirigé.
+
+    Le dossier temporaire n'est plus supprimé d'office : huit heures de génération ne se
+    jettent pas avant que le pack ait été vérifié. `--purge` le retire quand c'est fait.
+    """
+    import shutil
+
+    source = MEDIA / "voices/arthur-qwen3"
+    cible = MEDIA / "voices/arthur"
+    repere = MEDIA / "docs/ecoute-qwen3-tts/repere-chatterbox"
+    clips = sorted(source.glob("*.ogg"))
+    if not clips:
+        print(f"rien à intégrer dans {source}", file=sys.stderr)
+        return 1
+
+    lots = _repliques_par_stade()
+    attendus = {l["id"]: l for sid in stades for l in (lots.get(sid) or [])}
+    livres = {c.stem for c in clips}
+    manquants = set(attendus) - livres
+    if manquants:
+        print(f"{len(manquants)} répliques des stades demandés n'ont pas de clip "
+              f"(ex. {', '.join(sorted(manquants)[:5])}) — relancer `livrer`", file=sys.stderr)
+        return 1
+
+    # 1. Le repère Chatterbox est FIGÉ, on ne l'alimente plus.
+    #
+    # Cette étape copiait dans `repere-chatterbox/` les premiers `arthur_ch0*.ogg` de
+    # `voices/arthur/` avant de les écraser. C'était juste une fois, quand `voices/arthur/`
+    # contenait encore du Chatterbox. Depuis le pack 0.3.0 il n'en contient plus, et depuis
+    # les ch0-60 le lot couvre les ch00 à ch09 : les huit premiers par ordre alphabétique ne
+    # sont plus ceux d'alors. Relancer la copie verserait donc du Qwen3 dans le dossier qui
+    # sert d'ÉTALON au Qwen3 — `_repere_chatterbox` mesurerait sa propre sortie en croyant
+    # mesurer le moteur d'avant, et le comparatif rendrait une égalité parfaite sans que rien
+    # ne cloche. Exactement le défaut que cette étape était censée prévenir.
+    #
+    # Les sept clips de référence sont versionnés, donc récupérables : il n'y a plus rien à
+    # sauver et le dossier ne doit plus bouger.
+    existants = sorted(p.name for p in repere.glob("*.ogg"))
+    if not existants:
+        print("repère Chatterbox VIDE — le comparatif de moteur n'a plus d'étalon ; le "
+              "restaurer par git avant tout banc A/B", file=sys.stderr)
+    else:
+        print(f"repère Chatterbox : {len(existants)} clips figés, laissés intacts", flush=True)
+
+    # 2. Remplacer.
+    cible.mkdir(parents=True, exist_ok=True)
+    for c in clips:
+        shutil.copy2(c, cible / c.name)
+    print(f"{len(clips)} clips versés dans {cible.relative_to(MEDIA)}", flush=True)
+
+    # 3. Retirer les clips périmés — ceux que plus aucune réplique ne réclame.
+    perimes = sorted(p for p in cible.glob("*.ogg") if p.stem not in livres)
+    for p in perimes:
+        p.unlink()
+    if perimes:
+        print(f"{len(perimes)} clips périmés retirés : "
+              f"{', '.join(p.stem for p in perimes[:8])}"
+              f"{'…' if len(perimes) > 8 else ''}", flush=True)
+
+    # 4. Reconstruire le manifeste à partir de ce qui est RÉELLEMENT là.
+    chemin = MEDIA / "manifest.json"
+    manifeste = json.loads(chemin.read_text(encoding="utf-8"))
+    fichiers = []
+    for c in sorted(cible.glob("*.ogg")):
+        fichiers.append({"id": c.stem, "fichier": c.name,
+                         "sha256": _sha256(c)[:16], "moteur": "qwen3-tts"})
+    manifeste["voix"]["arthur"] = {
+        "nom": "Arthur", "repliques": len(fichiers), "format": "ogg",
+        "moteur_par_defaut": "qwen3-tts", "fichiers": fichiers,
+    }
+    chemin.write_text(json.dumps(manifeste, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"manifeste reconstruit : {len(fichiers)} entrées", flush=True)
+
+    print(f"\n{source.relative_to(MEDIA)} CONSERVÉ. Une fois le pack vérifié :")
+    print(f"    rm -rf {source}")
     return 0
 
 
