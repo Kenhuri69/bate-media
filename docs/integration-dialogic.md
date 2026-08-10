@@ -11,9 +11,9 @@ Convention retenue :
 
 | élément | valeur |
 |---|---|
-| chemin | `res://assets/audio/voice/<personnage>/<id>.ogg` |
-| clé AudioManager | `voice/<personnage>/<id>` |
-| id | `<personnage>_ch<NN>_<II>` — ex. `alice_ch08_02` |
+| chemin | `res://assets/audio/voice/<dossier de voix>/<id>.ogg` |
+| clé AudioManager | `voice/<dossier de voix>/<id>` |
+| id | `<rôle>_<empreinte du texte>` — ex. `narrator_c03132187d` |
 
 Le `manifest.json` déposé dans chaque dossier relie l'`id` au texte exact de la réplique :
 c'est lui qui permet de retrouver le fichier correspondant à une ligne de timeline sans
@@ -24,12 +24,16 @@ dépendre d'un ordre implicite.
 ```csharp
 /// Joue la voix d'une réplique si le pack de médias est installé ; sans effet sinon.
 /// L'immersion est optionnelle : aucune partie ne doit dépendre de la présence d'un .ogg.
-public void PlayVoice(string personnage, string id)
+public bool PlayVoice(string speaker, string text)
 {
-    var stream = ResolveClip($"voice/{personnage.ToLowerInvariant()}/{id}");
-    if (stream == null) return;      // pack absent : on continue en silence
+    StopVoice();                     // une nouvelle réplique coupe la précédente
+    var key = VoiceLines.ClipKey(speaker, text);   // voice/<dossier>/<rôle>_<empreinte>
+    if (key == null) return false;
+    var stream = ResolveClip(key, cache: false);
+    if (stream == null) return false;              // pack absent : on continue en silence
     _voicePlayer.Stream = stream;
     _voicePlayer.Play();
+    return true;
 }
 ```
 
@@ -39,18 +43,20 @@ la voix.
 
 ## Côté Dialogic : déclencher au bon moment
 
-Deux approches, selon le degré d'automatisme voulu :
+`scenes/hud/VoiceLine.gd` s'abonne à `Dialogic.Text.about_to_show_text` et appelle `PlayVoice`
+à chaque réplique. Aucune des 326 timelines n'est modifiée.
 
-1. **Par signal** — s'abonner au signal Dialogic émis à chaque ligne, en déduire l'`id`
-   depuis le personnage et le compteur de répliques du chapitre courant, appeler
-   `PlayVoice`. Aucune modification des 98 timelines, mais il faut que le compteur suive
-   exactement l'ordre d'extraction (`<perso>_ch<NN>_<II>`, `II` incrémenté par personnage et
-   par chapitre).
-2. **Par annotation explicite** — ajouter un événement de son dans les timelines aux
-   endroits voulus. Plus verbeux, mais robuste au réordonnancement d'une timeline.
+**Le texte utilisé est celui du fichier `.dtl`, pas celui affiché.** C'est le point délicat, et
+le seul endroit où la chaîne peut rompre en silence. `about_to_show_text` porte le texte FINAL :
+variables substituées, segment courant d'une réplique découpée par `[n+]`, effets appliqués. La
+forge, elle, lit le `.dtl`. Hacher l'un pour chercher un clip nommé d'après l'autre ne donnerait
+jamais la même empreinte, et le jeu resterait muet sans lever d'erreur. Le nœud lit donc
+`event.text`, la propriété que Dialogic remplit depuis la ligne du fichier.
 
-La première est cohérente avec l'extraction actuelle et ne demande aucun travail de
-réécriture ; la seconde est préférable si les timelines doivent encore beaucoup bouger.
+Une version antérieure de ce document proposait de **compter les répliques** au fil du jeu pour
+en déduire un rang. C'était faux deux fois : un compteur d'exécution se décale dès qu'une
+timeline offre un choix — le joueur n'entend qu'une branche — et un rang de fichier se périme
+dès qu'on insère une réplique en amont. L'empreinte du texte supprime les deux problèmes.
 
 ## Distribuer le pack aux joueurs
 

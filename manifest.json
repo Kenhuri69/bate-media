@@ -1,455 +1,80 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.3.0",
+  "version_pack": "0.4.0",
   "voix": {
     "arthur": {
       "nom": "Arthur",
-      "repliques": 72,
+      "repliques": 7,
       "format": "ogg",
+      "roles": [
+        "arthur",
+        "narrator",
+        "note"
+      ],
       "fichiers": [
         {
-          "id": "arthur_ch03_01",
-          "fichier": "arthur_ch03_01.ogg",
-          "sha256": "5bfe06e819fda981",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch03_02",
-          "fichier": "arthur_ch03_02.ogg",
-          "sha256": "bab57db5f5530ff8",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch04_01",
-          "fichier": "arthur_ch04_01.ogg",
-          "sha256": "c31cf8569f30e2e2",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch04_02",
-          "fichier": "arthur_ch04_02.ogg",
-          "sha256": "4aef649003c7066a",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch04_03",
-          "fichier": "arthur_ch04_03.ogg",
-          "sha256": "ca131f10411fce42",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch05_01",
-          "fichier": "arthur_ch05_01.ogg",
-          "sha256": "1a17e1c16ae41d17",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "arthur_ch05_02",
-          "fichier": "arthur_ch05_02.ogg",
-          "sha256": "4be59b6794569d03",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_01",
-          "fichier": "narrator_ch00_01.ogg",
-          "sha256": "37c192e85029cb75",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_02",
-          "fichier": "narrator_ch00_02.ogg",
-          "sha256": "65581311263ab823",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_03",
-          "fichier": "narrator_ch00_03.ogg",
+          "id": "narrator_4111b54e64",
+          "fichier": "narrator_4111b54e64.ogg",
           "sha256": "341cc6bc151547da",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch00_04",
-          "fichier": "narrator_ch00_04.ogg",
-          "sha256": "b8b885b593f1a564",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_05",
-          "fichier": "narrator_ch00_05.ogg",
-          "sha256": "fa3cda6023c130c3",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_06",
-          "fichier": "narrator_ch00_06.ogg",
-          "sha256": "17fcc420be03a19b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_07",
-          "fichier": "narrator_ch00_07.ogg",
-          "sha256": "3127550d25da86bb",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_08",
-          "fichier": "narrator_ch00_08.ogg",
-          "sha256": "45d4e4b402432a01",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_09",
-          "fichier": "narrator_ch00_09.ogg",
-          "sha256": "eb8139b3bb9545c8",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_10",
-          "fichier": "narrator_ch00_10.ogg",
-          "sha256": "dd916a040d2df04e",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_11",
-          "fichier": "narrator_ch00_11.ogg",
-          "sha256": "291ab35e0dc9678b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch00_12",
-          "fichier": "narrator_ch00_12.ogg",
+          "id": "narrator_923a08b58b",
+          "fichier": "narrator_923a08b58b.ogg",
           "sha256": "2d09da51d48266c2",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch00_13",
-          "fichier": "narrator_ch00_13.ogg",
-          "sha256": "d484ffacf657963f",
+          "id": "narrator_a29504759d",
+          "fichier": "narrator_a29504759d.ogg",
+          "sha256": "17fcc420be03a19b",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch00_14",
-          "fichier": "narrator_ch00_14.ogg",
-          "sha256": "79317617d2bf90af",
+          "id": "narrator_b4f78e4a59",
+          "fichier": "narrator_b4f78e4a59.ogg",
+          "sha256": "b8b885b593f1a564",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch00_15",
-          "fichier": "narrator_ch00_15.ogg",
-          "sha256": "1911b6afc8e2fdff",
+          "id": "narrator_c03132187d",
+          "fichier": "narrator_c03132187d.ogg",
+          "sha256": "37c192e85029cb75",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch01_01",
-          "fichier": "narrator_ch01_01.ogg",
-          "sha256": "df0d341243e2f362",
+          "id": "narrator_e563fb1238",
+          "fichier": "narrator_e563fb1238.ogg",
+          "sha256": "fa3cda6023c130c3",
           "moteur": "qwen3-tts"
         },
         {
-          "id": "narrator_ch01_02",
-          "fichier": "narrator_ch01_02.ogg",
-          "sha256": "eefe518a6a0676f7",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_03",
-          "fichier": "narrator_ch01_03.ogg",
-          "sha256": "5714fb27c27075a3",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_04",
-          "fichier": "narrator_ch01_04.ogg",
-          "sha256": "6bd1a5df08761730",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_05",
-          "fichier": "narrator_ch01_05.ogg",
-          "sha256": "555e7c2d4a89ac18",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_06",
-          "fichier": "narrator_ch01_06.ogg",
-          "sha256": "b462aac99b3d4e45",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_07",
-          "fichier": "narrator_ch01_07.ogg",
-          "sha256": "a41ee60e5eb2b1e4",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_08",
-          "fichier": "narrator_ch01_08.ogg",
-          "sha256": "6f7032223be4a41d",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_09",
-          "fichier": "narrator_ch01_09.ogg",
-          "sha256": "7d7aef8f53535e5b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_10",
-          "fichier": "narrator_ch01_10.ogg",
-          "sha256": "735fb8b69b6f3df8",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch01_11",
-          "fichier": "narrator_ch01_11.ogg",
-          "sha256": "812d32a968b20918",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_01",
-          "fichier": "narrator_ch02_01.ogg",
-          "sha256": "8c4763b4b7cdd637",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_02",
-          "fichier": "narrator_ch02_02.ogg",
-          "sha256": "a4b69e6973abf260",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_03",
-          "fichier": "narrator_ch02_03.ogg",
-          "sha256": "daf98d491307c3cd",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_04",
-          "fichier": "narrator_ch02_04.ogg",
-          "sha256": "f0def6c8fe85a2c2",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_05",
-          "fichier": "narrator_ch02_05.ogg",
-          "sha256": "3ec360390ed7590a",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_06",
-          "fichier": "narrator_ch02_06.ogg",
-          "sha256": "20587ec6efb8316e",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_07",
-          "fichier": "narrator_ch02_07.ogg",
-          "sha256": "19755a93797f389c",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_08",
-          "fichier": "narrator_ch02_08.ogg",
-          "sha256": "d0003aac62e3c745",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_09",
-          "fichier": "narrator_ch02_09.ogg",
-          "sha256": "1faa2ee1e8c35986",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_10",
-          "fichier": "narrator_ch02_10.ogg",
-          "sha256": "879ceb72814015af",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch02_11",
-          "fichier": "narrator_ch02_11.ogg",
-          "sha256": "1f345fef1b5c923e",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_01",
-          "fichier": "narrator_ch03_01.ogg",
-          "sha256": "3eb28483584affb5",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_02",
-          "fichier": "narrator_ch03_02.ogg",
-          "sha256": "0216973ad8c396d2",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_03",
-          "fichier": "narrator_ch03_03.ogg",
-          "sha256": "30e866a9160e663b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_04",
-          "fichier": "narrator_ch03_04.ogg",
-          "sha256": "2743d4cb67ba94cd",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_05",
-          "fichier": "narrator_ch03_05.ogg",
-          "sha256": "d47851c9f912e9d4",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_06",
-          "fichier": "narrator_ch03_06.ogg",
-          "sha256": "cf33bdf5dca7ab78",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_07",
-          "fichier": "narrator_ch03_07.ogg",
-          "sha256": "c8b562bcb292873b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_08",
-          "fichier": "narrator_ch03_08.ogg",
-          "sha256": "3c1c18bd2594be6a",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch03_09",
-          "fichier": "narrator_ch03_09.ogg",
-          "sha256": "08effe89d9cf4dd8",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_01",
-          "fichier": "narrator_ch04_01.ogg",
-          "sha256": "bb31d953418041ad",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_02",
-          "fichier": "narrator_ch04_02.ogg",
-          "sha256": "bbead43faacd4f79",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_03",
-          "fichier": "narrator_ch04_03.ogg",
-          "sha256": "ed08076a5886e454",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_04",
-          "fichier": "narrator_ch04_04.ogg",
-          "sha256": "0800bb36f4bcb7cb",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_05",
-          "fichier": "narrator_ch04_05.ogg",
-          "sha256": "2e1e296d5c97c6f0",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_06",
-          "fichier": "narrator_ch04_06.ogg",
-          "sha256": "3828313b66e05b3e",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_07",
-          "fichier": "narrator_ch04_07.ogg",
-          "sha256": "034b5418497cab57",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_08",
-          "fichier": "narrator_ch04_08.ogg",
-          "sha256": "b7c2e7f18d51200b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch04_09",
-          "fichier": "narrator_ch04_09.ogg",
-          "sha256": "bd4256a5c5ecc776",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_01",
-          "fichier": "narrator_ch05_01.ogg",
-          "sha256": "b196f2e7eb4f3822",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_02",
-          "fichier": "narrator_ch05_02.ogg",
-          "sha256": "4564b616757fe2f1",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_03",
-          "fichier": "narrator_ch05_03.ogg",
-          "sha256": "bff92da198d0830b",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_04",
-          "fichier": "narrator_ch05_04.ogg",
-          "sha256": "05ae1345e21415b9",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_05",
-          "fichier": "narrator_ch05_05.ogg",
-          "sha256": "beb7aa9d6cf5df86",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_06",
-          "fichier": "narrator_ch05_06.ogg",
-          "sha256": "76edd47afcf3f24d",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_07",
-          "fichier": "narrator_ch05_07.ogg",
-          "sha256": "f90c622d32f9afaf",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_08",
-          "fichier": "narrator_ch05_08.ogg",
-          "sha256": "f387005adfa156f3",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_09",
-          "fichier": "narrator_ch05_09.ogg",
-          "sha256": "11f699a31267c3b0",
-          "moteur": "qwen3-tts"
-        },
-        {
-          "id": "narrator_ch05_10",
-          "fichier": "narrator_ch05_10.ogg",
-          "sha256": "215e92ed42218a7e",
+          "id": "narrator_f31212f6c7",
+          "fichier": "narrator_f31212f6c7.ogg",
+          "sha256": "65581311263ab823",
           "moteur": "qwen3-tts"
         }
-      ],
-      "moteur": "qwen3-tts"
+      ]
     }
   },
   "medias": {
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-08T14:42:00",
+  "construit": "2026-08-10T06:00:00",
   "contenu": [
     "voices"
-  ]
+  ],
+  "nommage": "<role>_<empreinte>  — empreinte du TEXTE, cf. tools/empreinte.py",
+  "casting": {
+    "arthur": {
+      "timbre": "aiden:0.5+ryan:0.5",
+      "valide": true
+    },
+    "tessia": {
+      "timbre": "sohee",
+      "valide": true
+    }
+  }
 }
