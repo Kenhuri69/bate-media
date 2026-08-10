@@ -10,13 +10,22 @@ les inventer ici ferait diverger la voix et l'image du même personnage.
 Le timbre est `aiden:0.5+ryan:0.5`, validé à l'oreille, et il ne bouge JAMAIS : l'âge se
 fait par le prompt (`PROMPTS_AGE`). La première version le diluait dans une composante
 aiguë pour monter en hauteur ; à trois ans il n'en restait que 20 %, et ce n'était plus la
-voix choisie. Le prompt seul fait aussi bien que la dilution à 30 % (164 Hz contre 162) en
-gardant le timbre entier — voir `tools/age_par_prompt_arthur.py` et le lot d'écoute 7.
+voix choisie. Le prompt seul suffit en gardant le timbre entier — voir
+`tools/age_par_prompt_arthur.py` et le lot d'écoute 7.
+
+CE QUE LE PROMPT FAIT, ET CE QU'IL NE FAIT PAS (mesuré le 2026-08-10 sur les 4433 répliques
+livrées, au barycentre spectral) : il crée un vrai registre d'enfant — **289 à 308 Hz** en
+réplique parlée contre **209 à 214 Hz** en narration, dix fois les intervalles de confiance.
+Mais il **ne distingue pas les stades entre eux** : trois ans, cinq ans, six ans et treize ans
+se recouvrent tous. Arthur a deux voix, pas cinq âges.
 
 **La narration ne suit pas l'âge** : une seule voix de narrateur sur tout le jeu. Seules
-les 149 répliques parlées d'Arthur portent un prompt d'âge, pas les 713 narrations.
+les répliques PARLÉES d'Arthur portent un prompt d'âge (1121 sur les ch0-60, contre 3312
+narrations) — voir `_instruct`.
 
+    python tools/voix_age_arthur.py produire                      # banc des prompts d'âge
     python tools/voix_age_arthur.py livrer prologue,s02_toddler   # génère pour de bon
+    python tools/voix_age_arthur.py bilan  prologue,s02_toddler   # hauteur du lot, par rôle
     python tools/voix_age_arthur.py verifier prologue,s02_toddler # contrôle qualité
     python tools/voix_age_arthur.py reprendre prologue,s02_toddler # régénère les ratés
 
@@ -24,9 +33,15 @@ les 149 répliques parlées d'Arthur portent un prompt d'âge, pas les 713 narra
 d'âge, justement pour isoler l'effet de la dose. Ce sont des outils d'analyse, plus le
 chemin de production.
 
-La contrainte qui prime sur la hauteur : la **plage F0**. Un lot dont les clips vont de
-138 à 296 Hz n'est pas un personnage, c'en est trois — voir le lot 5. Et le contrôle se
-fait sur l'énergie spectrale, pas sur la F0, qui se trompe d'octave (lot 6).
+⚠️ **NE JAMAIS CONCLURE SUR UNE HAUTEUR À PARTIR DE LA F0 ICI.** L'autocorrélation divise le
+fondamental par deux sur les répliques parlées — elle rend ~140 Hz quand 96 % de l'énergie est
+au-dessus — et cette erreur est invisible parce que la valeur reste plausible et stable. Elle a
+produit un verdict entièrement faux le 2026-08-10. Utiliser `bilan` (barycentre spectral) pour
+la hauteur et `verifier` (énergie en bande) pour la qualité ; `produire` et `calibrer` affichent
+encore des F0, elles ne valent que comme indices.
+
+La contrainte qui prime sur la hauteur reste la **dispersion** : un lot dont les clips vont de
+138 à 296 Hz n'est pas un personnage, c'en est trois — voir le lot 5.
 """
 import json
 import re
@@ -41,6 +56,10 @@ MEDIA = Path(__file__).resolve().parent.parent
 LIGNES = RACINE / "voice-agent/training/forge/bate-arthur/lines.json"
 PLAN = RACINE / "bate/tools/assets/character_plan.json"
 ECOUTE = MEDIA / "docs/ecoute-qwen3-tts/6-ages-arthur"
+# Le banc des âges PAR LE PROMPT a son propre lot : le 6 garde les mesures de la déclinaison
+# par DILUTION du timbre, écartée le 2026-08-08, et mélanger les deux dans un dossier ferait
+# comparer des clips qui ne répondent pas à la même question.
+ECOUTE_AGES = MEDIA / "docs/ecoute-qwen3-tts/8-ages-par-prompt"
 
 sys.path.insert(0, str(RACINE / "voice-agent/training"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -52,6 +71,8 @@ BASE = "aiden:0.5+ryan:0.5"          # validé à l'oreille le 2026-08-08
 # académie retombe donc pile sur l'Arthur que le jeu fait déjà entendre (176-211 Hz).
 CIBLES = {
     "s02_toddler": 270.0,
+    "s03_road": 250.0,               # 5 ans, entre le bambin (270) et l'enfant (240)
+    "s04_elenoir": 230.0,            # 8 ans, la fin du séjour chez les elfes
     "s03_child": 240.0,
     "s04_teen": 200.0,
     "s05_academy": 175.0,
@@ -89,12 +110,34 @@ def _repliques_par_stade() -> dict:
 
     La narration vieillit avec le personnage — c'est sa voix intérieure — sauf ces deux
     chapitres-là, où celui qui pense est encore le roi d'avant la réincarnation.
+
+    **Les listes de chapitres du plan ont des trous, et il faut les combler.** Elles disent où
+    le personnage APPARAÎT, ce qui n'a pas de raison de coïncider avec où il PARLE : `s05_academy`
+    ne liste pas les ch50, 51, 54 et 59, alors qu'Arthur y narre 359 répliques — le narrateur
+    étant sa voix intérieure, il est présent même quand le sprite ne l'est pas. Une appartenance
+    exacte seule les jetterait en silence, et un lot muet sur quatre chapitres au milieu de
+    l'académie ne se remarquerait qu'à l'écoute du jeu fini. Un chapitre orphelin rejoint donc le
+    stade du chapitre listé le plus proche EN DESSOUS : c'est celui que le personnage traversait
+    juste avant, donc son âge.
     """
     stades = _stades()
     lignes = json.loads(LIGNES.read_text(encoding="utf-8"))
     lots = {"prologue": []}
-    for sid, s in stades.items():
+    for sid in stades:
         lots[sid] = []
+
+    # Chapitre listé -> stade, dans l'ordre du plan (le premier stade qui revendique gagne).
+    proprietaire = {}
+    for sid, s in stades.items():
+        for c in s["chapitres"]:
+            proprietaire.setdefault(c, sid)
+
+    def stade_de(ch: int):
+        if ch in proprietaire:
+            return proprietaire[ch]
+        anterieurs = [c for c in proprietaire if c < ch]
+        return proprietaire[max(anterieurs)] if anterieurs else None
+
     for ligne in lignes:
         ch = _chapitre(ligne)
         if ch is None:
@@ -102,10 +145,9 @@ def _repliques_par_stade() -> dict:
         if ch <= 1:
             lots["prologue"].append(ligne)
             continue
-        for sid, s in stades.items():
-            if ch in s["chapitres"]:
-                lots[sid].append(ligne)
-                break
+        sid = stade_de(ch)
+        if sid is not None:
+            lots[sid].append(ligne)
     return {k: v for k, v in lots.items() if v}
 
 
@@ -252,14 +294,48 @@ PROMPTS_AGE = {
     "s02_toddler": ("Parle exactement comme un très jeune enfant de trois ans : voix "
                     "haut perchée, fluette et claire, intonation montante, mots détachés, "
                     "comme un petit garçon qui découvre le monde."),
-    # Les trois suivants NE SONT PAS MESURÉS — ils reprennent la formulation qui a marché
-    # en changeant l'âge. À passer au banc avant toute livraison.
-    "s03_child": ("Parle comme un garçon de six ans : voix claire et légère, un peu "
-                  "haut perchée, curieuse, phrases nettes."),
-    "s04_teen": ("Parle comme un garçon de treize ans : voix jeune qui commence à muer, "
-                 "plus posée, encore claire mais moins aiguë."),
-    "s05_academy": ("Parle comme un adolescent de quinze ans : voix presque adulte, "
-                    "assurée et posée, sans rondeur enfantine."),
+    # LES QUATRE STADES SUIVANTS SONT UN CHOIX SOUS CONTRAINTE, PAS UN RÉGLAGE RÉUSSI.
+    #
+    # Mesuré le 2026-08-09 (`temoin` puis `tools/age_par_prompt_stades.py`, lot d'écoute 8) : au
+    # delà du bambin, le prompt d'âge NE CONTRÔLE PLUS LA HAUTEUR. Les formulations en place
+    # apportaient -6, +4, -21 et +17 Hz par rapport au timbre nu — du bruit, signes compris,
+    # alors que le même levier vaut +48 Hz au stade bambin. Trois familles de formulation ont été
+    # comparées sur les répliques réelles de chaque stade : aucune n'approche la cible
+    # physiologique, et la meilleure change d'un stade à l'autre sans logique.
+    #
+    # Ce qui est retenu ci-dessous est, par stade, la variante la plus proche de sa cible sans
+    # dégrader la dispersion. Elle donne une échelle qui DESCEND avec l'âge — 167, 158, 144,
+    # 149, 137 Hz — ce qui est le point ; elle reste loin sous les repères physiologiques
+    # (270, 250, 240, 200, 175). Le seul levier connu pour combler l'écart est la dilution du
+    # timbre, refusée le 2026-08-08 parce qu'elle ne laissait que 20 % de la voix validée. On ne
+    # la reprend pas de notre propre chef : l'arbitrage appartient à l'oreille d'Olivier.
+    #
+    # Stades AJOUTÉS au plan du jeu le 2026-08-09 (`s03_road`, `s04_elenoir`) : aucun sprite ne
+    # couvrait les 4-5 ans ni la fin du séjour chez les elfes. La voix suit les mêmes bornes que
+    # le sprite, sinon les deux changeraient à des chapitres différents pour le même personnage.
+    # `s04_elenoir` ne reçoit aujourd'hui aucune réplique — ses ch18-21 sont déjà revendiqués par
+    # `s03_road` — mais son prompt est écrit pour le jour où le plan tranchera le partage.
+    "s03_road": ("Tu ES un garçon de cinq ans et ta voix doit s'entendre comme telle : "
+                 "nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture "
+                 "haute, souffle court, intonation montante en fin de phrase. Jamais une voix "
+                 "d'adulte."),                                      # 158 Hz (sobre : 130)
+    "s04_elenoir": ("Tu ES un garçon de huit ans et ta voix doit s'entendre comme telle : "
+                    "nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture "
+                    "haute, intonation montante en fin de phrase. Jamais une voix d'adulte."),
+    "s03_child": ("Tu ES un garçon de six ans et ta voix doit s'entendre comme telle : "
+                  "nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture "
+                  "haute, souffle court, intonation montante en fin de phrase. Jamais une voix "
+                  "d'adulte."),                                     # 144 Hz, plage 56, la plus
+                                                                    # resserrée du banc
+    "s04_teen": ("Tu ES un garçon de treize ans et ta voix doit s'entendre comme telle : "
+                 "nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture "
+                 "haute, souffle court, intonation montante en fin de phrase. Jamais une voix "
+                 "d'adulte."),                                      # 149 Hz (sobre : 117)
+    # Seul stade où la forme « intense » fait PERDRE de la hauteur (123 contre 134) : la
+    # transposition sobre du bambin l'emporte de peu. Ne pas uniformiser par cohérence d'écriture,
+    # c'est la mesure qui départage.
+    "s05_academy": ("Parle exactement comme un garçon de quinze ans : voix claire et haut "
+                    "perchée, jeune et légère, intonation montante, sans gravité d'adulte."),
 }
 
 
@@ -324,6 +400,15 @@ def _cible(sid: str, role: str) -> float:
     signalait 13 clips sur 13 comme défectueux, alors qu'ils étaient parfaitement sains —
     la narration ne suit pas l'âge, elle DOIT rester à ~130 Hz. Un contrôle qui applique
     la mauvaise attente ne détecte pas des défauts, il en invente.
+
+    **NE PAS remplacer ces cibles par la F0 mesurée du lot** — essayé le 2026-08-10, à tort.
+    L'intention paraissait bonne (« mesurer où la voix est vraiment plutôt que où on la
+    voudrait ») mais la F0 mesurée est précisément la grandeur fausse ici : sur les répliques
+    parlées, l'autocorrélation rend ~140 Hz alors que **3 à 6 % seulement** de l'énergie vocale
+    se trouve sous 110 Hz et que la bande dominante est 200-270 Hz. Elle divise le fondamental
+    par deux. Recentrer la bande sur cette valeur faisait tomber l'énergie captée de 45 % à
+    28 % : le contrôle se mettait à regarder sous la voix. Les cibles de `CIBLES`, elles,
+    tombent sur la bande dominante réelle — elles sont justes, c'est la F0 qui ment.
     """
     return CIBLE_NARRATION if role == "narrator" else CIBLES.get(sid, CIBLE_NARRATION)
 
@@ -509,6 +594,12 @@ def livrer(stades: list) -> int:
     ne couvre que deux stades sur cinq. Les deux jeux cohabitent jusqu'à ce que les trois
     stades restants soient résolus. Le dossier n'est pas versionné (`voices/*/` est dans
     .gitignore) : les médias partent en Release, pas dans l'arborescence.
+
+    **Reprenable** : un clip déjà présent et non vide est conservé. Sur les 72 répliques du
+    premier pack la question ne se posait pas ; sur les 4433 des ch0-60 la génération dure des
+    heures, et une coupure en cours de route reperdrait tout le travail fait. Pour refaire un
+    stade pour de bon, vider son lot de `voices/arthur-qwen3/` — la reprise ne devine pas qu'un
+    prompt d'âge a changé.
     """
     import bench_qwen3tts as mesures
     import qwen3tts
@@ -527,9 +618,13 @@ def livrer(stades: list) -> int:
         age = PROMPTS_AGE.get(sid, "")
         print(f"\n=== {sid} : {len(lot)} répliques  ({spec})"
               f"{'  + prompt d âge' if age else '  (sans prompt d âge)'}", flush=True)
-        faits, relances, debut = [], 0, time.time()
+        faits, relances, gardes, debut = [], 0, 0, time.time()
         for i, ligne in enumerate(lot):
             cible = sortie / f"{ligne['id']}.ogg"
+            if cible.exists() and cible.stat().st_size > 0:
+                gardes += 1
+                faits.append(cible)
+                continue
             onde, essais = qwen3tts._genere(modele, "customvoice", ligne["texte"],
                                             _instruct(qwen3tts, sid, ligne), spec,
                                             seed=2000 + i, temperature=0.7)
@@ -538,7 +633,7 @@ def livrer(stades: list) -> int:
             faits.append(cible)
             if (i + 1) % 10 == 0 or i + 1 == len(lot):
                 print(f"    {i + 1}/{len(lot)}  ({time.time() - debut:.0f}s, "
-                      f"{relances} relances)", flush=True)
+                      f"{relances} relances, {gardes} repris)", flush=True)
         rapport["stades"][sid] = {"spec": spec, "clips": len(faits), "relances": relances,
                                   "secondes": round(time.time() - debut, 1),
                                   **_mesure(faits, mesures)}
@@ -572,7 +667,7 @@ def produire() -> int:
             print(f"  {sid} : aucune réplique", flush=True)
             continue
         echantillon = _echantillon(lot, 6)
-        dossier = ECOUTE / sid
+        dossier = ECOUTE_AGES / sid
         print(f"\n=== {sid}  ({spec})  {len(echantillon)} répliques", flush=True)
         clips = _genere_lot(modele, qwen3tts, spec, echantillon, dossier, sid=sid)
         rapport["stades"][sid] = {
@@ -584,14 +679,123 @@ def produire() -> int:
               f"plage {r['f0_plage']:4.0f} Hz", flush=True)
     del modele
 
-    (ECOUTE / "rapport_ages.json").write_text(
+    ECOUTE_AGES.mkdir(parents=True, exist_ok=True)
+    (ECOUTE_AGES / "rapport_ages.json").write_text(
         json.dumps(rapport, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
     print("\n" + "=" * 70)
     print(f"{'stade':16s} {'mélange':34s} {'F0':>7s} {'cible':>7s} {'plage':>7s}")
     for sid, r in rapport["stades"].items():
         print(f"{sid:16s} {r['spec']:34s} {r['f0_median']:6.0f}Hz "
               f"{CIBLES.get(sid, 0):6.0f}Hz {r['f0_plage']:6.0f}Hz")
-    print(f"\nÀ écouter : {ECOUTE.relative_to(MEDIA)}")
+    print(f"\nÀ écouter : {ECOUTE_AGES.relative_to(MEDIA)}")
+    return 0
+
+
+def _barycentre(chemin: Path) -> float:
+    """Barycentre de l'énergie vocale (60-800 Hz) d'un clip.
+
+    **La grandeur de référence pour toute question de hauteur sur ces voix.** La F0 par
+    autocorrélation, elle, divise le fondamental par deux sur les répliques parlées : elle rend
+    ~140 Hz alors que 3 à 6 % seulement de l'énergie se trouve sous 110 Hz. L'erreur est
+    invisible — 140 Hz est plausible pour une voix masculine, et la valeur est stable d'un stade
+    à l'autre — et elle a produit un verdict entièrement faux le 2026-08-10 (« le prompt d'âge ne
+    fait rien »), alors que l'écart réel entre voix parlée et narration est de 80 à 95 Hz.
+
+    Un barycentre ne peut pas se tromper d'octave : il n'identifie aucun fondamental, il pèse
+    l'énergie là où elle est.
+    """
+    import soundfile as sf
+
+    x, sr = sf.read(str(chemin))
+    if x.ndim > 1:
+        x = x.mean(axis=1)
+    spectre = np.abs(np.fft.rfft(x * np.hanning(len(x)))) ** 2
+    f = np.fft.rfftfreq(len(x), 1 / sr)
+    m = (f > 60) & (f < 800)
+    return float((f[m] * spectre[m]).sum() / spectre[m].sum()) if spectre[m].sum() > 0 else 0.0
+
+
+def bilan(stades: list) -> int:
+    """Hauteur du lot LIVRÉ, par rôle, au barycentre spectral — la mesure qui décrit le produit.
+
+    Deux raisons de ne pas lire le rapport de `livrer` à la place.
+
+    **Le rôle d'abord.** Sa médiane par stade mêle tous les rôles, or un stade compte cinq à six
+    fois plus de narrations que de répliques parlées et la narration ne porte PAS le prompt d'âge
+    (décision du 2026-08-08). La médiane du stade est donc celle de sa narration, et l'effet
+    d'âge — qui ne vit que dans les répliques parlées — y est noyé.
+
+    **La grandeur ensuite.** `livrer` rapporte une F0, inutilisable ici (voir `_barycentre`).
+
+    L'intervalle de confiance est donné parce qu'il tranche la seule question ouverte : les
+    stades se recouvrent tous, ils ne se distinguent pas entre eux.
+    """
+    sortie = MEDIA / "voices/arthur-qwen3"
+    lots = _repliques_par_stade()
+    rapport = {}
+    print(f"{'stade':14s} {'rôle':10s} {'clips':>6s} {'barycentre':>11s} {'IC95':>7s}")
+    for sid in stades:
+        par_role = {}
+        for ligne in lots.get(sid) or []:
+            chemin = sortie / f"{ligne['id']}.ogg"
+            if chemin.exists() and chemin.stat().st_size > 0:
+                par_role.setdefault(ligne["role"], []).append(chemin)
+        rapport[sid] = {}
+        for role, clips in sorted(par_role.items()):
+            v = [c for c in (_barycentre(p) for p in clips) if c > 0]
+            if not v:
+                continue
+            mediane = float(np.median(v))
+            # IC95 de la MÉDIANE : 1,253·σ/√n est son erreur type asymptotique. Pas celui de la
+            # moyenne — la distribution est asymétrique, tirée vers le haut par les clips brefs.
+            ic = 1.96 * 1.253 * float(np.std(v)) / np.sqrt(len(v))
+            rapport[sid][role] = {"clips": len(clips), "barycentre": mediane, "ic95": ic}
+            print(f"{sid:14s} {role:10s} {len(clips):6d} {mediane:10.0f}Hz {ic:6.0f}")
+    (sortie / "rapport_bilan.json").write_text(
+        json.dumps(rapport, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
+    return 0
+
+
+def temoin() -> int:
+    """Les mêmes répliques SANS prompt d'âge — le contrôle qui dit si le prompt agit.
+
+    `produire` mesure ce que le prompt donne ; il ne dit pas ce qu'il APPORTE. Un prompt qui
+    n'atteint pas le modèle, ou qu'il ignore, rend exactement les mêmes chiffres qu'un timbre nu
+    et rien ne le signale : le mécanisme est là, il ne fait rien. Seul l'écart à ce témoin
+    tranche, stade par stade — et il se mesure sur les mêmes textes et les mêmes graines, sans
+    quoi on comparerait deux échantillons plutôt que deux consignes.
+    """
+    import bench_qwen3tts as mesures
+    import qwen3tts
+
+    lots = _repliques_par_stade()
+    reference = json.loads((ECOUTE_AGES / "rapport_ages.json").read_text(encoding="utf-8"))
+    modele = qwen3tts._charge("customvoice")
+    rapport = {"base": BASE, "stades": {}}
+    for sid in PROMPTS_AGE:
+        lot = lots.get(sid) or []
+        if not lot or not PROMPTS_AGE[sid]:
+            continue                     # sans prompt d'âge, le témoin serait le lot lui-même
+        echantillon = _echantillon(lot, 6)
+        dossier = ECOUTE_AGES / "temoin-sans-prompt" / sid
+        print(f"\n=== témoin {sid}  {len(echantillon)} répliques", flush=True)
+        # `sid=None` : `_genere_lot` n'applique alors que le registre, pas le prompt d'âge.
+        clips = _genere_lot(modele, qwen3tts, TIMBRE, echantillon, dossier)
+        rapport["stades"][sid] = _mesure(clips, mesures)
+        avec = reference["stades"][sid]["f0_median"]
+        sans = rapport["stades"][sid]["f0_median"]
+        print(f"    F0 {sans:5.0f} Hz sans prompt contre {avec:5.0f} avec "
+              f"({avec - sans:+.0f} Hz)", flush=True)
+    del modele
+
+    (ECOUTE_AGES / "rapport_temoin.json").write_text(
+        json.dumps(rapport, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
+    print("\n" + "=" * 70)
+    print(f"{'stade':16s} {'sans prompt':>12s} {'avec prompt':>12s} {'apport':>8s} {'cible':>7s}")
+    for sid, r in rapport["stades"].items():
+        avec = reference["stades"][sid]["f0_median"]
+        print(f"{sid:16s} {r['f0_median']:11.0f}Hz {avec:11.0f}Hz "
+              f"{avec - r['f0_median']:+7.0f}Hz {CIBLES.get(sid, 0):6.0f}Hz")
     return 0
 
 
@@ -607,6 +811,10 @@ if __name__ == "__main__":
     if action == "integrer":
         # Verse le lot dans voices/arthur/ — l'étape qui le rend jouable.
         sys.exit(integrer(sys.argv[2].split(",") if len(sys.argv) > 2 else []))
+    if action == "bilan":
+        # `bilan <stade>[,...]` — hauteur du lot livré, PAR RÔLE. La médiane tous rôles
+        # confondus d'un stade est celle de sa narration, qui ne porte pas le prompt d'âge.
+        sys.exit(bilan(sys.argv[2].split(",")))
     if action in ("verifier", "reprendre"):
         # Contrôle qualité du lot livré, puis reprise ciblée des clips défectueux.
         cibles = sys.argv[2].split(",")
@@ -618,4 +826,4 @@ if __name__ == "__main__":
         # `ajuster <stade> <composante> <doses>` — rebalaye un stade sur ses répliques.
         sys.exit(ajuster(sys.argv[2], sys.argv[3],
                          [float(d) for d in sys.argv[4].split(",")]))
-    sys.exit({"calibrer": calibrer, "produire": produire}[action]())
+    sys.exit({"calibrer": calibrer, "produire": produire, "temoin": temoin}[action]())

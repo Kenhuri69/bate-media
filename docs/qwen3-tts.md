@@ -142,6 +142,35 @@ normaux qui ne se ressemblent pas entre eux. Un contrôle par clip ne pouvait pa
 
 À écouter avant d'entériner : `bash docs/ecoute-qwen3-tts/ecouter.sh 5`.
 
+## L'âge par le prompt : deux voix, pas cinq âges (2026-08-10)
+
+En étendant la voix d'Arthur aux ch0-60, mesuré **sur l'énergie spectrale** — la F0 par
+autocorrélation divise le fondamental par deux sur ces voix et a d'abord conduit à la conclusion
+inverse, voir le [lot d'écoute 8](ecoute-qwen3-tts/8-ages-par-prompt/README.md) :
+
+| lot | bande dominante | énergie sous 110 Hz |
+|---|---|---|
+| répliques **parlées** d'Arthur (3, 5 et 6 ans) | **200-270 Hz** | 3-6 % |
+| **narration** des mêmes stades | **110-150 Hz** | 12-20 % |
+
+**Le prompt d'âge fonctionne** : les répliques parlées sont dans un registre d'enfant, une octave
+au-dessus de la narration, et la quasi-absence d'énergie sous 110 Hz montre que c'est bien le
+fondamental qui monte, pas la brillance. Le témoin (mêmes répliques, mêmes graines, sans la
+consigne) le confirme au barycentre spectral : +28, +25, +23, +40 Hz sur quatre stades, −15 sur
+`s05_academy`.
+
+**Ce qui ne marche pas, c'est de séparer les stades entre eux** : trois ans, cinq ans et six ans
+ont le même profil spectral. Arthur a deux voix, pas cinq âges. Aller plus loin demanderait la
+dilution du timbre, refusée le 2026-08-08 — arbitrage d'oreille, pas de mesure :
+`bash docs/ecoute-qwen3-tts/ecouter.sh 4`.
+
+**La leçon de méthode, à ne pas repayer.** Ce dossier avait déjà écrit que la F0 se trompe
+d'octave, et le verdict a quand même été construit dessus. Contrôle gratuit qui l'aurait évité :
+si la bande sous 110 Hz porte moins de 10 % de l'énergie, une F0 annoncée à ~140 Hz est un
+artefact. Pire, « corriger » le contrôle qualité en recentrant sa bande sur cette F0 mesurée l'a
+fait regarder SOUS la voix (45 % → 28 % d'énergie captée) : une correction fondée sur une mesure
+fausse aggrave le mal qu'elle prétend soigner.
+
 ## Les âges d'Arthur — deux stades sur cinq tiennent (2026-08-08)
 
 Arthur est le seul rôle qui traverse quatre âges **en parlant** : trois ans au chapitre 2,

@@ -1,13 +1,14 @@
 # Jeu d'écoute — la voix d'Arthur
 
-Les clips qui documentent les décisions **encore en vigueur** sur la voix d'Arthur :
-le timbre en service, l'âge par le prompt, et la comparaison qui a fait changer de moteur.
+Les clips qui documentent les décisions **encore en vigueur**, et le choix qui attend une
+oreille : les âges d'Arthur (lot 8).
 Verdicts et mesures : [`../qwen3-tts.md`](../qwen3-tts.md).
 
     bash docs/ecoute-qwen3-tts/ecouter.sh      # tout, dans l'ordre
     bash docs/ecoute-qwen3-tts/ecouter.sh 1    # la voix en service
     bash docs/ecoute-qwen3-tts/ecouter.sh 2    # l'âge par le prompt, même timbre
     bash docs/ecoute-qwen3-tts/ecouter.sh 3    # A/B Chatterbox contre Qwen3-TTS
+    bash docs/ecoute-qwen3-tts/ecouter.sh 4    # ⚠ les âges d'Arthur — À VALIDER
 
 `ecouter.sh` utilise `afplay` (macOS). Ailleurs, n'importe quel lecteur fait l'affaire.
 
@@ -15,6 +16,7 @@ Verdicts et mesures : [`../qwen3-tts.md`](../qwen3-tts.md).
 |---|---|
 | `4-melanges/aiden_0-5-ryan_0-5.wav` | **le timbre en service**, validé à l'oreille |
 | `7-age-par-prompt/` | l'âge par le prompt, timbre intact ([détail](7-age-par-prompt/README.md)) |
+| `8-ages-par-prompt/` | **⚠ à valider** — les six stades, et la limite du prompt ([détail](8-ages-par-prompt/README.md)) |
 | `3-ab/` | A = Chatterbox, B = Qwen3-TTS, sur 4 répliques identiques |
 | `repere-chatterbox/` | les 7 clips Chatterbox qui servent d'étalon aux bancs |
 | `5-tournoi-arthur/`, `6-ages-arthur/` | README et mesures seuls — clips supprimés |

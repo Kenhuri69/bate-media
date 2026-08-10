@@ -1,0 +1,84 @@
+{
+  "base": "aiden:0.5+ryan:0.5",
+  "cibles_f0": {
+    "s02_toddler": 270.0,
+    "s03_road": 250.0,
+    "s04_elenoir": 230.0,
+    "s03_child": 240.0,
+    "s04_teen": 200.0,
+    "s05_academy": 175.0,
+    "prologue": 132.0
+  },
+  "stades": {
+    "prologue": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 39,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/prologue",
+      "f0_median": 128.04461643523788,
+      "f0_plage": 27.100416722677778,
+      "cohesion_moyenne": 0.9748217492891936,
+      "cohesion_min": 0.9337172572985928,
+      "paires": 15,
+      "formulation": "inchangée depuis le lot 7"
+    },
+    "s02_toddler": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 157,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/s02_toddler",
+      "f0_median": 167.22295518636395,
+      "f0_plage": 84.04403567447045,
+      "cohesion_moyenne": 0.9365902597890072,
+      "cohesion_min": 0.8246557165538932,
+      "paires": 15,
+      "formulation": "inchangée depuis le lot 7"
+    },
+    "s03_road": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 866,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/s03_road",
+      "f0_median": 158.24175824175825,
+      "f0_plage": 115.70178035268744,
+      "cohesion_moyenne": 0.9223895773379717,
+      "cohesion_min": 0.7620263567774106,
+      "paires": 15,
+      "formulation": "intense",
+      "prompt": "Tu ES un garçon de cinq ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+    },
+    "s03_child": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 709,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/s03_child",
+      "f0_median": 143.7950704983317,
+      "f0_plage": 56.075048620451966,
+      "cohesion_moyenne": 0.9904003818474373,
+      "cohesion_min": 0.9822043292545343,
+      "paires": 15,
+      "formulation": "intense",
+      "prompt": "Tu ES un garçon de six ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+    },
+    "s04_teen": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 1140,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/s04_teen",
+      "f0_median": 149.23764053596182,
+      "f0_plage": 62.60309179485212,
+      "cohesion_moyenne": 0.9682296515096163,
+      "cohesion_min": 0.9268688945916835,
+      "paires": 15,
+      "formulation": "intense",
+      "prompt": "Tu ES un garçon de treize ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+    },
+    "s05_academy": {
+      "spec": "aiden:0.5+ryan:0.5",
+      "repliques_du_stade": 1522,
+      "dossier": "docs/ecoute-qwen3-tts/8-ages-par-prompt/s05_academy",
+      "f0_median": 136.76212741087085,
+      "f0_plage": 68.3015951092685,
+      "cohesion_moyenne": 0.9464486367792511,
+      "cohesion_min": 0.900434093310813,
+      "paires": 15,
+      "formulation": "insistant",
+      "prompt": "Parle exactement comme un garçon de quinze ans : voix claire et haut perchée, jeune et légère, intonation montante, sans gravité d'adulte."
+    }
+  }
+}
