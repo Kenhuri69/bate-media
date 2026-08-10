@@ -33,6 +33,34 @@ def _sha256(chemin: Path) -> str:
     return h.hexdigest()
 
 
+_IGNORES = set()
+
+
+def _declaree(fichier: Path, racine: Path, manifeste: dict) -> bool:
+    """Vrai si ce fichier de `voices/` appartient à une voix DÉCLARÉE au manifeste.
+
+    Le manifeste est l'index de ce que le pack doit contenir : empaqueter des dossiers qu'il
+    ne déclare pas, c'est faire diverger l'archive de son index sans que `verify_pack.py`
+    puisse le voir — il ne contrôle que la présence des fichiers attendus, jamais l'absence
+    des autres.
+
+    Le cas concret qui a motivé ce garde-fou : `voix_age_arthur.py integrer` conserve son
+    dossier de travail `voices/arthur-qwen3/` (huit heures de génération ne se jettent pas
+    avant que le pack soit vérifié). Il est le doublon exact de `voices/arthur/`, et il a
+    doublé le pack 0.4.0 — 8870 fichiers pour 4433 voix, 509 Mo au lieu de 254.
+    """
+    relatif = fichier.relative_to(racine / "voices")
+    if len(relatif.parts) < 2:
+        return True                      # README, .gitkeep… à la racine de voices/
+    dossier = relatif.parts[0]
+    if dossier in manifeste.get("voix", {}):
+        return True
+    if dossier not in _IGNORES:
+        _IGNORES.add(dossier)
+        print(f"  voices/{dossier}/ ignoré : non déclaré au manifeste", file=sys.stderr)
+    return False
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -79,9 +107,12 @@ def main() -> int:
             tar.add(RACINE / "NOTICE.md", arcname=f"{base}/NOTICE.md")
             for dossier in presents:
                 for f in sorted((RACINE / dossier).rglob("*")):
-                    if f.is_file() and not f.name.startswith("."):
-                        tar.add(f, arcname=f"{base}/{f.relative_to(RACINE)}")
-                        fichiers += 1
+                    if not f.is_file() or f.name.startswith("."):
+                        continue
+                    if dossier == "voices" and not _declaree(f, RACINE, manifeste):
+                        continue
+                    tar.add(f, arcname=f"{base}/{f.relative_to(RACINE)}")
+                    fichiers += 1
         subprocess.run(["zstd", f"-{args.niveau}", "-q", "-f",
                         str(chemin_tar), "-o", str(archive_zst)], check=True)
     finally:

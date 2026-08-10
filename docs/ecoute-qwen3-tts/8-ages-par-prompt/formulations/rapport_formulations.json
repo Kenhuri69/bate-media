@@ -1,0 +1,125 @@
+{
+  "base": "aiden:0.5+ryan:0.5",
+  "stades": {
+    "s03_road": {
+      "age": "cinq ans",
+      "cible": 250.0,
+      "variantes": {
+        "sobre": {
+          "f0_median": 129.70271871069642,
+          "f0_plage": 123.18881048584137,
+          "cohesion_moyenne": 0.9501430050014287,
+          "cohesion_min": 0.8484569220843177,
+          "paires": 15,
+          "prompt": "Parle comme un petit garçon de cinq ans : voix claire et haut perchée, phrases courtes, élan un peu impatient."
+        },
+        "insistant": {
+          "f0_median": 112.02564546872293,
+          "f0_plage": 75.29167746953591,
+          "cohesion_moyenne": 0.9672732137155218,
+          "cohesion_min": 0.9249044896280549,
+          "paires": 15,
+          "prompt": "Parle exactement comme un garçon de cinq ans : voix claire et haut perchée, jeune et légère, intonation montante, sans gravité d'adulte."
+        },
+        "intense": {
+          "f0_median": 158.24175824175825,
+          "f0_plage": 115.70178035268744,
+          "cohesion_moyenne": 0.9223895773379717,
+          "cohesion_min": 0.7620263567774106,
+          "paires": 15,
+          "prompt": "Tu ES un garçon de cinq ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+        }
+      }
+    },
+    "s03_child": {
+      "age": "six ans",
+      "cible": 240.0,
+      "variantes": {
+        "sobre": {
+          "f0_median": 142.64834658662386,
+          "f0_plage": 64.97485030753607,
+          "cohesion_moyenne": 0.9720081324007596,
+          "cohesion_min": 0.9192965853976568,
+          "paires": 15,
+          "prompt": "Parle comme un garçon de six ans : voix claire et légère, un peu haut perchée, curieuse, phrases nettes."
+        },
+        "insistant": {
+          "f0_median": 139.76637887252411,
+          "f0_plage": 60.833822665883716,
+          "cohesion_moyenne": 0.9610767208263582,
+          "cohesion_min": 0.8814449585315732,
+          "paires": 15,
+          "prompt": "Parle exactement comme un garçon de six ans : voix claire et haut perchée, jeune et légère, intonation montante, sans gravité d'adulte."
+        },
+        "intense": {
+          "f0_median": 143.7950704983317,
+          "f0_plage": 56.075048620451966,
+          "cohesion_moyenne": 0.9904003818474373,
+          "cohesion_min": 0.9822043292545343,
+          "paires": 15,
+          "prompt": "Tu ES un garçon de six ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+        }
+      }
+    },
+    "s04_teen": {
+      "age": "treize ans",
+      "cible": 200.0,
+      "variantes": {
+        "sobre": {
+          "f0_median": 116.79454390451832,
+          "f0_plage": 30.937598653056924,
+          "cohesion_moyenne": 0.9651520115530194,
+          "cohesion_min": 0.8963591420097599,
+          "paires": 15,
+          "prompt": "Parle comme un garçon de treize ans : voix jeune qui commence à muer, plus posée, encore claire mais moins aiguë."
+        },
+        "insistant": {
+          "f0_median": 126.4828738512949,
+          "f0_plage": 66.04651162790697,
+          "cohesion_moyenne": 0.9658155156415267,
+          "cohesion_min": 0.928860784730786,
+          "paires": 15,
+          "prompt": "Parle exactement comme un garçon de treize ans : voix claire et haut perchée, jeune et légère, intonation montante, sans gravité d'adulte."
+        },
+        "intense": {
+          "f0_median": 149.23764053596182,
+          "f0_plage": 62.60309179485212,
+          "cohesion_moyenne": 0.9682296515096163,
+          "cohesion_min": 0.9268688945916835,
+          "paires": 15,
+          "prompt": "Tu ES un garçon de treize ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+        }
+      }
+    },
+    "s05_academy": {
+      "age": "quinze ans",
+      "cible": 175.0,
+      "variantes": {
+        "sobre": {
+          "f0_median": 134.21162417934698,
+          "f0_plage": 78.18585670747456,
+          "cohesion_moyenne": 0.9554979824178529,
+          "cohesion_min": 0.8848086495249863,
+          "paires": 15,
+          "prompt": "Parle comme un adolescent de quinze ans : voix presque adulte, assurée et posée, sans rondeur enfantine."
+        },
+        "insistant": {
+          "f0_median": 136.76212741087085,
+          "f0_plage": 68.3015951092685,
+          "cohesion_moyenne": 0.9464486367792511,
+          "cohesion_min": 0.900434093310813,
+          "paires": 15,
+          "prompt": "Parle exactement comme un garçon de quinze ans : voix claire et haut perchée, jeune et légère, intonation montante, sans gravité d'adulte."
+        },
+        "intense": {
+          "f0_median": 123.28100920276458,
+          "f0_plage": 71.96162046908316,
+          "cohesion_moyenne": 0.9427374569748499,
+          "cohesion_min": 0.843136053639713,
+          "paires": 15,
+          "prompt": "Tu ES un garçon de quinze ans et ta voix doit s'entendre comme telle : nettement plus aiguë qu'une voix d'homme, timbre jeune et clair, tessiture haute, souffle court, intonation montante en fin de phrase. Jamais une voix d'adulte."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "base": "aiden:0.5+ryan:0.5",
+  "stades": {
+    "s02_toddler": {
+      "f0_median": 119.23076923076923,
+      "f0_plage": 64.14473684210526,
+      "cohesion_moyenne": 0.9529354993172823,
+      "cohesion_min": 0.8937094042273762,
+      "paires": 15
+    },
+    "s03_road": {
+      "f0_median": 136.0274104198021,
+      "f0_plage": 58.06323324716644,
+      "cohesion_moyenne": 0.9582712162511686,
+      "cohesion_min": 0.8829390945364098,
+      "paires": 15
+    },
+    "s03_child": {
+      "f0_median": 138.35725677830942,
+      "f0_plage": 81.18209474141678,
+      "cohesion_moyenne": 0.947257465486628,
+      "cohesion_min": 0.8325773247019741,
+      "paires": 15
+    },
+    "s04_teen": {
+      "f0_median": 137.82722513089004,
+      "f0_plage": 54.67260012714557,
+      "cohesion_moyenne": 0.9611512756765058,
+      "cohesion_min": 0.9335747209512255,
+      "paires": 15
+    },
+    "s05_academy": {
+      "f0_median": 117.51766143266923,
+      "f0_plage": 70.27914614121511,
+      "cohesion_moyenne": 0.9466439942254274,
+      "cohesion_min": 0.8625592676957962,
+      "paires": 15
+    }
+  }
+}

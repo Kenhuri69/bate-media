@@ -15,6 +15,15 @@ animation/*
 candidates/
 audit/
 
+# Sous-produits d'analyse du lot 8 : les formulations perdantes (72 clips) et le témoin
+# sans prompt (24). Même règle que ci-dessus — ce sont les MESURES qui portent les
+# conclusions, et elles restent versionnées dans `rapport_formulations.json` et
+# `rapport_temoin.json`. Les clips se refabriquent : `tools/age_par_prompt_stades.py`
+# et `tools/voix_age_arthur.py temoin`, à graines fixes.
+docs/ecoute-qwen3-tts/8-ages-par-prompt/formulations/*.ogg
+docs/ecoute-qwen3-tts/8-ages-par-prompt/formulations/*/
+docs/ecoute-qwen3-tts/8-ages-par-prompt/temoin-sans-prompt/
+
 # Packs construits localement
 dist/
 
