@@ -3,6 +3,7 @@
 
     python3 tools/migrer_empreintes.py --dry-run
     python3 tools/migrer_empreintes.py
+    python3 tools/migrer_empreintes.py --personnage Tessia --roles Tessia --slug bate-tessia
 
 Le jeu a changé de convention le 2026-08-10 (`bate` PR #333) : un clip s'appelle désormais
 `<rôle>_<empreinte du texte>` et non plus `<rôle>_ch<NN>_<II>`. Les 4433 clips des ch0-60
@@ -52,20 +53,24 @@ from pathlib import Path
 RACINE = Path.home() / "workspace"
 MEDIA = Path(__file__).resolve().parent.parent
 DIALOGUES = RACINE / "bate/dialogues"
-VOIX = MEDIA / "voices/arthur"
-LIGNES = RACINE / "voice-agent/training/forge/bate-arthur/lines.json"
 ANCIEN_NOM = re.compile(r"^[a-z0-9]+_ch\d+[a-z]*_\d+$")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from empreinte import clip_id, normalise_texte, role_du_locuteur   # noqa: E402
+from empreinte import clip_id, dossier_de_voix, normalise_texte, role_du_locuteur  # noqa: E402
 
-ROLES = ("Arthur", "Note", "narrator")
+# Arthur reste le défaut : c'est le lot pour lequel cet outil a été écrit, et le seul dont la
+# migration positionnelle -> empreinte ait réellement eu lieu. Les autres personnages n'ont
+# jamais eu de clips à l'ancienne convention — pour eux, ce script ne migre rien et ne fait
+# que la seconde moitié de son travail : nommer par l'empreinte et reconstruire le manifeste.
+PERSONNAGE_DEFAUT = "Arthur"
+ROLES_DEFAUT = ("Arthur", "Note", "narrator")
+SLUG_DEFAUT = "bate-arthur"
 # Même filtre que `check_voices.py` côté jeu : commentaires, événements et libellés de choix ne
 # sont pas des répliques.
 REPLIQUE = re.compile(r"^([A-Za-zÀ-ÿ][\w '\-À-ÿ]*)\s*:\s*(.+)$")
 
 
-def correspondances() -> tuple[dict, dict, list, list]:
+def correspondances(lignes_json: Path, roles: tuple, max_chapitre: int) -> tuple[dict, dict, list, list]:
     """Ce que chaque clip DIT, confronté à ce que le jeu DEMANDE.
 
     La correspondance ne se recalcule surtout pas depuis les timelines : elles ont encore bougé
@@ -81,7 +86,7 @@ def correspondances() -> tuple[dict, dict, list, list]:
     Les timelines ne servent plus qu'à répondre à deux questions de couverture : quels clips ne
     correspondent plus à rien (texte réécrit), et quelles répliques n'ont pas de voix.
     """
-    lignes = json.loads(LIGNES.read_text(encoding="utf-8"))
+    lignes = json.loads(lignes_json.read_text(encoding="utf-8"))
     a_dire = {}                          # nouvel id -> (ancien id, texte, chapitre)
     for l in lignes:
         nouveau = clip_id(l["role"], l["texte"])
@@ -103,7 +108,7 @@ def correspondances() -> tuple[dict, dict, list, list]:
             if not s or s.startswith("#") or s.startswith("[") or s.startswith("- "):
                 continue
             mm = REPLIQUE.match(s)
-            if not mm or mm.group(1) not in ROLES:
+            if not mm or mm.group(1) not in roles:
                 continue
             ident = clip_id(mm.group(1), mm.group(2))
             if ident:
@@ -111,7 +116,7 @@ def correspondances() -> tuple[dict, dict, list, list]:
 
     caducs = sorted(set(a_dire) - set(demandes))
     dans_perimetre = {i for i, (_, stem) in demandes.items()
-                      if int(re.search(r"\d+", stem).group()) <= MAX_CHAPITRE}
+                      if int(re.search(r"\d+", stem).group()) <= max_chapitre}
     manquants = sorted(dans_perimetre - set(a_dire))
     return a_dire, demandes, caducs, manquants
 
@@ -123,13 +128,37 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--personnage", default=PERSONNAGE_DEFAUT,
+                    help="nom affiché dans le manifeste (défaut : Arthur)")
+    ap.add_argument("--roles", default=",".join(ROLES_DEFAUT),
+                    help="noms EXACTS écrits dans les timelines, séparés par des virgules ; "
+                         "plusieurs rôles ne partagent une voix que s'ils sont le même "
+                         "personnage (Arthur/Note/narrator)")
+    ap.add_argument("--slug", default=SLUG_DEFAUT, help="dossier de forge")
+    ap.add_argument("--max-chapitre", type=int, default=MAX_CHAPITRE,
+                    help="périmètre livré, pour le seul décompte des manquants")
     args = ap.parse_args()
 
-    presents = {p.stem for p in VOIX.glob("*.ogg")}
-    a_dire, demandes, caducs, manquants = correspondances()
-    print(f"{len(presents)} clips présents dans {VOIX.relative_to(MEDIA)}")
+    roles = tuple(r.strip() for r in args.roles.split(",") if r.strip())
+    lignes_json = RACINE / f"voice-agent/training/forge/{args.slug}/lines.json"
+    # Le dossier de voix se DÉDUIT du rôle par la même règle que le jeu, il ne se choisit
+    # pas : `AudioManager` cherche `voice/<dossier>/<id>`, et un dossier inventé ici
+    # produirait un pack complet que personne n'appelle — construit sans erreur, muet en jeu.
+    voix = MEDIA / "voices" / dossier_de_voix(role_du_locuteur(roles[0]))
+    if not lignes_json.exists():
+        print(f"extraction introuvable : {lignes_json}", file=sys.stderr)
+        return 1
+    if not voix.is_dir():
+        print(f"dossier de voix absent : {voix} — lancer la production d'abord",
+              file=sys.stderr)
+        return 1
+
+    presents = {p.stem for p in voix.glob("*.ogg")}
+    a_dire, demandes, caducs, manquants = correspondances(lignes_json, roles,
+                                                          args.max_chapitre)
+    print(f"{len(presents)} clips présents dans {voix.relative_to(MEDIA)}")
     print(f"{len(a_dire)} textes distincts enregistrés (après fusion des répliques identiques)")
-    print(f"{len(demandes)} répliques demandées par les timelines ch0-{MAX_CHAPITRE}")
+    print(f"{len(demandes)} répliques demandées par les timelines ch0-{args.max_chapitre}")
     print(f"  caducs   (texte enregistré que plus personne ne dit) : {len(caducs)}")
     print(f"  manquants (réplique sans voix)                       : {len(manquants)}")
 
@@ -141,7 +170,7 @@ def main() -> int:
 
     renommes, doublons, absents = 0, 0, 0
     for nouveau, (ancien, _, _) in a_dire.items():
-        src, dst = VOIX / f"{ancien}.ogg", VOIX / f"{nouveau}.ogg"
+        src, dst = voix / f"{ancien}.ogg", voix / f"{nouveau}.ogg"
         if not src.exists():
             absents += 1
             continue
@@ -152,7 +181,7 @@ def main() -> int:
         src.rename(dst)
         renommes += 1
     # Tout ce qui garde un nom positionnel après ça ne correspond à aucun texte de `lines.json`.
-    restants = [p for p in VOIX.glob("*.ogg") if ANCIEN_NOM.match(p.stem)]
+    restants = [p for p in voix.glob("*.ogg") if ANCIEN_NOM.match(p.stem)]
     for p in restants:
         p.unlink()
     print(f"{renommes} renommés, {doublons} doublons fusionnés, {len(restants)} sans texte retirés"
@@ -174,7 +203,7 @@ def main() -> int:
     manifeste = json.loads(chemin.read_text(encoding="utf-8"))
     fichiers = []
     for nouveau, (_, texte, chapitre) in sorted(a_dire.items()):
-        p = VOIX / f"{nouveau}.ogg"
+        p = voix / f"{nouveau}.ogg"
         if not p.exists():
             continue
         if nouveau in caducs:
@@ -186,15 +215,17 @@ def main() -> int:
         fichiers.append({"id": nouveau, "fichier": p.name, "sha256": sha(p),
                          "moteur": "qwen3-tts", "chapitre": chapitre,
                          "texte": normalise_texte(texte)})
-    manifeste["voix"]["arthur"] = {
-        "nom": "Arthur", "repliques": len(fichiers), "format": "ogg",
+    # Une seule entrée de manifeste est réécrite : celle de ce personnage. Les autres voix du
+    # pack ne sont pas relues, donc pas menacées par une exécution ciblée.
+    manifeste["voix"][voix.name] = {
+        "nom": args.personnage, "repliques": len(fichiers), "format": "ogg",
         "convention": "voice-fingerprint-1.0", "moteur_par_defaut": "qwen3-tts",
         "fichiers": fichiers,
     }
     chemin.write_text(json.dumps(manifeste, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{len(caducs)} clips caducs retirés (texte réécrit depuis la production)")
     print(f"manifeste reconstruit : {len(fichiers)} entrées, convention voice-fingerprint-1.0")
-    print(f"couverture ch0-{MAX_CHAPITRE} : {len(fichiers)}/{len(fichiers) + len(manquants)} "
+    print(f"couverture ch0-{args.max_chapitre} : {len(fichiers)}/{len(fichiers) + len(manquants)} "
           f"({len(fichiers) / max(len(fichiers) + len(manquants), 1):.1%})")
     return 0
 

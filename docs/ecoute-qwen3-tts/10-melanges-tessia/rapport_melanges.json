@@ -1,0 +1,592 @@
+{
+  "candidats": [
+    "sohee",
+    "ono_anna",
+    "sohee:0.7+ono_anna:0.3",
+    "sohee:0.5+ono_anna:0.5",
+    "sohee:0.3+ono_anna:0.7",
+    "sohee:0.8+serena:0.2",
+    "ono_anna:0.8+serena:0.2"
+  ],
+  "portes": {
+    "plage_f0_hz": 30.0,
+    "ecart_age_hz": 30.0
+  },
+  "repliques": [
+    {
+      "id": "tessia_ch11_09",
+      "chapitre": "ch11",
+      "texte": "Tout le monde va à l'école. L'histoire, lire, écrire. Après, quand on s'éveille, on nous donne un maître, et on devient son disciple. Et puis c'est lui qui t'apprend le reste.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch14_08",
+      "chapitre": "ch14",
+      "texte": "Et entre nobles, un duel comme celui-là n'est pas un combat. On montre sa magie, chacun son tour, et on compte les points. C'est tout. Tu m'entends ?",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch11_01",
+      "chapitre": "ch11",
+      "texte": "Les bêtes n'ont peur que des grands. Mes parents disent que les enfants se font manger par les chiens, ou par les golems d'arbre.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch12_06",
+      "chapitre": "ch12",
+      "texte": "...Tu es la première personne dont je me sois approchée. Vraiment approchée. Je ne sais pas comment on fait, après.",
+      "age": "enfant"
+    },
+    {
+      "id": "tessia_ch45_03",
+      "chapitre": "ch45",
+      "texte": "Et puisque j'ai eu le privilège d'être ici un an avant vous, je vais dire ce que j'y ai vu : il existe dans cette académie un mépris installé, ancien, des élèves de la filière de combat envers les élèves de la filière érudite.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch50_03",
+      "chapitre": "ch50",
+      "texte": "Là où le conseil aide la directrice à faire tourner l'école et ses évènements, ce groupe-ci est autorisé à employer la magie pour maintenir la paix et la sécurité de chacun — que la menace vienne d'un élève ou de l'extérieur.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch45_11",
+      "chapitre": "ch45",
+      "texte": "Il a été bruyant, soit, mais il n'a enfreint aucune règle en duel. Et il est en filière de combat quand vous êtes en filière érudite. Vous n'avez donc rien entendu de mon discours ? Le premier jour, et c'est déjà vous.",
+      "age": "adolescente"
+    },
+    {
+      "id": "tessia_ch45_05",
+      "chapitre": "ch45",
+      "texte": "À partir de cette année, et quelles que soient vos filières, vos deux premières années seront un tronc commun obligatoire, mêlant cours érudits et cours de combat. On ne méprise pas longtemps ceux avec qui on récite.",
+      "age": "adolescente"
+    }
+  ],
+  "timbres": {
+    "sohee": {
+      "cohesion_moyenne": 0.9852934747540543,
+      "cohesion_min": 0.9648153433591403,
+      "paires": 28,
+      "f0_median": 209.6429661275557,
+      "f0_plage": 13.053613053613049,
+      "f0_par_age": {
+        "enfant": 206.89655172413794,
+        "adolescente": 215.28559935639584
+      },
+      "barycentre_median": 362.7059310615616,
+      "barycentre_plage": 97.68275821262125,
+      "barycentre_par_age": {
+        "enfant": 342.63438234501405,
+        "adolescente": 365.35111800305486
+      },
+      "ecart_age_barycentre": 22.716735658040818,
+      "ecart_age_f0": 8.389047632257899,
+      "ambitus_st": 3.0829905431759643,
+      "duree_totale": 100.08,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 207,
+          "barycentre": 365,
+          "duree": 14.1,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch14_08": {
+          "f0": 207,
+          "barycentre": 274,
+          "duree": 10.9,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch11_01": {
+          "f0": 205,
+          "barycentre": 372,
+          "duree": 6.5,
+          "ambitus_st": 2.3
+        },
+        "tessia_ch12_06": {
+          "f0": 216,
+          "barycentre": 320,
+          "duree": 7.9,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch45_03": {
+          "f0": 218,
+          "barycentre": 370,
+          "duree": 14.5,
+          "ambitus_st": 3.6
+        },
+        "tessia_ch50_03": {
+          "f0": 212,
+          "barycentre": 361,
+          "duree": 14.1,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch45_11": {
+          "f0": 207,
+          "barycentre": 343,
+          "duree": 19.3,
+          "ambitus_st": 3.0
+        },
+        "tessia_ch45_05": {
+          "f0": 218,
+          "barycentre": 372,
+          "duree": 12.9,
+          "ambitus_st": 4.1
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "ancrage": true,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/sohee"
+    },
+    "ono_anna": {
+      "cohesion_moyenne": 0.9867130450125309,
+      "cohesion_min": 0.9702067304136642,
+      "paires": 28,
+      "f0_median": 254.54545454545456,
+      "f0_plage": 68.5033507073716,
+      "f0_par_age": {
+        "enfant": 284.1131969739423,
+        "adolescente": 240.02400240024002
+      },
+      "barycentre_median": 353.9268431531353,
+      "barycentre_plage": 98.16053536298716,
+      "barycentre_par_age": {
+        "enfant": 359.54363550824337,
+        "adolescente": 348.25899105614184
+      },
+      "ecart_age_barycentre": 11.284644452101531,
+      "ecart_age_f0": 44.08919457370229,
+      "ambitus_st": 3.1309025692721653,
+      "duree_totale": 93.76,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 289,
+          "barycentre": 359,
+          "duree": 13.5,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch14_08": {
+          "f0": 304,
+          "barycentre": 360,
+          "duree": 9.3,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch11_01": {
+          "f0": 279,
+          "barycentre": 401,
+          "duree": 8.1,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch12_06": {
+          "f0": 242,
+          "barycentre": 325,
+          "duree": 7.4,
+          "ambitus_st": 3.3
+        },
+        "tessia_ch45_03": {
+          "f0": 238,
+          "barycentre": 348,
+          "duree": 13.7,
+          "ambitus_st": 3.5
+        },
+        "tessia_ch50_03": {
+          "f0": 235,
+          "barycentre": 303,
+          "duree": 18.8,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch45_11": {
+          "f0": 267,
+          "barycentre": 396,
+          "duree": 12.2,
+          "ambitus_st": 3.5
+        },
+        "tessia_ch45_05": {
+          "f0": 242,
+          "barycentre": 349,
+          "duree": 10.8,
+          "ambitus_st": 3.0
+        }
+      },
+      "rtf": null,
+      "relances": null,
+      "ancrage": true,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/ono_anna"
+    },
+    "sohee:0.7+ono_anna:0.3": {
+      "cohesion_moyenne": 0.9813651535939437,
+      "cohesion_min": 0.9561120021307612,
+      "paires": 28,
+      "f0_median": 211.9236143455985,
+      "f0_plage": 28.397565922920876,
+      "f0_par_age": {
+        "enfant": 210.54251635244324,
+        "adolescente": 217.87845679039214
+      },
+      "barycentre_median": 353.36470647764713,
+      "barycentre_plage": 187.15795873764336,
+      "barycentre_par_age": {
+        "enfant": 319.9005369731822,
+        "adolescente": 353.36470647764713
+      },
+      "ecart_age_barycentre": 33.464169504464905,
+      "ecart_age_f0": 7.335940437948892,
+      "ambitus_st": 3.035283376025582,
+      "duree_totale": 104.0,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 212,
+          "barycentre": 257,
+          "duree": 14.6,
+          "ambitus_st": 2.1
+        },
+        "tessia_ch14_08": {
+          "f0": 220,
+          "barycentre": 439,
+          "duree": 11.0,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch11_01": {
+          "f0": 207,
+          "barycentre": 265,
+          "duree": 7.8,
+          "ambitus_st": 2.5
+        },
+        "tessia_ch12_06": {
+          "f0": 209,
+          "barycentre": 374,
+          "duree": 6.4,
+          "ambitus_st": 3.3
+        },
+        "tessia_ch45_03": {
+          "f0": 211,
+          "barycentre": 345,
+          "duree": 14.0,
+          "ambitus_st": 2.6
+        },
+        "tessia_ch50_03": {
+          "f0": 224,
+          "barycentre": 341,
+          "duree": 19.8,
+          "ambitus_st": 3.6
+        },
+        "tessia_ch45_11": {
+          "f0": 211,
+          "barycentre": 361,
+          "duree": 19.4,
+          "ambitus_st": 3.4
+        },
+        "tessia_ch45_05": {
+          "f0": 235,
+          "barycentre": 444,
+          "duree": 11.0,
+          "ambitus_st": 3.7
+        }
+      },
+      "rtf": 1.5108331739902496,
+      "relances": 0,
+      "ancrage": false,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/sohee-0-7_ono_anna-0-3"
+    },
+    "sohee:0.5+ono_anna:0.5": {
+      "cohesion_moyenne": 0.983535011145084,
+      "cohesion_min": 0.9585076062169609,
+      "paires": 28,
+      "f0_median": 240.02400240024002,
+      "f0_plage": 63.492063492063494,
+      "f0_par_age": {
+        "enfant": 231.88946975354742,
+        "adolescente": 248.87169568020633
+      },
+      "barycentre_median": 373.5178388088712,
+      "barycentre_plage": 121.53918397814061,
+      "barycentre_par_age": {
+        "enfant": 351.81297143252203,
+        "adolescente": 377.38255521785516
+      },
+      "ecart_age_barycentre": 25.569583785333123,
+      "ecart_age_f0": 16.982225926658913,
+      "ambitus_st": 3.2842840328230585,
+      "duree_totale": 87.03999999999999,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 231,
+          "barycentre": 440,
+          "duree": 9.4,
+          "ambitus_st": 3.7
+        },
+        "tessia_ch14_08": {
+          "f0": 242,
+          "barycentre": 327,
+          "duree": 8.7,
+          "ambitus_st": 3.8
+        },
+        "tessia_ch11_01": {
+          "f0": 222,
+          "barycentre": 331,
+          "duree": 6.6,
+          "ambitus_st": 2.6
+        },
+        "tessia_ch12_06": {
+          "f0": 233,
+          "barycentre": 372,
+          "duree": 9.0,
+          "ambitus_st": 3.6
+        },
+        "tessia_ch45_03": {
+          "f0": 238,
+          "barycentre": 380,
+          "duree": 14.5,
+          "ambitus_st": 3.4
+        },
+        "tessia_ch50_03": {
+          "f0": 242,
+          "barycentre": 375,
+          "duree": 13.6,
+          "ambitus_st": 3.0
+        },
+        "tessia_ch45_11": {
+          "f0": 255,
+          "barycentre": 358,
+          "duree": 13.5,
+          "ambitus_st": 2.7
+        },
+        "tessia_ch45_05": {
+          "f0": 286,
+          "barycentre": 449,
+          "duree": 11.7,
+          "ambitus_st": 3.4
+        }
+      },
+      "rtf": 1.1673404040801176,
+      "relances": 0,
+      "ancrage": false,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/sohee-0-5_ono_anna-0-5"
+    },
+    "sohee:0.3+ono_anna:0.7": {
+      "cohesion_moyenne": 0.9828583334066272,
+      "cohesion_min": 0.9553561023792599,
+      "paires": 28,
+      "f0_median": 252.6595744680851,
+      "f0_plage": 89.23076923076923,
+      "f0_par_age": {
+        "enfant": 268.2317682317682,
+        "adolescente": 248.71134020618558
+      },
+      "barycentre_median": 371.76644389206376,
+      "barycentre_plage": 125.53377676117896,
+      "barycentre_par_age": {
+        "enfant": 356.8480171624891,
+        "adolescente": 372.94239294721837
+      },
+      "ecart_age_barycentre": 16.094375784729266,
+      "ecart_age_f0": 19.520428025582646,
+      "ambitus_st": 3.109249056273306,
+      "duree_totale": 86.56,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 320,
+          "barycentre": 429,
+          "duree": 12.0,
+          "ambitus_st": 3.7
+        },
+        "tessia_ch14_08": {
+          "f0": 273,
+          "barycentre": 337,
+          "duree": 8.9,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch11_01": {
+          "f0": 264,
+          "barycentre": 377,
+          "duree": 6.3,
+          "ambitus_st": 2.6
+        },
+        "tessia_ch12_06": {
+          "f0": 231,
+          "barycentre": 303,
+          "duree": 7.7,
+          "ambitus_st": 3.3
+        },
+        "tessia_ch45_03": {
+          "f0": 255,
+          "barycentre": 366,
+          "duree": 13.5,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch50_03": {
+          "f0": 233,
+          "barycentre": 379,
+          "duree": 12.2,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch45_11": {
+          "f0": 247,
+          "barycentre": 384,
+          "duree": 14.5,
+          "ambitus_st": 3.0
+        },
+        "tessia_ch45_05": {
+          "f0": 250,
+          "barycentre": 339,
+          "duree": 11.4,
+          "ambitus_st": 3.4
+        }
+      },
+      "rtf": 1.1111636644370455,
+      "relances": 0,
+      "ancrage": false,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/sohee-0-3_ono_anna-0-7"
+    },
+    "sohee:0.8+serena:0.2": {
+      "cohesion_moyenne": 0.9830526519991727,
+      "cohesion_min": 0.9583389273445512,
+      "paires": 28,
+      "f0_median": 219.7106197106197,
+      "f0_plage": 40.74357015533488,
+      "f0_par_age": {
+        "enfant": 219.7106197106197,
+        "adolescente": 224.61296247704016
+      },
+      "barycentre_median": 344.8983194466676,
+      "barycentre_plage": 93.93717667753549,
+      "barycentre_par_age": {
+        "enfant": 334.19053455702226,
+        "adolescente": 365.8788810137656
+      },
+      "ecart_age_barycentre": 31.688346456743318,
+      "ecart_age_f0": 4.902342766420446,
+      "ambitus_st": 3.151113703238157,
+      "duree_totale": 103.67999999999999,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 202,
+          "barycentre": 318,
+          "duree": 16.7,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch14_08": {
+          "f0": 222,
+          "barycentre": 341,
+          "duree": 10.8,
+          "ambitus_st": 3.5
+        },
+        "tessia_ch11_01": {
+          "f0": 224,
+          "barycentre": 369,
+          "duree": 6.3,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch12_06": {
+          "f0": 217,
+          "barycentre": 327,
+          "duree": 8.8,
+          "ambitus_st": 2.5
+        },
+        "tessia_ch45_03": {
+          "f0": 216,
+          "barycentre": 342,
+          "duree": 17.0,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch50_03": {
+          "f0": 205,
+          "barycentre": 348,
+          "duree": 15.9,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch45_11": {
+          "f0": 233,
+          "barycentre": 384,
+          "duree": 16.1,
+          "ambitus_st": 3.9
+        },
+        "tessia_ch45_05": {
+          "f0": 242,
+          "barycentre": 412,
+          "duree": 12.0,
+          "ambitus_st": 3.5
+        }
+      },
+      "rtf": 1.1458616128858226,
+      "relances": 0,
+      "ancrage": false,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/sohee-0-8_serena-0-2"
+    },
+    "ono_anna:0.8+serena:0.2": {
+      "cohesion_moyenne": 0.9855010383925874,
+      "cohesion_min": 0.966837123043218,
+      "paires": 28,
+      "f0_median": 252.6315789473684,
+      "f0_plage": 76.9230769230769,
+      "f0_par_age": {
+        "enfant": 256.0493098102901,
+        "adolescente": 248.76476906552094
+      },
+      "barycentre_median": 365.7993654022033,
+      "barycentre_plage": 96.80833730928498,
+      "barycentre_par_age": {
+        "enfant": 397.19638346116585,
+        "adolescente": 362.347832876569
+      },
+      "ecart_age_barycentre": 34.848550584596865,
+      "ecart_age_f0": 7.284540744769146,
+      "ambitus_st": 3.2501788960509552,
+      "duree_totale": 85.44,
+      "par_clip": {
+        "tessia_ch11_09": {
+          "f0": 259,
+          "barycentre": 433,
+          "duree": 11.0,
+          "ambitus_st": 4.4
+        },
+        "tessia_ch14_08": {
+          "f0": 308,
+          "barycentre": 438,
+          "duree": 9.1,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch11_01": {
+          "f0": 240,
+          "barycentre": 344,
+          "duree": 8.0,
+          "ambitus_st": 2.8
+        },
+        "tessia_ch12_06": {
+          "f0": 253,
+          "barycentre": 361,
+          "duree": 7.6,
+          "ambitus_st": 3.4
+        },
+        "tessia_ch45_03": {
+          "f0": 231,
+          "barycentre": 341,
+          "duree": 13.4,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch50_03": {
+          "f0": 253,
+          "barycentre": 370,
+          "duree": 11.8,
+          "ambitus_st": 3.1
+        },
+        "tessia_ch45_11": {
+          "f0": 270,
+          "barycentre": 385,
+          "duree": 12.8,
+          "ambitus_st": 2.9
+        },
+        "tessia_ch45_05": {
+          "f0": 245,
+          "barycentre": 355,
+          "duree": 11.7,
+          "ambitus_st": 3.6
+        }
+      },
+      "rtf": 1.1775718339150318,
+      "relances": 0,
+      "ancrage": false,
+      "dossier": "docs/ecoute-qwen3-tts/10-melanges-tessia/ono_anna-0-8_serena-0-2"
+    }
+  }
+}

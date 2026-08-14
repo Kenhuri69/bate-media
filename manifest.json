@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.4.0",
+  "version_pack": "0.5.0",
   "voix": {
     "arthur": {
       "nom": "Arthur",
@@ -35224,13 +35224,934 @@
         "narrator",
         "note"
       ]
+    },
+    "tessia": {
+      "nom": "Tessia",
+      "repliques": 114,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": [
+        {
+          "id": "tessia_03e31035de",
+          "fichier": "tessia_03e31035de.ogg",
+          "sha256": "b74ac536260098fd",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Au terme de ces deux ans, ceux qui le souhaiteront pourront changer de filière en passant un examen. Je préfère vous prévenir tout de suite : il sera difficile."
+        },
+        {
+          "id": "tessia_071c4a0358",
+          "fichier": "tessia_071c4a0358.ogg",
+          "sha256": "f3db2a397ce4c2ce",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "Feyrith. Tu viens de provoquer le disciple d'Elder Virion. Ramasse ça."
+        },
+        {
+          "id": "tessia_09d1ff1708",
+          "fichier": "tessia_09d1ff1708.ogg",
+          "sha256": "909035fdf361d9b0",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Les bêtes n'ont peur que des grands. Mes parents disent que les enfants se font manger par les chiens, ou par les golems d'arbre."
+        },
+        {
+          "id": "tessia_0f3b77a29d",
+          "fichier": "tessia_0f3b77a29d.ogg",
+          "sha256": "21ee81be35c777a0",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "Art. Deux choses, vite. C'est lui qui a jeté le mouchoir, donc c'est lui qui frappe le premier."
+        },
+        {
+          "id": "tessia_0ff7e39136",
+          "fichier": "tessia_0ff7e39136.ogg",
+          "sha256": "d03e5665dfe71616",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Et puisque j'ai eu le privilège d'être ici un an avant vous, je vais dire ce que j'y ai vu : il existe dans cette académie un mépris installé, ancien, des élèves de la filière de combat envers les élèves de la filière érudite."
+        },
+        {
+          "id": "tessia_114eb4510a",
+          "fichier": "tessia_114eb4510a.ogg",
+          "sha256": "ee22f13cb752bf2d",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch16",
+          "texte": "Traître. Tu es censée être ma compagne à moi."
+        },
+        {
+          "id": "tessia_155c5b4a32",
+          "fichier": "tessia_155c5b4a32.ogg",
+          "sha256": "aafe5f421772e90a",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Je... je croyais que tu me détestais."
+        },
+        {
+          "id": "tessia_15ad3a9f9a",
+          "fichier": "tessia_15ad3a9f9a.ogg",
+          "sha256": "a629c1d7ad86a607",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Partez."
+        },
+        {
+          "id": "tessia_1ea2c86b42",
+          "fichier": "tessia_1ea2c86b42.ogg",
+          "sha256": "e8042a6c9fb50c6c",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "...Tout ce temps. Avec cette Jasmine."
+        },
+        {
+          "id": "tessia_21d91b4f57",
+          "fichier": "tessia_21d91b4f57.ogg",
+          "sha256": "a54959c0e1d457bc",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "Art. Tu vas partir demain."
+        },
+        {
+          "id": "tessia_23bc259dcc",
+          "fichier": "tessia_23bc259dcc.ogg",
+          "sha256": "20cb88cef7c61fa4",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch54",
+          "texte": "Enchantée."
+        },
+        {
+          "id": "tessia_2ac40f29ea",
+          "fichier": "tessia_2ac40f29ea.ogg",
+          "sha256": "1206326a71d4e535",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "« Si tu veux »... Tu pourrais avoir l'air un peu plus content !"
+        },
+        {
+          "id": "tessia_2b2d0bb3d5",
+          "fichier": "tessia_2b2d0bb3d5.ogg",
+          "sha256": "3d5832bb01a40912",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "...J'aurais annulé avant qu'il y passe. Et je savais que tu t'en chargerais."
+        },
+        {
+          "id": "tessia_2c57053b36",
+          "fichier": "tessia_2c57053b36.ogg",
+          "sha256": "ca06fd5d929ab81f",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "Je vais bien, maman. Vraiment."
+        },
+        {
+          "id": "tessia_2d6764952b",
+          "fichier": "tessia_2d6764952b.ogg",
+          "sha256": "d3cde4a73eef3c3d",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "La plante."
+        },
+        {
+          "id": "tessia_2fa17efe22",
+          "fichier": "tessia_2fa17efe22.ogg",
+          "sha256": "53e23dcd8d1d889c",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Je ne veux pas rester toute seule ici."
+        },
+        {
+          "id": "tessia_30d5397b0a",
+          "fichier": "tessia_30d5397b0a.ogg",
+          "sha256": "0d3101dc53e4272e",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "C'est LE problème. Il n'existe presque personne pour l'enseigner. Ceux qui pourraient l'apprendre choisissent un autre élément et dorment tranquilles."
+        },
+        {
+          "id": "tessia_310aa7cdf5",
+          "fichier": "tessia_310aa7cdf5.ogg",
+          "sha256": "bdbeda9f2be9ce09",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Les grands. On ne choisit pas. Enfin — les maîtres, eux, ils peuvent refuser."
+        },
+        {
+          "id": "tessia_37afa81d97",
+          "fichier": "tessia_37afa81d97.ogg",
+          "sha256": "0293356994c150c7",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Alors j'ai pris le vent en second, pour avoir quelque chose qu'on sache m'apprendre. Double spécialiste. Ça sonne bien sur une estrade et ça veut surtout dire que j'ai bricolé."
+        },
+        {
+          "id": "tessia_3d914e6fec",
+          "fichier": "tessia_3d914e6fec.ogg",
+          "sha256": "6426c05fd61fc251",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch18",
+          "texte": "Grand-père !"
+        },
+        {
+          "id": "tessia_3ff3d9e1da",
+          "fichier": "tessia_3ff3d9e1da.ogg",
+          "sha256": "c76848ae29f4749f",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "C'est le compliment le plus étrange qu'on m'ait fait aujourd'hui, et pourtant j'en ai reçu beaucoup."
+        },
+        {
+          "id": "tessia_484a99bba4",
+          "fichier": "tessia_484a99bba4.ogg",
+          "sha256": "c928bfac8bcc1d73",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10b",
+          "texte": "...C'est toi qui... ? Toi tout seul ?"
+        },
+        {
+          "id": "tessia_48f8a97457",
+          "fichier": "tessia_48f8a97457.ogg",
+          "sha256": "298a7a185f466f91",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "...Non. Non, pas vraiment."
+        },
+        {
+          "id": "tessia_5063a30a69",
+          "fichier": "tessia_5063a30a69.ogg",
+          "sha256": "fb3dc5ce5317998b",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10b",
+          "texte": "Attends — tu es vraiment tout seul ? Il n'y a personne avec toi ?"
+        },
+        {
+          "id": "tessia_523a8db2c1",
+          "fichier": "tessia_523a8db2c1.ogg",
+          "sha256": "ab66a45fbf3fd72c",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Blesser un élève hors d'un duel consenti vous expose à une sanction dont peu d'entre vous mesurent la portée. Je vous invite à la mesurer aujourd'hui plutôt que demain."
+        },
+        {
+          "id": "tessia_526c40f328",
+          "fichier": "tessia_526c40f328.ogg",
+          "sha256": "0aa2c94b17bb86a0",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch15",
+          "texte": "Grand-père dit que je m'entraîne avec toi, maintenant."
+        },
+        {
+          "id": "tessia_54d7eb2125",
+          "fichier": "tessia_54d7eb2125.ogg",
+          "sha256": "f679c137f106c564",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Elle me l'a demandé. Je suis sa seule disciple et elle n'a jamais eu d'enfants. Alors voilà."
+        },
+        {
+          "id": "tessia_57cdf5975d",
+          "fichier": "tessia_57cdf5975d.ogg",
+          "sha256": "58bb5cf559196050",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "...Ça a l'air normal. On m'avait dit que c'était affreux."
+        },
+        {
+          "id": "tessia_591eb2251b",
+          "fichier": "tessia_591eb2251b.ogg",
+          "sha256": "2633afdaf9734b3a",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "C'est celui-là ! J'avais gravé mon nom dessus, un jour, quand grand-père ne regardait pas. On est arrivés !"
+        },
+        {
+          "id": "tessia_5a4731a6d2",
+          "fichier": "tessia_5a4731a6d2.ogg",
+          "sha256": "52c41b26924cafaa",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "...Je ne sais pas."
+        },
+        {
+          "id": "tessia_5ccbfcd92b",
+          "fichier": "tessia_5ccbfcd92b.ogg",
+          "sha256": "f336c7333d90e3dd",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Soupir... Je ne supporte pas de faire semblant de ne pas te connaître."
+        },
+        {
+          "id": "tessia_5d9cd0649b",
+          "fichier": "tessia_5d9cd0649b.ogg",
+          "sha256": "b88fc78fd3497e29",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "Tu dis ça comme quelqu'un de très vieux, parfois. C'est déroutant."
+        },
+        {
+          "id": "tessia_605178a888",
+          "fichier": "tessia_605178a888.ogg",
+          "sha256": "bd3f07332a106b19",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Alors je suis plus grande que toi."
+        },
+        {
+          "id": "tessia_64b4a4e950",
+          "fichier": "tessia_64b4a4e950.ogg",
+          "sha256": "8cfb739126f719be",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "...Tu as quatre ans. Tu sais que c'est très bizarre de dire ça ?"
+        },
+        {
+          "id": "tessia_684173aa87",
+          "fichier": "tessia_684173aa87.ogg",
+          "sha256": "4a7bc6a01a2a0f1b",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "...Il a dit ça exactement comme ça, hein."
+        },
+        {
+          "id": "tessia_69bfc380b8",
+          "fichier": "tessia_69bfc380b8.ogg",
+          "sha256": "c080151b0a0f523d",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch16",
+          "texte": "...Tu vas partir, alors."
+        },
+        {
+          "id": "tessia_6d33f3e001",
+          "fichier": "tessia_6d33f3e001.ogg",
+          "sha256": "10a5f198fdd4afb7",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch60",
+          "texte": "O-On commence ?"
+        },
+        {
+          "id": "tessia_6ee235c480",
+          "fichier": "tessia_6ee235c480.ogg",
+          "sha256": "f99ae2262dd771c1",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch50",
+          "texte": "Avant que le club rush ne commence, le conseil des élèves souhaite vous présenter un groupe choisi personnellement par la directrice."
+        },
+        {
+          "id": "tessia_6f05b42410",
+          "fichier": "tessia_6f05b42410.ogg",
+          "sha256": "fab164113dcfb356",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Surtout celle-là."
+        },
+        {
+          "id": "tessia_76e8ef0321",
+          "fichier": "tessia_76e8ef0321.ogg",
+          "sha256": "c91f8d94defa9ef9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Je suis désolé—"
+        },
+        {
+          "id": "tessia_7722a3464f",
+          "fichier": "tessia_7722a3464f.ogg",
+          "sha256": "d2bf3d2b33de1566",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch17",
+          "texte": "Elle te regarde comme si elle te connaissait déjà."
+        },
+        {
+          "id": "tessia_7848b5f0e4",
+          "fichier": "tessia_7848b5f0e4.ogg",
+          "sha256": "e149fbdc9f1198a1",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch15",
+          "texte": "Tu dis toujours ça. Et pourtant l'année dernière tu ne me suivais pas dans les hauteurs."
+        },
+        {
+          "id": "tessia_78d4814689",
+          "fichier": "tessia_78d4814689.ogg",
+          "sha256": "1f1846f7949c74a7",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch57",
+          "texte": "Tu as dit que tu ne pouvais pas bouger, c'est ça ?"
+        },
+        {
+          "id": "tessia_7c2a3abdfe",
+          "fichier": "tessia_7c2a3abdfe.ogg",
+          "sha256": "14b08e84b58de649",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch44",
+          "texte": "Je m'appelle Tessia Eralith, et j'ai l'honneur de me tenir devant vous comme présidente du conseil des élèves de cette académie."
+        },
+        {
+          "id": "tessia_7d2e3b7011",
+          "fichier": "tessia_7d2e3b7011.ogg",
+          "sha256": "7460811a831008e4",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Tout le monde va à l'école. L'histoire, lire, écrire. Après, quand on s'éveille, on nous donne un maître, et on devient son disciple. Et puis c'est lui qui t'apprend le reste."
+        },
+        {
+          "id": "tessia_7e793feac6",
+          "fichier": "tessia_7e793feac6.ogg",
+          "sha256": "aa0b90f12163d849",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Il a été bruyant, soit, mais il n'a enfreint aucune règle en duel. Et il est en filière de combat quand vous êtes en filière érudite. Vous n'avez donc rien entendu de mon discours ? Le premier jour, et c'est déjà vous."
+        },
+        {
+          "id": "tessia_7f2302c86d",
+          "fichier": "tessia_7f2302c86d.ogg",
+          "sha256": "0a7f4900075d9045",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Hmm."
+        },
+        {
+          "id": "tessia_8172a6d085",
+          "fichier": "tessia_8172a6d085.ogg",
+          "sha256": "68a7dc1f5c79e392",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch16",
+          "texte": "Grand-père a passé la nuit à préparer la salle. Il ne le dira pas, alors je le dis."
+        },
+        {
+          "id": "tessia_82d8ffd301",
+          "fichier": "tessia_82d8ffd301.ogg",
+          "sha256": "e1e7bced996c94fe",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch50",
+          "texte": "Là où le conseil aide la directrice à faire tourner l'école et ses évènements, ce groupe-ci est autorisé à employer la magie pour maintenir la paix et la sécurité de chacun — que la menace vienne d'un élève ou de l'extérieur."
+        },
+        {
+          "id": "tessia_833c9eca39",
+          "fichier": "tessia_833c9eca39.ogg",
+          "sha256": "b9850ace0b69a4b9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch15",
+          "texte": "Tu as grandi. Beaucoup."
+        },
+        {
+          "id": "tessia_8443ff7015",
+          "fichier": "tessia_8443ff7015.ogg",
+          "sha256": "3e8fe6a7b8bdbd3c",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch60",
+          "texte": "S-Salut."
+        },
+        {
+          "id": "tessia_844bb4118d",
+          "fichier": "tessia_844bb4118d.ogg",
+          "sha256": "ae61781f51d313bf",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Je ne veux pas de ça non plus ! Je ne veux pas que tu sois en colère !"
+        },
+        {
+          "id": "tessia_85e90e4207",
+          "fichier": "tessia_85e90e4207.ogg",
+          "sha256": "10936c16af6aefdd",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Dis, c'est comment, le royaume des humains ?"
+        },
+        {
+          "id": "tessia_893ba22500",
+          "fichier": "tessia_893ba22500.ogg",
+          "sha256": "cd82b5fad643a067",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "Ce n'est pas pareil du tout ! ...Enfin. Un peu, peut-être."
+        },
+        {
+          "id": "tessia_8958009ba0",
+          "fichier": "tessia_8958009ba0.ogg",
+          "sha256": "a09f98e245cffcfd",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch60",
+          "texte": "T-Tais-toi ! Comment j'étais censée — AH..."
+        },
+        {
+          "id": "tessia_89b6c4f012",
+          "fichier": "tessia_89b6c4f012.ogg",
+          "sha256": "213cb7139fe0addf",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Avec le couteau au flanc ? On appelle ça une ronde, Art."
+        },
+        {
+          "id": "tessia_8bf250c1ee",
+          "fichier": "tessia_8bf250c1ee.ogg",
+          "sha256": "70d9b0359bb3a3d0",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch13",
+          "texte": "...Les parents d'Art."
+        },
+        {
+          "id": "tessia_94ad2785cf",
+          "fichier": "tessia_94ad2785cf.ogg",
+          "sha256": "3d70ed3e4bf254da",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Tu oses ?"
+        },
+        {
+          "id": "tessia_98cccc5517",
+          "fichier": "tessia_98cccc5517.ogg",
+          "sha256": "a5df2f157927572e",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch57",
+          "texte": "B-Bonjour ! Je m'appelle Tessia Eralith ! Enchantée ! Prenez soin de moi ! Je suis l'amie d'enfance d'Arthur et je ne sais pas s'il vous a parlé de moi mais c'est vrai, je le suis !"
+        },
+        {
+          "id": "tessia_9943893436",
+          "fichier": "tessia_9943893436.ogg",
+          "sha256": "8414afb08d9d98d3",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch57",
+          "texte": "Je ne me suis pas présentée. Tessia Eralith, l'amie la plus proche d'Arthur."
+        },
+        {
+          "id": "tessia_9961f4466f",
+          "fichier": "tessia_9961f4466f.ogg",
+          "sha256": "74d4bef64633d1f3",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "...Tu as compris ça en trois phrases. Moi il m'a fallu un an."
+        },
+        {
+          "id": "tessia_9b2682c29b",
+          "fichier": "tessia_9b2682c29b.ogg",
+          "sha256": "7546e5821f9be37e",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10a",
+          "texte": "Mon grand-père va venir."
+        },
+        {
+          "id": "tessia_9ee63b1f52",
+          "fichier": "tessia_9ee63b1f52.ogg",
+          "sha256": "161c983e760960dc",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "Et entre nobles, un duel comme celui-là n'est pas un combat. On montre sa magie, chacun son tour, et on compte les points. C'est tout. Tu m'entends ?"
+        },
+        {
+          "id": "tessia_a25192916d",
+          "fichier": "tessia_a25192916d.ogg",
+          "sha256": "7ffec13fc2a6760e",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Pas un seul qui aille au-delà des bases. Des lignées nobles en ont la capacité, mais elles se rabattent toutes sur autre chose : c'est trop difficile, personne ne veut y perdre dix ans."
+        },
+        {
+          "id": "tessia_a9cc8ea98b",
+          "fichier": "tessia_a9cc8ea98b.ogg",
+          "sha256": "5d174f568a4ad809",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Ben oui. Sinon comment on apprendrait ?"
+        },
+        {
+          "id": "tessia_ab5df625bc",
+          "fichier": "tessia_ab5df625bc.ogg",
+          "sha256": "a67246d840b8d8fa",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "..."
+        },
+        {
+          "id": "tessia_ab8d978171",
+          "fichier": "tessia_ab8d978171.ogg",
+          "sha256": "7290693155373117",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Voilà. C'est exactement la tête que je voulais voir."
+        },
+        {
+          "id": "tessia_ab92266e0d",
+          "fichier": "tessia_ab92266e0d.ogg",
+          "sha256": "391ce9c06b5954d7",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Cette académie est un lieu où chacun doit pouvoir marcher librement, sans craindre pour son intégrité. Ce n'est pas une figure de style. C'est la règle."
+        },
+        {
+          "id": "tessia_b17944c612",
+          "fichier": "tessia_b17944c612.ogg",
+          "sha256": "f40e1de4973e022e",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10b",
+          "texte": "Qu'est-ce qui leur est arrivé, aux méchants ?"
+        },
+        {
+          "id": "tessia_b3d5cdfbd7",
+          "fichier": "tessia_b3d5cdfbd7.ogg",
+          "sha256": "b60673847f119c8f",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Le pire, c'est que ce n'est pas sa dureté qui m'a coûté. C'est mon élément."
+        },
+        {
+          "id": "tessia_b3e37fa8a5",
+          "fichier": "tessia_b3e37fa8a5.ogg",
+          "sha256": "dd6963ad19768620",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Tu... tu t'en fiches ? Grand-mère Cynthia m'avait dit que tu voulais rester discret, alors j'ai cru que —"
+        },
+        {
+          "id": "tessia_b542b791b5",
+          "fichier": "tessia_b542b791b5.ogg",
+          "sha256": "221fcedb33994fe9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch18",
+          "texte": "ART !"
+        },
+        {
+          "id": "tessia_bafe712b07",
+          "fichier": "tessia_bafe712b07.ogg",
+          "sha256": "837b5d3683e8a571",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch15",
+          "texte": "...Tu vas regretter cette phrase, Art."
+        },
+        {
+          "id": "tessia_bb193b862d",
+          "fichier": "tessia_bb193b862d.ogg",
+          "sha256": "9f42a3f6534460c1",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Quoi ?"
+        },
+        {
+          "id": "tessia_bbb10a9917",
+          "fichier": "tessia_bbb10a9917.ogg",
+          "sha256": "7c9c3fd920270843",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch17",
+          "texte": "Fais voir ! Oh. C'est très beau et c'est très inquiétant."
+        },
+        {
+          "id": "tessia_bc0744e378",
+          "fichier": "tessia_bc0744e378.ogg",
+          "sha256": "b5dd1bc4a693338d",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch17",
+          "texte": "C'est joli. Et ça sonne comme un merci, à sa manière."
+        },
+        {
+          "id": "tessia_bd91b4d82e",
+          "fichier": "tessia_bd91b4d82e.ogg",
+          "sha256": "6749115a395f709d",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "Tu es venu."
+        },
+        {
+          "id": "tessia_c04b5e56b2",
+          "fichier": "tessia_c04b5e56b2.ogg",
+          "sha256": "5a270331d6b3bca4",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Qu'est-ce que — Art, attends —"
+        },
+        {
+          "id": "tessia_c3e7ec161f",
+          "fichier": "tessia_c3e7ec161f.ogg",
+          "sha256": "d7c2aba3a53c0924",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "Ça s'appelle ne plus décider de rien. Dans la forêt, au moins, on choisissait la direction."
+        },
+        {
+          "id": "tessia_c61ecb422c",
+          "fichier": "tessia_c61ecb422c.ogg",
+          "sha256": "fc0aec695be16a33",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10b",
+          "texte": "Tu as le même âge que moi."
+        },
+        {
+          "id": "tessia_c7591d5e30",
+          "fichier": "tessia_c7591d5e30.ogg",
+          "sha256": "413bda4c822c10c8",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Tu parles tout le temps comme un vieux monsieur. Tu forces, en plus. Ça s'entend."
+        },
+        {
+          "id": "tessia_c8f4b2eef6",
+          "fichier": "tessia_c8f4b2eef6.ogg",
+          "sha256": "04c6f2de7ad72d8b",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Non ! Moi aussi j'avais tort ! Je n'aurais pas dû te reprendre devant tout ce monde !"
+        },
+        {
+          "id": "tessia_cbf3b2f86c",
+          "fichier": "tessia_cbf3b2f86c.ogg",
+          "sha256": "59dd8a3cadc42001",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch17",
+          "texte": "Doucement, Arthur. Elle doit être terrifiée, de l'autre côté."
+        },
+        {
+          "id": "tessia_ce136adb05",
+          "fichier": "tessia_ce136adb05.ogg",
+          "sha256": "21f8e7ba18a66b21",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Et vous ! Chercher querelle à un aîné le jour de la rentrée. Vous ne connaissez donc pas votre place ?"
+        },
+        {
+          "id": "tessia_cf8a95c011",
+          "fichier": "tessia_cf8a95c011.ogg",
+          "sha256": "c83870b37ee3a7c5",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "...Le comité patrouille dès le premier soir ?"
+        },
+        {
+          "id": "tessia_d091f6f742",
+          "fichier": "tessia_d091f6f742.ogg",
+          "sha256": "d20957712872e57b",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Tais-toi."
+        },
+        {
+          "id": "tessia_d70752ed23",
+          "fichier": "tessia_d70752ed23.ogg",
+          "sha256": "fc9934a0c7739ddd",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch18",
+          "texte": "Tu reviens. Tu as dit que tu revenais."
+        },
+        {
+          "id": "tessia_d981b36e92",
+          "fichier": "tessia_d981b36e92.ogg",
+          "sha256": "3f0ba50e6f7763f9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "C-C'est parce que ça fait mal !"
+        },
+        {
+          "id": "tessia_dc2a87bbf7",
+          "fichier": "tessia_dc2a87bbf7.ogg",
+          "sha256": "8c5be4297ab126b9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch14",
+          "texte": "...Bonjour, toi."
+        },
+        {
+          "id": "tessia_dd97df80d6",
+          "fichier": "tessia_dd97df80d6.ogg",
+          "sha256": "9f1aef013e154445",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch60",
+          "texte": "L'assimilation ! Grand-père m'a dit que ça marchait mieux si tu m'aidais à même la peau !"
+        },
+        {
+          "id": "tessia_e1b39b091e",
+          "fichier": "tessia_e1b39b091e.ogg",
+          "sha256": "f92ad4c6666ca32f",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch18",
+          "texte": "Et tu ne cours pas après les filles humaines. Promets."
+        },
+        {
+          "id": "tessia_e1d50e234e",
+          "fichier": "tessia_e1d50e234e.ogg",
+          "sha256": "4079e4c1f5f885ba",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Tessia Eralith. Et j'ai eu cinq ans."
+        },
+        {
+          "id": "tessia_e1f534d317",
+          "fichier": "tessia_e1f534d317.ogg",
+          "sha256": "75369c2465873a43",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch10a",
+          "texte": "Je ne suis pas une marchandise."
+        },
+        {
+          "id": "tessia_e27ffae349",
+          "fichier": "tessia_e27ffae349.ogg",
+          "sha256": "f6527aedc09d5615",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Arthur. Tu as dit que tes proches t'appelaient Art."
+        },
+        {
+          "id": "tessia_e62669e947",
+          "fichier": "tessia_e62669e947.ogg",
+          "sha256": "ea0494b761a8a487",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Grand-mère Cynthia est un monstre. Je le dis avec beaucoup d'affection."
+        },
+        {
+          "id": "tessia_e67d127215",
+          "fichier": "tessia_e67d127215.ogg",
+          "sha256": "5d0d1fe93cef4210",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Je ne vois pas ce que — ah ! Je n'arrive pas à sentir ton —"
+        },
+        {
+          "id": "tessia_e6ee9b5edc",
+          "fichier": "tessia_e6ee9b5edc.ogg",
+          "sha256": "a7d50c092615202c",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch60",
+          "texte": "Art. On peut parler ?"
+        },
+        {
+          "id": "tessia_e853aa2355",
+          "fichier": "tessia_e853aa2355.ogg",
+          "sha256": "729e4fd3d8e498de",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Mais tu comprends, devant eux je dois être la présidente. La présidente sévère. Sinon plus rien ne tient."
+        },
+        {
+          "id": "tessia_e8be4dc18e",
+          "fichier": "tessia_e8be4dc18e.ogg",
+          "sha256": "c18f5c1bdb0d24e9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Je ne tolérerai aucune agression, aucune brimade fondée sur ce prétexte. Aucune."
+        },
+        {
+          "id": "tessia_e91a4486c1",
+          "fichier": "tessia_e91a4486c1.ogg",
+          "sha256": "cd6355ad59473e54",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "Vous. Je vous ai posé une question. Vous osez ?"
+        },
+        {
+          "id": "tessia_ee6f2d30e0",
+          "fichier": "tessia_ee6f2d30e0.ogg",
+          "sha256": "7994c062e6ed35b0",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Hé ! Et toi tu peux m'appeler Tess. Voilà."
+        },
+        {
+          "id": "tessia_eeb3d3194f",
+          "fichier": "tessia_eeb3d3194f.ogg",
+          "sha256": "239bc4fa6d198461",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "J'aurais annulé dès qu'il aurait perdu connaissance. Et puis je savais que tu t'en occuperais."
+        },
+        {
+          "id": "tessia_eef489785f",
+          "fichier": "tessia_eef489785f.ogg",
+          "sha256": "8929a43e552ed0f9",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Alors est-ce que je peux t'appeler Art ? Parce que je trouve qu'on est proches, maintenant."
+        },
+        {
+          "id": "tessia_f0a29a18fb",
+          "fichier": "tessia_f0a29a18fb.ogg",
+          "sha256": "a50ea5b06db49b89",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch50",
+          "texte": "Accueillez avec moi le comité de discipline."
+        },
+        {
+          "id": "tessia_f16c9566ce",
+          "fichier": "tessia_f16c9566ce.ogg",
+          "sha256": "a12561c6e3b64265",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch45",
+          "texte": "À partir de cette année, et quelles que soient vos filières, vos deux premières années seront un tronc commun obligatoire, mêlant cours érudits et cours de combat. On ne méprise pas longtemps ceux avec qui on récite."
+        },
+        {
+          "id": "tessia_f229658b9f",
+          "fichier": "tessia_f229658b9f.ogg",
+          "sha256": "f8e433efeba16006",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Tiens-toi prêt, alors."
+        },
+        {
+          "id": "tessia_f7c017fac2",
+          "fichier": "tessia_f7c017fac2.ogg",
+          "sha256": "eac687b05edd12eb",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "...Tu es la première personne dont je me sois approchée. Vraiment approchée. Je ne sais pas comment on fait, après."
+        },
+        {
+          "id": "tessia_f7d70905f1",
+          "fichier": "tessia_f7d70905f1.ogg",
+          "sha256": "dd993b41785742e8",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch12",
+          "texte": "Ils m'ont donné un précepteur. Et un emploi du temps. Et deux gardes."
+        },
+        {
+          "id": "tessia_f7da807dfd",
+          "fichier": "tessia_f7da807dfd.ogg",
+          "sha256": "0957ec93ff976f08",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch49",
+          "texte": "Félicitations, au fait. Pour le comité."
+        },
+        {
+          "id": "tessia_fad8ef5e93",
+          "fichier": "tessia_fad8ef5e93.ogg",
+          "sha256": "bb50d5efb9d37ef3",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch50",
+          "texte": "Sa mission est de prévenir et de régler les différends entre élèves, et de sanctionner ceux qui troublent l'ordre de cette académie."
+        },
+        {
+          "id": "tessia_fb4de4583a",
+          "fichier": "tessia_fb4de4583a.ogg",
+          "sha256": "095c7b1ab7ffe40a",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch55",
+          "texte": "Tais-toi, monsieur le génie. Ils sont tous là-bas, de toute façon."
+        },
+        {
+          "id": "tessia_fe821cdc83",
+          "fichier": "tessia_fe821cdc83.ogg",
+          "sha256": "992f24e17595b027",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch16",
+          "texte": "Grand-père ! Ton dos !"
+        },
+        {
+          "id": "tessia_fec6fc0106",
+          "fichier": "tessia_fec6fc0106.ogg",
+          "sha256": "10a30feef95b6038",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "Que les hommes humains sont tous des vicieux et qu'ils ont plusieurs femmes chacun."
+        },
+        {
+          "id": "tessia_ffdefc31b1",
+          "fichier": "tessia_ffdefc31b1.ogg",
+          "sha256": "089a6ddb69f1a43a",
+          "moteur": "qwen3-tts",
+          "chapitre": "ch11",
+          "texte": "...Je comptais te le dire. Un peu plus tard. Dans un endroit où tu ne pourrais pas t'enfuir."
+        }
+      ]
     }
   },
   "medias": {
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-10T13:13:48",
+  "construit": "2026-08-14T11:10:37",
   "contenu": [
     "voices"
   ],

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5]
+# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5|6|6b]
 #
 # Ne restent ici que les clips qui documentent une décision ENCORE EN VIGUEUR : la voix
 # en service, la comparaison qui a fait changer de moteur, et le repère de mesure. Les
@@ -51,4 +51,33 @@ if [ "$lot" = 5 ] || [ "$lot" = 0 ]; then
     echo "  --- $t"
     for f in 9-casting-tessia/"$t"/*.ogg; do jouer "$f"; done
   done
+fi
+
+# Les mélanges du lot 10 : sohee et ono_anna sont repris tels quels du lot 5 (mêmes graines,
+# mêmes clips), donc les entendre ici à côté des mélanges est une comparaison honnête.
+MELANGES="sohee ono_anna sohee-0-7_ono_anna-0-3 sohee-0-5_ono_anna-0-5 sohee-0-3_ono_anna-0-7 \
+sohee-0-8_serena-0-2 ono_anna-0-8_serena-0-2"
+
+if [ "$lot" = 6 ] || [ "$lot" = 0 ]; then
+  echo "=== 6. MÉLANGES POUR TESSIA — la MÊME réplique enchaînée sur les 7 doses"
+  echo "    C'est l'ordre qui compte : deux timbres ne se comparent qu'à texte identique."
+  echo "    D'abord l'enfant de 5 ans, puis l'adolescente. Aucun prompt d'âge : ce qui"
+  echo "    bouge entre les deux, c'est le TEXTE qui le fait bouger."
+  for id in tessia_ch11_09 tessia_ch45_03; do
+    echo "  --- réplique $id"
+    for t in $MELANGES; do
+      [ -f "10-melanges-tessia/$t/$id.ogg" ] || continue
+      echo "    · $t"; jouer "10-melanges-tessia/$t/$id.ogg"
+    done
+  done
+  echo "    Puis : bash ecouter.sh 6b <dose>  — les 8 répliques d'une seule dose,"
+  echo "    pour entendre si elle reste la même personne d'un « ...Je ne sais pas » à"
+  echo "    un discours de 14 s. Doses : $MELANGES"
+fi
+
+if [ "$lot" = 6b ]; then
+  t=${2:?usage : bash ecouter.sh 6b <dose>   (ex. sohee-0-5_ono_anna-0-5)}
+  [ -d "10-melanges-tessia/$t" ] || { echo "dose inconnue : $t"; echo "→ $MELANGES"; exit 1; }
+  echo "=== 6b. $t sur les 8 répliques — 4 enfant (ch11-14) puis 4 adolescente (ch45-50)"
+  for f in 10-melanges-tessia/"$t"/*.ogg; do jouer "$f"; done
 fi
