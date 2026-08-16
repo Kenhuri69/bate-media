@@ -35,8 +35,18 @@ sys.path.insert(0, str(RACINE / "voice-agent/training"))
 
 
 def _numero(etiquette: str):
-    m = re.search(r"\d+", etiquette)
-    return int(m.group()) if m else None
+    """Numéro de chapitre d'une étiquette, ou None si elle n'en porte pas.
+
+    ANCRÉ SUR LE PRÉFIXE `ch`, et pas sur « le premier nombre trouvé » : depuis que
+    l'extraction descend dans `dialogues/side/`, une étiquette d'arc secondaire
+    (`gates_design_01`) contient elle aussi un nombre. Le motif large en tirait 1, donc
+    `--max-chapitre 60` gardait les six arcs en les faisant passer pour du chapitre 1 —
+    un filtre qui ne filtre pas ce qu'il annonce, et personne ne le voit dans un compte.
+    Une histoire secondaire n'est datée par aucun chapitre : elle rend None et sort de
+    toute borne de chapitre.
+    """
+    m = re.fullmatch(r"ch(\d+)[a-z]*", etiquette)
+    return int(m.group(1)) if m else None
 
 
 def main() -> int:
@@ -64,7 +74,11 @@ def main() -> int:
     if args.max_chapitre is not None:
         lignes = [l for l in lignes
                   if (n := _numero(l["chapitre"])) is not None and n <= args.max_chapitre]
-    lignes.sort(key=lambda l: (_numero(l["chapitre"]), l["chapitre"], l["role"], l["id"]))
+    # Les chapitres d'abord, dans l'ordre du récit ; les histoires secondaires ensuite, par
+    # nom d'arc. `_numero` rend None sur ces dernières et None ne se compare pas à un entier.
+    lignes.sort(key=lambda l: (_numero(l["chapitre"]) is None,
+                               _numero(l["chapitre"]) or 0,
+                               l["chapitre"], l["role"], l["id"]))
 
     doublons = [i for i, c in Counter(l["id"] for l in lignes).items() if c > 1]
     if doublons:
@@ -75,7 +89,8 @@ def main() -> int:
         return 1
 
     par_role = Counter(l["role"] for l in lignes)
-    chapitres = sorted({l["chapitre"] for l in lignes}, key=lambda c: (_numero(c), c))
+    chapitres = sorted({l["chapitre"] for l in lignes},
+                       key=lambda c: (_numero(c) is None, _numero(c) or 0, c))
     print(f"{len(lignes)} répliques — {dict(par_role)} — {len(chapitres)} timelines "
           f"({chapitres[0]} → {chapitres[-1]})")
 

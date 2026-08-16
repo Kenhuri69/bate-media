@@ -1,5 +1,5 @@
 #!/bin/bash
-# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5|6|6b]
+# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5|6|6b|7|8]
 #
 # Ne restent ici que les clips qui documentent une décision ENCORE EN VIGUEUR : la voix
 # en service, la comparaison qui a fait changer de moteur, et le repère de mesure. Les
@@ -80,4 +80,37 @@ if [ "$lot" = 6b ]; then
   [ -d "10-melanges-tessia/$t" ] || { echo "dose inconnue : $t"; echo "→ $MELANGES"; exit 1; }
   echo "=== 6b. $t sur les 8 répliques — 4 enfant (ch11-14) puis 4 adolescente (ch45-50)"
   for f in 10-melanges-tessia/"$t"/*.ogg; do jouer "$f"; done
+fi
+
+if [ "$lot" = 7 ] || [ "$lot" = 0 ]; then
+  echo "=== 7. CASTING DE VIRION — 3 timbres masculins, et Arthur en dit deux"
+  echo "    La question n'est pas « lequel lui va » mais « lequel ne sera pas pris pour"
+  echo "    Arthur » : CustomVoice n'a que trois voix d'homme utilisables et le mélange"
+  echo "    d'Arthur en consomme deux (aiden + ryan). Écouter chaque réplique DANS LA"
+  echo "    FOULÉE de la référence : c'est la confusion qu'on juge, pas le timbre seul."
+  for f in "11-casting-virion/uncle_fu:0.5+aiden:0.5"/*.ogg; do
+    id=$(basename "$f")
+    echo "  --- réplique ${id%.ogg}"
+    echo "    · ARTHUR (référence)"; jouer "11-casting-virion/_reference-arthur/$id"
+    echo "    · TESSIA (référence)"; jouer "11-casting-virion/_reference-tessia/$id"
+    echo "    · VIRION retenu"; jouer "$f"
+  done
+  echo "    uncle_fu PUR a été produit (350 clips) puis écarté : F0 201,7 Hz, soit 14 Hz de"
+  echo "    Tessia, et 79 Hz de dispersion — le pire lot des quatre voix. Le mélange retenu"
+  echo "    tombe à 130 Hz et 47 Hz. Détail : 11-casting-virion/README.md"
+fi
+
+if [ "$lot" = 8 ] || [ "$lot" = 0 ]; then
+  echo "=== 8. CASTING DE SYLVIE — sa référence est TESSIA, pas Arthur"
+  echo "    Deux voix féminines jeunes qui partagent la plupart de leurs scènes : c'est"
+  echo "    entre elles deux que la confusion coûte, pas avec le narrateur."
+  for f in "11-casting-sylvie/ono_anna:0.5+serena:0.5"/*.ogg; do
+    id=$(basename "$f")
+    echo "  --- réplique ${id%.ogg}"
+    echo "    · TESSIA (référence)"; jouer "11-casting-sylvie/_reference-tessia/$id"
+    echo "    · SYLVIE retenue"; jouer "$f"
+  done
+  echo "    vivian:0.7+serena:0.3 avait gagné le casting puis livré 98 Hz de dispersion."
+  echo "    Le lot d'audition prend les répliques les PLUS LONGUES : sa plage sous-estime"
+  echo "    celle du lot réel. Détail : 11-casting-sylvie/README.md"
 fi
