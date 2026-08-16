@@ -96,13 +96,15 @@ def correspondances(lignes_json: Path, roles: tuple, max_chapitre: int) -> tuple
 
     # Ce que le jeu demande aujourd'hui, à SA règle : empreinte de la ligne BRUTE.
     demandes = {}
-    for timeline in sorted(DIALOGUES.glob("*.dtl")):
+    for timeline in sorted(DIALOGUES.rglob("*.dtl")):
         # AUCUNE borne de chapitre ici, et c'est important : un clip dont le texte a migré
         # vers un chapitre au-delà de la plage produite passerait pour caduc alors qu'il est
         # demandé. La borne ne vaut que pour compter ce qui MANQUE dans le périmètre livré.
-        m = re.search(r"(\d+)", timeline.stem)
-        if not m:
-            continue
+        #
+        # RÉCURSIF depuis le 2026-08-15 : `dialogues/side/` échappait au balayage, si bien que
+        # les 563 répliques d'histoires secondaires étaient comptées CADUQUES — « aucune
+        # réplique du jeu ne dit ce texte » — et leurs clips supprimés à chaque reconstruction
+        # du manifeste. Le dossier qu'on ne regarde pas n'est pas neutre, il accuse.
         for ligne in timeline.read_text(encoding="utf-8").splitlines():
             s = ligne.strip()
             if not s or s.startswith("#") or s.startswith("[") or s.startswith("- "):
@@ -116,12 +118,25 @@ def correspondances(lignes_json: Path, roles: tuple, max_chapitre: int) -> tuple
 
     caducs = sorted(set(a_dire) - set(demandes))
     dans_perimetre = {i for i, (_, stem) in demandes.items()
-                      if int(re.search(r"\d+", stem).group()) <= max_chapitre}
+                      if _dans_perimetre(stem, max_chapitre)}
     manquants = sorted(dans_perimetre - set(a_dire))
     return a_dire, demandes, caducs, manquants
 
 
-MAX_CHAPITRE = 60
+def _dans_perimetre(stem: str, max_chapitre: int) -> bool:
+    """Vrai si cette timeline entre dans la plage de chapitres annoncée.
+
+    Une timeline d'histoire secondaire (`gates_design_01`) n'est datée d'aucun chapitre : elle
+    est TOUJOURS dans le périmètre. Le motif large « premier nombre trouvé » en tirait 1 et la
+    faisait passer pour du chapitre 1 — donc dans la plage quelle que soit la borne, par
+    accident plutôt que par décision.
+    """
+    m = re.fullmatch(r"chapter_(\d+)[a-z]*", stem)
+    return int(m.group(1)) <= max_chapitre if m else True
+
+
+# Le périmètre par défaut est désormais le JEU ENTIER : le pack ne s'arrête plus au chapitre 60.
+MAX_CHAPITRE = 10_000
 
 
 def main() -> int:

@@ -1,0 +1,126 @@
+{
+  "personnage": "Virion",
+  "candidats": [
+    "uncle_fu",
+    "uncle_fu:0.7+aiden:0.3",
+    "uncle_fu:0.5+aiden:0.5",
+    "uncle_fu:0.3+aiden:0.7",
+    "uncle_fu:0.5+ryan:0.5",
+    "aiden",
+    "ryan"
+  ],
+  "references": [
+    {
+      "personnage": "Arthur",
+      "timbre": "aiden:0.5+ryan:0.5"
+    },
+    {
+      "personnage": "Tessia",
+      "timbre": "sohee"
+    }
+  ],
+  "repliques": [
+    {
+      "id": "virion_ch13_12",
+      "chapitre": "ch13",
+      "texte": "Vous êtes aussi les seuls à avoir des deviants des formes supérieures, et les seuls à en avoir qui sortent des quatre tout à fait — vos guérisseurs, les émetteurs. Vos noyaux sont les plus divers de ce monde, et c'est bien la seule chose que je vous envie."
+    },
+    {
+      "id": "virion_ch16_33",
+      "chapitre": "ch16",
+      "texte": "On n'a pas vu les races draconiques depuis des centaines d'années. Ce qu'il en reste tient dans trois livres, et deux sont faux. Tu garderas cela pour toi jusqu'au jour où tu pourras te protéger, toi et ceux qui sont autour de toi."
+    },
+    {
+      "id": "virion_ch16_37",
+      "chapitre": "ch16",
+      "texte": "Un tournoi, à Xyrus. Les elfes et les nains y envoient des jeunes — comme concurrents, et comme premiers élèves de votre académie humaine. Les trois races ont décidé d'apprendre sous un même toit, ce qui est soit la meilleure idée du siècle, soit la pire."
+    },
+    {
+      "id": "virion_ch76_30",
+      "chapitre": "ch76",
+      "texte": "Imagine le nombre de mages d'argent qui plafonnent depuis vingt ans et qui apprendraient qu'il existe un objet capable de les faire passer. Certains iraient jusqu'à effacer une lignée royale entière pour devenir les nouveaux maîtres des artefacts. Ne me regarde pas comme ça : j'ai été roi, j'ai fait le compte."
+    },
+    {
+      "id": "virion_ch78_05",
+      "chapitre": "ch78",
+      "texte": "Ils ont reconnu la mort. Ils ont reconnu la plaque — la directrice l'a remise à Merial en personne. Ils n'ont pas prononcé le nom. Quatre heures de séance pour aboutir à « un adversaire non identifié d'une puissance exceptionnelle », qu'un secrétaire a écrite trois fois avant que tout le monde soit d'accord sur l'ordre des mots."
+    },
+    {
+      "id": "virion_ch129_08",
+      "chapitre": "ch129",
+      "texte": "...C'est la chose la plus dure que j'aie entendue de la bouche d'un homme de vingt-cinq ans, et c'est la bonne. Ta famille : vivante, au château volant. Les Twin Horns : vivants, tous les cinq. Tessia : vivante, et elle commande une escouade dans les Beast Glades. Va-t'en maintenant, avant que je te donne le quatrième."
+    }
+  ],
+  "timbres": {
+    "uncle_fu": {
+      "f0_median": 174.93638676844785,
+      "f0_plage": 69.85990752205774,
+      "ambitus_st": 5.133059287084322,
+      "proximite": {
+        "Arthur": 0.9493836616092614,
+        "Tessia": 0.9329435867520169
+      },
+      "proximite_pire": 0.9493836616092614
+    },
+    "uncle_fu:0.7+aiden:0.3": {
+      "f0_median": 192.0,
+      "f0_plage": 62.47315867697756,
+      "ambitus_st": 5.060186081570894,
+      "proximite": {
+        "Arthur": 0.9446018093515134,
+        "Tessia": 0.9486032202919429
+      },
+      "proximite_pire": 0.9486032202919429
+    },
+    "uncle_fu:0.5+aiden:0.5": {
+      "f0_median": 134.0823970037453,
+      "f0_plage": 32.039551706471045,
+      "ambitus_st": 3.5819319472880338,
+      "proximite": {
+        "Arthur": 0.9634635088048796,
+        "Tessia": 0.873068308606802
+      },
+      "proximite_pire": 0.9634635088048796
+    },
+    "uncle_fu:0.3+aiden:0.7": {
+      "f0_median": 134.094952710928,
+      "f0_plage": 23.53198308091092,
+      "ambitus_st": 3.638875088883162,
+      "proximite": {
+        "Arthur": 0.9755538905932563,
+        "Tessia": 0.8800828971592698
+      },
+      "proximite_pire": 0.9755538905932563
+    },
+    "uncle_fu:0.5+ryan:0.5": {
+      "f0_median": 143.9367861054608,
+      "f0_plage": 31.80176149985965,
+      "ambitus_st": 4.817067229226549,
+      "proximite": {
+        "Arthur": 0.9743518051932437,
+        "Tessia": 0.9073080049793094
+      },
+      "proximite_pire": 0.9743518051932437
+    },
+    "aiden": {
+      "f0_median": 136.75324675324674,
+      "f0_plage": 12.701178442173301,
+      "ambitus_st": 4.3198995732910515,
+      "proximite": {
+        "Arthur": 0.9646684229333484,
+        "Tessia": 0.862669260171288
+      },
+      "proximite_pire": 0.9646684229333484
+    },
+    "ryan": {
+      "f0_median": 155.07107424236108,
+      "f0_plage": 33.62625636902686,
+      "ambitus_st": 7.0639864414202815,
+      "proximite": {
+        "Arthur": 0.9748768731108214,
+        "Tessia": 0.9254266323068704
+      },
+      "proximite_pire": 0.9748768731108214
+    }
+  }
+}

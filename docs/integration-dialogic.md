@@ -41,6 +41,37 @@ Un `AudioStreamPlayer` dédié (bus `Voice`) évite que la voix coupe la musique
 réglage de volume séparé — utile puisque certains joueurs voudront les dialogues écrits sans
 la voix.
 
+## La pensée passe sous la parole
+
+Le jeu est narré à la première personne : `narrator`, c'est Arthur qui se raconte, avec la même
+voix et le même timbre que lorsqu'il parle à quelqu'un. Rien ne distingue donc à l'oreille ce
+qu'il **dit** de ce qu'il **pense** — sauf le niveau.
+
+| | RMS médian mesuré | écart |
+|---|---|---|
+| répliques parlées (`Arthur`, `Note`) | −20,5 à −20,9 dBFS | référence |
+| narration (`narrator`) | −22,2 dBFS | −1,5 dB |
+
+Ces −1,5 dB sont un effet de bord du registre de synthèse (« posé, presque murmuré, sans
+emphase »), pas une intention, et ils ne s'entendent pas comme telle. La convention porte l'écart
+à **3 dB**, l'ordre de grandeur d'un monologue intérieur qui se distingue sans devenir
+inintelligible sur le haut-parleur d'un téléphone — le jeu est un jeu mobile, et c'est cette
+contrainte qui borne la valeur par le haut, pas le goût.
+
+**L'écart est appliqué au mixage, jamais cuit dans les fichiers.** Il vaut `-1,5 dB`
+(`VoiceLines.ThoughtGainDb`, appliqué par `AudioManager.PlayVoice`) et le bloc `mixage` du
+`manifest.json` publie la même valeur. Les deux doivent rester d'accord.
+
+Ce choix n'est pas seulement de la prudence : cuire l'écart dans les `.ogg` demanderait de
+regénérer plus de 10 000 clips — une dizaine d'heures de GPU — pour changer d'avis d'un décibel,
+et laisserait un ancien pack incohérent avec le nouveau. Au mixage, la valeur se change en un
+point et rien n'est à reproduire.
+
+Un piège déjà couvert : `SetVoiceVolume` rejoue la correction de rôle. Sans cela, bouger le
+curseur des options pendant une narration la remonterait au niveau de la parole jusqu'à la
+réplique suivante — un décrochage audible que personne ne relierait au réglage qu'il vient de
+toucher.
+
 ## Côté Dialogic : déclencher au bon moment
 
 `scenes/hud/VoiceLine.gd` s'abonne à `Dialogic.Text.about_to_show_text` et appelle `PlayVoice`

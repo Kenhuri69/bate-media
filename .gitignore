@@ -27,6 +27,11 @@ docs/ecoute-qwen3-tts/8-ages-par-prompt/temoin-sans-prompt/
 # Packs construits localement
 dist/
 
+# Journaux des productions détachées (`nohup … voix_personnage.py livrer`). Une livraison
+# d'Arthur en produit des heures ; ce qui doit survivre au journal, c'est le
+# `rapport_livraison.json` de la forge.
+scratch/
+
 # Python
 __pycache__/
 *.pyc

@@ -1,0 +1,174 @@
+{
+  "personnage": "Sylvie",
+  "candidats": [
+    "vivian:0.5+serena:0.5",
+    "vivian:0.3+serena:0.7",
+    "serena",
+    "ono_anna:0.5+serena:0.5",
+    "ono_anna:0.3+serena:0.7"
+  ],
+  "references": [
+    {
+      "personnage": "Tessia",
+      "timbre": "sohee"
+    },
+    {
+      "personnage": "Arthur",
+      "timbre": "aiden:0.5+ryan:0.5"
+    }
+  ],
+  "repliques": [
+    {
+      "id": "sylvie_ch17_01",
+      "chapitre": "ch17",
+      "texte": "...Maman ?"
+    },
+    {
+      "id": "sylvie_ch21_01",
+      "chapitre": "ch21",
+      "texte": "(Une poche. On me range dans une poche. Est-ce que quelqu'un compte me demander mon avis, à un moment, ou est-ce que je suis un bagage ?)"
+    },
+    {
+      "id": "sylvie_ch24_01",
+      "chapitre": "ch24",
+      "texte": "...kuu."
+    },
+    {
+      "id": "sylvie_ch30_01",
+      "chapitre": "ch30",
+      "texte": "(Arrête de vérifier. Tu as vérifié quatre fois depuis le feu. Je sais chasser, et je sais rentrer.)"
+    },
+    {
+      "id": "sylvie_ch35_03",
+      "chapitre": "ch35",
+      "texte": "J'ai chassé beaucoup. J'ai mangé beaucoup de noyaux. C'est comme ça qu'on grandit."
+    },
+    {
+      "id": "sylvie_ch35_04",
+      "chapitre": "ch35",
+      "texte": "Tu as dit non. Je t'ai écouté. Je ne t'écouterai plus jamais."
+    },
+    {
+      "id": "sylvie_ch40_01",
+      "chapitre": "ch40",
+      "texte": "J'espère que c'est de la viande. J'espère très fort que c'est de la viande."
+    },
+    {
+      "id": "sylvie_ch50_01",
+      "chapitre": "ch50",
+      "texte": "(Feyrith. L'elfe du couloir, celui que tu as mis par terre. Feyrith.)"
+    },
+    {
+      "id": "sylvie_ch54_03",
+      "chapitre": "ch54",
+      "texte": "(Il a dit à la vieille dame de ne jamais faire de toi son ennemi.)"
+    },
+    {
+      "id": "sylvie_ch56_02",
+      "chapitre": "ch56",
+      "texte": "(Maman est en train de gagner contre Curtis. Et Claire gagne contre le monsieur sérieux.)"
+    },
+    {
+      "id": "sylvie_ch56_04",
+      "chapitre": "ch56",
+      "texte": "(PAPA ! Il y a quelque chose qui ne va pas avec Maman ! Elle va recevoir une attaque énorme et elle ne fait RIEN ! C'est très grave ! Je vais l'aider ?)"
+    },
+    {
+      "id": "sylvie_ch59_02",
+      "chapitre": "ch59",
+      "texte": "(Pas mal. Je ferais mieux.)"
+    },
+    {
+      "id": "sylvie_ch62_02",
+      "chapitre": "ch62",
+      "texte": "(Tu as répondu trop vite. Tu réponds toujours trop vite quand tu n'en sais rien.)"
+    },
+    {
+      "id": "sylvie_ch70_05",
+      "chapitre": "ch70",
+      "texte": "Alors on travaillera. Tu dis toujours les choses comme si j'allais dire non."
+    },
+    {
+      "id": "sylvie_ch70_06",
+      "chapitre": "ch70",
+      "texte": "Elles étaient... des bêtes. Grandes comme ça. Je suis vraiment forte, tu sais."
+    },
+    {
+      "id": "sylvie_ch75_01",
+      "chapitre": "ch75",
+      "texte": "Papa... c'est Maman. Qu'est-ce que je fais ?"
+    },
+    {
+      "id": "sylvie_ch127_03",
+      "chapitre": "ch127",
+      "texte": "...Ils ont essayé. Le premier hiver, tous les jours. Ils m'ont dit que sept ans avec un humain m'avaient mal formée, et ils avaient raison sur la moitié — je me tenais mal, je volais mal, je ne savais rien de mon propre sang. Ils avaient tort sur le reste, et je le leur ai dit à onze ans."
+    },
+    {
+      "id": "sylvie_ch134_01",
+      "chapitre": "ch134",
+      "texte": "Ne me regarde pas comme ça. Je sais compter aussi : trois cents noyaux de bête en sept semaines, et je pourrais en prendre autant demain. Ce n'est pas de la gourmandise et ce n'est pas une maladie. C'est mon corps qui se prépare à quelque chose, et il ne me demande pas mon avis."
+    },
+    {
+      "id": "sylvie_ch231_03",
+      "chapitre": "ch231",
+      "texte": "Il y a un trou. Aucune escorte, aucun soutien de mana derrière la troisième ligne, et rien du tout depuis le neuvième jour du siège. Trois cents navires au mouillage et personne dedans qui vaille la peine d'être protégé."
+    },
+    {
+      "id": "sylvie_ch242_02",
+      "chapitre": "ch242",
+      "texte": "Ce n'est pas perdu. Tu as passé cent onze soirs à regarder une chose que tu ne peux pas voir sans t'inventer de l'avoir vue. Personne que je connaisse n'en est capable."
+    }
+  ],
+  "timbres": {
+    "vivian:0.5+serena:0.5": {
+      "f0_median": 242.42424242424244,
+      "f0_plage": 75.09373264006604,
+      "ambitus_st": 3.0134074316342665,
+      "proximite": {
+        "Tessia": 0.932027884323313,
+        "Arthur": 0.8475301880384872
+      },
+      "proximite_pire": 0.932027884323313
+    },
+    "vivian:0.3+serena:0.7": {
+      "f0_median": 252.6595744680851,
+      "f0_plage": 61.7594543728988,
+      "ambitus_st": 3.118313299392375,
+      "proximite": {
+        "Tessia": 0.9322668242900921,
+        "Arthur": 0.848882777914414
+      },
+      "proximite_pire": 0.9322668242900921
+    },
+    "serena": {
+      "f0_median": 243.71134020618558,
+      "f0_plage": 55.85097285712786,
+      "ambitus_st": 3.0982182718546936,
+      "proximite": {
+        "Tessia": 0.9421620636680214,
+        "Arthur": 0.859134000575024
+      },
+      "proximite_pire": 0.9421620636680214
+    },
+    "ono_anna:0.5+serena:0.5": {
+      "f0_median": 258.09435707678074,
+      "f0_plage": 56.986872776346445,
+      "ambitus_st": 2.7909297642211532,
+      "proximite": {
+        "Tessia": 0.9223324386492591,
+        "Arthur": 0.8415496192527966
+      },
+      "proximite_pire": 0.9223324386492591
+    },
+    "ono_anna:0.3+serena:0.7": {
+      "f0_median": 236.45894001164822,
+      "f0_plage": 65.11973959544292,
+      "ambitus_st": 3.19759332776784,
+      "proximite": {
+        "Tessia": 0.9387977652493609,
+        "Arthur": 0.8719874414420697
+      },
+      "proximite_pire": 0.9387977652493609
+    }
+  }
+}
