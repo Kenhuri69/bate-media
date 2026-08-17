@@ -50,6 +50,7 @@ sys.path.insert(0, str(RACINE / "voice-agent/training"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from empreinte import clip_id, dossier_de_voix, role_du_locuteur  # noqa: E402
+from descente_voix import descendre  # noqa: E402
 
 # --- casting ------------------------------------------------------------------
 # Le timbre de chaque personnage, sa date de validation à l'oreille, et la cible du contrôle
@@ -112,12 +113,22 @@ PERSONNAGES = {
         # utilisables et Arthur en consomme deux. Il n'y a pas de quatrième voix d'homme à
         # trouver — un quatrième personnage masculin devra partager ou changer de moteur.
         "timbre": "uncle_fu:0.5+aiden:0.5",
-        # Étalonnée sur le lot livré (voir plus bas pour Sylvie) : 6,5 de concentration à 150 Hz contre 6,1 à 132 et 5,4 à
-        # 205. `Virion` sort à 150 et `Virion Eralith` à 175 pour 0,4 d'écart — du bruit, pas
-        # deux registres : une seule cible, comme une seule voix. Écrite en dur parce que la F0
-        # mesurée n'est pas utilisable sur une voix d'homme (trop d'énergie sous 150 Hz pour que
-        # le garde-fou de `_cible` la juge croyable).
-        "cibles": {"*": 150.0},
+        # LE TIMBRE NE SUFFIT PAS, ET LE MODÈLE NE SAIT PAS COMPLÉTER. À 130 Hz, Virion parle
+        # exactement à la hauteur d'Arthur (131 Hz en parlé, 119 en narration) pour un
+        # personnage de plusieurs siècles. Les six consignes « vieil homme » essayées montent
+        # toutes la F0 au lieu de la descendre (+1 à +16 Hz), et aucun des trois timbres
+        # masculins de CustomVoice ne descend sous 130 Hz.
+        #
+        # On descend donc le signal de 3 demi-tons — 130 Hz devient 109 Hz, sous Arthur au lieu
+        # d'être sur lui — À DURÉE CONSTANTE : ralentir a été refusé, et la compression WSOLA
+        # rend la durée sans remonter la hauteur. Validé à l'écoute le 2026-08-17 (lot 13).
+        "grave_demi_tons": 3.0,
+        # Étalonnée à 150 Hz sur le lot AVANT descente (6,5 de concentration contre 6,1 à 132
+        # et 5,4 à 205). La descente de 3 demi-tons la déplace du même rapport : 150 / 2^(3/12)
+        # = 126 Hz. Ne PAS laisser 150 ici — le contrôle chercherait l'énergie une tierce
+        # au-dessus de la voix et signalerait des clips sains, exactement le piège déjà payé sur
+        # les narrations d'Arthur (13 clips sur 13 déclarés défectueux par une cible fausse).
+        "cibles": {"*": 126.0},
     },
     "sylvie": {
         "nom": "Sylvie",
@@ -344,6 +355,7 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
         return 0
 
     modele = qwen3tts._charge("customvoice")
+    grave = perso.get("grave_demi_tons", 0.0)
     relances, debut = 0, time.time()
     for i, ligne in enumerate(a_faire):
         cible = perso["sortie"] / f"{ligne['clip']}.ogg"
@@ -356,7 +368,8 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
             # même son.
             seed=qwen3tts._seed_de(ligne["clip"], 2000), temperature=0.7)
         relances += essais
-        qwen3tts._ecrit(onde, modele.sample_rate, cible, "ogg")
+        qwen3tts._ecrit(descendre(onde, grave, modele.sample_rate), modele.sample_rate,
+                        cible, "ogg")
         if (i + 1) % 25 == 0 or i + 1 == len(a_faire):
             ecoule = time.time() - debut
             reste = ecoule / (i + 1) * (len(a_faire) - i - 1)
@@ -494,6 +507,7 @@ def reprendre(cle: str, essais: int = 4) -> int:
             onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"],
                                        _instruct(qwen3tts, ligne), perso["timbre"],
                                        seed=7000 + essai * 613, temperature=0.7)
+            onde = descendre(onde, perso.get("grave_demi_tons", 0.0), modele.sample_rate)
             tmp = chemin.with_suffix(".essai.ogg")
             qwen3tts._ecrit(onde, modele.sample_rate, tmp, "ogg")
             part = _part_bande(tmp, cible)

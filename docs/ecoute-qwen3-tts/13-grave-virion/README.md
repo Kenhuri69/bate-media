@@ -1,6 +1,21 @@
 # Lot 13 — descendre la voix de Virion sans la ralentir
 
-**Rien n'est décidé ici.** Le palier attend une écoute.
+**Tranché le 2026-08-17 : −3 demi-tons**, à durée constante. Les 350 clips sont regénérés
+dessus et le timbre passe à `valide: true`. Ce lot garde les quatre paliers, qui documentent le
+choix et permettent d'y revenir.
+
+Vérifié sur les 350 clips livrés, avant/après, clip par clip :
+
+| | F0 médiane | plage | durée |
+|---|---|---|---|
+| avant | 131,9 Hz | 45 Hz | référence |
+| **après (−3)** | **113,7 Hz** | 48 Hz | **−0,02 %** |
+| Arthur parlé | 131,7 Hz | 57 Hz | |
+| Arthur narration | 120,3 Hz | 46 Hz | |
+
+Virion passe **sous** Arthur au lieu d'être exactement à sa hauteur, sa dispersion ne bouge pas,
+et la durée est tenue à deux centièmes de pour cent — contre +18,9 % si la descente avait
+ralenti.
 
 ```bash
 bash docs/ecoute-qwen3-tts/ecouter.sh 9
@@ -68,8 +83,18 @@ effet.
 - **Le plancher.** En dessous de −4 demi-tons la voix se creuse vers le grondement. Non testé
   au-delà, faute d'intérêt probable.
 
-## Coût d'un changement d'avis : nul
+## Où la descente est appliquée, et pourquoi pas ailleurs
 
-La descente est un **post-traitement**. Changer de palier ne demande aucune regénération —
-repasser les 350 clips au filtre prend quelques secondes, contre une heure de GPU. Le pack peut
-même être livré à un palier et ajusté ensuite.
+**À la génération** (`voix_personnage.livrer`, champ `grave_demi_tons`), pas en post-traitement
+des `.ogg` livrés. Retoucher les fichiers aurait pris quelques secondes au lieu d'une heure de
+GPU, mais leur aurait infligé un **second encodage Vorbis** — une perte gratuite sur un pack
+distribué. Les 350 clips ont donc été regénérés à graines identiques : mêmes prises, descendues
+une fois, encodées une fois.
+
+`reprendre` applique la même descente, sans quoi un clip repris ressortirait une tierce au-dessus
+de ses voisins — un défaut qu'aucun compte ne montrerait.
+
+La cible du contrôle d'énergie suit le même rapport : 150 Hz devient **126 Hz**. La laisser à 150
+aurait fait chercher l'énergie une tierce au-dessus de la voix et déclaré défectueux des clips
+sains — le piège déjà payé sur les narrations d'Arthur, où une cible fausse en avait condamné
+13 sur 13.

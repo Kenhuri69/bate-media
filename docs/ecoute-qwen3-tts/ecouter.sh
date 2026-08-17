@@ -114,8 +114,8 @@ if [ "$lot" = 9 ] || [ "$lot" = 0 ]; then
       echo "    · $p"; jouer "13-grave-virion/$p/$id"
     done
   done
-  echo "    La descente s'applique APRÈS coup : changer de palier ne demande aucune"
-  echo "    regénération, seulement de repasser les 350 clips au filtre (quelques secondes)."
+  echo "    TRANCHÉ : -3 demi-tons. Vérifié sur les 350 clips livrés, clip par clip :"
+  echo "    132 -> 114 Hz, dispersion inchangée, durée tenue à -0,02 %."
 fi
 
 if [ "$lot" = 8 ] || [ "$lot" = 0 ]; then

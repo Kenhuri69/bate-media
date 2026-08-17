@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.6.0",
+  "version_pack": "0.6.1",
   "mixage": {
     "convention": "voice-mix-1.0",
     "pensee_db": -1.5,
@@ -62275,7 +62275,7 @@
         {
           "id": "virion_009974fc6a",
           "fichier": "virion_009974fc6a.ogg",
-          "sha256": "e07abe95c392863e",
+          "sha256": "3248a538b434dc30",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Elle rit plus depuis dix jours qu'en cinq ans. Je te le dis une fois et je ne le redirai pas : merci."
@@ -62283,7 +62283,7 @@
         {
           "id": "virion_00c16b1fc1",
           "fichier": "virion_00c16b1fc1.ogg",
-          "sha256": "eb40f03f30af2148",
+          "sha256": "7ab9b67a363bbf93",
           "moteur": "qwen3-tts",
           "chapitre": "ch138",
           "texte": "...Un relevé. Tu es en train de me dire que nous venons de gagner une expérience."
@@ -62291,7 +62291,7 @@
         {
           "id": "virion_00dc5392b4",
           "fichier": "virion_00dc5392b4.ogg",
-          "sha256": "9008a91994972f0c",
+          "sha256": "071e8216aedab7e9",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "J'ai signé ça. Pas cette copie gravée : l'original, sur parchemin, dans une tente qui prenait l'eau. Nous étions jeunes et nous pensions faire quelque chose d'irréversible."
@@ -62299,7 +62299,7 @@
         {
           "id": "virion_012c619559",
           "fichier": "virion_012c619559.ogg",
-          "sha256": "d4e5b051f8f87228",
+          "sha256": "fd53cc34e4166b88",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "L'intuition d'un grand-père. Avec tes capacités, si tu ne pensais qu'à toi, tu ne te retrouverais pas dans des situations pareilles. Tu es en morceaux à chaque fois, et à chaque fois il y a quelqu'un derrière toi qui ne l'est pas."
@@ -62307,7 +62307,7 @@
         {
           "id": "virion_015cce8a68",
           "fichier": "virion_015cce8a68.ogg",
-          "sha256": "430c85abb60675d7",
+          "sha256": "664074aa8b786592",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "On les élève. Depuis l'enfance, dans l'entourage de la famille royale de leur race, comme candidats, sans qu'ils le sachent toujours. On les juge dignes, ou pas. Ensuite seulement vient l'objet, et le serment."
@@ -62315,7 +62315,7 @@
         {
           "id": "virion_01685c249d",
           "fichier": "virion_01685c249d.ogg",
-          "sha256": "de4311233fa7fe1f",
+          "sha256": "8f5077d9c89856a4",
           "moteur": "qwen3-tts",
           "chapitre": "ch211",
           "texte": "Personne ne lit la troisième ligne."
@@ -62323,7 +62323,7 @@
         {
           "id": "virion_0252305d91",
           "fichier": "virion_0252305d91.ogg",
-          "sha256": "e6bb3cf2459b386c",
+          "sha256": "a4d37214ddc0714a",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "...Qu'ils ne peuvent pas la remplacer. Qu'un artefact choisit quand il veut, et que personne ne sait quand. Et qu'en attendant, ils sont cinq à couvrir un continent contre une chose qui en a tué une sans se presser."
@@ -62331,7 +62331,7 @@
         {
           "id": "virion_02607ebf7e",
           "fichier": "virion_02607ebf7e.ogg",
-          "sha256": "489b95cf39a0cd99",
+          "sha256": "31dfd2957fade67f",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "La découverte d'un autre continent. Voilà ce qu'il a fallu."
@@ -62339,7 +62339,7 @@
         {
           "id": "virion_02cc5a8cf6",
           "fichier": "virion_02cc5a8cf6.ogg",
-          "sha256": "be0cd51de9ce6ae1",
+          "sha256": "25f33e12c7fd279f",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Blaine Glayder a parlé de communications qui ne passent plus. Il n'a pas dit avec qui, il a dit « nos liaisons », et il a laissé la phrase pendre exactement le temps qu'il fallait pour que chacun pense au continent qu'on a découvert."
@@ -62347,7 +62347,7 @@
         {
           "id": "virion_03c0865a62",
           "fichier": "virion_03c0865a62.ogg",
-          "sha256": "85e747906220153a",
+          "sha256": "79e747f1bd180f62",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Six autour d'une table. Dawsid et Glaundera Greysunders pour les nains. Alduin et Merial pour les miens — mon fils et ma belle-fille, que je n'ai pas eu le droit de prévenir avant la séance. Blaine et Priscilla Glayder pour les humains."
@@ -62355,7 +62355,7 @@
         {
           "id": "virion_045e9f671f",
           "fichier": "virion_045e9f671f.ogg",
-          "sha256": "64800d9a39660f2b",
+          "sha256": "9512ea323fde2150",
           "moteur": "qwen3-tts",
           "chapitre": "ch202",
           "texte": "Et le quatrième ?"
@@ -62363,7 +62363,7 @@
         {
           "id": "virion_048bc26cf9",
           "fichier": "virion_048bc26cf9.ogg",
-          "sha256": "7dbe16a1a3135610",
+          "sha256": "6fb526f1d1da5551",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Nous, les elfes : l'eau, le vent, la terre, et rien d'autre — mais avec une affinité que vous n'aurez jamais. Les lignées les plus pures commandent la plante. Aucun d'entre nous ne tient une forme supérieure. Aucun, jamais."
@@ -62371,7 +62371,7 @@
         {
           "id": "virion_0583b549cd",
           "fichier": "virion_0583b549cd.ogg",
-          "sha256": "9b3141cdc122eb9e",
+          "sha256": "ffae4035aa0a06b2",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Je te la redemande une dernière fois, et ensuite je n'y reviendrai plus jamais. Quelle bête t'a laissé sa volonté ?"
@@ -62379,7 +62379,7 @@
         {
           "id": "virion_05979ecfdd",
           "fichier": "virion_05979ecfdd.ogg",
-          "sha256": "0444e9ea3d366fad",
+          "sha256": "5b6efde753b7ef17",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Voilà. Assieds-toi. Nous allons parler, et ensuite tu décideras si tu prends cette escorte."
@@ -62387,7 +62387,7 @@
         {
           "id": "virion_077bd56824",
           "fichier": "virion_077bd56824.ogg",
-          "sha256": "9d73c4a14e56a0d0",
+          "sha256": "2670b5a044cf5ad8",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Tu ne me diras pas d'où elle vient. Bien. Ne le dis à personne d'autre non plus."
@@ -62395,7 +62395,7 @@
         {
           "id": "virion_0886d0c6aa",
           "fichier": "virion_0886d0c6aa.ogg",
-          "sha256": "8d7ec70794e59f4c",
+          "sha256": "dd6cf972ace961ee",
           "moteur": "qwen3-tts",
           "chapitre": "ch87",
           "texte": "...\"Le siège\". Tu as écrit « il faut trouver où elle s'assoit »."
@@ -62403,7 +62403,7 @@
         {
           "id": "virion_0aa71236e0",
           "fichier": "virion_0aa71236e0.ogg",
-          "sha256": "8c3c77a11d70d41a",
+          "sha256": "dc5d5edfd6a610da",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Maintenant la même garde, les yeux fermés. Ce que tu portes ne se voit pas ; autant t'habituer à travailler sans regarder."
@@ -62411,7 +62411,7 @@
         {
           "id": "virion_0b06a5f8ce",
           "fichier": "virion_0b06a5f8ce.ogg",
-          "sha256": "dda06d4b71ba1134",
+          "sha256": "00e874db1d0b35e3",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Une chose encore, et elle m'a serré la gorge. L'un d'eux a dit que sa mort était **indigne du nom des Lances**. Voilà l'oraison qu'elle a eue de ses pairs : mourir contre un adversaire trop fort, ça se juge."
@@ -62419,7 +62419,7 @@
         {
           "id": "virion_0bfd74a459",
           "fichier": "virion_0bfd74a459.ogg",
-          "sha256": "ec5a690c6175c316",
+          "sha256": "ef71773c8f9311e2",
           "moteur": "qwen3-tts",
           "chapitre": "ch102",
           "texte": "Je ne sais pas quel jour. Je ne sais pas où. Je ne sais pas combien. Voilà, c'est dit, et je ne l'avouerai pas devant le Conseil. C'est pour ça que je suis venu voir la seule personne de cette forteresse qui ait vu un de leurs éclaireurs de près."
@@ -62427,7 +62427,7 @@
         {
           "id": "virion_0c45ed4d37",
           "fichier": "virion_0c45ed4d37.ogg",
-          "sha256": "0ed5538c94f9d019",
+          "sha256": "6476e8a939084137",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Tu vas t'épuiser pour quelque chose. Si tu remplis d'un côté ce que tu vides de l'autre, ton noyau ne comprendra jamais qu'il doit lâcher."
@@ -62435,7 +62435,7 @@
         {
           "id": "virion_0c6944b9ae",
           "fichier": "virion_0c6944b9ae.ogg",
-          "sha256": "9d85aec63186fe2e",
+          "sha256": "bb811a2f719a38c8",
           "moteur": "qwen3-tts",
           "chapitre": "ch210",
           "texte": "...Les nôtres relèvent cette forêt depuis quatre-vingts ans et n'ont jamais rien noté de tel."
@@ -62443,7 +62443,7 @@
         {
           "id": "virion_0d847a5b74",
           "fichier": "virion_0d847a5b74.ogg",
-          "sha256": "1db5c0fb789d5de2",
+          "sha256": "c8f9d51c369de978",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Depuis quand ?"
@@ -62451,7 +62451,7 @@
         {
           "id": "virion_0db589d4fa",
           "fichier": "virion_0db589d4fa.ogg",
-          "sha256": "ab9c3c6cb910b490",
+          "sha256": "33e32a62b138c5e0",
           "moteur": "qwen3-tts",
           "chapitre": "ch203",
           "texte": "Vous ne nous dites pas de les évacuer."
@@ -62459,7 +62459,7 @@
         {
           "id": "virion_0db8c753cc",
           "fichier": "virion_0db8c753cc.ogg",
-          "sha256": "b12e79654d2f35fa",
+          "sha256": "b2becd13a303252c",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Doucement ! Elle n'est pas ton ennemie, mais elle n'est pas ton animal non plus."
@@ -62467,7 +62467,7 @@
         {
           "id": "virion_0e4bd90fe8",
           "fichier": "virion_0e4bd90fe8.ogg",
-          "sha256": "448ad0d62041746b",
+          "sha256": "fc5c4d3df60c6f1b",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Je le sais. C'est pour ça que je te la demande à toi et pas à un autre."
@@ -62475,7 +62475,7 @@
         {
           "id": "virion_105c16c9c2",
           "fichier": "virion_105c16c9c2.ogg",
-          "sha256": "bac28d3ec8ccd87d",
+          "sha256": "2ad9ce8845084715",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "...Trois. Bien. Cela explique pourquoi je ne sens plus mes mains."
@@ -62483,7 +62483,7 @@
         {
           "id": "virion_105cafa5f4",
           "fichier": "virion_105cafa5f4.ogg",
-          "sha256": "7007c03c3f94e4fd",
+          "sha256": "5c91c67443c504ad",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Non. C'est bien pour cela que je suis assis en face de toi à cette heure-ci."
@@ -62491,7 +62491,7 @@
         {
           "id": "virion_114125a8ff",
           "fichier": "virion_114125a8ff.ogg",
-          "sha256": "d98b73a8463f584f",
+          "sha256": "c0f5583253875c3c",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Trois ans que ta volonté attend, enfermée dans un corps trop petit pour elle. Aujourd'hui, on lui ouvre la porte."
@@ -62499,7 +62499,7 @@
         {
           "id": "virion_137c4f61d3",
           "fichier": "virion_137c4f61d3.ogg",
-          "sha256": "520180ad261bb771",
+          "sha256": "f9dc94fd62f9c6c2",
           "moteur": "qwen3-tts",
           "chapitre": "ch138",
           "texte": "Quatre cent onze, une flotte à l'arrêt, un port condamné pour dix ans, et trois lieues de vase reprises. Sur cinq semaines annoncées et une écluse fermée à la manivelle, c'est le meilleur chiffre que j'aie rapporté en six ans. Et je n'arrive pas à le trouver bon. Explique-moi ça, toi qui sais expliquer."
@@ -62507,7 +62507,7 @@
         {
           "id": "virion_13d8c02ea1",
           "fichier": "virion_13d8c02ea1.ogg",
-          "sha256": "6ff38b8fdc58a57a",
+          "sha256": "a4fc0526fdfc3ee4",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Non. Au bout, quand ton corps aura bu tout ce que ton noyau te verse, tu pourras commencer à EMPLOYER ce que ta bête t'a laissé. Le corps qui encaisse n'est pas le but, petit. C'est le péage."
@@ -62515,7 +62515,7 @@
         {
           "id": "virion_1471084055",
           "fichier": "virion_1471084055.ogg",
-          "sha256": "f0b2b154c4ef7267",
+          "sha256": "932453b23585fe31",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Rien de l'extérieur. Rien. Tu ne répands que le tien, et tu ne le remplaces pas."
@@ -62523,7 +62523,7 @@
         {
           "id": "virion_14f6f2a1c3",
           "fichier": "virion_14f6f2a1c3.ogg",
-          "sha256": "5fac188edb3d94cb",
+          "sha256": "f236f8caac8bc23b",
           "moteur": "qwen3-tts",
           "chapitre": "ch131",
           "texte": "...Tu me demandes de créer une réunion. Pour ça, tu n'avais pas besoin d'aller chez les déités."
@@ -62531,7 +62531,7 @@
         {
           "id": "virion_1551986ce5",
           "fichier": "virion_1551986ce5.ogg",
-          "sha256": "86c4efc7e3ecb612",
+          "sha256": "a2236c61a38881f7",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Chaque roi devait les confier à ses **deux sujets les plus puissants**, au cours d'une cérémonie d'adoubement — et sous un **serment d'âme**. Voilà d'où vient le chiffre de deux Lances par race, et voilà pourquoi il n'a jamais bougé."
@@ -62539,7 +62539,7 @@
         {
           "id": "virion_15b60595bf",
           "fichier": "virion_15b60595bf.ogg",
-          "sha256": "95d412e458537761",
+          "sha256": "54628fdb7f8506e4",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Et la directrice de ton Académie a répondu que cet élève était un enfant intimidable, qui inventerait des détails pour plaire au Conseil, et que le faire venir ne produirait que du bruit. Priscilla Glayder l'a soutenue. La question est tombée."
@@ -62547,7 +62547,7 @@
         {
           "id": "virion_160858b651",
           "fichier": "virion_160858b651.ogg",
-          "sha256": "b591ba6e13fe24e3",
+          "sha256": "fae69afefff98698",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Avant ça, récite. Combien de formes a un dompteur ?"
@@ -62555,7 +62555,7 @@
         {
           "id": "virion_164657ba4c",
           "fichier": "virion_164657ba4c.ogg",
-          "sha256": "aafab6b87b74fd35",
+          "sha256": "4a7d78b19fe430cc",
           "moteur": "qwen3-tts",
           "chapitre": "ch18",
           "texte": "En restant en vie, et en revenant. Les deux, pas l'un ou l'autre."
@@ -62563,7 +62563,7 @@
         {
           "id": "virion_16f23b455a",
           "fichier": "virion_16f23b455a.ogg",
-          "sha256": "ffac5a38d50184a1",
+          "sha256": "11980b0e7b10d8b9",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "La passe : quinze jours si l'hiver est clément. Le gué : plus longtemps, l'eau travaille pour nous jusqu'aux basses eaux, ensuite cinq jours. La capitale tiendra tant que les deux autres tiennent, et pas une heure de plus. Voilà. Personne n'a jamais écrit ça."
@@ -62571,7 +62571,7 @@
         {
           "id": "virion_1751959e11",
           "fichier": "virion_1751959e11.ogg",
-          "sha256": "08be7ba3249613d6",
+          "sha256": "50ac079c74d177dd",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "Trois lignes. La passe du Nord, le gué, les abords de la capitale. Je ne les défends pas, petit : je les tiens. La différence, c'est qu'on tient jusqu'à ce qu'on lâche, et qu'on ne sait jamais d'avance quel jour."
@@ -62579,7 +62579,7 @@
         {
           "id": "virion_1a7a019a10",
           "fichier": "virion_1a7a019a10.ogg",
-          "sha256": "2bf353f3bca8784c",
+          "sha256": "182c22fefaaededf",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Ma petite-fille parle trop."
@@ -62587,7 +62587,7 @@
         {
           "id": "virion_1af614bd3b",
           "fichier": "virion_1af614bd3b.ogg",
-          "sha256": "e8d9c221914a7eeb",
+          "sha256": "73450ceec3339e1a",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Jaune clair au sommet, ma chérie. Tu es une mage au **sommet du jaune clair**."
@@ -62595,7 +62595,7 @@
         {
           "id": "virion_1b6a6f3b5c",
           "fichier": "virion_1b6a6f3b5c.ogg",
-          "sha256": "840e531a1fcba4fc",
+          "sha256": "e266cd38262ee6a2",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Bien. Alors nous n'en reparlerons pas, et j'irai me coucher content pour la première fois depuis dix ans."
@@ -62603,7 +62603,7 @@
         {
           "id": "virion_1d39755ba8",
           "fichier": "virion_1d39755ba8.ogg",
-          "sha256": "dd535a558f354b3f",
+          "sha256": "3d49566cffc2d288",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Une bonne nouvelle, pour finir, et tu vas la trouver meilleure que tout le reste. La porte qui devait s'ouvrir dans deux ans va s'ouvrir dans quatre mois."
@@ -62611,7 +62611,7 @@
         {
           "id": "virion_1d54be402c",
           "fichier": "virion_1d54be402c.ogg",
-          "sha256": "b9b756ad9826b078",
+          "sha256": "b95f8afa56c4847f",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Integrate monte la vitesse, monte la discrétion, et monte mes sens avec — sinon j'irais vite dans le noir sans savoir où. Je la tiens un peu moins d'une heure, après vingt ans de pratique."
@@ -62619,7 +62619,7 @@
         {
           "id": "virion_1d9bc6cce2",
           "fichier": "virion_1d9bc6cce2.ogg",
-          "sha256": "e65a68c04989ed0b",
+          "sha256": "1fd99bd43649d71f",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Qu'est-ce que tu as fait, garnement ?"
@@ -62627,7 +62627,7 @@
         {
           "id": "virion_1e8b53872d",
           "fichier": "virion_1e8b53872d.ogg",
-          "sha256": "a04bef1979206c25",
+          "sha256": "d01d7c9eb76fb967",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "On n'a jamais calmé personne en lui disant de se calmer, garnement. Tu as quarante ans de retard sur ce point précis."
@@ -62635,7 +62635,7 @@
         {
           "id": "virion_1f7164cf94",
           "fichier": "virion_1f7164cf94.ogg",
-          "sha256": "e5e8b491bc6d78ed",
+          "sha256": "603467990a51c4ff",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Il n'y a qu'une personne de cette taille pour marcher là-dedans comme dans un couloir. Content de te savoir entier, garnement."
@@ -62643,7 +62643,7 @@
         {
           "id": "virion_1fee77f6b1",
           "fichier": "virion_1fee77f6b1.ogg",
-          "sha256": "031d70c2bffe8f0d",
+          "sha256": "66071e64ebfe5a44",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Elle représente une déité qui remet aux trois peuples l'outil qui a mis fin à l'Ère des Bêtes."
@@ -62651,7 +62651,7 @@
         {
           "id": "virion_20f6b49c61",
           "fichier": "virion_20f6b49c61.ogg",
-          "sha256": "52c85cdd86e53149",
+          "sha256": "ddfeafd891dd6f10",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Tu te trompes, et c'est là que ça devient intéressant. Ils ne devaient PAS s'en servir."
@@ -62659,7 +62659,7 @@
         {
           "id": "virion_22998d028a",
           "fichier": "virion_22998d028a.ogg",
-          "sha256": "771ee7ffdeb754b1",
+          "sha256": "560eb254094975d0",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Jusqu'ici tu as fait ce que fait un mage : purifier ton noyau, et pousser ton mana par tes canaux. Pour un mage, cela suffit. Pour un dompteur, cela ne suffit pas."
@@ -62667,7 +62667,7 @@
         {
           "id": "virion_22a6b9e910",
           "fichier": "virion_22a6b9e910.ogg",
-          "sha256": "9bfecc4e1caabbe3",
+          "sha256": "8c756aba5dc3180e",
           "moteur": "qwen3-tts",
           "chapitre": "ch11",
           "texte": "...Suffisant, oui. Peu d'adultes s'en contenteraient."
@@ -62675,7 +62675,7 @@
         {
           "id": "virion_25276be363",
           "fichier": "virion_25276be363.ogg",
-          "sha256": "ab6bfe00afcadd71",
+          "sha256": "5855538fd3e41c90",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "...Arthur. Si un élixir capable de faire ça existait réellement et qu'on l'apprenait, il y aurait une guerre pour l'obtenir. Une vraie. Et tu me dis que tu l'as eu pour une pièce d'argent."
@@ -62683,7 +62683,7 @@
         {
           "id": "virion_25c39cefb4",
           "fichier": "virion_25c39cefb4.ogg",
-          "sha256": "20d4f5b0690f03a8",
+          "sha256": "866f7041071a2f16",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Dans le vestibule de mon palais, garnement. Et dans celui des deux autres. Nous y arrivons."
@@ -62691,7 +62691,7 @@
         {
           "id": "virion_25cd9411c1",
           "fichier": "virion_25cd9411c1.ogg",
-          "sha256": "ef3fadb679c4c663",
+          "sha256": "2ca756f28613aacd",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Je sais. C'est précisément pour cela que peu de gens y survivent."
@@ -62699,7 +62699,7 @@
         {
           "id": "virion_272ee9360d",
           "fichier": "virion_272ee9360d.ogg",
-          "sha256": "f95f9a7aefb11a8e",
+          "sha256": "94fa5af24f44592a",
           "moteur": "qwen3-tts",
           "chapitre": "ch219",
           "texte": "Ce n'était pas le manque d'information ?"
@@ -62707,7 +62707,7 @@
         {
           "id": "virion_281adf585d",
           "fichier": "virion_281adf585d.ogg",
-          "sha256": "5a6a036aed4c50c8",
+          "sha256": "92c8ac5c7e259217",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "Regarde comme c'était bien rangé. Rien de plus rassurant qu'un traité dans une vitrine. Rien de plus facile à brûler, non plus."
@@ -62715,7 +62715,7 @@
         {
           "id": "virion_285d504dc7",
           "fichier": "virion_285d504dc7.ogg",
-          "sha256": "a1fc3d29b01374ee",
+          "sha256": "d1d5f01bc45b2ce9",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "C'est la seule princesse d'un royaume entier. Elle n'a jamais eu d'ami qui ne cherchait pas quelque chose. On l'a déçue assez de fois pour qu'elle apprenne à être froide, et elle l'a très bien appris."
@@ -62723,7 +62723,7 @@
         {
           "id": "virion_28b64211bb",
           "fichier": "virion_28b64211bb.ogg",
-          "sha256": "1355e2ec120e5984",
+          "sha256": "a01863bda470c9a8",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "Une manière de voir venir. Voilà ce qui me manque. Je perds des éclaireurs parce qu'ils voient trop tard, et je place mes fossés au jugé. Si tes déités t'apprennent à voir, rapporte-moi ça et je te pardonnerai tout le reste."
@@ -62731,7 +62731,7 @@
         {
           "id": "virion_2a215236ed",
           "fichier": "virion_2a215236ed.ogg",
-          "sha256": "2d36a72f1d3e85b2",
+          "sha256": "3feb480364249b08",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Il y a des noms, et il y a autre chose : chacun porte **un nom de code**, qu'on emploie dans les salles où l'on parle d'eux. Alea en avait un. Je ne te le donnerai pas, et pas par cachotterie : parce que le jour où tu prononceras l'un de ces mots devant la mauvaise personne, elle saura exactement d'où tu le tiens."
@@ -62739,7 +62739,7 @@
         {
           "id": "virion_2b2810bc7f",
           "fichier": "virion_2b2810bc7f.ogg",
-          "sha256": "b62c64fdbab55cb5",
+          "sha256": "1756b6cb2050da87",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Si tu n'apprends pas à la conduire, elle ne te rendra pas plus fort. Elle détruira ton corps. Ce n'est pas une image et ce n'est pas un pari : c'est ce qui se passe, à ce rythme-là, et cela a déjà commencé."
@@ -62747,7 +62747,7 @@
         {
           "id": "virion_2b6c24dfd1",
           "fichier": "virion_2b6c24dfd1.ogg",
-          "sha256": "cf35264782f35bf2",
+          "sha256": "ccc58df464dc3682",
           "moteur": "qwen3-tts",
           "chapitre": "ch216",
           "texte": "Et la bonne raison ?"
@@ -62755,7 +62755,7 @@
         {
           "id": "virion_2bfb1d79d6",
           "fichier": "virion_2bfb1d79d6.ogg",
-          "sha256": "a46eeb3674dc3dac",
+          "sha256": "7f1d9dabe902f4af",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Merci, garnement. Pour le donjon, et pour maintenant."
@@ -62763,7 +62763,7 @@
         {
           "id": "virion_2cf9c08ded",
           "fichier": "virion_2cf9c08ded.ogg",
-          "sha256": "4912aa1f497d7bd1",
+          "sha256": "61613efe1266eef7",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Une dernière chose, que je t'ai gardée pour ce jour-ci. Il y a deux façons de porter une volonté, et tu ne portes pas la mienne."
@@ -62771,7 +62771,7 @@
         {
           "id": "virion_2d1a7f19ed",
           "fichier": "virion_2d1a7f19ed.ogg",
-          "sha256": "403bdd7c8f49c62d",
+          "sha256": "5ee6c3c043fda454",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Les nains : la terre et le feu. Tous plient le métal, du plus habile au plus bête. Et quelques-uns fondent leurs deux éléments en magma, ce dont aucun humain n'est capable."
@@ -62779,7 +62779,7 @@
         {
           "id": "virion_2d1b11dd12",
           "fichier": "virion_2d1b11dd12.ogg",
-          "sha256": "42b828622d4c71c8",
+          "sha256": "0ae05a31119c888a",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Réponds mieux que ça. Une brûlure. Qui part de là, sous ma main, et qui se répand dans le ventre."
@@ -62787,7 +62787,7 @@
         {
           "id": "virion_2d45cdc4ff",
           "fichier": "virion_2d45cdc4ff.ogg",
-          "sha256": "ef219f397518fc5e",
+          "sha256": "dfa3915c43b4c1ef",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Ton noyau ne grandira plus pendant tout ce temps. Pas d'un cheveu. Tu vas avoir l'impression de reculer chaque jour."
@@ -62795,7 +62795,7 @@
         {
           "id": "virion_2d64cdd4bf",
           "fichier": "virion_2d64cdd4bf.ogg",
-          "sha256": "58051bd70b614207",
+          "sha256": "a578462ac4461a23",
           "moteur": "qwen3-tts",
           "chapitre": "ch137",
           "texte": "Pourquoi ne le recommandes-tu pas ?"
@@ -62803,7 +62803,7 @@
         {
           "id": "virion_2d6a19af74",
           "fichier": "virion_2d6a19af74.ogg",
-          "sha256": "dfb6ae9c13a7516f",
+          "sha256": "60a7862a818a8f19",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Regarde bien, maintenant. Tu n'as jamais vu ma seconde phase, et tu ne la reverras pas souvent."
@@ -62811,7 +62811,7 @@
         {
           "id": "virion_2e39a02002",
           "fichier": "virion_2e39a02002.ogg",
-          "sha256": "b2e7a5658220825b",
+          "sha256": "bede8da137045dbc",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "C'est fini. Trois ans. Tu as tenu."
@@ -62819,7 +62819,7 @@
         {
           "id": "virion_2f4ccf8278",
           "fichier": "virion_2f4ccf8278.ogg",
-          "sha256": "4874f0bb190c300e",
+          "sha256": "e369693237e66b63",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Non. Personne ne l'apprend à personne. La porte est ouverte, c'est déjà fait — depuis le rite, il y a un petit endroit dans ton noyau où la volonté se tient, et tu le sais aussi bien que moi."
@@ -62827,7 +62827,7 @@
         {
           "id": "virion_2fe8fe4295",
           "fichier": "virion_2fe8fe4295.ogg",
-          "sha256": "9e22e506f1f27b10",
+          "sha256": "740dfcb57b0a1d47",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "C'est l'explication la plus probable, et je n'ai pas de quoi la vérifier. On n'a pas vu de dragon depuis des siècles ; ce qu'on en sait tiendrait sur une main."
@@ -62835,7 +62835,7 @@
         {
           "id": "virion_3015f163ae",
           "fichier": "virion_3015f163ae.ogg",
-          "sha256": "5b04ea8eb2b19c01",
+          "sha256": "df35f1039240be19",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Tu ne demandes pas pourquoi. Ça veut dire que tu sais quelque chose que je ne sais pas, et je n'ai plus assez de mana pour t'arracher quoi que ce soit ce soir."
@@ -62843,7 +62843,7 @@
         {
           "id": "virion_308af294aa",
           "fichier": "virion_308af294aa.ogg",
-          "sha256": "3275c605e5b894c2",
+          "sha256": "5d532063fece3a75",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Non. Demain, ta petite amie est reconnue devant les siens, et tu y seras. Après-demain, nous commencerons ce pour quoi je t'ai pris."
@@ -62851,7 +62851,7 @@
         {
           "id": "virion_3112e77d69",
           "fichier": "virion_3112e77d69.ogg",
-          "sha256": "930d061fb5ae76d0",
+          "sha256": "7cdbf5cecdbdf945",
           "moteur": "qwen3-tts",
           "chapitre": "ch205",
           "texte": "C'est la première fois que je vous entends défendre la lenteur. Vous vous en rendez compte ?"
@@ -62859,7 +62859,7 @@
         {
           "id": "virion_319e3702b6",
           "fichier": "virion_319e3702b6.ogg",
-          "sha256": "a9bb4b85e01b660a",
+          "sha256": "bac0ee834ca4b43e",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Elle te reconnaît. Tu ne le vois pas d'où tu es, mais moi si : de mes mains, elle ne s'occupe pas. **C'est toi qu'elle veut.**"
@@ -62867,7 +62867,7 @@
         {
           "id": "virion_327ef5ddf8",
           "fichier": "virion_327ef5ddf8.ogg",
-          "sha256": "d21b684e73d33d7f",
+          "sha256": "89cf0293386d794b",
           "moteur": "qwen3-tts",
           "chapitre": "ch102",
           "texte": "...Un garçon scellé dans une cellule a une meilleure carte que mon état-major. Répète-moi les noms lentement. Je les écris moi-même."
@@ -62875,7 +62875,7 @@
         {
           "id": "virion_32de80f221",
           "fichier": "virion_32de80f221.ogg",
-          "sha256": "9944ab01e7a60c02",
+          "sha256": "a0eaaafaf58d6d3d",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Jusqu'à ce qu'on m'amène un humain de quatre ans avec du S dans la poitrine."
@@ -62883,7 +62883,7 @@
         {
           "id": "virion_3401311f6a",
           "fichier": "virion_3401311f6a.ogg",
-          "sha256": "077a001e87445e17",
+          "sha256": "22b55f10ad065a7c",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Non, tu ne l'es pas. Traître."
@@ -62891,7 +62891,7 @@
         {
           "id": "virion_342c58a795",
           "fichier": "virion_342c58a795.ogg",
-          "sha256": "f913da8a135284a7",
+          "sha256": "3f3037ff2bf6da48",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Maintenant la partie qui te concerne. Une bête de mana de classe A ou plus peut léguer sa volonté — son aptitude propre — à quelqu'un. À une seule personne, une seule fois."
@@ -62899,7 +62899,7 @@
         {
           "id": "virion_3435f08232",
           "fichier": "virion_3435f08232.ogg",
-          "sha256": "69dc544e9e08f4f3",
+          "sha256": "ed59e6310f6e66de",
           "moteur": "qwen3-tts",
           "chapitre": "ch219",
           "texte": "Onze jours. Nous discutions encore d'une brèche de quarante pas."
@@ -62907,7 +62907,7 @@
         {
           "id": "virion_346074ff61",
           "fichier": "virion_346074ff61.ogg",
-          "sha256": "f67517c62dad3995",
+          "sha256": "68101a592bb2b0a7",
           "moteur": "qwen3-tts",
           "chapitre": "ch137",
           "texte": "Dix ans de port. ...Dis-moi le chiffre en gens, petit, pas en années de port. Tu l'as calculé, alors dis-le, parce que c'est celui que je devrai porter."
@@ -62915,7 +62915,7 @@
         {
           "id": "virion_34b25f768d",
           "fichier": "virion_34b25f768d.ogg",
-          "sha256": "6bf834ec80e9acb5",
+          "sha256": "7cdc1e4326f8c453",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "On le mesurera. Pas avec une couleur, mais on le mesurera."
@@ -62923,7 +62923,7 @@
         {
           "id": "virion_37d7cc9ba1",
           "fichier": "virion_37d7cc9ba1.ogg",
-          "sha256": "b1e09420e502dbaa",
+          "sha256": "49a20c8dced263c6",
           "moteur": "qwen3-tts",
           "chapitre": "ch205",
           "texte": "Vous vouliez la rappeler à la septième semaine. Je vous ai vu y penser trois fois."
@@ -62931,7 +62931,7 @@
         {
           "id": "virion_38b37c4dc3",
           "fichier": "virion_38b37c4dc3.ogg",
-          "sha256": "b636c86082bfb644",
+          "sha256": "352fe3f042dbefc2",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Cela commence. Je te l'avais dit : ou elle t'intègre, ou elle te déchire."
@@ -62939,7 +62939,7 @@
         {
           "id": "virion_394c79ea8a",
           "fichier": "virion_394c79ea8a.ogg",
-          "sha256": "2b86192ef7bb95eb",
+          "sha256": "e24f3b9d1cf92afb",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "C'est exactement ce qui se passe. La question n'est pas de savoir si c'est vrai, c'est de savoir si tu tiens."
@@ -62947,7 +62947,7 @@
         {
           "id": "virion_39f1c7e3d0",
           "fichier": "virion_39f1c7e3d0.ogg",
-          "sha256": "b00e0cd325b85ec9",
+          "sha256": "3a96eb8135376247",
           "moteur": "qwen3-tts",
           "chapitre": "ch79",
           "texte": "Je connais les maisons de trois royaumes, petit. Les grandes, les ruinées, les éteintes. Ce nom n'existe pas. Quelqu'un qui arrive en ville sans nom qui existe et qui achète une douzaine de fortunes en un automne n'est pas un aventurier. C'est un investissement."
@@ -62955,7 +62955,7 @@
         {
           "id": "virion_3a34d8919d",
           "fichier": "virion_3a34d8919d.ogg",
-          "sha256": "cded6b2166dba9ec",
+          "sha256": "4c1e988a972e4a23",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Une condition, et elle n'est pas négociable. Mon premier disciple ne m'appellera pas Elder Virion pendant quatre ans. Appelle-moi grand-père."
@@ -62963,7 +62963,7 @@
         {
           "id": "virion_3b9593e7d8",
           "fichier": "virion_3b9593e7d8.ogg",
-          "sha256": "cd17ecbc5e12f7d3",
+          "sha256": "6f7d678f23433e5f",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Assieds-toi. Sonde-le."
@@ -62971,7 +62971,7 @@
         {
           "id": "virion_3c0977006f",
           "fichier": "virion_3c0977006f.ogg",
-          "sha256": "f353756f7d73c138",
+          "sha256": "3cd8be88ea787983",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Si. **La reine naine l'a exigé.** Elle a tapé sur la table et elle a demandé qu'on fasse venir l'élève."
@@ -62979,7 +62979,7 @@
         {
           "id": "virion_3c978a5602",
           "fichier": "virion_3c978a5602.ogg",
-          "sha256": "fbf5672ac5711191",
+          "sha256": "5412039289386ef2",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Une déité, ce n'est pas ce que racontent les livres de prières. C'est un être qui finit par quitter ce que nous appelons un corps et **s'harmoniser entièrement avec le mana**. Les dragons peuvent le devenir. C'est dans leur nature."
@@ -62987,7 +62987,7 @@
         {
           "id": "virion_3d89704da4",
           "fichier": "virion_3d89704da4.ogg",
-          "sha256": "a59611234d0178d9",
+          "sha256": "863e3532c60670d4",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Un corps qui supporte ce que ton noyau seul n'aurait jamais porté. C'est un échange, petit. Tous les bons échanges font mal."
@@ -62995,7 +62995,7 @@
         {
           "id": "virion_400d33cb78",
           "fichier": "virion_400d33cb78.ogg",
-          "sha256": "901f02df873c1b3c",
+          "sha256": "3c914fca87b09bd7",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Pas encore. Et « renard » est une facétie à laquelle je ne crois plus depuis longtemps, garnement."
@@ -63003,7 +63003,7 @@
         {
           "id": "virion_4084cbc364",
           "fichier": "virion_4084cbc364.ogg",
-          "sha256": "172278cd31d69733",
+          "sha256": "888b4fbc4859498c",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "...Tu n'argumentes pas. Tu argumentes toujours. Je note."
@@ -63011,7 +63011,7 @@
         {
           "id": "virion_40be4cf534",
           "fichier": "virion_40be4cf534.ogg",
-          "sha256": "51b3db8dcac2febf",
+          "sha256": "8d1697955594f94a",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "Tu arrives par la porte du nord avec un asura dans le dos et une plaque de contention sur la poitrine. Ne m'explique pas : je n'ai pas le grade pour comprendre, et j'ai trois corps d'armée à nourrir. Regarde plutôt, et dis-moi ce que tu vois."
@@ -63019,7 +63019,7 @@
         {
           "id": "virion_420c546172",
           "fichier": "virion_420c546172.ogg",
-          "sha256": "de8d56e9773ce072",
+          "sha256": "dd66f64cd7e8c5ec",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Quelqu'un l'a lu. Trois d'entre eux savaient déjà, j'en mettrais ma main. Ils ne cachent pas la vérité au continent, petit. Ils se la cachent les uns aux autres, ce qui est infiniment plus lâche et beaucoup plus banal."
@@ -63027,7 +63027,7 @@
         {
           "id": "virion_42546944d3",
           "fichier": "virion_42546944d3.ogg",
-          "sha256": "78c49026ff7991ea",
+          "sha256": "eb5a398cfd3b1d0c",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Elle est apparue à trois hommes, qui sont devenus les ancêtres des trois familles royales : le chef des **Glayder** pour les humains, celui des **Greysunders** pour les nains, et mon aïeul **Eralith** pour les elfes. Et elle leur a remis **six objets**, deux chacun."
@@ -63035,7 +63035,7 @@
         {
           "id": "virion_4295154759",
           "fichier": "virion_4295154759.ogg",
-          "sha256": "e6ab0529b2ea7b68",
+          "sha256": "ae48f3462f49afdc",
           "moteur": "qwen3-tts",
           "chapitre": "ch202",
           "texte": "...Vous leur donnez du travail au lieu d'un accusé de réception."
@@ -63043,7 +63043,7 @@
         {
           "id": "virion_42d9a7d276",
           "fichier": "virion_42d9a7d276.ogg",
-          "sha256": "d2c135a474fb5050",
+          "sha256": "bd9beb0555094b9e",
           "moteur": "qwen3-tts",
           "chapitre": "ch88",
           "texte": "Je le fais parce que tu as raison sur la théorie et parce que je n'ai rien de mieux. Mais dis-le à voix haute avant qu'on commence : si elle perd le contrôle ici, il n'y a pas de garde royale et pas de dôme de vent pour couvrir quatre hommes. Il n'y a que nous trois."
@@ -63051,7 +63051,7 @@
         {
           "id": "virion_42f961db38",
           "fichier": "virion_42f961db38.ogg",
-          "sha256": "477a9e64bc314ca3",
+          "sha256": "cfe510e3ee8267ab",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "Je te donne la coordination des trois lignes. Sur le papier ça ne veut rien dire — tu n'as ni troupes ni grade. Dans les faits, ça veut dire que quand tu diras « celle-ci d'abord », deux personnes dans cette grange t'écouteront. C'est peu et c'est tout ce que j'ai."
@@ -63059,7 +63059,7 @@
         {
           "id": "virion_448d36784c",
           "fichier": "virion_448d36784c.ogg",
-          "sha256": "93ea1790f1424e75",
+          "sha256": "7d0e4a7207a4797d",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "L'autre façon, c'est que la bête donne. Vivante, en connaissance, à quelqu'un qu'elle a choisi. On appelle cela un dompteur par legs, et c'est si rare que je n'en avais jamais vu."
@@ -63067,7 +63067,7 @@
         {
           "id": "virion_46333a6589",
           "fichier": "virion_46333a6589.ogg",
-          "sha256": "76df56d544bfe2d0",
+          "sha256": "6a49221421685ab3",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Je vois à ta figure que tu viens de compter. Oui, garnement. Ce sont les mêmes six."
@@ -63075,7 +63075,7 @@
         {
           "id": "virion_46759f1613",
           "fichier": "virion_46759f1613.ogg",
-          "sha256": "e37cd37c6605a1e9",
+          "sha256": "851833f665a40a12",
           "moteur": "qwen3-tts",
           "chapitre": "ch215",
           "texte": "Vous vous fixez une règle après coup. Ça ne tient jamais."
@@ -63083,7 +63083,7 @@
         {
           "id": "virion_48585effeb",
           "fichier": "virion_48585effeb.ogg",
-          "sha256": "c49e7ccb6daa2787",
+          "sha256": "d7ed7f8fc65f8989",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Elle a l'air d'accord, en tout cas — regarde-la remuer la queue."
@@ -63091,7 +63091,7 @@
         {
           "id": "virion_49b0d0f731",
           "fichier": "virion_49b0d0f731.ogg",
-          "sha256": "44d203fa72a86473",
+          "sha256": "b49bc195e076f469",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "...Par les esprits."
@@ -63099,7 +63099,7 @@
         {
           "id": "virion_4a68bf68e7",
           "fichier": "virion_4a68bf68e7.ogg",
-          "sha256": "793b73dcec942ab5",
+          "sha256": "c3333956e87dd623",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Un dompteur de dragon. Dans ma vie. Et c'est moi qui l'ai entraîné."
@@ -63107,7 +63107,7 @@
         {
           "id": "virion_4ab619a690",
           "fichier": "virion_4ab619a690.ogg",
-          "sha256": "1066e3570f6a0d20",
+          "sha256": "b6c7649dbd9fa388",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Parce que nous ne pouvions pas. Ce n'est pas que nous ne l'avons pas fait, garnement : **nous ne savions pas le faire.**"
@@ -63115,7 +63115,7 @@
         {
           "id": "virion_4be2fd9c7b",
           "fichier": "virion_4be2fd9c7b.ogg",
-          "sha256": "2ec6d1b85b82222a",
+          "sha256": "0a19f689d246f5c5",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "...Tu es plus vieux que ça. Tu es parti gamin de seize ans, tu reviens cinq ans plus tard, et tu as la tête de quelqu'un de vingt-cinq. Je ne te demande pas comment. Je te demande si c'est réparable, parce que si ça ne l'est pas, je ne veux pas savoir."
@@ -63123,7 +63123,7 @@
         {
           "id": "virion_4cad035219",
           "fichier": "virion_4cad035219.ogg",
-          "sha256": "eca9b86cbc476377",
+          "sha256": "fcf088b658e0cb49",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Elle m'aurait surtout fait peur. Ce n'est pas incompatible."
@@ -63131,7 +63131,7 @@
         {
           "id": "virion_4cc71381d2",
           "fichier": "virion_4cc71381d2.ogg",
-          "sha256": "1601616dd4927099",
+          "sha256": "e8912ed779a434f0",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "...La brise acceptera peut-être mon étreinte."
@@ -63139,7 +63139,7 @@
         {
           "id": "virion_4cf7db2a90",
           "fichier": "virion_4cf7db2a90.ogg",
-          "sha256": "96c601e6f7563d41",
+          "sha256": "8c8fd3a5f6a93324",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Garde tes remerciements pour quand tu seras encore en vie ce soir."
@@ -63147,7 +63147,7 @@
         {
           "id": "virion_4d2f99a20f",
           "fichier": "virion_4d2f99a20f.ogg",
-          "sha256": "005f44d5d3f260a8",
+          "sha256": "be2d2ffbf6cea223",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "Trois. Trois redoutes sur onze. La deuxième, je l'avais toujours trouvée mauvaise sans savoir pourquoi, et j'ai perdu quarante hommes dedans en février."
@@ -63155,7 +63155,7 @@
         {
           "id": "virion_4f0b6c2317",
           "fichier": "virion_4f0b6c2317.ogg",
-          "sha256": "4c870ea01a756d54",
+          "sha256": "20e30f1af7bbb7a7",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Il est temps. Prends ta place au centre."
@@ -63163,7 +63163,7 @@
         {
           "id": "virion_51a96d4850",
           "fichier": "virion_51a96d4850.ogg",
-          "sha256": "6f15ebe02014d195",
+          "sha256": "925fdda5617f0547",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Tu as raison, et je préférerais que tu aies tort."
@@ -63171,7 +63171,7 @@
         {
           "id": "virion_51af0e4602",
           "fichier": "virion_51af0e4602.ogg",
-          "sha256": "879ed138da0dc1a5",
+          "sha256": "02aa64478ce68e40",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Et sans compréhension, on ne passe pas la première. Jamais. On meurt avec une volonté dans la poitrine et on ne s'en sert pas une fois."
@@ -63179,7 +63179,7 @@
         {
           "id": "virion_51bafe9ec1",
           "fichier": "virion_51bafe9ec1.ogg",
-          "sha256": "93d5b48ed0f882b2",
+          "sha256": "e83b37985a6bad1f",
           "moteur": "qwen3-tts",
           "chapitre": "ch89",
           "texte": "...Tu ne demandes jamais rien au bon moment, petit. C'est une qualité qui va te coûter cher."
@@ -63187,7 +63187,7 @@
         {
           "id": "virion_54676ca087",
           "fichier": "virion_54676ca087.ogg",
-          "sha256": "b334951542e825a6",
+          "sha256": "4ca6f94500a45536",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Tu recommences à le sonder tous les jours."
@@ -63195,7 +63195,7 @@
         {
           "id": "virion_5496bede07",
           "fichier": "virion_5496bede07.ogg",
-          "sha256": "e5ea83afdd54d5d6",
+          "sha256": "39e51997a79c97ad",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Mais atteindre une phase et pouvoir s'en servir dans un échange sont deux métiers. Le second ne se transmet pas. Il s'attrape en se battant, et en se battant encore."
@@ -63203,7 +63203,7 @@
         {
           "id": "virion_557ff11624",
           "fichier": "virion_557ff11624.ogg",
-          "sha256": "65d5ce069c77b4a1",
+          "sha256": "1545e4389155004d",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "À mesure que cela se fera, ton noyau cessera de rejeter ton corps. C'est ce rejet qui te brûle."
@@ -63211,7 +63211,7 @@
         {
           "id": "virion_5585390631",
           "fichier": "virion_5585390631.ogg",
-          "sha256": "68b2b4cdcca6f3ff",
+          "sha256": "7756b8fc2b391a2b",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Dis-moi, garnement. **Est-ce que tu crois aux déités ?**"
@@ -63219,7 +63219,7 @@
         {
           "id": "virion_5682e7a24f",
           "fichier": "virion_5682e7a24f.ogg",
-          "sha256": "b458bf399f4c0148",
+          "sha256": "e0da22963d4d23fe",
           "moteur": "qwen3-tts",
           "chapitre": "ch131",
           "texte": "Trois questions. ...Tu viens de me faire perdre huit pages sur onze et de tripler le nombre de gens capables de remplir le formulaire. Petit, si tu m'avais donné ça il y a cinq ans, j'aurais tenu deux villes de plus."
@@ -63227,7 +63227,7 @@
         {
           "id": "virion_56cc926dce",
           "fichier": "virion_56cc926dce.ogg",
-          "sha256": "1cabd5abfa961437",
+          "sha256": "a6f048ebacfaa155",
           "moteur": "qwen3-tts",
           "chapitre": "ch88",
           "texte": "...Voilà la phrase la plus adulte que j'aie entendue de toi. Note-la dans ton carnet, celle-là. Je la citerai."
@@ -63235,7 +63235,7 @@
         {
           "id": "virion_570ed2c000",
           "fichier": "virion_570ed2c000.ogg",
-          "sha256": "de71a2ff77a02f77",
+          "sha256": "2514f4c6302b486b",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Bonne idée. Garde-la couverte."
@@ -63243,7 +63243,7 @@
         {
           "id": "virion_5755bfae1e",
           "fichier": "virion_5755bfae1e.ogg",
-          "sha256": "8960c2282fc11b06",
+          "sha256": "ad63a71988ddd64e",
           "moteur": "qwen3-tts",
           "chapitre": "ch239",
           "texte": "Aevum. Spatium. Ce sont des mots qu'on m'a appris à quinze ans et qu'on m'a fait recopier en me disant que personne ne les emploierait jamais devant moi."
@@ -63251,7 +63251,7 @@
         {
           "id": "virion_57dd32bc95",
           "fichier": "virion_57dd32bc95.ogg",
-          "sha256": "eda0e180558138b1",
+          "sha256": "a5df6a3528e421b4",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "...Tu ne demandes rien ? Pas la durée, pas ce que tu manques ici, pas ce que ça t'oblige à laisser derrière ?"
@@ -63259,7 +63259,7 @@
         {
           "id": "virion_59144d64e4",
           "fichier": "virion_59144d64e4.ogg",
-          "sha256": "10babcfce81096c0",
+          "sha256": "d519a2dac64992b2",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "C'est ta volonté qu'elle reconnaît, petit. Elles viennent de la même source. Tu la portais contre toi bien avant de savoir ce que tu portais."
@@ -63267,7 +63267,7 @@
         {
           "id": "virion_5b97120d19",
           "fichier": "virion_5b97120d19.ogg",
-          "sha256": "4532c2d50d00a7aa",
+          "sha256": "b911bb51602206ba",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Il est sous ma garde directe. Faites savoir dans cette ville qu'on ne le bouscule pas."
@@ -63275,7 +63275,7 @@
         {
           "id": "virion_5bf63b8dd9",
           "fichier": "virion_5bf63b8dd9.ogg",
-          "sha256": "ee8fd53e41b6368d",
+          "sha256": "bb0aadeb273fce61",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ensuite, les races. Les humains manient les quatre éléments de base. Les quatre. Vous êtes les seuls."
@@ -63283,7 +63283,7 @@
         {
           "id": "virion_5c4410c847",
           "fichier": "virion_5c4410c847.ogg",
-          "sha256": "97f66881cdf4d03a",
+          "sha256": "dd40ac734cef17e8",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "Ta famille est vivante. Ils sont au château volant depuis trois ans, avec ta sœur, et elle a quinze ans et une bête de mana qui pèse quatre cents livres. Perrin est vivant, à l'ouest. Les Twin Horns sont vivants, tous les cinq, ce qui relève du miracle. Gideon est vivant et insupportable."
@@ -63291,7 +63291,7 @@
         {
           "id": "virion_5d4c0a7983",
           "fichier": "virion_5d4c0a7983.ogg",
-          "sha256": "db0786b72f28bcea",
+          "sha256": "a4408d0dcee6195e",
           "moteur": "qwen3-tts",
           "chapitre": "ch136",
           "texte": "Ma petite-fille. Tu me demandes de la mettre à un poste où elle ne pourra plus être sur le terrain."
@@ -63299,7 +63299,7 @@
         {
           "id": "virion_5d6fe105c0",
           "fichier": "virion_5d6fe105c0.ogg",
-          "sha256": "c340f49a6ce0d553",
+          "sha256": "0e939806b6f29415",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Leurs meilleurs pisteurs sont partis chercher ce que le meurtrier aurait laissé derrière lui. Deux compagnies déplacées vers les contreforts, et l'accès au donjon scellé par décret. Voilà. Le continent a répondu à la mort d'une des Six Lances par une palissade et par des chiens."
@@ -63307,7 +63307,7 @@
         {
           "id": "virion_5d98b8f3b3",
           "fichier": "virion_5d98b8f3b3.ogg",
-          "sha256": "e2a0ea43f49ef4b8",
+          "sha256": "993bc64a24f1ef7d",
           "moteur": "qwen3-tts",
           "chapitre": "ch138",
           "texte": "Exécution. ...Petit, tu viens de donner un ordre à mon armée. Nous en parlerons ce soir, et je te dirai probablement merci."
@@ -63315,7 +63315,7 @@
         {
           "id": "virion_5da513d1b9",
           "fichier": "virion_5da513d1b9.ogg",
-          "sha256": "410e5f6b3c5113da",
+          "sha256": "67d666812e4c3657",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Un humain ne peut pas résider ici. Un disciple, si — sous mon nom. Ce n'est pas une faveur du roi, c'est une faveur de la coutume, et la coutume ne se discute pas avec moi."
@@ -63323,7 +63323,7 @@
         {
           "id": "virion_5df9f76546",
           "fichier": "virion_5df9f76546.ogg",
-          "sha256": "b053fc0990c6ba25",
+          "sha256": "fec76b8269770d7f",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Ce qui est dedans attend de sentir près de lui quelque chose qui saura le protéger et l'aimer. Et il faut plus que la présence : il faut que le lien soit déjà là."
@@ -63331,7 +63331,7 @@
         {
           "id": "virion_603c715d30",
           "fichier": "virion_603c715d30.ogg",
-          "sha256": "e5b7aabb79c4066b",
+          "sha256": "060079a258e8fc5d",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Comment tu te sens, garnement ?"
@@ -63339,7 +63339,7 @@
         {
           "id": "virion_607d9f2501",
           "fichier": "virion_607d9f2501.ogg",
-          "sha256": "9cce689121c50429",
+          "sha256": "a5c25e0b98066f34",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Alea. ...Ils ne l'ont pas annoncé. Bien sûr qu'ils ne l'ont pas annoncé. Petit, tu viens de me faire cadeau de la pire nouvelle de ma vie, et je vais te la payer en vérités."
@@ -63347,7 +63347,7 @@
         {
           "id": "virion_6249b1530a",
           "fichier": "virion_6249b1530a.ogg",
-          "sha256": "b511602862fca386",
+          "sha256": "ab7de14729576f83",
           "moteur": "qwen3-tts",
           "chapitre": "ch88",
           "texte": "Et toi, dans ce plan ? Tu as prévu deux choses pour nous et une pour la Volonté. Tu n'apparais nulle part."
@@ -63355,7 +63355,7 @@
         {
           "id": "virion_6268ec1d6d",
           "fichier": "virion_6268ec1d6d.ogg",
-          "sha256": "29122cc1da86b68d",
+          "sha256": "17563c9fe506ed59",
           "moteur": "qwen3-tts",
           "chapitre": "ch135",
           "texte": "Onze jours près. Sur quoi, six semaines ?"
@@ -63363,7 +63363,7 @@
         {
           "id": "virion_627daf2e26",
           "fichier": "virion_627daf2e26.ogg",
-          "sha256": "eb9027f86b3baa14",
+          "sha256": "d8ba55068f2943ae",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Il y a une peinture dans le grand hall du palais d'Elenoir. Tu l'as vue mille fois sans la regarder — ne prends pas cet air coupable, personne ne la regarde. Il y en a une semblable dans chacun des trois palais."
@@ -63371,7 +63371,7 @@
         {
           "id": "virion_63ea6be8f9",
           "fichier": "virion_63ea6be8f9.ogg",
-          "sha256": "43a703a8e58e4ba4",
+          "sha256": "fff2e07961bc0090",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Avec ça, nous avons cessé de fuir. Les bêtes ont été tuées ou repoussées vers ce qu'on appelle aujourd'hui les Clairières. L'Ère des Bêtes s'est achevée."
@@ -63379,7 +63379,7 @@
         {
           "id": "virion_64067231cd",
           "fichier": "virion_64067231cd.ogg",
-          "sha256": "bd9e29a53216bdbd",
+          "sha256": "dda4574e069f97d6",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Mon dos va très bien. Petit — j'ai tenu des volontés de rang AA au bout de mes mains pendant cent soixante ans, et je viens de m'asseoir dans un mur."
@@ -63387,7 +63387,7 @@
         {
           "id": "virion_64603a59eb",
           "fichier": "virion_64603a59eb.ogg",
-          "sha256": "2b79896ea190115c",
+          "sha256": "8eac75ab551d0a33",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Commence par répondre toi-même : à ton avis, qu'est-ce que ça vaut, un noyau blanc ?"
@@ -63395,7 +63395,7 @@
         {
           "id": "virion_65119ad2f6",
           "fichier": "virion_65119ad2f6.ogg",
-          "sha256": "d350efc0686e8e0e",
+          "sha256": "dacb96efce32e8b0",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Prends soin d'elle, Art. Elle a grandi dans un endroit très vide."
@@ -63403,7 +63403,7 @@
         {
           "id": "virion_66288129d7",
           "fichier": "virion_66288129d7.ogg",
-          "sha256": "45b75627de6e63e3",
+          "sha256": "76a64ccb01ee8fef",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Combien de temps s'est écoulé dehors, garnement ? Je crois que je retiens cette saleté depuis un jour ou deux, depuis qu'elle est rentrée du donjon."
@@ -63411,7 +63411,7 @@
         {
           "id": "virion_682085e47c",
           "fichier": "virion_682085e47c.ogg",
-          "sha256": "0576d2dd78dd5fa0",
+          "sha256": "d0d6867212d2d6bb",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Je ne lui ai rien dit. On ne cache pas grand-chose à Rinia. D'ordinaire elle ne se donne pas la peine de regarder — qu'est-ce qui t'a rendue curieuse, vieille chose ?"
@@ -63419,7 +63419,7 @@
         {
           "id": "virion_69e88ba537",
           "fichier": "virion_69e88ba537.ogg",
-          "sha256": "29d97ea5648c7393",
+          "sha256": "cbaac18e487cf65d",
           "moteur": "qwen3-tts",
           "chapitre": "ch131",
           "texte": "Trois semaines de ton temps, pour onze hommes. ...Fais-le. Et prends celui qui boite, à l'ouest, celui que personne ne veut : il a une mémoire de terrain que je n'ai jamais vue chez personne, et il ne sait pas lire."
@@ -63427,7 +63427,7 @@
         {
           "id": "virion_6baf8bc000",
           "fichier": "virion_6baf8bc000.ogg",
-          "sha256": "21070c3a7c1768a6",
+          "sha256": "20f7ef7dfc7fa220",
           "moteur": "qwen3-tts",
           "chapitre": "ch214",
           "texte": "Alors ils veulent quoi ?"
@@ -63435,7 +63435,7 @@
         {
           "id": "virion_6bc35c9800",
           "fichier": "virion_6bc35c9800.ogg",
-          "sha256": "fae8a2ce4cd49066",
+          "sha256": "161cff77c33e6f5f",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Voilà. Tu viens de dire à voix haute ce que trois familles royales cachent depuis la fondation des royaumes."
@@ -63443,7 +63443,7 @@
         {
           "id": "virion_6bd9c45d8f",
           "fichier": "virion_6bd9c45d8f.ogg",
-          "sha256": "235107a6941d05dc",
+          "sha256": "cddab73001b8229f",
           "moteur": "qwen3-tts",
           "chapitre": "ch86",
           "texte": "Alors il faut le lui apprendre. Et je ne sais pas comment. Je suis dompteur depuis quatre siècles et je viens de découvrir qu'on ne m'a jamais appris à rattraper une phase manquée."
@@ -63451,7 +63451,7 @@
         {
           "id": "virion_6bef49ffb3",
           "fichier": "virion_6bef49ffb3.ogg",
-          "sha256": "c17ecfa027fd10d6",
+          "sha256": "e79ab3f806fda049",
           "moteur": "qwen3-tts",
           "chapitre": "ch81",
           "texte": "Il passe avec moi. Sous ma responsabilité, à mes frais, et si votre registre exige une maison, écrivez la mienne. Elle est courte à épeler."
@@ -63459,7 +63459,7 @@
         {
           "id": "virion_6c1f321272",
           "fichier": "virion_6c1f321272.ogg",
-          "sha256": "883286eb5f5d5868",
+          "sha256": "4b8a42618dfee478",
           "moteur": "qwen3-tts",
           "chapitre": "ch131",
           "texte": "Trois fronts. Le sud, où ils ont débarqué et où ils tiennent. L'ouest, où Perrin s'accroche à une vallée. Et les glades, qui ne sont pas un front mais qui commencent à en être un. Je les tiens séparément parce que je n'ai jamais eu le moyen de les tenir ensemble."
@@ -63467,7 +63467,7 @@
         {
           "id": "virion_6eb9cd7885",
           "fichier": "virion_6eb9cd7885.ogg",
-          "sha256": "baa4e978efd73f52",
+          "sha256": "90fc0da0f9bdfb1a",
           "moteur": "qwen3-tts",
           "chapitre": "ch87",
           "texte": "...Une place. C'est le mot que nous employons entre nous et que nous n'expliquons jamais aux élèves parce qu'il a l'air mystique. Elle cesse de chercher où être. Voilà ce qui change."
@@ -63475,7 +63475,7 @@
         {
           "id": "virion_6f4ebad523",
           "fichier": "virion_6f4ebad523.ogg",
-          "sha256": "360c8ccb26923343",
+          "sha256": "323594c51fdfcbfe",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Le programme, c'est moi. Lève ta garde."
@@ -63483,7 +63483,7 @@
         {
           "id": "virion_6f89ff6d7d",
           "fichier": "virion_6f89ff6d7d.ogg",
-          "sha256": "1391153ba0fe27fc",
+          "sha256": "b67d3475abd12c06",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Je vais te donner une mesure, et je vais me servir de moi. Je suis un noyau **d'argent moyen**. Il en faudrait environ **dix comme moi** pour tenir en respect un blanc moyen — et je suis optimiste en disant dix."
@@ -63491,7 +63491,7 @@
         {
           "id": "virion_6f8efb264d",
           "fichier": "virion_6f8efb264d.ogg",
-          "sha256": "6ee45f23958fd56f",
+          "sha256": "8e7019385fa88cef",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Alors voici la première pièce, et c'est celle qui rend les autres possibles. **Les Six Lances ne sont pas nées puissantes.** Aujourd'hui elles sont au-dessus d'un blanc ordinaire, oui. Mais avant d'être adoubées, la plupart n'étaient que des noyaux d'argent."
@@ -63499,7 +63499,7 @@
         {
           "id": "virion_70979cf0c9",
           "fichier": "virion_70979cf0c9.ogg",
-          "sha256": "50f220630134a789",
+          "sha256": "e81e7c994fa1d0d8",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Tu plaisantes... non. Non, tu plaisantes ? Tu es en train de me dire que tu as tué une bête de classe S ?"
@@ -63507,7 +63507,7 @@
         {
           "id": "virion_711c85fc75",
           "fichier": "virion_711c85fc75.ogg",
-          "sha256": "3fee9eea7a7f0712",
+          "sha256": "66db7936df06d045",
           "moteur": "qwen3-tts",
           "chapitre": "ch210",
           "texte": "Combien ?"
@@ -63515,7 +63515,7 @@
         {
           "id": "virion_71422512ac",
           "fichier": "virion_71422512ac.ogg",
-          "sha256": "50df084c8bc825f2",
+          "sha256": "5d6ff15462c081fc",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ton pied avant tremble. Recommence, jusqu'à ce qu'il ne tremble plus."
@@ -63523,7 +63523,7 @@
         {
           "id": "virion_71bc3a2464",
           "fichier": "virion_71bc3a2464.ogg",
-          "sha256": "8d98e00d90461c95",
+          "sha256": "178ba4146df29d4e",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Une délégation qui traverse, cela fait du monde et du bruit. On te glissera dedans, et personne côté humain n'aura à savoir par où tu es passé."
@@ -63531,7 +63531,7 @@
         {
           "id": "virion_71f7a924c8",
           "fichier": "virion_71f7a924c8.ogg",
-          "sha256": "c2de21c54fed910a",
+          "sha256": "d893ef9030515314",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Nous voyagions séparément — l'apparence, les usages, tu connais la chanson. Mais quand deux de nos peuples se croisaient, nous nous entendions plutôt bien. Il le fallait : on échangeait des renseignements et des matières premières. On appelle cette époque **l'Ère des Bêtes**."
@@ -63539,7 +63539,7 @@
         {
           "id": "virion_722cffae87",
           "fichier": "virion_722cffae87.ogg",
-          "sha256": "9d06273dbd8ec309",
+          "sha256": "440e7080d5e2f909",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Parce que c'est la première fois. Avant, les porteurs protégeaient leur roi **depuis l'ombre**. Nous ne les avons rendus publics qu'après l'unification."
@@ -63547,7 +63547,7 @@
         {
           "id": "virion_726c3ca80a",
           "fichier": "virion_726c3ca80a.ogg",
-          "sha256": "96f76c3324a2bc27",
+          "sha256": "7a0056977d4c1d78",
           "moteur": "qwen3-tts",
           "chapitre": "ch202",
           "texte": "Vous brûlez beaucoup de papier pour quelqu'un qui prétend n'avoir rien de compliqué à écrire."
@@ -63555,7 +63555,7 @@
         {
           "id": "virion_72d374a0f2",
           "fichier": "virion_72d374a0f2.ogg",
-          "sha256": "49f3e223a563f237",
+          "sha256": "0fc289af01137a92",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "On n'a pas vu les races draconiques depuis des centaines d'années. Ce qu'il en reste tient dans trois livres, et deux sont faux. Tu garderas cela pour toi jusqu'au jour où tu pourras te protéger, toi et ceux qui sont autour de toi."
@@ -63563,7 +63563,7 @@
         {
           "id": "virion_7392fe113f",
           "fichier": "virion_7392fe113f.ogg",
-          "sha256": "b0a982272d115635",
+          "sha256": "ca8e6b4681e03835",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Demain, six heures, devant le manoir. Tu vas voir une amie à moi. Après ça, tu auras la tête libre et tu travailleras."
@@ -63571,7 +63571,7 @@
         {
           "id": "virion_741729401c",
           "fichier": "virion_741729401c.ogg",
-          "sha256": "062fd472ceb7dc38",
+          "sha256": "cc65e0d67ac9b05c",
           "moteur": "qwen3-tts",
           "chapitre": "ch18",
           "texte": "Ou alors tu retrouves une princesse pour te guider. Cela t'a bien réussi la première fois."
@@ -63579,7 +63579,7 @@
         {
           "id": "virion_752b8566dd",
           "fichier": "virion_752b8566dd.ogg",
-          "sha256": "db7212e2d013db19",
+          "sha256": "4de16f072bdaad55",
           "moteur": "qwen3-tts",
           "chapitre": "ch18",
           "texte": "Alduin et Merial voyagent devant, en chefs de royaume. Tessia et moi ne venons pas. C'est ici qu'on se dit au revoir."
@@ -63587,7 +63587,7 @@
         {
           "id": "virion_755d6d95ba",
           "fichier": "virion_755d6d95ba.ogg",
-          "sha256": "5d962528157dc43e",
+          "sha256": "215b0c1ce767cf0a",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "Sur ton année de Xyrus, il en reste onze sur trente et un. Et Tessia commande une escouade dans les Beast Glades, ce qui est ma faute et la sienne, et ce dont nous ne discuterons pas."
@@ -63595,7 +63595,7 @@
         {
           "id": "virion_7641625d3a",
           "fichier": "virion_7641625d3a.ogg",
-          "sha256": "64c25d27bfdd4a95",
+          "sha256": "aee5ab974d42d9a3",
           "moteur": "qwen3-tts",
           "chapitre": "ch203",
           "texte": "Dites."
@@ -63603,7 +63603,7 @@
         {
           "id": "virion_79013d5bcb",
           "fichier": "virion_79013d5bcb.ogg",
-          "sha256": "a2f73a560eaf1855",
+          "sha256": "40ea72006f994066",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "La reine naine a exigé qu'on fasse venir le témoin. Ta directrice a expliqué au Conseil que ce témoin était un enfant impressionnable qui inventerait pour plaire. Elle a menti à six souverains, petit, posément, et une reine l'a couverte."
@@ -63611,7 +63611,7 @@
         {
           "id": "virion_79f2bb9b4e",
           "fichier": "virion_79f2bb9b4e.ogg",
-          "sha256": "2b6fc62dfe547fda",
+          "sha256": "792a1598dc58155f",
           "moteur": "qwen3-tts",
           "chapitre": "ch12",
           "texte": "Des marchands d'esclaves, Alduin. Le petit en a été un lui aussi, à ce que j'entends. Ne lui fais pas ça."
@@ -63619,7 +63619,7 @@
         {
           "id": "virion_7a6be9e0b2",
           "fichier": "virion_7a6be9e0b2.ogg",
-          "sha256": "15d25b48e3a73eef",
+          "sha256": "c80d74f4d6be1008",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ce n'est pas une trahison, petit. C'est une place vide, et quelqu'un doit s'y asseoir."
@@ -63627,7 +63627,7 @@
         {
           "id": "virion_7a91ec7888",
           "fichier": "virion_7a91ec7888.ogg",
-          "sha256": "ac7f9366c4df97c7",
+          "sha256": "e1269b107a409c89",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Elle partira sans toi ou elle partira avec un cadavre. Ôte ta chemise."
@@ -63635,7 +63635,7 @@
         {
           "id": "virion_7af661d47d",
           "fichier": "virion_7af661d47d.ogg",
-          "sha256": "d0aeae3b9fcfeaba",
+          "sha256": "ad406e396f610483",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Tu viens de faire en trois secondes le chemin que j'ai mis quarante ans à ne pas oser faire."
@@ -63643,7 +63643,7 @@
         {
           "id": "virion_7d14a4fa63",
           "fichier": "virion_7d14a4fa63.ogg",
-          "sha256": "1d28f0131f216f2d",
+          "sha256": "19f6e46d28b5108c",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Voici pourquoi ton escorte ne part pas avec toi. Cette puissance est trop grande pour un corps qui n'a pas fini de se faire. Ta brûlure, c'est elle qui pousse contre tes parois."
@@ -63651,7 +63651,7 @@
         {
           "id": "virion_7ed313406d",
           "fichier": "virion_7ed313406d.ogg",
-          "sha256": "bb9470bc87571a63",
+          "sha256": "121c777deeb10889",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Non. Avant, tu ne savais pas frapper à sa porte. Maintenant, si."
@@ -63659,7 +63659,7 @@
         {
           "id": "virion_7f4e685503",
           "fichier": "virion_7f4e685503.ogg",
-          "sha256": "1adcee5fc09de56d",
+          "sha256": "5532465aa4045447",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Voilà Integrate. Je vais passer derrière toi. Fais attention."
@@ -63667,7 +63667,7 @@
         {
           "id": "virion_7f65250a20",
           "fichier": "virion_7f65250a20.ogg",
-          "sha256": "c1a572ebe6b590b4",
+          "sha256": "6758b998969ed8db",
           "moteur": "qwen3-tts",
           "chapitre": "ch81",
           "texte": "Personne ne sait. Écrivez « Eralith » et n'y pensez plus."
@@ -63675,7 +63675,7 @@
         {
           "id": "virion_7f7cd63c44",
           "fichier": "virion_7f7cd63c44.ogg",
-          "sha256": "a3e8f3b3ca6fd16a",
+          "sha256": "7e651f9c49de05e1",
           "moteur": "qwen3-tts",
           "chapitre": "ch18",
           "texte": "Tiens. Pour la brume, si tu repasses un jour par Elshire."
@@ -63683,7 +63683,7 @@
         {
           "id": "virion_7f9ccbcd81",
           "fichier": "virion_7f9ccbcd81.ogg",
-          "sha256": "924bbdaace63ad49",
+          "sha256": "09a2845e73881c09",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Ah. Tu es de ceux qui ne mordent pas. C'est dommage, j'avais préparé deux autres phrases."
@@ -63691,7 +63691,7 @@
         {
           "id": "virion_8105171839",
           "fichier": "virion_8105171839.ogg",
-          "sha256": "e257654990b67763",
+          "sha256": "e5c10ebabf165182",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Parce qu'un œuf de dragon ne s'ouvre pas au bout d'un délai. Ce n'est pas une pendule."
@@ -63699,7 +63699,7 @@
         {
           "id": "virion_82c7f85a5d",
           "fichier": "virion_82c7f85a5d.ogg",
-          "sha256": "3bf4485138669e74",
+          "sha256": "9f5799fb538b132c",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Bientôt quatorze."
@@ -63707,7 +63707,7 @@
         {
           "id": "virion_83f1428cfc",
           "fichier": "virion_83f1428cfc.ogg",
-          "sha256": "6dddd341746e3f0a",
+          "sha256": "25da811bbd91e032",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Et d'ici là tu travailles, et pas ce que tu crois. Trois ans que ton noyau n'a pas gagné un grain : c'est lui qui doit monter, maintenant."
@@ -63715,7 +63715,7 @@
         {
           "id": "virion_85f4e04cf4",
           "fichier": "virion_85f4e04cf4.ogg",
-          "sha256": "7e5fef8f286bb0c2",
+          "sha256": "8f1e1e514a19ed9b",
           "moteur": "qwen3-tts",
           "chapitre": "ch211",
           "texte": "...Faites porter cette phrase-là aussi."
@@ -63723,7 +63723,7 @@
         {
           "id": "virion_8720e6518d",
           "fichier": "virion_8720e6518d.ogg",
-          "sha256": "502fe49aa2bdf634",
+          "sha256": "58f1abf8a30f8fcd",
           "moteur": "qwen3-tts",
           "chapitre": "ch211",
           "texte": "Vous avez un nom. Vos officiers attendent que vous en fassiez quelque chose."
@@ -63731,7 +63731,7 @@
         {
           "id": "virion_88f4778435",
           "fichier": "virion_88f4778435.ogg",
-          "sha256": "b38adfe3071673eb",
+          "sha256": "b9e19449445cdd5d",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Elle t'a parlé."
@@ -63739,7 +63739,7 @@
         {
           "id": "virion_891e5ee4c9",
           "fichier": "virion_891e5ee4c9.ogg",
-          "sha256": "e23fd9018a919c7e",
+          "sha256": "c6201780981c23a3",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Un œuf de dragon ne compte pas les jours. Il attend de sentir près de lui quelqu'un capable de le protéger et de l'aimer, et un lien déjà noué. Sinon il attend cent ans."
@@ -63747,7 +63747,7 @@
         {
           "id": "virion_895c82fa18",
           "fichier": "virion_895c82fa18.ogg",
-          "sha256": "34c117026656e311",
+          "sha256": "d1cbbf09e717852d",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "...Tu vas trop vite pour un vieil homme. Oui. On nous a donné quelque chose."
@@ -63755,7 +63755,7 @@
         {
           "id": "virion_8a3c5e41ad",
           "fichier": "virion_8a3c5e41ad.ogg",
-          "sha256": "5c73b33e90a64d34",
+          "sha256": "3c59985cb4097209",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Exactement. Les tout premiers mages de ce monde sont les élèves des porteurs. Toute notre magie descend de six objets prêtés."
@@ -63763,7 +63763,7 @@
         {
           "id": "virion_8a9fcf290e",
           "fichier": "virion_8a9fcf290e.ogg",
-          "sha256": "cfd240c781cf1894",
+          "sha256": "1284c0a8283bda96",
           "moteur": "qwen3-tts",
           "chapitre": "ch18",
           "texte": "Aïe ! Petite ! C'était une plaisanterie !"
@@ -63771,7 +63771,7 @@
         {
           "id": "virion_8b236ca25c",
           "fichier": "virion_8b236ca25c.ogg",
-          "sha256": "48c093e00a7af1f0",
+          "sha256": "a324c5b7933f79e0",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Trois paliers d'un coup, après trois jours de corps sous tension. Ce n'est pas le mana qui lâche, c'est la tête — et c'est de l'avoir compris qui l'a fait basculer. Laisse-la dormir."
@@ -63779,7 +63779,7 @@
         {
           "id": "virion_8bae63ddb2",
           "fichier": "virion_8bae63ddb2.ogg",
-          "sha256": "b9fd0b055df5a484",
+          "sha256": "993ad0d2a20c850f",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Kuku. Tu as retenu même ce que je t'ai dit une seule fois. C'est agaçant."
@@ -63787,7 +63787,7 @@
         {
           "id": "virion_8c077ed34d",
           "fichier": "virion_8c077ed34d.ogg",
-          "sha256": "374584337d1f1f2b",
+          "sha256": "870c769d0f7697ed",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Tu ne peux pas prendre le relais, petit. Ce n'est pas une question de puissance : c'est une question de qui elle reconnaît. ...Cela dit, elle te reconnaîtra peut-être. C'est bien pour ça que j'ai traversé un continent."
@@ -63795,7 +63795,7 @@
         {
           "id": "virion_8d3eb12c83",
           "fichier": "virion_8d3eb12c83.ogg",
-          "sha256": "e6f28d56fcfd4a52",
+          "sha256": "bc2edccfdb77ed6d",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Beaucoup. Ne me le fais pas regretter."
@@ -63803,7 +63803,7 @@
         {
           "id": "virion_8d4eab8de8",
           "fichier": "virion_8d4eab8de8.ogg",
-          "sha256": "dedd01d63fbf676b",
+          "sha256": "c054064100af949a",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "Ça vaut trois discours, ce que tu as fait hier soir. Bon. Maintenant la vraie conversation, et tu ne l'aimeras pas. Il te prend combien de temps, l'asura ?"
@@ -63811,7 +63811,7 @@
         {
           "id": "virion_8d920b95f5",
           "fichier": "virion_8d920b95f5.ogg",
-          "sha256": "960cec08f5ee41b9",
+          "sha256": "08b606be0b1d8280",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Parce que tu l'aurais trouvé seul, et plus mal. Ce que ça me coûte ne te regarde pas encore."
@@ -63819,7 +63819,7 @@
         {
           "id": "virion_8e1b9498c9",
           "fichier": "virion_8e1b9498c9.ogg",
-          "sha256": "a29daab2b8f4bfae",
+          "sha256": "479db970e26716c1",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Dernière chose à savoir, et c'est une échelle. E, D, C, B, A, AA, S, SS. Elle vaut pour les mages, et elle vaut aussi pour les bêtes de mana."
@@ -63827,7 +63827,7 @@
         {
           "id": "virion_90eae0990c",
           "fichier": "virion_90eae0990c.ogg",
-          "sha256": "4ed841f09e6915ba",
+          "sha256": "aceeb29db4ce7599",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "À un demi-pas de l'argent initial. Elle est à un demi-pas de l'argent initial."
@@ -63835,7 +63835,7 @@
         {
           "id": "virion_924b9928dc",
           "fichier": "virion_924b9928dc.ogg",
-          "sha256": "52667b43ac48b6d4",
+          "sha256": "fefef15dfc4a0767",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Et personne ne sait d'où leur vient leur force. Personne. Si cela s'ébruitait, ce serait un coup d'État dans l'année."
@@ -63843,7 +63843,7 @@
         {
           "id": "virion_9385765468",
           "fichier": "virion_9385765468.ogg",
-          "sha256": "86e1d08185e37d50",
+          "sha256": "07013bceccfabb58",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Et les deux premières ?"
@@ -63851,7 +63851,7 @@
         {
           "id": "virion_939afb574d",
           "fichier": "virion_939afb574d.ogg",
-          "sha256": "7c239d8a4148184c",
+          "sha256": "4161ad32c404ec37",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "On peut tuer la bête, extraire son noyau avec la volonté encore dedans, et l'absorber. C'est plus simple, c'est plus sûr, et cela fait un dompteur forgé. La compréhension, elle, ne vient presque jamais."
@@ -63859,7 +63859,7 @@
         {
           "id": "virion_93af22512c",
           "fichier": "virion_93af22512c.ogg",
-          "sha256": "46e4bdbec76c2902",
+          "sha256": "8c81878fdc57ebb1",
           "moteur": "qwen3-tts",
           "chapitre": "ch203",
           "texte": "Ce qui veut dire ?"
@@ -63867,7 +63867,7 @@
         {
           "id": "virion_93e4f7b16b",
           "fichier": "virion_93e4f7b16b.ogg",
-          "sha256": "912b9ab256781bc5",
+          "sha256": "85f253380fbe21b7",
           "moteur": "qwen3-tts",
           "chapitre": "ch86",
           "texte": "Trois blessés. Aucun mort. Une aile de mon château dans le jardin. Petit, je ne te remercierai pas devant témoins, parce qu'un vieux roi ne remercie pas un humain de douze ans d'avoir sauvé sa garde, mais je te le dis une fois : sans le dôme, j'en enterrais quatre demain."
@@ -63875,7 +63875,7 @@
         {
           "id": "virion_94eb88d277",
           "fichier": "virion_94eb88d277.ogg",
-          "sha256": "c313c00b02d9ddd1",
+          "sha256": "c9234cfae3ca2e12",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Elle a de la chance : son corps s'entend bien mieux avec ce noyau que le tien ne s'entendait avec le sien la première fois."
@@ -63883,7 +63883,7 @@
         {
           "id": "virion_9701a5e54b",
           "fichier": "virion_9701a5e54b.ogg",
-          "sha256": "a7f494866b86b7db",
+          "sha256": "65cfa99fb115b9f2",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Par les esprits. Ce n'était pas une pierre. Ce n'en a jamais été une."
@@ -63891,7 +63891,7 @@
         {
           "id": "virion_9726c225f8",
           "fichier": "virion_9726c225f8.ogg",
-          "sha256": "5a46f8a786a63d83",
+          "sha256": "1af8f98e7fd67d53",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Croire qu'Integrate vaut mieux qu'Acquire. Acquire prend une aptitude précise ; Integrate soulève tout d'un cran. Ce n'est pas la même arme, et il y a des jours où la première est la bonne."
@@ -63899,7 +63899,7 @@
         {
           "id": "virion_97fa302ba3",
           "fichier": "virion_97fa302ba3.ogg",
-          "sha256": "27030d5ad94997d4",
+          "sha256": "9f208f5292a5475f",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Ils ont passé une partie de la soirée à comparer laquelle des trois couronnes se soucie le moins des deux autres. Je te laisse en tirer ce que tu veux ; moi, j'en ai tiré une mauvaise nuit."
@@ -63907,7 +63907,7 @@
         {
           "id": "virion_993ce7cec8",
           "fichier": "virion_993ce7cec8.ogg",
-          "sha256": "dfd97a6200de1f1f",
+          "sha256": "4efb197182ab4237",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Tu as bien fait d'aller chez les tiens d'abord. Tessia a une famille, elle n'est jamais seule ; toi, tu venais de faire une peur mortelle à la tienne. Tu y as pensé, tu y es allé. **Ne sois pas désolé du temps que tu leur as donné.**"
@@ -63915,7 +63915,7 @@
         {
           "id": "virion_99bd279c06",
           "fichier": "virion_99bd279c06.ogg",
-          "sha256": "5c54ddab0d75416f",
+          "sha256": "968b9ff68a6d334e",
           "moteur": "qwen3-tts",
           "chapitre": "ch89",
           "texte": "Une Devineresse. Elle voit ce qui va arriver, mal, par morceaux, et jamais quand on le lui demande. Elle a passé sa vie à comprendre qu'on ne peut presque rien faire de ce qu'elle voit, et cela l'a rendue extrêmement désagréable."
@@ -63923,7 +63923,7 @@
         {
           "id": "virion_9a9ee2bb68",
           "fichier": "virion_9a9ee2bb68.ogg",
-          "sha256": "8ec93d4bb976c808",
+          "sha256": "aa6fa02b890c1080",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Rien de ce que tu imagines. Bien pire, et par des gens dont tu n'as pas encore entendu le nom."
@@ -63931,7 +63931,7 @@
         {
           "id": "virion_9ad237ed6d",
           "fichier": "virion_9ad237ed6d.ogg",
-          "sha256": "138f5fde4b878cae",
+          "sha256": "40df085a35302015",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Et une consigne, la seule qui ait été votée sans discussion : **que rien ne sorte.** Pas un mot au dehors sur le fait qu'une Lance est morte."
@@ -63939,7 +63939,7 @@
         {
           "id": "virion_9ad6d58dc0",
           "fichier": "virion_9ad6d58dc0.ogg",
-          "sha256": "11dd315d6d57a52a",
+          "sha256": "b24642dc03954616",
           "moteur": "qwen3-tts",
           "chapitre": "ch136",
           "texte": "Même s'il croit avoir vu ? Explique, parce que je vais devoir le défendre devant des sergents qui trouveront ça inhumain."
@@ -63947,7 +63947,7 @@
         {
           "id": "virion_9b9f62de7e",
           "fichier": "virion_9b9f62de7e.ogg",
-          "sha256": "465d3d81c895b6ed",
+          "sha256": "babad0ae32443ab7",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Et cela ne se range pas dans nos classes de bêtes. Ni S, ni SS. Si tu veux une comparaison qui te parle : une déité se tient au niveau qu'on atteint **après avoir percé le stade blanc**."
@@ -63955,7 +63955,7 @@
         {
           "id": "virion_9cf5d229c0",
           "fichier": "virion_9cf5d229c0.ogg",
-          "sha256": "a3ea9d9bad873227",
+          "sha256": "379e52ce00063ec2",
           "moteur": "qwen3-tts",
           "chapitre": "ch136",
           "texte": "Il ne sait pas lire."
@@ -63963,7 +63963,7 @@
         {
           "id": "virion_9d5624ffa2",
           "fichier": "virion_9d5624ffa2.ogg",
-          "sha256": "2325d0a40acb3e60",
+          "sha256": "630be71d9fca9733",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Vieille sorcière ! Sors de là !"
@@ -63971,7 +63971,7 @@
         {
           "id": "virion_9dd9da391c",
           "fichier": "virion_9dd9da391c.ogg",
-          "sha256": "57db76d33b83eac5",
+          "sha256": "e5f015416cad8d89",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Je la ramène à Elenoir par la porte. Et j'ai une réunion du Conseil que j'évite depuis un moment et que je ne pourrai plus éviter, donc tu ne me verras pas d'ici quelque temps. Repose-toi, petit."
@@ -63979,7 +63979,7 @@
         {
           "id": "virion_9e2f4ec866",
           "fichier": "virion_9e2f4ec866.ogg",
-          "sha256": "aad8d0f1c8c0d5a5",
+          "sha256": "84820a40a0c7319b",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Assez pour arriver quelque part sur cette route, et pas assez pour en revenir."
@@ -63987,7 +63987,7 @@
         {
           "id": "virion_9f6ab77811",
           "fichier": "virion_9f6ab77811.ogg",
-          "sha256": "b3469c45645dbb74",
+          "sha256": "40b349bbd2f44a1a",
           "moteur": "qwen3-tts",
           "chapitre": "ch87",
           "texte": "Tu n'as pas dormi. Ne mens pas, il y a onze pages dans ce carnet qui n'y étaient pas hier. Montre."
@@ -63995,7 +63995,7 @@
         {
           "id": "virion_9f6ce7395b",
           "fichier": "virion_9f6ce7395b.ogg",
-          "sha256": "6094f4c5b45bfe6a",
+          "sha256": "6bc85b3ebb8a6b9c",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Vous êtes aussi les seuls à avoir des deviants des formes supérieures, et les seuls à en avoir qui sortent des quatre tout à fait — vos guérisseurs, les émetteurs. Vos noyaux sont les plus divers de ce monde, et c'est bien la seule chose que je vous envie."
@@ -64003,7 +64003,7 @@
         {
           "id": "virion_9f8a1daaa0",
           "fichier": "virion_9f8a1daaa0.ogg",
-          "sha256": "926ddac4440f3768",
+          "sha256": "f152f2eed1bd95e0",
           "moteur": "qwen3-tts",
           "chapitre": "ch133",
           "texte": "Onze hommes contre trois donjons non ouverts. ...Le Conseil dira oui, et il dira oui pour la mauvaise raison : parce que ça ne lui coûte rien s'il perd. Prends-le quand même. Une bonne décision prise pour un mauvais motif reste une bonne décision."
@@ -64011,7 +64011,7 @@
         {
           "id": "virion_a02074e9ab",
           "fichier": "virion_a02074e9ab.ogg",
-          "sha256": "f657aa0531ea477a",
+          "sha256": "95a1965b21c6cfe9",
           "moteur": "qwen3-tts",
           "chapitre": "ch12",
           "texte": "Reste qu'un enfant de quatre ans a tué quatre adultes, dont un augmenteur, et qu'il appelle ça de la chance. Explique-moi cette chance, petit."
@@ -64019,7 +64019,7 @@
         {
           "id": "virion_a0a65cc358",
           "fichier": "virion_a0a65cc358.ogg",
-          "sha256": "6e4283b8a2036159",
+          "sha256": "393fe0f7f0a2b8c9",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "...C'est la chose la plus dure que j'aie entendue de la bouche d'un homme de vingt-cinq ans, et c'est la bonne. Ta famille : vivante, au château volant. Les Twin Horns : vivants, tous les cinq. Tessia : vivante, et elle commande une escouade dans les Beast Glades. Va-t'en maintenant, avant que je te donne le quatrième."
@@ -64027,7 +64027,7 @@
         {
           "id": "virion_a12ede002c",
           "fichier": "virion_a12ede002c.ogg",
-          "sha256": "422f490b8c790871",
+          "sha256": "66ef287b0b44da5a",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Un... dragon."
@@ -64035,7 +64035,7 @@
         {
           "id": "virion_a1c58fd96c",
           "fichier": "virion_a1c58fd96c.ogg",
-          "sha256": "e05a45b833c7434f",
+          "sha256": "7af0f87c3e3c59ff",
           "moteur": "qwen3-tts",
           "chapitre": "ch216",
           "texte": "Où va-t-elle ?"
@@ -64043,7 +64043,7 @@
         {
           "id": "virion_a2000e2a4f",
           "fichier": "virion_a2000e2a4f.ogg",
-          "sha256": "7c57089becbc2f36",
+          "sha256": "abcdd3722fef003c",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Un peu plus d'une journée, d'après Cynthia. Tu as raté ton deuxième jour de cours."
@@ -64051,7 +64051,7 @@
         {
           "id": "virion_a2b69d962d",
           "fichier": "virion_a2b69d962d.ogg",
-          "sha256": "8433f6e4bcf96091",
+          "sha256": "2b2d3348eaa87e93",
           "moteur": "qwen3-tts",
           "chapitre": "ch11",
           "texte": "Ha ! Voilà une réponse d'homme, dans une bouche de gamin. Nous en reparlerons."
@@ -64059,7 +64059,7 @@
         {
           "id": "virion_a4415c1ae3",
           "fichier": "virion_a4415c1ae3.ogg",
-          "sha256": "6ed8b8b5b2c05e28",
+          "sha256": "81a5eb3fd542ec96",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Ne cherche pas à saisir. Ne referme pas les doigts. Une volonté de ce rang ne se laisse pas attraper — au mieux, elle consent."
@@ -64067,7 +64067,7 @@
         {
           "id": "virion_a5528506f3",
           "fichier": "virion_a5528506f3.ogg",
-          "sha256": "0c65332aaca95b01",
+          "sha256": "7823765e96ce240d",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Tu as lu la guerre des trois races, et celle des humains contre les elfes. Avant tout cela, ce continent était bien pire. Nous étions **nomades**, tous les trois, et nous fuyions les bêtes de mana."
@@ -64075,7 +64075,7 @@
         {
           "id": "virion_a574c55866",
           "fichier": "virion_a574c55866.ogg",
-          "sha256": "809bc4699a879226",
+          "sha256": "11c8de1937501008",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Presque rien. Je veille à ce que cela se répartisse également, et je te soulage quand ton corps se cabre. Le reste, tu le fais seul, et personne ne peut le faire à ta place."
@@ -64083,7 +64083,7 @@
         {
           "id": "virion_a728435693",
           "fichier": "virion_a728435693.ogg",
-          "sha256": "2d42504a3b95088f",
+          "sha256": "3c8f4cf3f8f99650",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "Parce que sa Volonté te reconnaît et pas moi. Voilà. C'est humiliant à dire et c'est la seule raison qui vaille. Trois jours à contenir cette aura à mains nues, et elle ne m'a jamais regardé une fois ; elle t'a écarté, toi, ce qui veut dire qu'elle t'avait vu."
@@ -64091,7 +64091,7 @@
         {
           "id": "virion_a943747504",
           "fichier": "virion_a943747504.ogg",
-          "sha256": "c2416392ad534f3a",
+          "sha256": "0dfbdff58abade7c",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Je ne suis sûr de rien, garnement. Mais si tu veux mon idée de vieil homme : je crois que l'Elderwood que tu as abattu n'était pas dans son état normal. Je crois qu'il avait été **altéré**."
@@ -64099,7 +64099,7 @@
         {
           "id": "virion_aa0e262964",
           "fichier": "virion_aa0e262964.ogg",
-          "sha256": "a05eb51ad4094bda",
+          "sha256": "4520b1e4b9dc5cc8",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Assez longtemps, parce que les gens ne cherchent pas ce qu'ils ne savent pas exister. Ne les aide pas."
@@ -64107,7 +64107,7 @@
         {
           "id": "virion_aa309bfa99",
           "fichier": "virion_aa309bfa99.ogg",
-          "sha256": "d84bf8d049c9ad76",
+          "sha256": "48715309980ea665",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Ils ont reconnu la mort. Ils ont reconnu la plaque — la directrice l'a remise à Merial en personne. Ils n'ont pas prononcé le nom. Quatre heures de séance pour aboutir à « un adversaire non identifié d'une puissance exceptionnelle », qu'un secrétaire a écrite trois fois avant que tout le monde soit d'accord sur l'ordre des mots."
@@ -64115,7 +64115,7 @@
         {
           "id": "virion_aa327f4d87",
           "fichier": "virion_aa327f4d87.ogg",
-          "sha256": "658b248108e94ac7",
+          "sha256": "926420087fda7488",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "C'est exactement ma situation, et tu es le troisième en six mois à la formuler ainsi. Les deux autres étaient des sergents. Aucun de mes généraux ne l'a dit."
@@ -64123,7 +64123,7 @@
         {
           "id": "virion_ab3347fc76",
           "fichier": "virion_ab3347fc76.ogg",
-          "sha256": "bcb54de76c2080d7",
+          "sha256": "2eb5281383627a7a",
           "moteur": "qwen3-tts",
           "chapitre": "ch86",
           "texte": "...Répète-moi ça demain matin quand j'aurai dormi. Parce que si tu as raison, tout ce que j'ai enseigné à trois générations d'élèves est à revoir."
@@ -64131,7 +64131,7 @@
         {
           "id": "virion_aba76e8fd1",
           "fichier": "virion_aba76e8fd1.ogg",
-          "sha256": "36d666739f6637c5",
+          "sha256": "8bfaab2ffdf54512",
           "moteur": "qwen3-tts",
           "chapitre": "ch219",
           "texte": "Le Conseil n'entendra pas ça."
@@ -64139,7 +64139,7 @@
         {
           "id": "virion_ac3575a069",
           "fichier": "virion_ac3575a069.ogg",
-          "sha256": "79285283889718fd",
+          "sha256": "38025f65d32c91a1",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Je n'ai jamais entendu parler d'un receveur qui tombe dans un état pareil. Jamais. Ni dans ma vie, ni dans les archives d'Elenoir, et j'ai eu les deux entre les mains."
@@ -64147,7 +64147,7 @@
         {
           "id": "virion_aceec4f778",
           "fichier": "virion_aceec4f778.ogg",
-          "sha256": "95e46fe306ef8224",
+          "sha256": "0a591efb30fd823f",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "...Tu as raison, et j'aurais dû le voir avant de te l'offrir. Ce n'était pas un poste, en réalité. C'était une manière de te garder."
@@ -64155,7 +64155,7 @@
         {
           "id": "virion_b05abd8bfe",
           "fichier": "virion_b05abd8bfe.ogg",
-          "sha256": "dc5c6a86af3440fc",
+          "sha256": "700f743974b4a72b",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Une formation de mana de cette taille... elle ne devrait pas pouvoir. Elle ne devrait pas pouvoir du tout."
@@ -64163,7 +64163,7 @@
         {
           "id": "virion_b0caa14172",
           "fichier": "virion_b0caa14172.ogg",
-          "sha256": "d3558d6dfe24dc92",
+          "sha256": "79767f4517ec08bc",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "L'assimilation sert à ce que le corps de l'hôte apprenne à SUPPORTER la puissance de la Volonté. Petit à petit, phase après phase. Ici, c'est l'inverse qui se produit. **Elle n'apprend pas à être supportée : elle essaie de prendre la place.**"
@@ -64171,7 +64171,7 @@
         {
           "id": "virion_b12cbbd604",
           "fichier": "virion_b12cbbd604.ogg",
-          "sha256": "357c15dd84e79ba0",
+          "sha256": "018b60909f2aec3c",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Qu'est-ce que tu lui as donné, garnement ? Je n'ai jamais entendu parler d'une Volonté de bête qui **trempe** un noyau. Jamais. Ou alors c'est cette bille que tu as jetée."
@@ -64179,7 +64179,7 @@
         {
           "id": "virion_b1842374aa",
           "fichier": "virion_b1842374aa.ogg",
-          "sha256": "f41a7f4f34e0eb1d",
+          "sha256": "9d56bc5a3f596035",
           "moteur": "qwen3-tts",
           "chapitre": "ch227",
           "texte": "Alors dites-nous le chiffre. De combien sommes-nous en retard, exactement ?"
@@ -64187,7 +64187,7 @@
         {
           "id": "virion_b1b77949df",
           "fichier": "virion_b1b77949df.ogg",
-          "sha256": "eabf38da1b3aa114",
+          "sha256": "1c132640c56ef2e0",
           "moteur": "qwen3-tts",
           "chapitre": "ch12",
           "texte": "Il ne prouvera rien du tout, et toi tu vas te taire."
@@ -64195,7 +64195,7 @@
         {
           "id": "virion_b60fc19b89",
           "fichier": "virion_b60fc19b89.ogg",
-          "sha256": "0e0358df2b172f2f",
+          "sha256": "2ca14810679cc8fe",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Une dernière chose, garnement, et ensuite je dors. J'ignore combien de temps il faut à un dragon pour devenir ce dont je te parlais tout à l'heure, et je ne serai probablement plus là pour le voir."
@@ -64203,7 +64203,7 @@
         {
           "id": "virion_b6b97e4594",
           "fichier": "virion_b6b97e4594.ogg",
-          "sha256": "4e3b8873805e005a",
+          "sha256": "4b97d0291eff176e",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Ta volonté n'est pas un plan, petit. C'est une carte qu'on garde en main. Elle se voit de loin, elle attire exactement les yeux dont tu n'as pas besoin, et le jour où tu la joueras, ce sera parce que tu n'auras plus le choix."
@@ -64211,7 +64211,7 @@
         {
           "id": "virion_b700881f33",
           "fichier": "virion_b700881f33.ogg",
-          "sha256": "14289e403f8148d7",
+          "sha256": "36eb02462322f583",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "C'est anormal. Comme tout ce qui te concerne depuis le début. Je m'attendais à une porte qui s'entrouvre, pas à un courant d'air qui emporte les meubles."
@@ -64219,7 +64219,7 @@
         {
           "id": "virion_b7317346d3",
           "fichier": "virion_b7317346d3.ogg",
-          "sha256": "f7ecc454fa980734",
+          "sha256": "4ad28820880c8c24",
           "moteur": "qwen3-tts",
           "chapitre": "ch205",
           "texte": "Et vous répondrez quoi ?"
@@ -64227,7 +64227,7 @@
         {
           "id": "virion_bc138ff458",
           "fichier": "virion_bc138ff458.ogg",
-          "sha256": "4083a1dd8bde286e",
+          "sha256": "a1da484fd175b896",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Je sais. C'est bien ce qui m'inquiète, et non ce qui me fâche."
@@ -64235,7 +64235,7 @@
         {
           "id": "virion_bcc72a5188",
           "fichier": "virion_bcc72a5188.ogg",
-          "sha256": "b985860146cfb6d1",
+          "sha256": "61b4b8a503072b73",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Tu ne protestes pas. Bien. Alors écoute."
@@ -64243,7 +64243,7 @@
         {
           "id": "virion_bcdefea7be",
           "fichier": "virion_bcdefea7be.ogg",
-          "sha256": "230c0b96accd547e",
+          "sha256": "658058205fa1d654",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Quelque chose que je regarde depuis une heure, et qui ronfle contre ma petite-fille."
@@ -64251,7 +64251,7 @@
         {
           "id": "virion_bda2d97af5",
           "fichier": "virion_bda2d97af5.ogg",
-          "sha256": "6e718f5cb0402ab1",
+          "sha256": "9fa068ec8502f0e7",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Mon Acquire ne me rend pas beaucoup plus rapide. Il efface ma présence et me rend l'ombre. C'est déjà énorme."
@@ -64259,7 +64259,7 @@
         {
           "id": "virion_bdc9b10795",
           "fichier": "virion_bdc9b10795.ogg",
-          "sha256": "c83d11cc66dfbeaa",
+          "sha256": "9287c70d76b6b81e",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Tu l'as entendue. Voilà ce qu'elle est, quand elle n'a pas le choix."
@@ -64267,7 +64267,7 @@
         {
           "id": "virion_bdcb2ebbb1",
           "fichier": "virion_bdcb2ebbb1.ogg",
-          "sha256": "f5836fee5b4f4f29",
+          "sha256": "92b51bd8b4706f4c",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Des années. Je ne te mentirai pas là-dessus."
@@ -64275,7 +64275,7 @@
         {
           "id": "virion_be1829b84b",
           "fichier": "virion_be1829b84b.ogg",
-          "sha256": "4050c09280edbaa7",
+          "sha256": "1ecd2b3e5e4e3b9a",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Avant tout : **elle n'en saura rien.** Pas un mot à Tessia, tant qu'elle n'est pas beaucoup plus âgée. Ces choses-là sont noires et je veux qu'elle reste à l'écart aussi longtemps que possible."
@@ -64283,7 +64283,7 @@
         {
           "id": "virion_be24840237",
           "fichier": "virion_be24840237.ogg",
-          "sha256": "1b0a9d96485ce991",
+          "sha256": "3d269a5913928942",
           "moteur": "qwen3-tts",
           "chapitre": "ch89",
           "texte": "Elle n'aime pas les visites. Elle ne m'aime pas beaucoup non plus, ce qui est réciproque et confortable. Ne la remercie pas, ne la paie pas, et ne lui demande jamais deux choses le même jour."
@@ -64291,7 +64291,7 @@
         {
           "id": "virion_bef62e9eba",
           "fichier": "virion_bef62e9eba.ogg",
-          "sha256": "9eebbf7b16e8941e",
+          "sha256": "1b9aea9d1465fbdb",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Je ne plaisante jamais pendant un entraînement, petit."
@@ -64299,7 +64299,7 @@
         {
           "id": "virion_c06e1d1d85",
           "fichier": "virion_c06e1d1d85.ogg",
-          "sha256": "7442a29da7459fbc",
+          "sha256": "d3eeb892d0d3cd13",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Les trois paires n'avaient pas les mêmes attributs, et c'est ce qui nous a séparés pour de bon. Ce que chaque peuple sait faire aujourd'hui vient de là. Les nains se sont dit qu'ils étaient les plus proches de la terre ; nous, les plus proches du vivant ; les humains, qu'ils maniaient les quatre éléments."
@@ -64307,7 +64307,7 @@
         {
           "id": "virion_c0dbb6bf66",
           "fichier": "virion_c0dbb6bf66.ogg",
-          "sha256": "c2337b62b21cd730",
+          "sha256": "9a091b29dc2f15d3",
           "moteur": "qwen3-tts",
           "chapitre": "ch136",
           "texte": "Un homme dont tout le monde connaît le nom, par quartier. ...Onze quartiers, onze noms. C'est de l'administration, petit, ce n'est pas de la guerre."
@@ -64315,7 +64315,7 @@
         {
           "id": "virion_c1fa9a5c32",
           "fichier": "virion_c1fa9a5c32.ogg",
-          "sha256": "86305b2c302c592e",
+          "sha256": "486357d4c1807486",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Alors ? Tu as bien profité de la vue ?"
@@ -64323,7 +64323,7 @@
         {
           "id": "virion_c21d50b84d",
           "fichier": "virion_c21d50b84d.ogg",
-          "sha256": "d5bbf1bd2a9f617f",
+          "sha256": "3b24d813a0ab3a2f",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Et ensuite, évidemment, nous avons tout gâché."
@@ -64331,7 +64331,7 @@
         {
           "id": "virion_c3aaa6053b",
           "fichier": "virion_c3aaa6053b.ogg",
-          "sha256": "0a8347e2dc1b73af",
+          "sha256": "b4f1ec241eb4035b",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Le doute est normal. Ne le laisse simplement pas guider ta lame."
@@ -64339,7 +64339,7 @@
         {
           "id": "virion_c3b6715784",
           "fichier": "virion_c3b6715784.ogg",
-          "sha256": "7c0bce8268ceae2b",
+          "sha256": "4518bc54888fec8e",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "...Huit jours. J'aurais dit six, et j'ai quatre siècles d'avance sur toi. Un front ne s'enfonce pas d'un coup, petit : il s'enfonce par les petites choses qu'on cesse de réparer."
@@ -64347,7 +64347,7 @@
         {
           "id": "virion_c41822f84a",
           "fichier": "virion_c41822f84a.ogg",
-          "sha256": "c6b49d471e7841b7",
+          "sha256": "8a61f3e1a97f9986",
           "moteur": "qwen3-tts",
           "chapitre": "ch102",
           "texte": "On m'a donné une armée, petit. Trois royaumes, quatre corps, et un continent à couvrir. Sais-tu ce que j'ai demandé en premier ? La liste des villages vides. Ils ont mis onze jours à me la fournir et elle était fausse de six lignes."
@@ -64355,7 +64355,7 @@
         {
           "id": "virion_c45d193a12",
           "fichier": "virion_c45d193a12.ogg",
-          "sha256": "7a7ed3d9b73e53f9",
+          "sha256": "bbb877e4384eda2c",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Voilà. Nous trois — humains, elfes, nains — nous parvenons à peine à toucher le blanc. Et il existerait quelque part des êtres capables d'aplanir une montagne et de noyer une vallée. Haaa."
@@ -64363,7 +64363,7 @@
         {
           "id": "virion_c48d0ef429",
           "fichier": "virion_c48d0ef429.ogg",
-          "sha256": "25bee7df3e80acdc",
+          "sha256": "798f7dd99a9231c7",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Première phase : Acquire. Ce n'est pas prendre. C'est demander, et supporter la réponse."
@@ -64371,7 +64371,7 @@
         {
           "id": "virion_c4f99dbedc",
           "fichier": "virion_c4f99dbedc.ogg",
-          "sha256": "30ce40f61cd8edad",
+          "sha256": "400f9f80e19c426d",
           "moteur": "qwen3-tts",
           "chapitre": "ch227",
           "texte": "C'est modeste."
@@ -64379,7 +64379,7 @@
         {
           "id": "virion_c51597a288",
           "fichier": "virion_c51597a288.ogg",
-          "sha256": "e4635f55bc2187d0",
+          "sha256": "5bd23cd13c3f8c1d",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Ce que je vais te dire n'est connu que des familles royales des trois races. Je te le dis parce que je sens que tu en auras besoin, et parce que je crois que tu peux le porter."
@@ -64387,7 +64387,7 @@
         {
           "id": "virion_c59d391da2",
           "fichier": "virion_c59d391da2.ogg",
-          "sha256": "8fb3663190e2290a",
+          "sha256": "dcdf3e2bbc689988",
           "moteur": "qwen3-tts",
           "chapitre": "ch11",
           "texte": "On me dit que quatre esclavagistes armés sont restés dans la forêt d'Elshire, et qu'un enfant seul en est ressorti avec ma petite-fille."
@@ -64395,7 +64395,7 @@
         {
           "id": "virion_c60575f933",
           "fichier": "virion_c60575f933.ogg",
-          "sha256": "2234747f0a25ce2f",
+          "sha256": "d59eb55ecd4bf0a8",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "...Assieds-toi et écoute-moi, parce que je ne vais le dire qu'une fois."
@@ -64403,7 +64403,7 @@
         {
           "id": "virion_c753e4be61",
           "fichier": "virion_c753e4be61.ogg",
-          "sha256": "8f5aaff52bd3d43d",
+          "sha256": "e9a31bf170feb925",
           "moteur": "qwen3-tts",
           "chapitre": "ch133",
           "texte": "Cinq. Tu viens de doubler ta cible et de gager ton indépendance pour un an. ...Petit, je vais te dire ce qu'un vieux commandant ne devrait jamais dire : ne fais plus jamais ça. Un jour tu perdras un pari de ce genre, et ce jour-là ce continent aura besoin de toi libre."
@@ -64411,7 +64411,7 @@
         {
           "id": "virion_c7e42438e6",
           "fichier": "virion_c7e42438e6.ogg",
-          "sha256": "9827458132f27b3f",
+          "sha256": "e0d668165fb94fea",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Voilà. C'est ce regard-là que je voulais voir."
@@ -64419,7 +64419,7 @@
         {
           "id": "virion_c86fd3f15f",
           "fichier": "virion_c86fd3f15f.ogg",
-          "sha256": "b12b422deb84deeb",
+          "sha256": "8f27233b49c788c9",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Elle lui a mis dans la main un parchemin de transmission. Tu ne sais probablement pas ce que ça coûte : seuls le Conseil et deux ou trois maisons en gardent en réserve. Une mère a payé ça pour avoir des nouvelles de son enfant, à quinze pas de la salle où son mari discutait de l'ordre des mots."
@@ -64427,7 +64427,7 @@
         {
           "id": "virion_caab4d5f93",
           "fichier": "virion_caab4d5f93.ogg",
-          "sha256": "2ad9abf9871f0577",
+          "sha256": "efc747de732caaf7",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "Maintenant les noms. Tu vas me les demander et je vais te répondre, et nous allons faire ça d'un bloc parce que ça ne s'améliore pas en le fractionnant. Demande."
@@ -64435,7 +64435,7 @@
         {
           "id": "virion_cbac23701a",
           "fichier": "virion_cbac23701a.ogg",
-          "sha256": "fdf00b94e5752cd6",
+          "sha256": "67a16df7faa8ed59",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "Tu me donnes les limites avant les capacités. ...Petit, en cinq ans de guerre, aucun de mes mages ne m'a jamais dit ce qu'il ne savait pas faire. J'ai perdu des positions à cause de ça. Assieds-toi. Nous allons refaire ma carte entière et nous allons y passer la nuit."
@@ -64443,7 +64443,7 @@
         {
           "id": "virion_cbd07ac12d",
           "fichier": "virion_cbd07ac12d.ogg",
-          "sha256": "6d5be2891270b744",
+          "sha256": "c662203719b862df",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Par la porte, oui. Ses parents se rongent depuis trois jours, et j'avoue que j'attends leur tête avec une certaine gourmandise. Princesse Tessia, mage d'argent à treize ans. Tu veux venir ?"
@@ -64451,7 +64451,7 @@
         {
           "id": "virion_cc5614ffbe",
           "fichier": "virion_cc5614ffbe.ogg",
-          "sha256": "e322d76d09b2197f",
+          "sha256": "dbfd18a128af4c47",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Parce que tous les disciples le font, et parce que tu as la tête de quelqu'un qui vient de recevoir la même mauvaise nouvelle pour la six-centième fois."
@@ -64459,7 +64459,7 @@
         {
           "id": "virion_cc8d4e735d",
           "fichier": "virion_cc8d4e735d.ogg",
-          "sha256": "af9c2d9edccddf1d",
+          "sha256": "c8031b199ab8663c",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Écoute-moi bien, petit. Je suis dompteur depuis cent soixante ans. J'ai lu la volonté de tout ce qui vit sur ce continent. Et avant de te dire ce que tu portes, il faut que tu saches lire ce que je vais écrire."
@@ -64467,7 +64467,7 @@
         {
           "id": "virion_cd903b38c9",
           "fichier": "virion_cd903b38c9.ogg",
-          "sha256": "7b84641d5fcbc72c",
+          "sha256": "376d0ad75226aa1a",
           "moteur": "qwen3-tts",
           "chapitre": "ch136",
           "texte": "Tu vas me dire que personne. Ne le dis pas trop vite. Un continent qui dépend d'une paire d'yeux est un continent qui a déjà perdu, et tu le sais mieux que moi puisque c'est toi qui m'as fait écrire trois questions au lieu de onze."
@@ -64475,7 +64475,7 @@
         {
           "id": "virion_cd970d5e00",
           "fichier": "virion_cd970d5e00.ogg",
-          "sha256": "6f3122c6f6612ef4",
+          "sha256": "6e2e2d8532181405",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Bien. Et l'erreur que font neuf dompteurs sur dix ?"
@@ -64483,7 +64483,7 @@
         {
           "id": "virion_ce30259d5d",
           "fichier": "virion_ce30259d5d.ogg",
-          "sha256": "2d73a60267f76a9a",
+          "sha256": "0b05b7ced0e838bd",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ôte ta chemise."
@@ -64491,7 +64491,7 @@
         {
           "id": "virion_ce608d6f9b",
           "fichier": "virion_ce608d6f9b.ogg",
-          "sha256": "b2874366e7ffab85",
+          "sha256": "1bbe198fef5f0ef2",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Les quatre éléments de base, et la forme supérieure de chacun. L'eau donne la glace. Le feu donne la foudre. Le vent donne le son. La terre donne la gravité."
@@ -64499,7 +64499,7 @@
         {
           "id": "virion_ce86701265",
           "fichier": "virion_ce86701265.ogg",
-          "sha256": "30e8c6d13d8b9e51",
+          "sha256": "5fe9d8a63bcd5bbd",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ce qu'elle donnait à la panthère. Nous en reparlerons quand tu sauras ce que tu portes toi."
@@ -64507,7 +64507,7 @@
         {
           "id": "virion_d1f231cb5b",
           "fichier": "virion_d1f231cb5b.ogg",
-          "sha256": "1d66332160d62716",
+          "sha256": "5b84202b073e34e7",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "Dieu merci, tu es vivant, garnement. Je commence à être reconnaissant à ta ténacité de cafard. Approche — j'ai besoin de toi."
@@ -64515,7 +64515,7 @@
         {
           "id": "virion_d332cb2ec7",
           "fichier": "virion_d332cb2ec7.ogg",
-          "sha256": "cae833aeaf0fc474",
+          "sha256": "11d09c6cf298456b",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "...Oui. Et une Volonté qui choisit est une Volonté qui pense encore."
@@ -64523,7 +64523,7 @@
         {
           "id": "virion_d334194cd8",
           "fichier": "virion_d334194cd8.ogg",
-          "sha256": "b18501c6d38176db",
+          "sha256": "e86bbba2ad2e7c2c",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "Je creuse. Des fossés, des relais, des dépôts. On ne gagne pas une guerre qu'on n'a pas choisie ; on se donne le droit d'y survivre assez longtemps pour qu'elle change de forme. Le reste, c'est de la poésie de conseil."
@@ -64531,7 +64531,7 @@
         {
           "id": "virion_d36b1871c6",
           "fichier": "virion_d36b1871c6.ogg",
-          "sha256": "dddb332398c06641",
+          "sha256": "3d1b91909f122996",
           "moteur": "qwen3-tts",
           "chapitre": "ch11",
           "texte": "Tu ne dormiras pas dehors ce soir, jeune humain. Ni les soirs suivants, si j'ai mon mot à dire — et je l'ai généralement."
@@ -64539,7 +64539,7 @@
         {
           "id": "virion_d391767c56",
           "fichier": "virion_d391767c56.ogg",
-          "sha256": "9422c86380521869",
+          "sha256": "fb83502832f783ca",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Kuku. J'en employais la moitié, petit. La moitié."
@@ -64547,7 +64547,7 @@
         {
           "id": "virion_d39a081498",
           "fichier": "virion_d39a081498.ogg",
-          "sha256": "b0cdaa0169518acd",
+          "sha256": "545603d389f66b3e",
           "moteur": "qwen3-tts",
           "chapitre": "ch131",
           "texte": "Dix jours d'avance. ...Répète cette phrase. Répète-la lentement, parce que je vais devoir la redire moi-même à des gens qui ne me croiront pas, et je veux la dire exactement."
@@ -64555,7 +64555,7 @@
         {
           "id": "virion_d3a648433d",
           "fichier": "virion_d3a648433d.ogg",
-          "sha256": "7dc392a1477e70b7",
+          "sha256": "ea9fef21292249da",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Ça ne s'y range pas. Voilà ce que je peux te dire de plus utile ce soir : ce n'est pas plus haut sur l'échelle. **Ce n'est pas sur l'échelle.**"
@@ -64563,7 +64563,7 @@
         {
           "id": "virion_d4096d8fc5",
           "fichier": "virion_d4096d8fc5.ogg",
-          "sha256": "3d1747632f629728",
+          "sha256": "3dadada0080164e0",
           "moteur": "qwen3-tts",
           "chapitre": "ch138",
           "texte": "...Voilà. C'est exactement ce que je n'arrivais pas à formuler depuis trois jours. Le maître d'écluse est mort à la manivelle du vantail nord, à la sixième heure, après avoir fait entrer les quatre pieds d'eau que tu lui avais demandés. Il s'appelait Halden Fenwick. Tu avais promis d'écrire son nom."
@@ -64571,7 +64571,7 @@
         {
           "id": "virion_d4d2707a65",
           "fichier": "virion_d4d2707a65.ogg",
-          "sha256": "5694c983871455bc",
+          "sha256": "73f69a55924df684",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "À part, deux choses qui n'appartiennent à personne d'autre : la plante, qui est à nous, et le métal et le magma, qui sont aux nains."
@@ -64579,7 +64579,7 @@
         {
           "id": "virion_d5635b62da",
           "fichier": "virion_d5635b62da.ogg",
-          "sha256": "97c00a0a072ea56d",
+          "sha256": "00949c333cd27572",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Ce que nous allons faire s'appelle l'Assimilation. Tu vas faire SORTIR le mana de ton noyau — pas par les canaux, jamais par les canaux — et le laisser suinter dans tes os et dans tes muscles jusqu'à ce qu'ils l'absorbent."
@@ -64587,7 +64587,7 @@
         {
           "id": "virion_d5a07a3b42",
           "fichier": "virion_d5a07a3b42.ogg",
-          "sha256": "00e746f2cfcaeb4f",
+          "sha256": "47616b58b1af2e95",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Celui-là t'a jaugé. Les bêtes libres ne donnent pas leur accord par politesse."
@@ -64595,7 +64595,7 @@
         {
           "id": "virion_d5a585a9ef",
           "fichier": "virion_d5a585a9ef.ogg",
-          "sha256": "5dbb812ee2364a21",
+          "sha256": "7b7882fd124affce",
           "moteur": "qwen3-tts",
           "chapitre": "ch237",
           "texte": "Faut-il faire quelque chose ? Personne ici ne sait, et vous êtes le seul à qui nous puissions poser la question."
@@ -64603,7 +64603,7 @@
         {
           "id": "virion_d651733982",
           "fichier": "virion_d651733982.ogg",
-          "sha256": "40c0da6106e0e317",
+          "sha256": "0eff67bc9b8c3754",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "Que ce sol soit la seule chose qui tienne les trois royaumes ensemble. Une gravure et des habitudes. Si quelque chose arrive de l'autre côté de la mer, nous saurons en une saison combien de cette alliance était du bâti et combien du décor."
@@ -64611,7 +64611,7 @@
         {
           "id": "virion_d788a073ef",
           "fichier": "virion_d788a073ef.ogg",
-          "sha256": "d6e77747eda13d04",
+          "sha256": "f53ba1870e9df48c",
           "moteur": "qwen3-tts",
           "chapitre": "ch202",
           "texte": "Laquelle ?"
@@ -64619,7 +64619,7 @@
         {
           "id": "virion_d82d161d00",
           "fichier": "virion_d82d161d00.ogg",
-          "sha256": "3ac98e57d867dad4",
+          "sha256": "3078bbbdee485b38",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Ton noyau n'a pas gagné un grain. Ton corps rend ce que rend un mage deux ou trois paliers au-dessus de toi. Voilà ce que tu as acheté."
@@ -64627,7 +64627,7 @@
         {
           "id": "virion_d8a99129f7",
           "fichier": "virion_d8a99129f7.ogg",
-          "sha256": "e74e2ac3c5ef779e",
+          "sha256": "014606d2dedd38d9",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "...Alors elle savait ce qu'elle faisait, et je ne lui ferai pas l'injure de fouiller."
@@ -64635,7 +64635,7 @@
         {
           "id": "virion_d8b6a5a6a2",
           "fichier": "virion_d8b6a5a6a2.ogg",
-          "sha256": "b874703d71efab89",
+          "sha256": "7413769a474fc4dc",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Une émettrice. Oui. Et si tu as un peu de tête, tu ne le répètes pas trop fort en chemin."
@@ -64643,7 +64643,7 @@
         {
           "id": "virion_da4a6fb4e7",
           "fichier": "virion_da4a6fb4e7.ogg",
-          "sha256": "e09bcaacba78f440",
+          "sha256": "ad4463d7a00810ee",
           "moteur": "qwen3-tts",
           "chapitre": "ch15",
           "texte": "Ha ! Trois ans d'attente et tu es pressé le jour même. Oui, petit. On peut."
@@ -64651,7 +64651,7 @@
         {
           "id": "virion_dad19442a5",
           "fichier": "virion_dad19442a5.ogg",
-          "sha256": "706d46798ffd8f86",
+          "sha256": "daec047d5c5b8022",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Celui qui la reçoit est un dompteur. Je peux lire la tienne parce que j'en suis un moi-même : ce que je porte est une panthère des ombres, une bête AA."
@@ -64659,7 +64659,7 @@
         {
           "id": "virion_de83674bfb",
           "fichier": "virion_de83674bfb.ogg",
-          "sha256": "8f7c926231444f17",
+          "sha256": "cb2df8f01b56d385",
           "moteur": "qwen3-tts",
           "chapitre": "ch210",
           "texte": "Vous venez d'acheter votre autorité avec de la lumière. Ça se paie, ce genre d'emprunt."
@@ -64667,7 +64667,7 @@
         {
           "id": "virion_deb8b8946f",
           "fichier": "virion_deb8b8946f.ogg",
-          "sha256": "af69e100b0b06fe9",
+          "sha256": "2464e34a0459f943",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Je suis un dompteur forgé, et j'ai mis plus de dix ans à passer la deuxième phase. Je me considère chanceux d'y être arrivé du tout."
@@ -64675,7 +64675,7 @@
         {
           "id": "virion_defd9b0441",
           "fichier": "virion_defd9b0441.ogg",
-          "sha256": "53efa679dd32b7ce",
+          "sha256": "85c53d6d8338f8b8",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Et chacun des trois en a conclu que la déité l'avait choisi pour régner. La première guerre a duré plus longtemps que la campagne contre les bêtes. Elle a produit trois royaumes. La seconde, tu la connais : elle nous a opposés aux humains."
@@ -64683,7 +64683,7 @@
         {
           "id": "virion_dffeb26307",
           "fichier": "virion_dffeb26307.ogg",
-          "sha256": "f11a3bcc056a12e4",
+          "sha256": "1cc3f52842c3ac67",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Aussi sûr qu'on peut l'être d'une chose que trois rois ont signée. Oui, petit. Tu rentres chez toi."
@@ -64691,7 +64691,7 @@
         {
           "id": "virion_e2908306c6",
           "fichier": "virion_e2908306c6.ogg",
-          "sha256": "fede59c05b2009aa",
+          "sha256": "b35205ef058f1454",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Un tournoi, à Xyrus. Les elfes et les nains y envoient des jeunes — comme concurrents, et comme premiers élèves de votre académie humaine. Les trois races ont décidé d'apprendre sous un même toit, ce qui est soit la meilleure idée du siècle, soit la pire."
@@ -64699,7 +64699,7 @@
         {
           "id": "virion_e3cec1eeb2",
           "fichier": "virion_e3cec1eeb2.ogg",
-          "sha256": "c9d7705904c92f30",
+          "sha256": "65323b3739883e8f",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Cynthia est **argent haut**. Six ou sept d'elle, pour le même blanc. Voilà l'échelle. Elle n'est pas linéaire, garnement, et je vois à ta tête que tu viens de le comprendre."
@@ -64707,7 +64707,7 @@
         {
           "id": "virion_e443df0be8",
           "fichier": "virion_e443df0be8.ogg",
-          "sha256": "b8274402922d5f84",
+          "sha256": "0398607d0d081ca6",
           "moteur": "qwen3-tts",
           "chapitre": "ch203",
           "texte": "Neuf villages de la lisière. Dont sept que le Conseil n'a jamais financés et dont deux ne figurent sur aucune carte du Continent."
@@ -64715,7 +64715,7 @@
         {
           "id": "virion_e4fbdf1223",
           "fichier": "virion_e4fbdf1223.ogg",
-          "sha256": "d1ab7b0572fe8f05",
+          "sha256": "47fc721962356308",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "La marque et la voix vont ensemble. Ce que tu as là, aucun dompteur de ce continent ne l'a, moi compris."
@@ -64723,7 +64723,7 @@
         {
           "id": "virion_e58bad6d15",
           "fichier": "virion_e58bad6d15.ogg",
-          "sha256": "acd25633e336693f",
+          "sha256": "fb31cf1a1bd9489d",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "J'ai cru que tu venais de mourir, garnement. Ne recommence pas — ou plutôt si, recommence, mais préviens un vieil homme."
@@ -64731,7 +64731,7 @@
         {
           "id": "virion_e5d125eca8",
           "fichier": "virion_e5d125eca8.ogg",
-          "sha256": "96ae191d9bfce7c0",
+          "sha256": "a6d61e8445c405fb",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Bien ! Maintenant, faisons-leur savoir que tu es vivant."
@@ -64739,7 +64739,7 @@
         {
           "id": "virion_e860bb34f0",
           "fichier": "virion_e860bb34f0.ogg",
-          "sha256": "52abb1f80f05db28",
+          "sha256": "a2b3525062e80e38",
           "moteur": "qwen3-tts",
           "chapitre": "ch211",
           "texte": "Vos officiers entendront « nous savons qui c'est »."
@@ -64747,7 +64747,7 @@
         {
           "id": "virion_e92901cd2a",
           "fichier": "virion_e92901cd2a.ogg",
-          "sha256": "f1291b4a8a618058",
+          "sha256": "ef6b8da8a9bd67f4",
           "moteur": "qwen3-tts",
           "chapitre": "ch11",
           "texte": "Alors c'est toi."
@@ -64755,7 +64755,7 @@
         {
           "id": "virion_e97db27da9",
           "fichier": "virion_e97db27da9.ogg",
-          "sha256": "fe98473353c59814",
+          "sha256": "20f7366ea58cfa8f",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Parce qu'une lignée penche. La nôtre va vers ce qui nourrit — et la plante est la seule forme vivante de la nature. La leur va vers ce qui construit."
@@ -64763,7 +64763,7 @@
         {
           "id": "virion_e9a7b32ebd",
           "fichier": "virion_e9a7b32ebd.ogg",
-          "sha256": "72d49a1f6ea132fa",
+          "sha256": "0624ef2f8dbb12c8",
           "moteur": "qwen3-tts",
           "chapitre": "ch107",
           "texte": "Alors je vais te dire ce qu'un vieux commandant dit à ses meilleurs éléments quand il les envoie loin : ne reviens pas pour nous sauver. Reviens en état de nous être utile. Ce n'est pas la même chose et beaucoup de héros ne l'ont jamais compris."
@@ -64771,7 +64771,7 @@
         {
           "id": "virion_e9c4f42325",
           "fichier": "virion_e9c4f42325.ogg",
-          "sha256": "b3aa346d50001521",
+          "sha256": "388bc4277f9e52ae",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Haha ! Je me pose la question depuis toute ma vie. Ces derniers temps, je commence à croire que oui."
@@ -64779,7 +64779,7 @@
         {
           "id": "virion_e9eb0e114d",
           "fichier": "virion_e9eb0e114d.ogg",
-          "sha256": "36d728130f2dfccd",
+          "sha256": "f3ac7a0cbb7cbabf",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Bonjour. Je m'appelle Virion Eralith, et je suis l'ancien professeur de votre fils."
@@ -64787,7 +64787,7 @@
         {
           "id": "virion_ea4897837a",
           "fichier": "virion_ea4897837a.ogg",
-          "sha256": "746f25959e806da6",
+          "sha256": "f258a4c4d0d61edb",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Sur ce continent ? Moi. Peut-être deux autres, et je ne sais pas où ils sont."
@@ -64795,7 +64795,7 @@
         {
           "id": "virion_eaa2ad4d27",
           "fichier": "virion_eaa2ad4d27.ogg",
-          "sha256": "ec44a8685759da6d",
+          "sha256": "dc343066bcb6f78c",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Une babiole. Garnement, je serais moins surpris si tu me disais l'avoir volée à un dieu."
@@ -64803,7 +64803,7 @@
         {
           "id": "virion_eb64c0a903",
           "fichier": "virion_eb64c0a903.ogg",
-          "sha256": "68f43999b767d970",
+          "sha256": "c79d1a59df5360bb",
           "moteur": "qwen3-tts",
           "chapitre": "ch108",
           "texte": "Écris-le cette nuit. Et signe-le, petit : signé de toi, mes officiers le liront comme un ordre au lieu d'une curiosité."
@@ -64811,7 +64811,7 @@
         {
           "id": "virion_eb69402fe0",
           "fichier": "virion_eb69402fe0.ogg",
-          "sha256": "a37514310aa8dbfb",
+          "sha256": "dc309d6f71bfa9fd",
           "moteur": "qwen3-tts",
           "chapitre": "ch14",
           "texte": "Rien. C'est bien ce qui va te coûter le plus."
@@ -64819,7 +64819,7 @@
         {
           "id": "virion_eb91102399",
           "fichier": "virion_eb91102399.ogg",
-          "sha256": "2c6454561ebba66c",
+          "sha256": "f1878c004ae04888",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Mais **il faut que tu deviennes plus fort.** Appelle ça l'intuition d'un vieillard sénile : je sens venir des changements énormes, et j'espère de tout mon cœur me tromper."
@@ -64827,7 +64827,7 @@
         {
           "id": "virion_ec0d6584be",
           "fichier": "virion_ec0d6584be.ogg",
-          "sha256": "96af48b7b791e46a",
+          "sha256": "013f91b919996a34",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Le roi nain a crié. Il s'est levé, il a pointé le doigt sur mon fils et ma belle-fille et il leur a reproché leur silence devant tout le monde. Il a dit à voix haute qu'**une Lance des elfes était morte**, ce que trois personnes dans cette salle espéraient encore garder pour elles."
@@ -64835,7 +64835,7 @@
         {
           "id": "virion_ec33a591a0",
           "fichier": "virion_ec33a591a0.ogg",
-          "sha256": "c34c4fdd926c060f",
+          "sha256": "0b908758d0037bf0",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Si. **Alduin l'a su presque à l'instant même.** Un souverain est averti de la mort de sa Lance par le serment lui-même — c'est dans le contrat, si l'on peut appeler ça un contrat. Il l'a su, et il a passé onze jours à ne pas savoir de quoi elle était morte."
@@ -64843,7 +64843,7 @@
         {
           "id": "virion_ec75833d99",
           "fichier": "virion_ec75833d99.ogg",
-          "sha256": "3dda946400df856e",
+          "sha256": "523a7c5f5df53007",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Parce que ce que tu portes n'est pas de rang A. Ni AA. À ma mesure, c'est du S. Peut-être du SS."
@@ -64851,7 +64851,7 @@
         {
           "id": "virion_ee35d8a487",
           "fichier": "virion_ee35d8a487.ogg",
-          "sha256": "7a55aa2051be5676",
+          "sha256": "be550ae8cbea2b93",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Et pourtant. Pose-toi la vraie question, garnement : comment des familles royales sans aucun colosse dans leur lignée sont-elles restées au pouvoir depuis la fondation des trois royaumes ?"
@@ -64859,7 +64859,7 @@
         {
           "id": "virion_ee6233d7d5",
           "fichier": "virion_ee6233d7d5.ogg",
-          "sha256": "93e1d2d788f28100",
+          "sha256": "8df91212305fb55c",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Imagine le nombre de mages d'argent qui plafonnent depuis vingt ans et qui apprendraient qu'il existe un objet capable de les faire passer. Certains iraient jusqu'à effacer une lignée royale entière pour devenir les nouveaux maîtres des artefacts. Ne me regarde pas comme ça : j'ai été roi, j'ai fait le compte."
@@ -64867,7 +64867,7 @@
         {
           "id": "virion_ee788b0659",
           "fichier": "virion_ee788b0659.ogg",
-          "sha256": "e2d3c880d190b6cd",
+          "sha256": "a8e5eaf112ee6e73",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Ne la commande pas. Ne la fuis pas. Tiens-toi à côté d'elle, comme on se tient près d'un grand animal qui dort."
@@ -64875,7 +64875,7 @@
         {
           "id": "virion_efbcdf5878",
           "fichier": "virion_efbcdf5878.ogg",
-          "sha256": "fc15257a42721560",
+          "sha256": "6268dc516b8de816",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Merial a suivi la directrice dans le couloir après la séance. Elle l'a tirée à l'écart, hors de vue, et elle lui a demandé des nouvelles de sa fille. Elle n'en avait aucune. Elle n'en avait pas eu depuis onze jours, parce que le vieil idiot que je suis n'a pas su lui écrire."
@@ -64883,7 +64883,7 @@
         {
           "id": "virion_f000159994",
           "fichier": "virion_f000159994.ogg",
-          "sha256": "263305721ee0969c",
+          "sha256": "3ed9d07d431b5f7e",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Une bête de classe S. Tu me le raconteras, et tu me le raconteras en entier."
@@ -64891,7 +64891,7 @@
         {
           "id": "virion_f083919750",
           "fichier": "virion_f083919750.ogg",
-          "sha256": "51952d272c44b412",
+          "sha256": "cde355ba07f67c82",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "L'assimilation. La dernière phase — celle où la Volonté lutte le plus fort. C'est normal qu'elle lutte. Ce qui ne l'est pas, c'est ceci."
@@ -64899,7 +64899,7 @@
         {
           "id": "virion_f1d6635fa3",
           "fichier": "virion_f1d6635fa3.ogg",
-          "sha256": "500410d1580c6884",
+          "sha256": "36ce77fd5a6c4d9c",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Elle t'a répondu. Venant d'elle, considère cela comme une ovation."
@@ -64907,7 +64907,7 @@
         {
           "id": "virion_f2d093356f",
           "fichier": "virion_f2d093356f.ogg",
-          "sha256": "c0a63b32f4eedbfd",
+          "sha256": "a0ebf130c9ee687b",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Écoute-moi bien, maintenant, et écoute-moi mieux que tout ce que je t'ai dit jusqu'ici. Tu as bien fait de te taire. Ne le dis à personne d'autre."
@@ -64915,7 +64915,7 @@
         {
           "id": "virion_f51cf68032",
           "fichier": "virion_f51cf68032.ogg",
-          "sha256": "edc7f1d4538f7bed",
+          "sha256": "427c1ce4ac4c94c1",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "Excellente question. Tu as raison : par la seule force, n'importe laquelle des six pourrait effacer un royaume, et les familles royales n'ont produit aucun mage de ce calibre depuis des générations."
@@ -64923,7 +64923,7 @@
         {
           "id": "virion_f698ced8b0",
           "fichier": "virion_f698ced8b0.ogg",
-          "sha256": "330655ba786b56b3",
+          "sha256": "4b68bdd931d2911e",
           "moteur": "qwen3-tts",
           "chapitre": "ch16",
           "texte": "Tu tends ton mana vers elle, comme une main ouverte. Et tu attends de voir si elle la prend."
@@ -64931,7 +64931,7 @@
         {
           "id": "virion_f71524a2f3",
           "fichier": "virion_f71524a2f3.ogg",
-          "sha256": "6dd9fc0874633c36",
+          "sha256": "b945d1ff991264cf",
           "moteur": "qwen3-tts",
           "chapitre": "ch76",
           "texte": "Les objets ne donnaient pas que de la puissance. Ils donnaient **l'intelligence du mana** — comment il fonctionne, comment on s'en sert."
@@ -64939,7 +64939,7 @@
         {
           "id": "virion_f7404ac021",
           "fichier": "virion_f7404ac021.ogg",
-          "sha256": "5351f29b82ead69d",
+          "sha256": "65517ec40311ece7",
           "moteur": "qwen3-tts",
           "chapitre": "ch74",
           "texte": "QUI VA... Arthur ?"
@@ -64947,7 +64947,7 @@
         {
           "id": "virion_f7bada4907",
           "fichier": "virion_f7bada4907.ogg",
-          "sha256": "a18cdeb3473951d8",
+          "sha256": "436e895e803922f4",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Un autre a rappelé qu'elle portait aussi un grade. Général. On l'oublie parce qu'on ne dit que « Lance », mais elle commandait, et ce qu'elle commandait est mort autour d'elle en formation."
@@ -64955,7 +64955,7 @@
         {
           "id": "virion_f872567b67",
           "fichier": "virion_f872567b67.ogg",
-          "sha256": "dd8fe26589978b54",
+          "sha256": "23926e5c701663f5",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "J'ai refusé plus de disciples que tu n'as vécu de jours. Des riches, des pauvres, des vieux, des enfants de nobles dont les parents étaient sûrs du génie. Je n'en ai pris aucun."
@@ -64963,7 +64963,7 @@
         {
           "id": "virion_f8f5f7d787",
           "fichier": "virion_f8f5f7d787.ogg",
-          "sha256": "ca059aaa2017d71b",
+          "sha256": "1e94f378a276fec0",
           "moteur": "qwen3-tts",
           "chapitre": "ch12",
           "texte": "...De la patience. À quatre ans."
@@ -64971,7 +64971,7 @@
         {
           "id": "virion_f97be514f4",
           "fichier": "virion_f97be514f4.ogg",
-          "sha256": "a32cf1cea1221961",
+          "sha256": "325f611a9d0b2157",
           "moteur": "qwen3-tts",
           "chapitre": "ch80",
           "texte": "Emmène-la. Tessia. Loin de ces murs, chez elle, à Elenoir. Sa Volonté est installée de travers, et cet endroit est en train de devenir un lieu où l'on mesure les gens à leur race et à leur naissance. Elle a besoin d'un endroit où elle n'a rien à prouver."
@@ -64979,7 +64979,7 @@
         {
           "id": "virion_f9e4d5f436",
           "fichier": "virion_f9e4d5f436.ogg",
-          "sha256": "de88974a3c9a55df",
+          "sha256": "769c1848de6cbbf1",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "TESSIA ! C'est ton grand-père ! Ouvre les yeux !"
@@ -64987,7 +64987,7 @@
         {
           "id": "virion_fa3384e993",
           "fichier": "virion_fa3384e993.ogg",
-          "sha256": "574a1b4be4957717",
+          "sha256": "f39bccc9fa516ebd",
           "moteur": "qwen3-tts",
           "chapitre": "ch75",
           "texte": "TESSIA !"
@@ -64995,7 +64995,7 @@
         {
           "id": "virion_fa77c8a21d",
           "fichier": "virion_fa77c8a21d.ogg",
-          "sha256": "57d7a858b7c2308a",
+          "sha256": "501dab349da7d455",
           "moteur": "qwen3-tts",
           "chapitre": "ch77",
           "texte": "Je te retire tout ce que je t'ai dit de gentil cette nuit."
@@ -65003,7 +65003,7 @@
         {
           "id": "virion_faeff0426e",
           "fichier": "virion_faeff0426e.ogg",
-          "sha256": "09f55b55a84abf43",
+          "sha256": "e3e537ad52680ae9",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Tu es tombé cinq fois plus vite que je ne l'attendais. Ce n'est pas un compliment, c'est un avertissement : ne te crois jamais prêt."
@@ -65011,7 +65011,7 @@
         {
           "id": "virion_fb3edccdd2",
           "fichier": "virion_fb3edccdd2.ogg",
-          "sha256": "c0162b14f25ceae5",
+          "sha256": "7bc3d02300436217",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Presque personne. Il faut être exceptionnellement adepte de l'élément de base d'abord. On appelle ceux-là des deviants."
@@ -65019,7 +65019,7 @@
         {
           "id": "virion_fba3fdc10e",
           "fichier": "virion_fba3fdc10e.ogg",
-          "sha256": "83cf36e2e169b2a1",
+          "sha256": "d4340f9bc57d7e01",
           "moteur": "qwen3-tts",
           "chapitre": "ch78",
           "texte": "Cinq. Dans une pièce faite pour six, et **personne ne s'est assis sur la chaise vide.** Je ne devrais pas savoir qu'ils se sont réunis, et je ne devrais surtout pas savoir ce qui s'y est dit."
@@ -65027,7 +65027,7 @@
         {
           "id": "virion_fc65d6755f",
           "fichier": "virion_fc65d6755f.ogg",
-          "sha256": "4057b8560de3e91f",
+          "sha256": "3e37e65c4781c363",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Assez de gammes. Croise le fer avec moi. Pour de bon."
@@ -65035,7 +65035,7 @@
         {
           "id": "virion_fd980b0c67",
           "fichier": "virion_fd980b0c67.ogg",
-          "sha256": "994d96facd795ca3",
+          "sha256": "5c6aa03b226fd45e",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Et garde la petite près de toi, tout le temps. Je fais partie des trois ou quatre personnes de ce continent capables de reconnaître ce qu'elle est. Pour tous les autres, c'est une bête de mana rare, tu l'as trouvée, tu ne sais pas quoi."
@@ -65043,7 +65043,7 @@
         {
           "id": "virion_fd9c1c6391",
           "fichier": "virion_fd9c1c6391.ogg",
-          "sha256": "c2f18a7067ce1d86",
+          "sha256": "01051e7661248553",
           "moteur": "qwen3-tts",
           "chapitre": "ch17",
           "texte": "Trois ans que tu attendais sans le savoir. Je crois que tu viens d'être payé."
@@ -65051,7 +65051,7 @@
         {
           "id": "virion_fecf4870ca",
           "fichier": "virion_fecf4870ca.ogg",
-          "sha256": "44744742cac1ef18",
+          "sha256": "e3c437509ca4186c",
           "moteur": "qwen3-tts",
           "chapitre": "ch13",
           "texte": "Vent et terre, et je n'ai jamais touché la plante. Ma valeur n'est pas là, et c'est justement de quoi je viens te parler."
@@ -65059,7 +65059,7 @@
         {
           "id": "virion_feea85b5f2",
           "fichier": "virion_feea85b5f2.ogg",
-          "sha256": "ff74b637cf8d36e4",
+          "sha256": "3def3a175194dc5c",
           "moteur": "qwen3-tts",
           "chapitre": "ch129",
           "texte": "...Montre."
@@ -65067,7 +65067,7 @@
         {
           "id": "virion_ff15a715c8",
           "fichier": "virion_ff15a715c8.ogg",
-          "sha256": "0d3d373b24b0da0a",
+          "sha256": "aad35b62c9938033",
           "moteur": "qwen3-tts",
           "chapitre": "ch57",
           "texte": "Au fait. Comment diable as-tu mis la main sur un noyau de gardien de l'Elderwood ?"
@@ -65880,7 +65880,7 @@
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-16T16:23:59",
+  "construit": "2026-08-17T10:06:21",
   "contenu": [
     "voices"
   ],
@@ -65900,9 +65900,9 @@
     },
     "virion": {
       "timbre": "uncle_fu:0.5+aiden:0.5",
-      "valide": false,
-      "le": "2026-08-16",
-      "note": "uncle_fu pur ecarte : F0 201,7 Hz (14 Hz de Tessia) et dispersion 79 Hz. Le melange corrige la hauteur mais manque de maturite ; descente de voix a l'etude (lot d'ecoute 13), palier non arrete."
+      "valide": true,
+      "le": "2026-08-17",
+      "note": "uncle_fu pur ecarte (F0 201,7 Hz, 14 Hz de Tessia, dispersion 79 Hz). Melange retenu puis DESCENDU de 3 demi-tons a duree constante : 132 -> 114 Hz, sous Arthur au lieu d'etre sur lui. Valide a l'oreille (lot 13)."
     },
     "sylvie": {
       "timbre": "ono_anna:0.5+serena:0.5",
@@ -65915,5 +65915,12 @@
     "trame": "ch0-150",
     "histoires_secondaires": "toutes",
     "note": "ch151-321 volontairement reportes ; les arcs ne portent pas de numero de chapitre et echappent a la borne par construction"
+  },
+  "traitement": {
+    "virion": {
+      "descente_demi_tons": 3.0,
+      "duree": "constante (WSOLA)",
+      "note": "Le modele ne sait pas descendre une voix : les six consignes 'vieil homme' essayees montent toutes la F0. Applique a la generation, pas en post-traitement des .ogg livres, pour n'encoder qu'une fois."
+    }
   }
 }
