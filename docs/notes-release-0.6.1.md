@@ -1,12 +1,14 @@
-# Pack de voix 0.6.0 — quatre voix, une par personnage, la même d'un bout à l'autre
+# Pack de voix 0.6.1 — quatre voix, une par personnage, la même d'un bout à l'autre
 
-**8 228 clips, 543 Mo.** Quatre voix au lieu de deux, la déclinaison par âge retirée, et les
+**8 228 clips, 542 Mo.** *(La 0.6.0 n'a jamais été publiée : elle a été construite puis
+corrigée par la descente de voix de Virion avant toute distribution. La 0.6.1 est donc la
+première livraison depuis la 0.5.0, et ces notes couvrent les deux.)* Quatre voix au lieu de deux, la déclinaison par âge retirée, et les
 38 timelines d'histoires secondaires doublées pour la première fois.
 
 | voix | clips | timbre | périmètre |
 |---|---|---|---|
 | Arthur (`narrator`+`Note`+`Arthur`) | 7 532 | `aiden:0.5+ryan:0.5` | ch0-150 + arcs |
-| Virion | 350 | `uncle_fu:0.5+aiden:0.5` | intégral |
+| Virion | 350 | `uncle_fu:0.5+aiden:0.5`, descendu de 3 demi-tons | intégral |
 | Tessia | 247 | `sohee` | intégral |
 | Sylvie | 99 | `ono_anna:0.5+serena:0.5` | intégral |
 
@@ -142,3 +144,35 @@ en inventer. Elle est nommée par la narration dans **38 chapitres où elle ne d
 
 **Les 3 542 options de choix ne sont pas doublées**, et ce n'est pas un oubli : ce sont des
 intentions à l'infinitif, des actions du joueur, pas des paroles prononcées.
+
+
+## Virion descendu de trois demi-tons (0.6.1)
+
+Le timbre réglait la confusion avec Tessia mais **manquait de maturité** : à 132 Hz, un elfe de
+plusieurs siècles parlait exactement à la hauteur d'Arthur (132 Hz en parlé, 120 en narration).
+
+Le levier du modèle ne sert à rien ici, et c'est mesuré : six consignes « vieil homme » essayées
+sur ses répliques réelles **montent toutes la F0**, de +1 à +16 Hz. Demander « rauque et usé »
+fait forcer la voix, donc la monte. Et aucun des trois timbres masculins de CustomVoice ne
+descend sous 130 Hz.
+
+On descend donc le signal — rééchantillonnage puis compression WSOLA du rapport inverse, qui
+rend la durée sans remonter la hauteur, **ralentir ayant été refusé**. Vérifié sur les 350 clips,
+avant/après, clip par clip :
+
+| | F0 médiane | plage | durée |
+|---|---|---|---|
+| avant | 131,9 Hz | 45 Hz | référence |
+| **après** | **113,7 Hz** | 48 Hz | **−0,02 %** |
+
+Virion passe sous Arthur au lieu d'être exactement à sa hauteur, sa dispersion ne bouge pas, et
+la durée est tenue à deux centièmes de pour cent — contre +18,9 % si la descente avait ralenti.
+
+Les formants descendent avec la hauteur, et c'est voulu : ils s'entendent comme un conduit vocal
+plus grand, donc un corps plus vieux. La hauteur seule ne donne pas cet effet.
+
+Appliqué **à la génération**, pas sur les fichiers livrés : retoucher les `.ogg` aurait été plus
+rapide mais leur aurait infligé un second encodage Vorbis. Les clips ont été regénérés à graines
+identiques — mêmes prises, descendues une fois, encodées une fois.
+
+**Les quatre timbres sont désormais validés à l'oreille.**
