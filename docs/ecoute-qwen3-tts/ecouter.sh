@@ -1,5 +1,5 @@
 #!/bin/bash
-# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5|6|6b|7|8]
+# Écoute guidée des voix de BATE. Usage : bash ecouter.sh [1|2|3|4|5|6|6b|7|8|9]
 #
 # Ne restent ici que les clips qui documentent une décision ENCORE EN VIGUEUR : la voix
 # en service, la comparaison qui a fait changer de moteur, et le repère de mesure. Les
@@ -98,6 +98,24 @@ if [ "$lot" = 7 ] || [ "$lot" = 0 ]; then
   echo "    uncle_fu PUR a été produit (350 clips) puis écarté : F0 201,7 Hz, soit 14 Hz de"
   echo "    Tessia, et 79 Hz de dispersion — le pire lot des quatre voix. Le mélange retenu"
   echo "    tombe à 130 Hz et 47 Hz. Détail : 11-casting-virion/README.md"
+fi
+
+if [ "$lot" = 9 ] || [ "$lot" = 0 ]; then
+  echo "=== 9. VIRION PLUS GRAVE — la MÊME prise, descendue par rééchantillonnage"
+  echo "    Le modèle ne sait pas descendre une voix : les six consignes « vieil homme »"
+  echo "    essayées MONTENT toutes la F0 (+1 à +16 Hz). On descend donc le signal, en"
+  echo "    rattrapant la durée par compression WSOLA : plus grave, PAS plus lent."
+  echo "    Repères : Arthur parlé 131 Hz, Arthur narration 119 Hz, Tessia 216 Hz."
+  for f in 13-grave-virion/temoin/*.ogg; do
+    id=$(basename "$f")
+    echo "  --- réplique ${id%.ogg}"
+    for p in temoin moins2v0st moins3v0st moins4v0st; do
+      [ -f "13-grave-virion/$p/$id" ] || continue
+      echo "    · $p"; jouer "13-grave-virion/$p/$id"
+    done
+  done
+  echo "    La descente s'applique APRÈS coup : changer de palier ne demande aucune"
+  echo "    regénération, seulement de repasser les 350 clips au filtre (quelques secondes)."
 fi
 
 if [ "$lot" = 8 ] || [ "$lot" = 0 ]; then

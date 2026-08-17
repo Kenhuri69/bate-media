@@ -65902,13 +65902,13 @@
       "timbre": "uncle_fu:0.5+aiden:0.5",
       "valide": false,
       "le": "2026-08-16",
-      "note": "uncle_fu pur ecarte : F0 201,7 Hz (14 Hz de Tessia) et dispersion 79 Hz. A confirmer a l'oreille : lot d'ecoute 11."
+      "note": "uncle_fu pur ecarte : F0 201,7 Hz (14 Hz de Tessia) et dispersion 79 Hz. Le melange corrige la hauteur mais manque de maturite ; descente de voix a l'etude (lot d'ecoute 13), palier non arrete."
     },
     "sylvie": {
       "timbre": "ono_anna:0.5+serena:0.5",
-      "valide": false,
-      "le": "2026-08-16",
-      "note": "domine sur les deux criteres a 20 repliques. A confirmer a l'oreille."
+      "valide": true,
+      "le": "2026-08-17",
+      "note": "valide a l'oreille. ono_anna:0.5+serena:0.5 domine sur les deux criteres a 20 repliques (plage 57 Hz, distance a Tessia 0,922)."
     }
   },
   "perimetre": {

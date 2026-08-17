@@ -39,3 +39,9 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Lot 12 : les six consignes « vieil homme » essayées sur Virion. Résultat NÉGATIF et prouvé —
+# toutes montent la F0 (+1 à +16 Hz) au lieu de la descendre. Ce sont les mesures qui portent
+# la conclusion (`rapport_registre.json`, versionné) ; les 48 clips se refabriquent à graines
+# fixes par `tools/bench_registre.py`. Même règle que les formulations perdantes du lot 8.
+docs/ecoute-qwen3-tts/12-registre-virion/*/
