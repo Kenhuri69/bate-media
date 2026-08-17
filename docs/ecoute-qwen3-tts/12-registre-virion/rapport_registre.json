@@ -1,0 +1,90 @@
+{
+  "personnage": "Virion",
+  "timbre": "uncle_fu:0.5+aiden:0.5",
+  "repliques": [
+    {
+      "clip": "virion_9f6ce7395b",
+      "chapitre": "ch13",
+      "texte": "Vous êtes aussi les seuls à avoir des deviants des formes supérieures, et les seuls à en avoir qui sortent des quatre tout à fait — vos guérisseurs, les émetteurs. Vos noyaux sont les plus divers de ce monde, et c'est bien la seule chose que je vous envie."
+    },
+    {
+      "clip": "virion_d5635b62da",
+      "chapitre": "ch14",
+      "texte": "Ce que nous allons faire s'appelle l'Assimilation. Tu vas faire SORTIR le mana de ton noyau — pas par les canaux, jamais par les canaux — et le laisser suinter dans tes os et dans tes muscles jusqu'à ce qu'ils l'absorbent."
+    },
+    {
+      "clip": "virion_e2908306c6",
+      "chapitre": "ch16",
+      "texte": "Un tournoi, à Xyrus. Les elfes et les nains y envoient des jeunes — comme concurrents, et comme premiers élèves de votre académie humaine. Les trois races ont décidé d'apprendre sous un même toit, ce qui est soit la meilleure idée du siècle, soit la pire."
+    },
+    {
+      "clip": "virion_b0caa14172",
+      "chapitre": "ch74",
+      "texte": "L'assimilation sert à ce que le corps de l'hôte apprenne à SUPPORTER la puissance de la Volonté. Petit à petit, phase après phase. Ici, c'est l'inverse qui se produit. **Elle n'apprend pas à être supportée : elle essaie de prendre la place.**"
+    },
+    {
+      "clip": "virion_c06e1d1d85",
+      "chapitre": "ch76",
+      "texte": "Les trois paires n'avaient pas les mêmes attributs, et c'est ce qui nous a séparés pour de bon. Ce que chaque peuple sait faire aujourd'hui vient de là. Les nains se sont dit qu'ils étaient les plus proches de la terre ; nous, les plus proches du vivant ; les humains, qu'ils maniaient les quatre éléments."
+    },
+    {
+      "clip": "virion_aa309bfa99",
+      "chapitre": "ch78",
+      "texte": "Ils ont reconnu la mort. Ils ont reconnu la plaque — la directrice l'a remise à Merial en personne. Ils n'ont pas prononcé le nom. Quatre heures de séance pour aboutir à « un adversaire non identifié d'une puissance exceptionnelle », qu'un secrétaire a écrite trois fois avant que tout le monde soit d'accord sur l'ordre des mots."
+    },
+    {
+      "clip": "virion_a0a65cc358",
+      "chapitre": "ch129",
+      "texte": "...C'est la chose la plus dure que j'aie entendue de la bouche d'un homme de vingt-cinq ans, et c'est la bonne. Ta famille : vivante, au château volant. Les Twin Horns : vivants, tous les cinq. Tessia : vivante, et elle commande une escouade dans les Beast Glades. Va-t'en maintenant, avant que je te donne le quatrième."
+    },
+    {
+      "clip": "virion_137c4f61d3",
+      "chapitre": "ch138",
+      "texte": "Quatre cent onze, une flotte à l'arrêt, un port condamné pour dix ans, et trois lieues de vase reprises. Sur cinq semaines annoncées et une écluse fermée à la manivelle, c'est le meilleur chiffre que j'aie rapporté en six ans. Et je n'arrive pas à le trouver bon. Explique-moi ça, toi qui sais expliquer."
+    }
+  ],
+  "consignes": {
+    "temoin": {
+      "consigne": "Ton naturel de conversation, engagé et vivant.",
+      "f0_median": 121.87765834042224,
+      "barycentre": 370.5087343723445,
+      "duree_totale": 144.96,
+      "voise": 0.5859184353326483
+    },
+    "age_pose": {
+      "consigne": "Voix d'homme âgé, grave et posée. Débit lent, appuyé sur les fins de phrase.",
+      "f0_median": 135.61253561253562,
+      "barycentre": 426.25916472983124,
+      "duree_totale": 166.64000000000001,
+      "voise": 0.5564395442435236
+    },
+    "vieux_roi": {
+      "consigne": "Ton d'un vieil homme qui n'a plus rien à prouver : grave, lent, autorité tranquille, sans jamais hausser le ton.",
+      "f0_median": 123.18840579710145,
+      "barycentre": 379.41622030639786,
+      "duree_totale": 164.56,
+      "voise": 0.5619658555836804
+    },
+    "grand_pere": {
+      "consigne": "Voix de grand-père, grave et chaude, un peu voilée par l'âge.",
+      "f0_median": 125.87527802949171,
+      "barycentre": 387.9583257950331,
+      "duree_totale": 155.44,
+      "voise": 0.5924985656913369
+    },
+    "use": {
+      "consigne": "Voix très grave de vieil homme, timbre rauque et usé, souffle court entre les groupes de mots.",
+      "f0_median": 137.79035335921563,
+      "barycentre": 386.260727575088,
+      "duree_totale": 160.24,
+      "voise": 0.5901196308108851
+    },
+    "poitrine": {
+      "consigne": "Parle comme un homme très âgé : voix descendue dans la poitrine, lente, légèrement éraillée, sans énergie juvénile.",
+      "f0_median": 130.27786743346732,
+      "barycentre": 407.10481776822746,
+      "duree_totale": 179.35999999999999,
+      "voise": 0.5903183621933622
+    }
+  }
+}

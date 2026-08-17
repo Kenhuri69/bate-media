@@ -1,0 +1,27 @@
+{
+  "personnage": "Virion",
+  "timbre": "uncle_fu:0.5+aiden:0.5",
+  "consigne": null,
+  "paliers": {
+    "temoin": {
+      "demi_tons": 0.0,
+      "f0_median": 156.35345047109752,
+      "duree_totale": 101.92
+    },
+    "moins2v0st": {
+      "demi_tons": 2.0,
+      "f0_median": 139.94288045695635,
+      "duree_totale": 101.878
+    },
+    "moins3v0st": {
+      "demi_tons": 3.0,
+      "f0_median": 133.33744868668788,
+      "duree_totale": 101.90225
+    },
+    "moins4v0st": {
+      "demi_tons": 4.0,
+      "f0_median": 126.32978723404256,
+      "duree_totale": 101.92629166666667
+    }
+  }
+}
