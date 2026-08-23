@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.6.1",
+  "version_pack": "0.6.5",
   "mixage": {
     "convention": "voice-mix-1.0",
     "pensee_db": -1.5,
@@ -65874,13 +65874,29 @@
           "texte": "Kuu ?"
         }
       ]
+    },
+    "alice": {
+      "nom": "Alice",
+      "repliques": 143,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "reynolds": {
+      "nom": "Reynolds",
+      "repliques": 207,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
     }
   },
   "medias": {
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-17T10:06:21",
+  "construit": "2026-08-23T16:41:23",
   "contenu": [
     "voices"
   ],

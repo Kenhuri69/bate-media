@@ -130,33 +130,56 @@ PERSONNAGES = {
         # les narrations d'Arthur (13 clips sur 13 déclarés défectueux par une cible fausse).
         "cibles": {"*": 126.0},
     },
-    "sylvie": {
-        "nom": "Sylvie",
-        "slug": "bate-sylvie",
-        "roles": ("Sylvie",),
-        # ⚠️ SIX RÉPLIQUES NE MESURENT PAS UNE DISPERSION, et ce casting l'a payé deux fois.
-        # Premier verdict, sur l'échantillon de 6 du casting : `vivian:0.7+serena:0.3` battait
-        # ses deux composants (plage 66 Hz, Tessia 0,866). Les 111 clips produits dessus sont
-        # sortis à **98 Hz de plage** — le double des autres voix du jeu (Tessia 52, Virion 46,
-        # Arthur 45), pire que le `uncle_fu` écarté chez Virion — avec 10 relances du garde-fou
-        # anti-dégénérescence sur 111 clips, contre 0 pour Tessia et Virion.
-        #
-        # Rebalayé sur 20 répliques, tout le classement change, parce que le chiffre à 6
-        # sous-estimait la plage d'un facteur ~2 POUR TOUT LE MONDE : `serena` pur passe de 29
-        # à 56 Hz. Une grandeur mesurée sur un échantillon trop petit ne se contente pas d'être
-        # imprécise, elle réordonne les candidats.
-        #
-        # Verdict à 20 répliques, contre DEUX références (Tessia d'abord : c'est avec elle
-        # qu'on risque de confondre Sylvie, elles partagent la plupart de leurs scènes) :
-        #   ono_anna:0.5+serena:0.5   plage 57 Hz   Tessia 0,922   ← retenu, DOMINE
-        #   serena pur                plage 56 Hz   Tessia 0,942
-        #   vivian:0.3+serena:0.7     plage 62 Hz   Tessia 0,932
-        #   vivian:0.5+serena:0.5     plage 75 Hz   Tessia 0,932
-        # Le retenu n'est pas un compromis : il est aussi stable que le plus stable ET le plus
-        # éloigné de Tessia. Il n'y a pas d'arbitrage à faire, donc pas de regret à avoir.
-        "timbre": "ono_anna:0.5+serena:0.5",
-        "cibles": None,
-    },
+"sylvie": {
+	        "nom": "Sylvie",
+	        "slug": "bate-sylvie",
+	        "roles": ("Sylvie",),
+	        # ⚠️ SIX RÉPLIQUES NE MESURENT PAS UNE DISPERSION, et ce casting l'a payé deux fois.
+	        # Premier verdict, sur l'échantillon de 6 du casting : `vivian:0.7+serena:0.3` battait
+	        # ses deux composants (plage 66 Hz, Tessia 0,866). Les 111 clips produits dessus sont
+	        # sortis à **98 Hz de plage** — le double des autres voix du jeu (Tessia 52, Virion 46,
+	        # Arthur 45), pire que le `uncle_fu` écarté chez Virion — avec 10 relances du garde-fou
+	        # anti-dégénérescence sur 111 clips, contre 0 pour Tessia et Virion.
+	        #
+	        # Rebalayé sur 20 répliques, tout le classement change, parce que le chiffre à 6
+	        # sous-estimait la plage d'un facteur ~2 POUR TOUT LE MONDE : `serena` pur passe de 29
+	        # à 56 Hz. Une grandeur mesurée sur un échantillon trop petit ne se contente pas d'être
+	        # imprécise, elle réordonne les candidats.
+	        #
+	        # Verdict à 20 répliques, contre DEUX références (Tessia d'abord : c'est avec elle
+	        # qu'on risque de confondre Sylvie, elles partagent la plupart de leurs scènes) :
+	        #   ono_anna:0.5+serena:0.5   plage 57 Hz   Tessia 0,922   ← retenu, DOMINE
+	        #   serena pur                plage 56 Hz   Tessia 0,942
+	        #   vivian:0.3+serena:0.7     plage 62 Hz   Tessia 0,932
+	        #   vivian:0.5+serena:0.5     plage 75 Hz   Tessia 0,932
+	        # Le retenu n'est pas un compromis : il est aussi stable que le plus stable ET le plus
+	        # éloigné de Tessia. Il n'y a pas d'arbitrage à faire, donc pas de regret à avoir.
+	        "timbre": "ono_anna:0.5+serena:0.5",
+	        "cibles": None,
+	    },
+	    "alice": {
+	        "nom": "Alice",
+	        "slug": "bate-alice",
+	        "roles": ("Alice",),
+	        # Mère d'Arthur, healer (Emitter), voix douce et maternelle.
+	        # `vivian` pur : timbre féminin non utilisé comme principal ailleurs,
+	        # distinct de Tessia (sohee) et Sylvie (ono_anna+serena).
+	        "timbre": "vivian",
+	        # Validé par etalonner : concentration max à 270 Hz
+	        "cibles": {"*": 270.0},
+	    },
+	    "reynolds": {
+	        "nom": "Reynolds",
+	        "slug": "bate-reynolds",
+	        "roles": ("Reynolds",),
+	        # Père d'Arthur, ancien aventurier, voix masculine mature.
+	        # `uncle_fu:0.5+ryan:0.5` : plus grave qu'Arthur (aiden+ryan),
+	        # distinct de Virion (uncle_fu+aiden -3st).
+	        # Ryan (161 Hz) + uncle_fu donne un registre père ~30-40 ans.
+	        "timbre": "uncle_fu:0.5+ryan:0.5",
+	        # Validé par etalonner : concentration max à 205 Hz
+	        "cibles": {"*": 205.0},
+	    },
 }
 
 
