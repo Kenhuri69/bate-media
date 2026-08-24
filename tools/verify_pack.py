@@ -62,26 +62,68 @@ def main() -> int:
 
     racine = manifestes[0].rsplit("/", 1)[0]
     fichiers = {n for n in noms if not n.endswith("/")}
-    manquants, comptes = [], {}
+    # Combien de clips l'archive porte-t-elle RÉELLEMENT par dossier de voix ? Sert de repli
+    # quand le manifeste ne détaille pas ses fichiers (voir plus bas).
+    reels = {}
+    for n in fichiers:
+        pre = f"{racine}/voices/"
+        if n.startswith(pre) and n.endswith(".ogg"):
+            reste = n[len(pre):]
+            if "/" in reste:
+                reels[reste.split("/", 1)[0]] = reels.get(reste.split("/", 1)[0], 0) + 1
+
+    manquants, comptes, sans_liste = [], {}, []
     for cle, voix in (manifeste.get("voix") or {}).items():
+        attendus = voix.get("repliques", 0)
+        listes = voix.get("fichiers", [])
+        # UNE LISTE VIDE N'EST PAS UN FICHIER MANQUANT, et les confondre rendait ce contrôle
+        # inutilisable. Le manifeste de la 0.6.9 ne détaille `fichiers` que pour 4 voix sur
+        # 14 ; l'ancienne version comparait donc une liste VIDE au compteur de répliques et
+        # annonçait « 2057 fichier(s) absent(s) — pack incomplet » sur une archive dont le
+        # `tar` contenait bel et bien les 9 065 clips. Un vérificateur qui accuse un pack sain
+        # finit ignoré, et c'est alors un pack réellement tronqué qui passera.
+        if not listes and attendus:
+            sans_liste.append(cle)
+            comptes[voix.get("nom", cle)] = (reels.get(cle, 0), attendus, "compté")
+            continue
         présents = 0
-        for entree in voix.get("fichiers", []):
+        for entree in listes:
             chemin = f"{racine}/voices/{cle}/{entree['fichier']}"
             if chemin in fichiers:
                 présents += 1
             else:
                 manquants.append(chemin)
-        comptes[voix.get("nom", cle)] = (présents, voix.get("repliques", 0))
+        comptes[voix.get("nom", cle)] = (présents, attendus, "listé")
 
     print(f"pack version {manifeste.get('version_pack')} "
           f"(construit {manifeste.get('construit')}), contenu : "
           f"{', '.join(manifeste.get('contenu', []))}")
-    for nom, (présents, attendus) in sorted(comptes.items(), key=lambda kv: -kv[1][1]):
-        etat = "ok" if présents == attendus else f"MANQUE {attendus - présents}"
+    insuffisants = []
+    for nom, (présents, attendus, source) in sorted(comptes.items(), key=lambda kv: -kv[1][1]):
+        if présents == attendus:
+            etat = "ok" if source == "listé" else "ok (compté dans l'archive)"
+        elif source == "compté":
+            # Le manifeste ne dit pas QUELS fichiers ; on ne peut que comparer les nombres.
+            etat = f"{'MANQUE' if présents < attendus else 'EN PLUS'} {abs(attendus - présents)} (compté, liste absente)"
+            if présents < attendus:
+                insuffisants.append(nom)
+        else:
+            etat = f"MANQUE {attendus - présents}"
         print(f"  {nom:<18} {présents:>4}/{attendus:<4} {etat}")
+
+    if sans_liste:
+        print(f"\n⚠ {len(sans_liste)} voix sans liste `fichiers` au manifeste "
+              f"({', '.join(sorted(sans_liste))}) : leur présence est vérifiée par COMPTAGE "
+              f"des .ogg de l'archive, pas fichier par fichier. Le manifeste est à compléter "
+              f"côté forge — il porte le texte de chaque clip, qu'un scan ne peut pas deviner.",
+              file=sys.stderr)
     if manquants:
         print(f"\n{len(manquants)} fichier(s) annoncé(s) mais absent(s) — pack incomplet",
               file=sys.stderr)
+        return 1
+    if insuffisants:
+        print(f"\nmoins de clips que de répliques annoncées pour : {', '.join(insuffisants)}"
+              f" — pack incomplet", file=sys.stderr)
         return 1
     print(f"\npack complet : {len(fichiers)} fichiers")
     return 0
