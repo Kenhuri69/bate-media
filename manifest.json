@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.6.5",
+  "version_pack": "0.6.6",
   "mixage": {
     "convention": "voice-mix-1.0",
     "pensee_db": -1.5,
@@ -65890,13 +65890,53 @@
       "convention": "voice-fingerprint-1.0",
       "moteur_par_defaut": "qwen3-tts",
       "fichiers": []
+    },
+    "jasmine": {
+      "nom": "Jasmine",
+      "repliques": 77,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "angela": {
+      "nom": "Angela",
+      "repliques": 11,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "helen": {
+      "nom": "Helen",
+      "repliques": 11,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "adam": {
+      "nom": "Adam",
+      "repliques": 28,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "durden": {
+      "nom": "Durden",
+      "repliques": 17,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
     }
   },
   "medias": {
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-23T16:41:23",
+  "construit": "2026-08-24T06:20:41",
   "contenu": [
     "voices"
   ],
@@ -65925,6 +65965,36 @@
       "valide": true,
       "le": "2026-08-17",
       "note": "valide a l'oreille. ono_anna:0.5+serena:0.5 domine sur les deux criteres a 20 repliques (plage 57 Hz, distance a Tessia 0,922)."
+    },
+    "jasmine": {
+      "timbre": "serena",
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Twin Horns, dagues jumelles, taciturne. serena pur : voix froide distincte de Tessia/sohee, Alice/vivian, Sylvie/ono_anna+serena."
+    },
+    "angela": {
+      "timbre": "sohee:0.7+ono_anna:0.3",
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Twin Horns, conjureuse vent. Mix sohee dominant + ono_anna : voix légère/ventée, joyeuse."
+    },
+    "helen": {
+      "timbre": "ono_anna",
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Twin Horns, archère demi-elfe. ono_anna pur : voix nette, perçante."
+    },
+    "adam": {
+      "timbre": "ryan",
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Twin Horns, lance, énergique. ryan pur : masculin aigu, distinct de Reynolds/Arthur."
+    },
+    "durden": {
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Twin Horns, conjureur terre, géant doux. uncle_fu dominant + aiden -5st (WSOLA) pour registre grave ~112 Hz. Cible 268 Hz."
     }
   },
   "perimetre": {

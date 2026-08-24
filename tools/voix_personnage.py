@@ -180,7 +180,55 @@ PERSONNAGES = {
 	        # Validé par etalonner : concentration max à 205 Hz
 	        "cibles": {"*": 205.0},
 	    },
-}
+	    "jasmine": {
+	        "nom": "Jasmine",
+	        "slug": "bate-jasmine",
+	        "roles": ("Jasmine", "Jasmine Flamesworth"),
+	        # Femme taciturne, dagues jumelles. `serena` pur : voix froide,
+	        # distincte de Tessia (sohee), Alice (vivian), Sylvie (ono_anna+serena).
+	        "timbre": "serena",
+	        "cibles": None,
+	    },
+	    "angela": {
+	        "nom": "Angela",
+	        "slug": "bate-angela",
+	        "roles": ("Angela", "Angela Rose"),
+	        # Conjureuse de vent, joyeuse. Mix sohee dominant + pointe ono_anna
+	        # pour une voix plus légère/ventée que Tessia (sohee pur).
+	        "timbre": "sohee:0.7+ono_anna:0.3",
+	        "cibles": None,
+	    },
+	    "helen": {
+	        "nom": "Helen",
+	        "slug": "bate-helen",
+	        "roles": ("Helen", "Helen Shard"),
+	        # Archère, demi-elfe, perçante. `ono_anna` pur : voix nette, distincte.
+	        "timbre": "ono_anna",
+	        "cibles": None,
+	    },
+	    "adam": {
+	        "nom": "Adam",
+	        "slug": "bate-adam",
+	        "roles": ("Adam", "Adam Krensh"),
+	        # Lance, énergique, taquin. `ryan` pur : masculin plus aigu
+	        # que Reynolds (uncle_fu+ryan) et Arthur (aiden+ryan).
+	        "timbre": "ryan",
+	        # Validé par etalonner : concentration max à 205 Hz
+	        "cibles": {"*": 205.0},
+	    },
+	    "durden": {
+	        "nom": "Durden",
+	        "slug": "bate-durden",
+	        "roles": ("Durden", "Durden Walker"),
+	        # Conjureur terre, géant doux. Le mix uncle_fu+aiden sort trop aigu.
+	        # On applique une descente de 5 demi-tons (WSOLA, durée constante)
+	        # pour le placer en registre grave homme ~134 Hz → ~112 Hz.
+	        "timbre": "uncle_fu:0.8+aiden:0.2",
+	        "grave_demi_tons": 5.0,
+	        # Validé par etalonner AVANT descente : 380 Hz → après 5st = 380/2^(5/12) ≈ 268 Hz
+	        "cibles": {"*": 268.0},
+	    },
+	}
 
 
 def _perso(cle: str) -> dict:
