@@ -232,9 +232,43 @@ PERSONNAGES = {
 	        # On applique une descente de 5 demi-tons (WSOLA, durée constante)
 	        # pour le placer en registre grave homme ~134 Hz → ~112 Hz.
 	        "timbre": "uncle_fu:0.8+aiden:0.2",
-	        "grave_demi_tons": 5.0,
-	        # Validé par etalonner AVANT descente : 380 Hz → après 5st = 380/2^(5/12) ≈ 268 Hz
-	        "cibles": {"*": 268.0},
+"grave_demi_tons": 5.0,
+		        # Validé par etalonner AVANT descente : 380 Hz → après 5st = 380/2^(5/12) ≈ 268 Hz
+		        "cibles": {"*": 268.0},
+		    },
+	    "vincent": {
+	        "nom": "Vincent",
+	        "slug": "bate-vincent",
+	        "roles": ("Vincent",),
+	        # Marchand Helstea, ami de Reynolds, père de Lilia. Homme mature ~35-40 ans.
+	        # Mix uncle_fu+aiden -2st (WSOLA) pour registre mature/amical.
+	        # uncle_fu/aiden purs dispo pour futurs persos.
+	        "timbre": "uncle_fu:0.6+aiden:0.4",
+	        "grave_demi_tons": 2.0,
+	        # Validé par etalonner : concentration max à 150 Hz
+	        "cibles": {"*": 150.0},
+	    },
+	    "lilia": {
+	        "nom": "Lilia",
+	        "slug": "bate-lilia",
+	        "roles": ("Lilia",),
+	        # Fille de Vincent/Tabitha, même âge qu'Arthur, s'éveille mage.
+	        # Mix sohee+serena -1st (WSOLA) pour registre adolescent lumineux/ancré.
+	        # sohee/serena purs dispo pour futurs persos.
+	        "timbre": "sohee:0.6+serena:0.4",
+	        "grave_demi_tons": 1.0,
+	        "cibles": None,
+	    },
+	    "ellie": {
+	        "nom": "Ellie",
+	        "slug": "bate-ellie",
+	        "roles": ("Ellie", "Eleanor"),
+	        # Petite sœur d'Arthur, ~8-10 ans, adorable/curieuse.
+	        # Mix vivian+serena +2st (WSOLA) pour registre enfantin/pur.
+	        # vivian/serena purs dispo pour futurs persos.
+	        "timbre": "vivian:0.7+serena:0.3",
+	        "grave_demi_tons": -2.0,
+	        "cibles": None,
 	    },
 	}
 

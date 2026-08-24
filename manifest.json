@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.6.7",
+  "version_pack": "0.6.9",
   "mixage": {
     "convention": "voice-mix-1.0",
     "pensee_db": -1.5,
@@ -65930,13 +65930,37 @@
       "convention": "voice-fingerprint-1.0",
       "moteur_par_defaut": "qwen3-tts",
       "fichiers": []
+    },
+    "vincent": {
+      "nom": "Vincent",
+      "repliques": 85,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "lilia": {
+      "nom": "Lilia",
+      "repliques": 36,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
+    },
+    "ellie": {
+      "nom": "Ellie",
+      "repliques": 82,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": []
     }
   },
   "medias": {
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-24T06:43:35",
+  "construit": "2026-08-24T07:56:21",
   "contenu": [
     "voices"
   ],
@@ -66000,6 +66024,27 @@
       "valide": true,
       "le": "2026-08-24",
       "note": "Twin Horns, conjureur terre, géant doux. uncle_fu+aiden -5st (WSOLA) pour registre grave ~112 Hz. Cible 268 Hz."
+    },
+    "vincent": {
+      "timbre": "uncle_fu:0.6+aiden:0.4",
+      "grave_demi_tons": 2.0,
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Marchand Helstea, ami Reynolds, père Lilia. Mix uncle_fu+aiden -2st (WSOLA) pour registre mature/amical. Cible 150 Hz."
+    },
+    "lilia": {
+      "timbre": "sohee:0.6+serena:0.4",
+      "grave_demi_tons": 1.0,
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Fille Vincent/Tabitha, même âge Arthur. Mix sohee+serena -1st (WSOLA) pour registre adolescent lumineux. sohee/serena purs dispo."
+    },
+    "ellie": {
+      "timbre": "vivian:0.7+serena:0.3",
+      "grave_demi_tons": -2.0,
+      "valide": true,
+      "le": "2026-08-24",
+      "note": "Petite sœur Arthur, ~8-10 ans. Mix vivian+serena +2st (WSOLA) pour registre enfantin pur. vivian/serena purs dispo."
     }
   },
   "perimetre": {
