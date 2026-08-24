@@ -184,35 +184,43 @@ PERSONNAGES = {
 	        "nom": "Jasmine",
 	        "slug": "bate-jasmine",
 	        "roles": ("Jasmine", "Jasmine Flamesworth"),
-	        # Femme taciturne, dagues jumelles. `serena` pur : voix froide,
-	        # distincte de Tessia (sohee), Alice (vivian), Sylvie (ono_anna+serena).
-	        "timbre": "serena",
+	        # Dagues jumelles, taciturne, froide. Mix serena+vivian -2st (WSOLA)
+	        # pour un registre plus grave/froid, distinct de Tessia (sohee pur),
+	        # Alice (vivian pur), Sylvie (ono_anna+serena). serena/ vivian restent purs dispo.
+	        "timbre": "serena:0.6+vivian:0.4",
+	        "grave_demi_tons": 2.0,
 	        "cibles": None,
 	    },
 	    "angela": {
 	        "nom": "Angela",
 	        "slug": "bate-angela",
 	        "roles": ("Angela", "Angela Rose"),
-	        # Conjureuse de vent, joyeuse. Mix sohee dominant + pointe ono_anna
-	        # pour une voix plus légère/ventée que Tessia (sohee pur).
+	        # Conjureuse vent, joyeuse. Mix sohee dominant + ono_anna +2st (WSOLA)
+	        # Registre plus aigu/venté, sohee/ono_anna purs dispo pour futurs persos.
 	        "timbre": "sohee:0.7+ono_anna:0.3",
+	        "grave_demi_tons": -2.0,
 	        "cibles": None,
 	    },
 	    "helen": {
 	        "nom": "Helen",
 	        "slug": "bate-helen",
 	        "roles": ("Helen", "Helen Shard"),
-	        # Archère, demi-elfe, perçante. `ono_anna` pur : voix nette, distincte.
-	        "timbre": "ono_anna",
+	        # Archère demi-elfe, perçante. Mix ono_anna+serena -1st (WSOLA)
+	        # Registre net/perçant, distinct de Sylvie (ono_anna+serena sans shift).
+	        # ono_anna/serena purs dispo pour futurs persos.
+	        "timbre": "ono_anna:0.5+serena:0.5",
+	        "grave_demi_tons": 1.0,
 	        "cibles": None,
 	    },
 	    "adam": {
 	        "nom": "Adam",
 	        "slug": "bate-adam",
 	        "roles": ("Adam", "Adam Krensh"),
-	        # Lance, énergique, taquin. `ryan` pur : masculin plus aigu
-	        # que Reynolds (uncle_fu+ryan) et Arthur (aiden+ryan).
-	        "timbre": "ryan",
+	        # Lance, énergique, taquin. Mix ryan+aiden +1st (WSOLA)
+	        # Registre juvénile/énergique, distinct de Reynolds (uncle_fu+ryan),
+	        # Arthur (aiden+ryan). ryan/aiden purs dispo pour futurs persos.
+	        "timbre": "ryan:0.7+aiden:0.3",
+	        "grave_demi_tons": -1.0,
 	        # Validé par etalonner : concentration max à 205 Hz
 	        "cibles": {"*": 205.0},
 	    },
