@@ -50,10 +50,46 @@ def _sha256_court(chemin: Path) -> str:
     return h.hexdigest()[:16]
 
 
+def _personnages_declares() -> dict:
+    """Les personnages que la PRODUCTION déclare, `clé -> nom` — pas ceux du disque.
+
+    Sert à décider si un dossier de `voices/` absent du manifeste doit y entrer. La question
+    n'est pas rhétorique : `voices/arthur-qwen3/` est un dossier de travail qui a déjà doublé
+    un pack, et `build_pack._declaree` l'écarte précisément parce qu'il n'est pas déclaré. Le
+    registre de `voix_personnage.py` tranche entre les deux cas — un personnage qu'on produit
+    contre un répertoire qui traîne.
+    """
+    import importlib.util
+    chemin = RACINE / "tools" / "voix_personnage.py"
+    spec = importlib.util.spec_from_file_location("voix_personnage", chemin)
+    module = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(module)
+    except Exception as e:                                  # numpy absent : on n'invente rien
+        print(f"  (registre de production illisible : {e})", file=sys.stderr)
+        return {}
+    return {cle: p["nom"] for cle, p in module.PERSONNAGES.items()}
+
+
 def reindexer(racine: Path, manifeste: dict) -> tuple[dict, list[str]]:
     """Rend (manifeste réindexé, lignes de rapport). Ne touche pas au disque."""
     voix = manifeste.get("voix") or {}
     rapport = []
+    # UN DOSSIER DE VOIX ABSENT DU MANIFESTE EST EXCLU DU PACK, ET EN SILENCE. C'est le cas
+    # de toute voix nouvelle : `build_pack._declaree` filtre sur les clés du manifeste, si
+    # bien que les 67 clips de Luna et de Lise, produits et contrôlés, ne seraient jamais
+    # partis dans l'archive — un message sur stderr, et un pack « complet » à la vérification
+    # puisqu'il contient tout ce que son index annonce. Le titre de cet outil est « remettre
+    # le manifeste d'accord avec les fichiers réellement présents » : il doit donc DÉCLARER
+    # ce qui manque, pas seulement mettre à jour ce qui est déjà là.
+    declares = _personnages_declares()
+    for cle, nom in sorted(declares.items()):
+        if cle in voix or not (racine / "voices" / cle).is_dir():
+            continue
+        voix[cle] = {"nom": nom, "repliques": 0, "format": "ogg",
+                     "convention": "voice-fingerprint-1.0", "moteur_par_defaut": "qwen3-tts",
+                     "fichiers": []}
+        rapport.append(f"  {cle:<10} DÉCLARÉE — absente du manifeste, présente sur le disque")
     for cle in sorted(voix):
         dossier = racine / "voices" / cle
         if not dossier.is_dir():
@@ -122,6 +158,22 @@ def _selftest() -> int:
               all("texte" not in e for e in m["voix"]["alice"]["fichiers"]))
         check("le sha256 est celui du fichier, tronqué à 16",
               arth["sha256"] == hashlib.sha256(b"x").hexdigest()[:16])
+
+        # Une voix présente sur le disque et absente du manifeste doit y ENTRER, sinon le pack
+        # l'ignore en silence. Le registre de production est simulé pour ne pas dépendre de
+        # voix_personnage (et de numpy) dans un auto-test.
+        (td / "voices" / "luna").mkdir(parents=True)
+        (td / "voices" / "luna" / "luna_cc.ogg").write_bytes(b"y")
+        (td / "voices" / "arthur-qwen3").mkdir(parents=True)      # dossier de travail
+        (td / "voices" / "arthur-qwen3" / "arthur_11.ogg").write_bytes(b"x")
+        globals()["_personnages_declares"] = lambda: {"alice": "Alice", "arthur": "Arthur",
+                                                      "luna": "Luna"}
+        m2, _ = reindexer(td, {"voix": {"alice": {"nom": "Alice", "fichiers": []}}})
+        check("une voix nouvelle déclarée en production entre au manifeste",
+              [e["fichier"] for e in m2["voix"].get("luna", {}).get("fichiers", [])]
+              == ["luna_cc.ogg"])
+        check("un dossier de travail NON déclaré reste dehors",
+              "arthur-qwen3" not in m2["voix"])
     print("auto-test reindexer_manifeste :", "OK" if ok else "ECHEC")
     return 0 if ok else 1
 

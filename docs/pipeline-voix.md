@@ -86,6 +86,17 @@ regénérait tout le lot.
 `verifier` puis `reprendre` ne sont pas optionnels — sur les 4433 premiers clips d'Arthur, 11,0 %
 étaient défectueux, et le défaut ne se voit pas dans un log : il s'entend.
 
+Et ils ne suffisent pas : ils jugent le TIMBRE. Un clip peut dire son texte à moitié avec un
+timbre parfait, ce que ni eux ni le garde-fou de génération ne voient. Le contenu se contrôle
+en réécoutant le clip par ASR (`tools/audit_texte.py`, whisper-server local), et le verdict se
+croise avec la DURÉE — sur 42 clips que l'ASR déclarait incomplets, 37 disaient tout leur texte
+et c'est le transcripteur qui butait sur les noms propres du projet. Détail, seuils et résultats :
+[`audit-texte-asr.md`](audit-texte-asr.md).
+
+    ../.venv-mlx/bin/python tools/audit_texte.py <perso...>
+    ../.venv-mlx/bin/python tools/audit_texte.py --relire   scratch/audit_texte.json
+    ../.venv-mlx/bin/python tools/audit_texte.py --regenerer scratch/audit_texte.json
+
 ## Les histoires secondaires étaient invisibles
 
 L'extraction faisait un `glob("*.dtl")` **non récursif** : `dialogues/side/` n'a jamais été lu, et

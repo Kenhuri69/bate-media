@@ -132,3 +132,49 @@ if [ "$lot" = 8 ] || [ "$lot" = 0 ]; then
   echo "    Le lot d'audition prend les répliques les PLUS LONGUES : sa plage sous-estime"
   echo "    celle du lot réel. Détail : 11-casting-sylvie/README.md"
 fi
+
+if [ "$lot" = 10 ] || [ "$lot" = 0 ]; then
+  echo "=== 10. LUNA ET LISE — le couple que la mesure désigne, à valider à l'oreille"
+  echo
+  echo "    Luna = ono_anna:0.8+vivian:0.2  descendue de 2 demi-tons"
+  echo "           237 Hz · plage 53 Hz · ambitus 3,2 st · Tessia 0,932"
+  echo "    Lise = vivian:0.8+ono_anna:0.2  sans décalage"
+  echo "           262 Hz · plage 39 Hz · ambitus 3,7 st · Tessia 0,903"
+  echo
+  echo "    Deux mélanges INVERSES des deux mêmes timbres. Aucun pur : les quatre féminins de"
+  echo "    CustomVoice sont déjà pris (Tessia sohee, Alice vivian) ou trop proches de Tessia."
+  echo "    Lise évite serena, qui est le second composant d'ELLIE (0,970 de cosinus) —"
+  echo "    et Ellie sort désormais à 270 Hz, donc juste au-dessus de Lise."
+  echo
+  echo "    La hauteur place les quatre voix féminines jeunes sans en coller deux :"
+  echo "      Tessia 213  <  LUNA 237  <  LISE 262  <  Ellie 270"
+  echo
+  echo "  --- A. LA PAIRE, chacune sur ses propres répliques, Tessia en tête"
+  for f in "16-doses20-luna/_reference-tessia"/*.ogg; do
+    echo "    · TESSIA (la voix à ne pas confondre)"; jouer "$f"; break
+  done
+  n=0
+  for f in 20-hauteur-luna/luna-moins2st/*.ogg; do
+    n=$((n+1)); [ $n -gt 3 ] && break
+    echo "    · LUNA — ono_anna:0.8+vivian:0.2, -2 st"; jouer "$f"
+  done
+  n=0
+  for f in "19-melanges20-lise/vivian:0.8+ono_anna:0.2"/*.ogg; do
+    n=$((n+1)); [ $n -gt 3 ] && break
+    echo "    · LISE — vivian:0.8+ono_anna:0.2"; jouer "$f"
+  done
+
+  echo
+  echo "  --- B. LA HAUTEUR DE LUNA, seul point que la mesure ne tranche pas seule"
+  echo "    Sans décalage elle sort à 265 Hz, soit 3 Hz de Lise : indistinguables. Descendre"
+  echo "    la place entre Tessia et Lise, mais trop bas elle rejoint Tessia (piège déjà payé"
+  echo "    sur Virion, qui fuyait Arthur par le haut et atterrissait sur Tessia)."
+  echo "      sans shift 265 Hz  ·  -1 st 250  ·  -2 st 237 (proposé)  ·  -3 st 223"
+  for f in 20-hauteur-luna/luna-sans-shift/*.ogg; do
+    id=$(basename "$f")
+    echo "    --- ${id%.ogg}"
+    for v in luna-sans-shift luna-moins1st luna-moins2st luna-moins3st; do
+      echo "      · $v"; jouer "20-hauteur-luna/$v/$id"
+    done
+  done
+fi

@@ -1,0 +1,206 @@
+{
+  "personnage": "Lise",
+  "candidats": [
+    "vivian:0.7+serena:0.3",
+    "vivian:0.7+ono_anna:0.3",
+    "vivian:0.8+ono_anna:0.2",
+    "vivian:0.5+ono_anna:0.5",
+    "ono_anna:0.8+vivian:0.2"
+  ],
+  "references": [
+    {
+      "personnage": "Tessia",
+      "timbre": "sohee"
+    },
+    {
+      "personnage": "Arthur",
+      "timbre": "aiden:0.5+ryan:0.5"
+    }
+  ],
+  "repliques": [
+    {
+      "id": "lise_elven_dormitory_01_01",
+      "chapitre": "elven_dormitory_01",
+      "texte": "Ils ne nous ont pas frappés. C'est ça que personne ne croit quand je le raconte. Ils comptaient. Ils comptaient comme mon père compte des sacs."
+    },
+    {
+      "id": "lise_elven_dormitory_01_06",
+      "chapitre": "elven_dormitory_01",
+      "texte": "La porte du deuxième palier, celle du couloir de service. J'ai mis de l'eau dans la serrure et j'ai soufflé dessus, et elle a gelé, et les cinq du couloir sont restés du mauvais côté pendant... je ne sais pas. Le temps qu'il fallait."
+    },
+    {
+      "id": "lise_elven_dormitory_01_08",
+      "chapitre": "elven_dormitory_01",
+      "texte": "Je me suis mise devant elle. C'est tout. Je me suis mise devant elle et j'ai attendu, et je n'ai pas eu peur pendant à peu près quatre secondes, et après si."
+    },
+    {
+      "id": "lise_elven_dormitory_03_03",
+      "chapitre": "elven_dormitory_03",
+      "texte": "Je tiens l'eau et le vent. Ensemble. Le froid sort de la rencontre des deux. Je ne tiens aucune forme supérieure."
+    },
+    {
+      "id": "lise_elven_dormitory_03_05",
+      "chapitre": "elven_dormitory_03",
+      "texte": "Elle. La princesse. Le lendemain de la flaque. Elle m'a dit que le jour où quelqu'un me poserait la question, ce serait devant des gens en robe, et qu'une phrase qu'on récite mal ressemble à un mensonge même quand elle est vraie."
+    },
+    {
+      "id": "lise_loriande_awakening_01_02",
+      "chapitre": "loriande_awakening_01",
+      "texte": "...Les deux. Monte, et ne bouge pas au milieu, sinon on part dans les roseaux et c'est moi qu'on engueule."
+    },
+    {
+      "id": "lise_loriande_awakening_01_03",
+      "chapitre": "loriande_awakening_01",
+      "texte": "Depuis toujours ? C'est le bac. Mon père le passe avec les bras, moi je le passe comme je peux, et j'ai huit ans, alors je pousse comme je peux."
+    },
+    {
+      "id": "lise_loriande_awakening_01_06",
+      "chapitre": "loriande_awakening_01",
+      "texte": "Ah. D'accord. Alors descends dans l'eau et tire plus bas, toi qui sais."
+    },
+    {
+      "id": "lise_loriande_awakening_01_07",
+      "chapitre": "loriande_awakening_01",
+      "texte": "C'est le chien de son oncle. Elle le tient. Elle ne fait rien d'autre. Tu veux quoi, toi, avec ton pli ?"
+    },
+    {
+      "id": "lise_loriande_awakening_01_09",
+      "chapitre": "loriande_awakening_01",
+      "texte": "Quoi, Lise ? Il l'a vu. Il l'a vu et il n'a pas reculé, et ça fait deux ans que je n'ai vu personne ne pas reculer."
+    },
+    {
+      "id": "lise_loriande_awakening_02_03",
+      "chapitre": "loriande_awakening_02",
+      "texte": "Alors donne-moi le vocabulaire et arrête de me dire que c'est normal."
+    },
+    {
+      "id": "lise_loriande_awakening_02_04",
+      "chapitre": "loriande_awakening_02",
+      "texte": "Ah — ah, c'est CHAUD, c'est très chaud, tu avais dit comme la fièvre, ce n'est pas la fièvre !"
+    },
+    {
+      "id": "lise_loriande_awakening_03_02",
+      "chapitre": "loriande_awakening_03",
+      "texte": "...La tienne. Mais la tienne est ennuyeuse et je veux que ce soit dit devant témoin."
+    },
+    {
+      "id": "lise_xyrus_first_frost_01_03",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Elle a fait ce que tu lui as fait promettre. Mot pour mot. Elle a dit : « celle-ci veut partir, et ce hameau ne l'en empêchera pas ». Devant l'archiviste. Il en est resté bête."
+    },
+    {
+      "id": "lise_xyrus_first_frost_01_04",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Moi je tiens. Moi je la tiens. C'est mon travail depuis que j'ai dix ans et je suis très bonne à ça, alors tu peux arrêter de nous expliquer notre propre vie."
+    },
+    {
+      "id": "lise_xyrus_first_frost_01_07",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Elle se fait voir. Bien sûr qu'elle se fait voir. Tu la connais, tu l'as éveillée, tu SAIS qu'elle se fait voir."
+    },
+    {
+      "id": "lise_xyrus_first_frost_02_01",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "Encore raté. Je les ai tenus, pourtant. Je les ai tenus tous les deux, je le SAIS."
+    },
+    {
+      "id": "lise_xyrus_first_frost_02_02",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "...Comment tu vois ça, toi ? Personne ne voit ça."
+    },
+    {
+      "id": "lise_xyrus_first_frost_02_05",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "Qu'est-ce que j'ai fait ?"
+    },
+    {
+      "id": "lise_xyrus_first_frost_02_06",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "C'est la même chose vu de la flaque."
+    }
+  ],
+  "timbres": {
+    "vivian:0.7+serena:0.3": {
+      "f0_median": 242.44897959183675,
+      "f0_plage": 41.369475832978054,
+      "ambitus_st": 3.6029486798346158,
+      "proximite": {
+        "Tessia": 0.9213061361729983,
+        "Arthur": 0.7764529847911124
+      },
+      "proximite_pire": 0.9213061361729983
+    },
+    "vivian:0.7+ono_anna:0.3": {
+      "f0_median": 250.02712967986977,
+      "f0_plage": 87.42164541475907,
+      "ambitus_st": 3.5595407859774983,
+      "proximite": {
+        "Tessia": 0.9155279113738268,
+        "Arthur": 0.7692173046553119
+      },
+      "proximite_pire": 0.9155279113738268
+    },
+    "vivian:0.8+ono_anna:0.2": {
+      "f0_median": 262.36559139784947,
+      "f0_plage": 39.45649273707437,
+      "ambitus_st": 3.6657508068190356,
+      "proximite": {
+        "Tessia": 0.9032470114160679,
+        "Arthur": 0.7525499485691344
+      },
+      "proximite_pire": 0.9032470114160679
+    },
+    "vivian:0.5+ono_anna:0.5": {
+      "f0_median": 242.5232213943044,
+      "f0_plage": 45.98377068947417,
+      "ambitus_st": 3.5777711188078314,
+      "proximite": {
+        "Tessia": 0.9286116778290404,
+        "Arthur": 0.8492203930408188
+      },
+      "proximite_pire": 0.9286116778290404
+    },
+    "ono_anna:0.8+vivian:0.2": {
+      "f0_median": 262.3029144768275,
+      "f0_plage": 52.93228426951441,
+      "ambitus_st": 3.1925066372963187,
+      "proximite": {
+        "Tessia": 0.9318574511736595,
+        "Arthur": 0.8421421841975532
+      },
+      "proximite_pire": 0.9318574511736595
+    }
+  },
+  "entre_candidats": {
+    "vivian:0.7+serena:0.3": {
+      "vivian:0.7+ono_anna:0.3": 0.9639413408423124,
+      "vivian:0.8+ono_anna:0.2": 0.9701697924830354,
+      "vivian:0.5+ono_anna:0.5": 0.9604109956082567,
+      "ono_anna:0.8+vivian:0.2": 0.9580986456358056
+    },
+    "vivian:0.7+ono_anna:0.3": {
+      "vivian:0.7+serena:0.3": 0.9639413408423124,
+      "vivian:0.8+ono_anna:0.2": 0.9704597478076223,
+      "vivian:0.5+ono_anna:0.5": 0.9578361804338662,
+      "ono_anna:0.8+vivian:0.2": 0.9590027618279648
+    },
+    "vivian:0.8+ono_anna:0.2": {
+      "vivian:0.7+serena:0.3": 0.9701697924830354,
+      "vivian:0.7+ono_anna:0.3": 0.9704597478076223,
+      "vivian:0.5+ono_anna:0.5": 0.9553476734888937,
+      "ono_anna:0.8+vivian:0.2": 0.9531874016662819
+    },
+    "vivian:0.5+ono_anna:0.5": {
+      "vivian:0.7+serena:0.3": 0.9604109956082567,
+      "vivian:0.7+ono_anna:0.3": 0.9578361804338662,
+      "vivian:0.8+ono_anna:0.2": 0.9553476734888937,
+      "ono_anna:0.8+vivian:0.2": 0.9833220456944259
+    },
+    "ono_anna:0.8+vivian:0.2": {
+      "vivian:0.7+serena:0.3": 0.9580986456358056,
+      "vivian:0.7+ono_anna:0.3": 0.9590027618279648,
+      "vivian:0.8+ono_anna:0.2": 0.9531874016662819,
+      "vivian:0.5+ono_anna:0.5": 0.9833220456944259
+    }
+  }
+}

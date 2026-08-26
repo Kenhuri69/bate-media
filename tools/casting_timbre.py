@@ -33,6 +33,7 @@ DEUX CRITÈRES, ET LE SECOND EST NOUVEAU.
 import argparse
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -68,6 +69,18 @@ PERSONNAGES = {
     "sylvie": {"nom": "Sylvie", "slug": "bate-sylvie",
                "candidats": [t for t in FEMININS if t != "sohee"],
                "references": [("Tessia", "sohee"), ("Arthur", "aiden:0.5+ryan:0.5")]},
+    # Luna et Lise se castent ENSEMBLE, et c'est une contrainte de plus, pas une commodité :
+    # elles partagent la totalité de leurs scènes (trois arcs, 70 répliques) et Tessia y est
+    # présente dans les trois. Il ne suffit donc pas que chacune soit loin de Tessia — il faut
+    # aussi qu'elles soient loin l'une de l'autre, ce que la seule proximité aux références ne
+    # dit pas. D'où la matrice candidat × candidat imprimée en fin de casting : elle se lit sur
+    # les MÊMES textes aux MÊMES graines, donc elle mesure des timbres et non des phrases.
+    "luna": {"nom": "Luna", "slug": "bate-luna", "lot": 14,
+             "candidats": [t for t in FEMININS if t != "sohee"],
+             "references": [("Tessia", "sohee"), ("Arthur", "aiden:0.5+ryan:0.5")]},
+    "lise": {"nom": "Lise", "slug": "bate-lise", "lot": 14,
+             "candidats": [t for t in FEMININS if t != "sohee"],
+             "references": [("Tessia", "sohee"), ("Arthur", "aiden:0.5+ryan:0.5")]},
 }
 
 PAR_LOT = 6
@@ -109,6 +122,21 @@ def main() -> int:
     ap.add_argument("personnage", choices=sorted(PERSONNAGES))
     ap.add_argument("--candidats", help="liste de timbres séparés par des virgules")
     ap.add_argument("--lot", type=int, default=PAR_LOT, help="nombre de répliques auditionnées")
+    # Le balayage de doses (étape 3 du principe d'Arthur) n'a pas besoin d'un autre outil : un
+    # mélange est une spec de timbre comme une autre pour `--candidats`, et les mesures sont
+    # exactement celles qu'on veut. Seul le dossier doit changer, pour ne pas écraser
+    # l'audition des purs dont il faut pouvoir comparer les clips.
+    ap.add_argument("--dossier", help="nom du dossier d'écoute sous docs/ecoute-qwen3-tts/ "
+                                      "(défaut : <lot>-casting-<personnage>)")
+    # Reprendre plutôt que régénérer, pour la raison écrite dans `tournoi_timbre_tessia` : un
+    # clip refait pour recalculer une statistique est un AUTRE clip, et l'écart mesuré entre un
+    # pur et son mélange contiendrait alors le tirage en plus de la dose. Les graines étant
+    # dérivées du rang dans l'échantillon (3000 + i), la reprise n'est valide que si
+    # `--lot` est le même que celui du dossier source ; le nombre de clips par dossier le dit,
+    # et la copie échoue franchement si un fichier manque.
+    ap.add_argument("--reprendre-de", dest="reprendre_de",
+                    help="dossier d'écoute d'où recopier les clips déjà produits "
+                         "(références et timbres purs), au lieu de les régénérer")
     args = ap.parse_args()
 
     import bench_qwen3tts as mesures
@@ -122,7 +150,8 @@ def main() -> int:
         print(f"extraction introuvable : {lignes_json}\n"
               f"  python3 tools/extraire_repliques.py {perso['slug']} <rôles>", file=sys.stderr)
         return 1
-    sortie = MEDIA / f"docs/ecoute-qwen3-tts/11-casting-{args.personnage}"
+    sortie = MEDIA / "docs/ecoute-qwen3-tts" / (
+        args.dossier or f"{perso.get('lot', 11)}-casting-{args.personnage}")
 
     echantillon = _echantillon(json.loads(lignes_json.read_text(encoding="utf-8")), args.lot)
     print(f"{len(echantillon)} répliques réelles de {perso['nom']} :")
@@ -138,7 +167,26 @@ def main() -> int:
                "repliques": [{k: l[k] for k in ("id", "chapitre", "texte")} for l in echantillon],
                "timbres": {}}
 
+    repris = (MEDIA / "docs/ecoute-qwen3-tts" / args.reprendre_de) if args.reprendre_de else None
+    if repris is not None and not repris.is_dir():
+        print(f"dossier à reprendre introuvable : {repris}", file=sys.stderr)
+        return 1
+
     def _lot(timbre: str, dossier: Path) -> list:
+        if repris is not None:
+            source = repris / dossier.name
+            attendus = [source / f"{l['id']}.ogg" for l in echantillon]
+            if all(c.exists() for c in attendus):
+                dossier.mkdir(parents=True, exist_ok=True)
+                faits = []
+                for c in attendus:
+                    cible = dossier / c.name
+                    if not cible.exists():
+                        shutil.copy2(c, cible)
+                    faits.append(cible)
+                print(f"  {len(faits)} clips repris de {source.name} "
+                      f"(mêmes graines, mêmes clips)", flush=True)
+                return faits
         clips = []
         for i, ligne in enumerate(echantillon):
             registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"], qwen3tts.REGISTRE_DEFAUT)
@@ -158,10 +206,12 @@ def main() -> int:
         clips_ref = _lot(timbre_ref, sortie / f"_reference-{nom_ref.lower()}")
         mfcc_ref[nom_ref] = [mesures._descripteurs(c)["mfcc"] for c in clips_ref]
 
+    mfcc_cand = {}
     for timbre in candidats:
         print(f"\n=== {timbre}", flush=True)
         clips = _lot(timbre, sortie / timbre)
         descr = [mesures._descripteurs(c) for c in clips]
+        mfcc_cand[timbre] = [d["mfcc"] for d in descr]
         f0 = [d["f0_median"] for d in descr if d["f0_median"] > 0]
         # Cosinus PAIRE À PAIRE sur la même réplique, puis moyenne : comparer le clip 1 du
         # candidat au clip 3 de la référence mesurerait surtout un écart de contenu.
@@ -182,6 +232,16 @@ def main() -> int:
               + "  ".join(f"{n} {v:.3f}" for n, v in prox.items()), flush=True)
     del modele
 
+    # Matrice candidat × candidat : de quoi choisir DEUX voix à la fois. Deux personnages qui
+    # ne se quittent pas (Luna et Lise) peuvent chacun être loin des références et proches
+    # l'un de l'autre — le classement par « pire proximité aux références » ne le voit pas,
+    # puisque l'autre personnage n'est pas encore casté et n'est donc pas dans la liste.
+    rapport["entre_candidats"] = {
+        a: {b: float(np.mean([mesures._cosinus(x, y)
+                              for x, y in zip(mfcc_cand[a], mfcc_cand[b])]))
+            for b in candidats if b != a}
+        for a in candidats}
+
     sortie.mkdir(parents=True, exist_ok=True)
     (sortie / "rapport_casting.json").write_text(
         json.dumps(rapport, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
@@ -195,6 +255,16 @@ def main() -> int:
         cols = "".join(f"{r['proximite'][n]:10.3f}" for n, _ in refs)
         print(f"{nom_t:24s} {r['f0_median']:5.0f}Hz {r['f0_plage']:5.0f}Hz "
               f"{r['ambitus_st']:6.1f}st{cols}{r['proximite_pire']:8.3f}")
+    if len(candidats) > 1:
+        print("\nproximité ENTRE candidats (deux personnages qui partagent leurs scènes ne")
+        print("peuvent pas prendre deux timbres proches, même s'ils sont tous deux loin des")
+        print("références) :")
+        print(" " * 24 + "".join(f"{b[:9]:>10s}" for b in candidats))
+        for a in candidats:
+            cols = "".join(f"{rapport['entre_candidats'][a][b]:10.3f}" if b != a
+                           else f"{'—':>10s}" for b in candidats)
+            print(f"{a:24s}{cols}")
+
     print(f"\nÀ écouter : {sortie.relative_to(MEDIA)}")
     print("La mesure éclaire, elle ne tranche pas : écouter avant de décider.")
     return 0
