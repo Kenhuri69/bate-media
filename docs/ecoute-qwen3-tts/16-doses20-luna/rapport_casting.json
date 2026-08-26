@@ -1,0 +1,185 @@
+{
+  "personnage": "Luna",
+  "candidats": [
+    "serena",
+    "ono_anna",
+    "serena:0.5+vivian:0.5",
+    "vivian:0.7+serena:0.3"
+  ],
+  "references": [
+    {
+      "personnage": "Tessia",
+      "timbre": "sohee"
+    },
+    {
+      "personnage": "Arthur",
+      "timbre": "aiden:0.5+ryan:0.5"
+    }
+  ],
+  "repliques": [
+    {
+      "id": "luna_elven_dormitory_01_01",
+      "chapitre": "elven_dormitory_01",
+      "texte": "Il ne saignait plus au bout d'un quart d'heure. Je veux que vous le sachiez parce que tout le monde va dire que je n'ai rien pu faire. Il ne saignait plus. Il parlait. Il m'a demandé si les premières années étaient descendues."
+    },
+    {
+      "id": "luna_elven_dormitory_01_04",
+      "chapitre": "elven_dormitory_01",
+      "texte": "Un. Il n'y en a eu qu'un. Je ne me suis pas vidée sur trois personnes, j'ai fait exactement ce que vous m'avez dit — et ça n'a servi à rien du tout, alors ne me demandez pas de trouver ça bien."
+    },
+    {
+      "id": "luna_elven_dormitory_03_01",
+      "chapitre": "elven_dormitory_03",
+      "texte": "J'ai su à la quatrième heure. Il avait les mains froides et je n'arrivais plus à les réchauffer, et ce n'était pas la pièce."
+    },
+    {
+      "id": "luna_elven_dormitory_03_03",
+      "chapitre": "elven_dormitory_03",
+      "texte": "Il m'a demandé deux fois si les petites étaient descendues. La deuxième fois il ne savait plus qu'il l'avait déjà demandé, et j'ai répondu pareil, et j'ai été contente de pouvoir répondre pareil."
+    },
+    {
+      "id": "luna_elven_dormitory_03_06",
+      "chapitre": "elven_dormitory_03",
+      "texte": "Je ne sais pas. Je comprimais."
+    },
+    {
+      "id": "luna_loriande_awakening_01_01",
+      "chapitre": "loriande_awakening_01",
+      "texte": "Il s'est couché tout seul. Je le tenais pour qu'il ne se relève pas."
+    },
+    {
+      "id": "luna_loriande_awakening_02_01",
+      "chapitre": "loriande_awakening_02",
+      "texte": "...Moi j'en vois. J'en vois depuis longtemps. Personne ne m'a jamais dit que ça avait un nom."
+    },
+    {
+      "id": "luna_loriande_awakening_02_02",
+      "chapitre": "loriande_awakening_02",
+      "texte": "Elles sont partout. Elles sont partout, il y en a des milliers, elles n'étaient pas comme ça avant."
+    },
+    {
+      "id": "luna_loriande_awakening_02_03",
+      "chapitre": "loriande_awakening_02",
+      "texte": "Non. Non, ne coupez pas — j'ai compris, j'ai compris ce que c'est, laissez-moi finir."
+    },
+    {
+      "id": "luna_loriande_awakening_02_04",
+      "chapitre": "loriande_awakening_02",
+      "texte": "Encore un peu. Ça ne fatigue pas. Ça ne fatigue pas du tout, c'est ça que je n'arrive pas à vous faire comprendre."
+    },
+    {
+      "id": "luna_loriande_awakening_02_05",
+      "chapitre": "loriande_awakening_02",
+      "texte": "...D'accord."
+    },
+    {
+      "id": "luna_loriande_awakening_03_01",
+      "chapitre": "loriande_awakening_03",
+      "texte": "Et si la troisième est Lise ?"
+    },
+    {
+      "id": "luna_loriande_awakening_03_02",
+      "chapitre": "loriande_awakening_03",
+      "texte": "C'est ce que vous faisiez, avant ? Dans... avant."
+    },
+    {
+      "id": "luna_xyrus_first_frost_01_01",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Bonjour."
+    },
+    {
+      "id": "luna_xyrus_first_frost_01_02",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "...Oui. Arrivées le mois dernier."
+    },
+    {
+      "id": "luna_xyrus_first_frost_01_03",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Il a recensé quarante et un enfants. Il a mis une marque à côté de mon nom. Je ne sais pas laquelle et personne n'a voulu me la lire."
+    },
+    {
+      "id": "luna_xyrus_first_frost_01_04",
+      "chapitre": "xyrus_first_frost_01",
+      "texte": "Pourquoi ?"
+    },
+    {
+      "id": "luna_xyrus_first_frost_02_01",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "Tu as l'épaule droite qui chauffe depuis avant-hier. Toi, le mollet. Tessia, tu tires huit séries alors que ton dos t'en autorise cinq, et tu le sais."
+    },
+    {
+      "id": "luna_xyrus_first_frost_02_02",
+      "chapitre": "xyrus_first_frost_02",
+      "texte": "Je ne sais pas. C'est comme une pièce où il y a une bougie allumée quelque part : on ne voit pas la bougie, on voit que la pièce n'est pas noire. Chez vous il y a des endroits pas noirs."
+    },
+    {
+      "id": "luna_xyrus_first_frost_03_01",
+      "chapitre": "xyrus_first_frost_03",
+      "texte": "Je le tiens. Faites venir un brancard, ne le déplacez pas sans moi, et dites-moi quand vous êtes prêts. Je ne peux pas lâcher avant."
+    }
+  ],
+  "timbres": {
+    "serena": {
+      "f0_median": 237.6470588235294,
+      "f0_plage": 66.70463697539816,
+      "ambitus_st": 2.972336330098276,
+      "proximite": {
+        "Tessia": 0.9534478235403565,
+        "Arthur": 0.8699367639842818
+      },
+      "proximite_pire": 0.9534478235403565
+    },
+    "ono_anna": {
+      "f0_median": 256.75057208237985,
+      "f0_plage": 55.964397833511555,
+      "ambitus_st": 3.1710233177223675,
+      "proximite": {
+        "Tessia": 0.9258515402324605,
+        "Arthur": 0.8745366364140821
+      },
+      "proximite_pire": 0.9258515402324605
+    },
+    "serena:0.5+vivian:0.5": {
+      "f0_median": 263.768115942029,
+      "f0_plage": 71.74590131077883,
+      "ambitus_st": 3.2045306301943843,
+      "proximite": {
+        "Tessia": 0.9197673698658212,
+        "Arthur": 0.8156258035631387
+      },
+      "proximite_pire": 0.9197673698658212
+    },
+    "vivian:0.7+serena:0.3": {
+      "f0_median": 255.31914893617022,
+      "f0_plage": 71.83659179098206,
+      "ambitus_st": 3.6132705356668695,
+      "proximite": {
+        "Tessia": 0.8854294884878794,
+        "Arthur": 0.7775973073632276
+      },
+      "proximite_pire": 0.8854294884878794
+    }
+  },
+  "entre_candidats": {
+    "serena": {
+      "ono_anna": 0.9519279574150339,
+      "serena:0.5+vivian:0.5": 0.9667800826287806,
+      "vivian:0.7+serena:0.3": 0.9295744274457926
+    },
+    "ono_anna": {
+      "serena": 0.9519279574150339,
+      "serena:0.5+vivian:0.5": 0.9383015989616892,
+      "vivian:0.7+serena:0.3": 0.9255011382235525
+    },
+    "serena:0.5+vivian:0.5": {
+      "serena": 0.9667800826287806,
+      "ono_anna": 0.9383015989616892,
+      "vivian:0.7+serena:0.3": 0.9474664784177504
+    },
+    "vivian:0.7+serena:0.3": {
+      "serena": 0.9295744274457926,
+      "ono_anna": 0.9255011382235525,
+      "serena:0.5+vivian:0.5": 0.9474664784177504
+    }
+  }
+}

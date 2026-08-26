@@ -75,10 +75,19 @@ def descendre(onde: np.ndarray, demi_tons: float, sr: int = 24000,
 
     `garder_duree=False` s'arrête à l'étape 1 — plus grave ET plus lent. Gardé pour pouvoir
     réécouter le compromis, pas pour être livré : ralentir a été refusé explicitement.
+
+    UN DEMI-TON NÉGATIF MONTE LA VOIX, et il l'a longtemps fait sans effet. Le garde était
+    `if demi_tons <= 0: return onde`, écrit quand la seule demande était de descendre Virion.
+    Trois personnages déclarent pourtant une valeur négative en annonçant l'inverse dans leur
+    commentaire — `angela` (-2, « +2st pour un registre plus aigu »), `ellie` (-2) et `adam`
+    (-1) : leurs 121 clips ont été livrés SANS le décalage annoncé, et rien ne pouvait le dire
+    puisque la fonction rendait l'onde intacte au lieu de refuser. Le rééchantillonnage et le
+    WSOLA sont symétriques (le second reçoit `1 / rapport`, qui étire quand le premier
+    raccourcit) : seul le garde interdisait le sens montant.
     """
     from scipy.signal import resample_poly
 
-    if demi_tons <= 0:
+    if demi_tons == 0:
         return onde
     rapport = 2 ** (demi_tons / 12)
     # Fraction rationnelle proche du rapport : 1000 au dénominateur suffit (0,1 % d'erreur,

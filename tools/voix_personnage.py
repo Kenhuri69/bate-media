@@ -221,8 +221,13 @@ PERSONNAGES = {
 	        # Arthur (aiden+ryan). ryan/aiden purs dispo pour futurs persos.
 	        "timbre": "ryan:0.7+aiden:0.3",
 	        "grave_demi_tons": -1.0,
-	        # Validé par etalonner : concentration max à 205 Hz
-	        "cibles": {"*": 205.0},
+	        # 217 Hz, ET NON 205. Les 205 Hz avaient été étalonnés sur le lot livré, qui ne
+	        # portait AUCUNE montée : `descendre()` renvoyait l'onde intacte pour tout demi-ton
+	        # négatif (corrigé le 2026-08-26). Le décalage étant désormais appliqué, la cible se
+	        # déplace du même rapport — 205 × 2^(1/12) = 217 Hz. Laisser 205 ferait chercher
+	        # l'énergie sous la voix et signalerait des clips sains, exactement le piège déjà
+	        # payé sur les narrations d'Arthur et sur la descente de Virion.
+	        "cibles": {"*": 217.0},
 	    },
 	    "durden": {
 	        "nom": "Durden",
@@ -257,6 +262,47 @@ PERSONNAGES = {
 	        # sohee/serena purs dispo pour futurs persos.
 	        "timbre": "sohee:0.6+serena:0.4",
 	        "grave_demi_tons": 1.0,
+	        "cibles": None,
+	    },
+	    "luna": {
+	        "nom": "Luna",
+	        "slug": "bate-luna",
+	        "roles": ("Luna",),
+	        # Luna Sirenel, elfe de Loriande, arcs `loriande_awakening`, `xyrus_first_frost` et
+	        # `elven_dormitory` — 9 ans au hameau, 13 à l'Académie. Sobre, phrases courtes,
+	        # réponses exactes ; c'est l'aînée du duo et la plus posée des deux.
+	        #
+	        # AUCUN PUR (décision d'Olivier du 2026-08-26 : deux purs en service suffisent), et
+	        # le couple Luna/Lise se choisit ENSEMBLE — elles partagent la totalité de leurs
+	        # scènes, avec Tessia présente dans les trois arcs. Retenu sur 20 répliques réelles :
+	        # plage 61 Hz (la plus basse des mélanges), Tessia 0,920 (la plus éloignée),
+	        # Lise 0,953. Le balayage à 8 répliques désignait `serena` (23 Hz de plage) — il sort
+	        # à 67 Hz sur vingt : c'est exactement l'erreur payée sur Sylvie.
+	        "timbre": "ono_anna:0.8+vivian:0.2",
+	        # 2 demi-tons de DESCENTE, et c'est le seul point que la mesure ne tranchait pas
+	        # seule : sans décalage Luna sort à 265 Hz et Lise à 262, soit trois hertz d'écart
+	        # pour deux personnages qui ne se quittent pas. Descendue de deux, elle se place
+	        # entre Tessia et Lise — `Tessia 213 < Luna 237 < Lise 262 < Ellie 270`. Pas trois :
+	        # à 223 Hz elle rejoindrait Tessia, qui est l'autre voix à ne pas confondre.
+	        "grave_demi_tons": 2.0,
+	        "cibles": None,
+	    },
+	    "lise": {
+	        "nom": "Lise",
+	        "slug": "bate-lise",
+	        "roles": ("Lise",),
+	        # Lise Tavaren, la cadette (8 ans au hameau, 12 à l'Académie). Bavarde, frontale,
+	        # réponses trop rapides — d'où l'ambitus le plus large du lot (3,7 st), qui est ici
+	        # une qualité et non un défaut de stabilité.
+	        #
+	        # Mélange INVERSE de celui de Luna. Retenu sur 20 de ses répliques : plage 39 Hz,
+	        # ambitus 3,7, Tessia 0,903 — il domine ses trois rivales.
+	        # ET IL ÉVITE `serena` VOLONTAIREMENT : `vivian:0.7+serena:0.3`, que la mesure
+	        # désignait d'abord, EST le timbre d'ellie, dont la voix vient de monter à 270 Hz
+	        # (correction de `descendre()`, même jour) — deux voix à 0,970 de cosinus et 28 Hz
+	        # d'écart. Éviter la collision coûte 0,006 de distance à Luna et rapporte sur les
+	        # trois autres colonnes.
+	        "timbre": "vivian:0.8+ono_anna:0.2",
 	        "cibles": None,
 	    },
 	    "ellie": {

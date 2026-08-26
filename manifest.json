@@ -1,7 +1,7 @@
 {
   "projet": "bate-media",
   "source": "voice-agent forge",
-  "version_pack": "0.6.9",
+  "version_pack": "0.7.0",
   "mixage": {
     "convention": "voice-mix-1.0",
     "pensee_db": -1.5,
@@ -60444,7 +60444,7 @@
         {
           "id": "alice_0b41a2d2b3",
           "fichier": "alice_0b41a2d2b3.ogg",
-          "sha256": "a45caf83c994e901"
+          "sha256": "acde72c00c60acbe"
         },
         {
           "id": "alice_0d9f6b12de",
@@ -61079,7 +61079,7 @@
         {
           "id": "alice_f46cf74e82",
           "fichier": "alice_f46cf74e82.ogg",
-          "sha256": "90ca5b69a4326d65"
+          "sha256": "82f478e042d13a97"
         },
         {
           "id": "alice_f4d57bf0f5",
@@ -61328,7 +61328,7 @@
         {
           "id": "reynolds_34b01b500e",
           "fichier": "reynolds_34b01b500e.ogg",
-          "sha256": "c614864fd000923c"
+          "sha256": "26447cfe29ee174b"
         },
         {
           "id": "reynolds_3574bfc5ae",
@@ -62043,7 +62043,7 @@
         {
           "id": "reynolds_e7c753be08",
           "fichier": "reynolds_e7c753be08.ogg",
-          "sha256": "a02ca65000257377"
+          "sha256": "fd0ca7da988c61ce"
         },
         {
           "id": "reynolds_e832917608",
@@ -62123,7 +62123,7 @@
         {
           "id": "reynolds_f3e53b7bf1",
           "fichier": "reynolds_f3e53b7bf1.ogg",
-          "sha256": "e345cffb8df21144"
+          "sha256": "2f4abbf6872efb0e"
         },
         {
           "id": "reynolds_f62f59599c",
@@ -62467,7 +62467,7 @@
         {
           "id": "jasmine_c322add692",
           "fichier": "jasmine_c322add692.ogg",
-          "sha256": "fd8bc00f6d0a1e75"
+          "sha256": "c29f29d9c85152e7"
         },
         {
           "id": "jasmine_c381ed0df3",
@@ -62502,7 +62502,7 @@
         {
           "id": "jasmine_dae7e16c7e",
           "fichier": "jasmine_dae7e16c7e.ogg",
-          "sha256": "504df37ffe005184"
+          "sha256": "10b87776a75aee7f"
         },
         {
           "id": "jasmine_db3200953c",
@@ -62576,57 +62576,57 @@
         {
           "id": "angela_12bbc65f5f",
           "fichier": "angela_12bbc65f5f.ogg",
-          "sha256": "3208107666a0d035"
+          "sha256": "a74aa56ce8058fba"
         },
         {
           "id": "angela_13bebee39d",
           "fichier": "angela_13bebee39d.ogg",
-          "sha256": "9d598d383309ad68"
+          "sha256": "91eb4ac49ce7b923"
         },
         {
           "id": "angela_13ec127d3e",
           "fichier": "angela_13ec127d3e.ogg",
-          "sha256": "60eabeef53959d69"
+          "sha256": "a9a43d6b54108216"
         },
         {
           "id": "angela_20acd4c070",
           "fichier": "angela_20acd4c070.ogg",
-          "sha256": "28d5c3043f99b66b"
+          "sha256": "bea71000243137ee"
         },
         {
           "id": "angela_2c4085e8ba",
           "fichier": "angela_2c4085e8ba.ogg",
-          "sha256": "c9db55e03507e5a8"
+          "sha256": "cd4d9a50186311b1"
         },
         {
           "id": "angela_5a2fcc9bc0",
           "fichier": "angela_5a2fcc9bc0.ogg",
-          "sha256": "c05ec4dbc90978fe"
+          "sha256": "765c7ae2ef781e27"
         },
         {
           "id": "angela_687836df78",
           "fichier": "angela_687836df78.ogg",
-          "sha256": "7b56b9a4fb495577"
+          "sha256": "902c198e7d4adc79"
         },
         {
           "id": "angela_6b2b6ceffb",
           "fichier": "angela_6b2b6ceffb.ogg",
-          "sha256": "509daf36696d1221"
+          "sha256": "7886b1462d70ef09"
         },
         {
           "id": "angela_6f9ef38c89",
           "fichier": "angela_6f9ef38c89.ogg",
-          "sha256": "83e4f514d3c24b91"
+          "sha256": "0eaabd7f93a70335"
         },
         {
           "id": "angela_aae9f0f505",
           "fichier": "angela_aae9f0f505.ogg",
-          "sha256": "42f5c19a8799bb4b"
+          "sha256": "31ad0b135996072f"
         },
         {
           "id": "angela_e73735dbd7",
           "fichier": "angela_e73735dbd7.ogg",
-          "sha256": "c6b0a52e80b8b26e"
+          "sha256": "279d6a7a11a1535f"
         }
       ]
     },
@@ -62704,142 +62704,142 @@
         {
           "id": "adam_0a3bfac2d7",
           "fichier": "adam_0a3bfac2d7.ogg",
-          "sha256": "08f44141648e3327"
+          "sha256": "0b66cbe544b3ffaf"
         },
         {
           "id": "adam_203699f23b",
           "fichier": "adam_203699f23b.ogg",
-          "sha256": "36ce103bacb6c4b0"
+          "sha256": "06a09899d918f0de"
         },
         {
           "id": "adam_2056731074",
           "fichier": "adam_2056731074.ogg",
-          "sha256": "b74d2d73bafc92c5"
+          "sha256": "271dd044827f6e3b"
         },
         {
           "id": "adam_2920ba67ad",
           "fichier": "adam_2920ba67ad.ogg",
-          "sha256": "e1c149201bfd36a0"
+          "sha256": "9a8bbc59bd8e81e6"
         },
         {
           "id": "adam_3040fcc906",
           "fichier": "adam_3040fcc906.ogg",
-          "sha256": "f75ed770a8a6c1ba"
+          "sha256": "16124b6c27e16149"
         },
         {
           "id": "adam_3c7da0ec87",
           "fichier": "adam_3c7da0ec87.ogg",
-          "sha256": "90a4a01f406193cd"
+          "sha256": "1e5b4b71ea8426d7"
         },
         {
           "id": "adam_4cda8f862e",
           "fichier": "adam_4cda8f862e.ogg",
-          "sha256": "ec336af2abada0af"
+          "sha256": "34b873fe6ee5e334"
         },
         {
           "id": "adam_644e65b1b6",
           "fichier": "adam_644e65b1b6.ogg",
-          "sha256": "66d13e3d72226a21"
+          "sha256": "0cbe7440e9b57c98"
         },
         {
           "id": "adam_68e4624637",
           "fichier": "adam_68e4624637.ogg",
-          "sha256": "e754133d505835b0"
+          "sha256": "8bfb9054ba794e56"
         },
         {
           "id": "adam_6ec38f8dee",
           "fichier": "adam_6ec38f8dee.ogg",
-          "sha256": "4864951195e6ce68"
+          "sha256": "7b2aa4aa61326e58"
         },
         {
           "id": "adam_768d30c666",
           "fichier": "adam_768d30c666.ogg",
-          "sha256": "50285adc6b74a270"
+          "sha256": "f3882fbe2e25cbe9"
         },
         {
           "id": "adam_7eef0e7a89",
           "fichier": "adam_7eef0e7a89.ogg",
-          "sha256": "53739776da06222d"
+          "sha256": "f602d49457099dca"
         },
         {
           "id": "adam_90d35bb0ea",
           "fichier": "adam_90d35bb0ea.ogg",
-          "sha256": "b039f130a9715c0d"
+          "sha256": "500b5cba4937b1fb"
         },
         {
           "id": "adam_9a4328b07e",
           "fichier": "adam_9a4328b07e.ogg",
-          "sha256": "d65c9a35768b0b49"
+          "sha256": "752734e67d6cdd47"
         },
         {
           "id": "adam_a0c91dcdf9",
           "fichier": "adam_a0c91dcdf9.ogg",
-          "sha256": "39e03a46f12f23d2"
+          "sha256": "f7339be5601f0b92"
         },
         {
           "id": "adam_a47572ae6a",
           "fichier": "adam_a47572ae6a.ogg",
-          "sha256": "6023b193ec69f676"
+          "sha256": "b562877e136cc1dd"
         },
         {
           "id": "adam_a824367e66",
           "fichier": "adam_a824367e66.ogg",
-          "sha256": "ee5d4758627ea8b1"
+          "sha256": "617099bb7d2063e8"
         },
         {
           "id": "adam_a9d4226dff",
           "fichier": "adam_a9d4226dff.ogg",
-          "sha256": "8ea50eeca59717a9"
+          "sha256": "d34e9b9045b99a55"
         },
         {
           "id": "adam_ab9ed94cc1",
           "fichier": "adam_ab9ed94cc1.ogg",
-          "sha256": "0841ff1b22c95466"
+          "sha256": "4f553221207b740d"
         },
         {
           "id": "adam_abd6a4c918",
           "fichier": "adam_abd6a4c918.ogg",
-          "sha256": "fd1ea1ec906c51d9"
+          "sha256": "52a4e7a39c6594cd"
         },
         {
           "id": "adam_af14abd955",
           "fichier": "adam_af14abd955.ogg",
-          "sha256": "f01b96a60b1449b0"
+          "sha256": "9af59cded268dee4"
         },
         {
           "id": "adam_b9f4279049",
           "fichier": "adam_b9f4279049.ogg",
-          "sha256": "59ab798e50f4bcc9"
+          "sha256": "b911143be897d313"
         },
         {
           "id": "adam_c7bd7393e0",
           "fichier": "adam_c7bd7393e0.ogg",
-          "sha256": "237ff6fb6190ecb0"
+          "sha256": "d624450fd23b6238"
         },
         {
           "id": "adam_ca4bb0bfb4",
           "fichier": "adam_ca4bb0bfb4.ogg",
-          "sha256": "1ad741199692cd1f"
+          "sha256": "8d0633a92b4edb06"
         },
         {
           "id": "adam_cf365279c1",
           "fichier": "adam_cf365279c1.ogg",
-          "sha256": "12ad35d9a8450514"
+          "sha256": "ca33ef1d9b068968"
         },
         {
           "id": "adam_d15d8db6da",
           "fichier": "adam_d15d8db6da.ogg",
-          "sha256": "2fe18e72811a4faa"
+          "sha256": "34c9b57945d9dd0b"
         },
         {
           "id": "adam_ffcc7e2ac0",
           "fichier": "adam_ffcc7e2ac0.ogg",
-          "sha256": "c723d733ed5e1368"
+          "sha256": "68cf756aeb456b4a"
         },
         {
           "id": "adam_ffd574e7e7",
           "fichier": "adam_ffd574e7e7.ogg",
-          "sha256": "ecd8efc9d7b31e1a"
+          "sha256": "3a2537a8b1841512"
         }
       ]
     },
@@ -63062,7 +63062,7 @@
         {
           "id": "vincent_44bafbfe92",
           "fichier": "vincent_44bafbfe92.ogg",
-          "sha256": "d8e3b50b02d52248"
+          "sha256": "fda9fe8c07debb98"
         },
         {
           "id": "vincent_46c994c197",
@@ -63072,7 +63072,7 @@
         {
           "id": "vincent_49f4b1b2cf",
           "fichier": "vincent_49f4b1b2cf.ogg",
-          "sha256": "aed62a4755817d38"
+          "sha256": "6989b35ab35c2c95"
         },
         {
           "id": "vincent_4a36c9ffc7",
@@ -63217,7 +63217,7 @@
         {
           "id": "vincent_b367311607",
           "fichier": "vincent_b367311607.ogg",
-          "sha256": "3e03b9a54b01c0bb"
+          "sha256": "dabb3654420278a8"
         },
         {
           "id": "vincent_b3c02e8a71",
@@ -63247,7 +63247,7 @@
         {
           "id": "vincent_bab6802db6",
           "fichier": "vincent_bab6802db6.ogg",
-          "sha256": "7416b1653f4f8692"
+          "sha256": "37b007c53c5afdcd"
         },
         {
           "id": "vincent_be060bb59c",
@@ -63292,7 +63292,7 @@
         {
           "id": "vincent_d1050f5d94",
           "fichier": "vincent_d1050f5d94.ogg",
-          "sha256": "928f57a21574ac3b"
+          "sha256": "cc77b2e5c4b6f259"
         },
         {
           "id": "vincent_d54ee09f1e",
@@ -63332,7 +63332,7 @@
         {
           "id": "vincent_ed19e3d49d",
           "fichier": "vincent_ed19e3d49d.ogg",
-          "sha256": "4fe5eeafe0a7c6c3"
+          "sha256": "a4df9f913821526b"
         },
         {
           "id": "vincent_f0c557ce43",
@@ -63570,412 +63570,765 @@
         {
           "id": "ellie_0683220ea3",
           "fichier": "ellie_0683220ea3.ogg",
-          "sha256": "3f9814429bf45252"
+          "sha256": "267d842c19060caf"
         },
         {
           "id": "ellie_079b388f14",
           "fichier": "ellie_079b388f14.ogg",
-          "sha256": "816fffddb6810ac5"
+          "sha256": "30505832b47848a6"
         },
         {
           "id": "ellie_14429b6a9b",
           "fichier": "ellie_14429b6a9b.ogg",
-          "sha256": "75f6c65b3c4c2da9"
+          "sha256": "5bfe4e06865d4e6d"
         },
         {
           "id": "ellie_16ede38def",
           "fichier": "ellie_16ede38def.ogg",
-          "sha256": "357f22a917fea3af"
+          "sha256": "462f16dd063a1645"
         },
         {
           "id": "ellie_18e27e6863",
           "fichier": "ellie_18e27e6863.ogg",
-          "sha256": "7e287bfba3cb048c"
+          "sha256": "151e164ce8bce740"
         },
         {
           "id": "ellie_23ab9d5eae",
           "fichier": "ellie_23ab9d5eae.ogg",
-          "sha256": "63fefc2a76b80cea"
+          "sha256": "2c93638ece4dc354"
         },
         {
           "id": "ellie_25a62884f0",
           "fichier": "ellie_25a62884f0.ogg",
-          "sha256": "fb6170d93c73b413"
+          "sha256": "17154abd812a43ba"
         },
         {
           "id": "ellie_265236e2f1",
           "fichier": "ellie_265236e2f1.ogg",
-          "sha256": "2ff75b6fb912df78"
+          "sha256": "efe6d5967f9c661c"
         },
         {
           "id": "ellie_2aae0973fb",
           "fichier": "ellie_2aae0973fb.ogg",
-          "sha256": "520ba54b1542fb23"
+          "sha256": "7a5999e1d5110baa"
         },
         {
           "id": "ellie_2cd0801952",
           "fichier": "ellie_2cd0801952.ogg",
-          "sha256": "7bdde158f0c1fe24"
+          "sha256": "640ed6611f1e616e"
         },
         {
           "id": "ellie_2cf24f7948",
           "fichier": "ellie_2cf24f7948.ogg",
-          "sha256": "17af932de3f7822b"
+          "sha256": "53fd5e09a2298cdf"
         },
         {
           "id": "ellie_2d4aeba422",
           "fichier": "ellie_2d4aeba422.ogg",
-          "sha256": "7bb46bc9ec28dae5"
+          "sha256": "22eb30d21098d1cd"
         },
         {
           "id": "ellie_3155d044cb",
           "fichier": "ellie_3155d044cb.ogg",
-          "sha256": "3d24866a1e7bd5dc"
+          "sha256": "d3ae9c42abb597ad"
         },
         {
           "id": "ellie_3590d94705",
           "fichier": "ellie_3590d94705.ogg",
-          "sha256": "8bd6de145f612dcf"
+          "sha256": "ee5c4b5fcd65a9b7"
         },
         {
           "id": "ellie_364538d483",
           "fichier": "ellie_364538d483.ogg",
-          "sha256": "50a7f076f2bcf9ce"
+          "sha256": "9995c6c809b66488"
         },
         {
           "id": "ellie_38057f23e8",
           "fichier": "ellie_38057f23e8.ogg",
-          "sha256": "a38ed8a10d711415"
+          "sha256": "3007c305de90263a"
         },
         {
           "id": "ellie_3c4ff99fae",
           "fichier": "ellie_3c4ff99fae.ogg",
-          "sha256": "6ae29a7bebff7894"
+          "sha256": "dfa1f58c87ba7dce"
         },
         {
           "id": "ellie_3ef8014022",
           "fichier": "ellie_3ef8014022.ogg",
-          "sha256": "aafe7dc7ab37a2d2"
+          "sha256": "dd831ad1b4c2f83a"
         },
         {
           "id": "ellie_4003f80662",
           "fichier": "ellie_4003f80662.ogg",
-          "sha256": "e3b8ec0a28b56000"
+          "sha256": "54244fa15e5dc983"
         },
         {
           "id": "ellie_41111c7483",
           "fichier": "ellie_41111c7483.ogg",
-          "sha256": "5ba68f547a7ea260"
+          "sha256": "f378fac57b741abe"
         },
         {
           "id": "ellie_42637cad60",
           "fichier": "ellie_42637cad60.ogg",
-          "sha256": "afc6ce268201cb93"
+          "sha256": "e3606d281f22ed60"
         },
         {
           "id": "ellie_45005efbc2",
           "fichier": "ellie_45005efbc2.ogg",
-          "sha256": "f10f4a5baed43d81"
+          "sha256": "bdc3f45c05c639f4"
         },
         {
           "id": "ellie_4b6f894a72",
           "fichier": "ellie_4b6f894a72.ogg",
-          "sha256": "9f4eb25b15ee2b4d"
+          "sha256": "2c9c107aee522bff"
         },
         {
           "id": "ellie_4c50471e4b",
           "fichier": "ellie_4c50471e4b.ogg",
-          "sha256": "f3d7c3e319fd51ce"
+          "sha256": "2ccd3f6cc53d3504"
         },
         {
           "id": "ellie_4f806e8666",
           "fichier": "ellie_4f806e8666.ogg",
-          "sha256": "c7864430e91ab05c"
+          "sha256": "6f7b610ad320710e"
         },
         {
           "id": "ellie_5387e27b73",
           "fichier": "ellie_5387e27b73.ogg",
-          "sha256": "9962e55d667f4908"
+          "sha256": "6362868bf0dfc551"
         },
         {
           "id": "ellie_53f7aa5422",
           "fichier": "ellie_53f7aa5422.ogg",
-          "sha256": "e97c9f027ca3eb1b"
+          "sha256": "e22befc97de6ea56"
         },
         {
           "id": "ellie_55d6ffe30f",
           "fichier": "ellie_55d6ffe30f.ogg",
-          "sha256": "2528a02bff2af488"
+          "sha256": "3bd942c04ce4ebb9"
         },
         {
           "id": "ellie_606c678737",
           "fichier": "ellie_606c678737.ogg",
-          "sha256": "2961f37bd2589a7b"
+          "sha256": "3cab5c22c44f7121"
         },
         {
           "id": "ellie_611abe53eb",
           "fichier": "ellie_611abe53eb.ogg",
-          "sha256": "b0e3decdfeda1b1d"
+          "sha256": "a730a66e0aa4c593"
         },
         {
           "id": "ellie_648839a2b1",
           "fichier": "ellie_648839a2b1.ogg",
-          "sha256": "d709a67adcc33700"
+          "sha256": "df51d19d72f7d83b"
         },
         {
           "id": "ellie_6d217e7c0e",
           "fichier": "ellie_6d217e7c0e.ogg",
-          "sha256": "d80ec9a7ed1feb44"
+          "sha256": "22611d9bbdd49d7a"
         },
         {
           "id": "ellie_701a4378d9",
           "fichier": "ellie_701a4378d9.ogg",
-          "sha256": "20b8af22437756c0"
+          "sha256": "44aea38ab90ea51d"
         },
         {
           "id": "ellie_7ad2e52251",
           "fichier": "ellie_7ad2e52251.ogg",
-          "sha256": "de726feddde81c13"
+          "sha256": "b96522c90bedca03"
         },
         {
           "id": "ellie_7e8529fc9a",
           "fichier": "ellie_7e8529fc9a.ogg",
-          "sha256": "93fe18880da2b394"
+          "sha256": "f032a66bb2a73129"
         },
         {
           "id": "ellie_87e0926c07",
           "fichier": "ellie_87e0926c07.ogg",
-          "sha256": "9ac24ef21f0b8fbf"
+          "sha256": "28a7a5b2defa7676"
         },
         {
           "id": "ellie_8bbbca56c3",
           "fichier": "ellie_8bbbca56c3.ogg",
-          "sha256": "a33d8fc3fad2b5c1"
+          "sha256": "041e73b6e848e557"
         },
         {
           "id": "ellie_8ccddc0e4d",
           "fichier": "ellie_8ccddc0e4d.ogg",
-          "sha256": "397b7f80189a30ef"
+          "sha256": "455cc8db8ef8cd98"
         },
         {
           "id": "ellie_8e6649303f",
           "fichier": "ellie_8e6649303f.ogg",
-          "sha256": "36cfea9fd51d85d0"
+          "sha256": "fce84c562901308e"
         },
         {
           "id": "ellie_9254169843",
           "fichier": "ellie_9254169843.ogg",
-          "sha256": "4ded9a441731cd2e"
+          "sha256": "2c0377fcd911816e"
         },
         {
           "id": "ellie_92e64dcae4",
           "fichier": "ellie_92e64dcae4.ogg",
-          "sha256": "e51cd6b9d693913c"
+          "sha256": "fd5964f19c314c7d"
         },
         {
           "id": "ellie_95fdd23212",
           "fichier": "ellie_95fdd23212.ogg",
-          "sha256": "763de33747a77074"
+          "sha256": "9a1102662e327333"
         },
         {
           "id": "ellie_9c239a4255",
           "fichier": "ellie_9c239a4255.ogg",
-          "sha256": "fd83533463db69eb"
+          "sha256": "5542bac9aa6e8cab"
         },
         {
           "id": "ellie_9df3d64ec9",
           "fichier": "ellie_9df3d64ec9.ogg",
-          "sha256": "42303e164ac0a097"
+          "sha256": "d547e8fb27a7a2e0"
         },
         {
           "id": "ellie_a29ba889a2",
           "fichier": "ellie_a29ba889a2.ogg",
-          "sha256": "0f07381e1e0c471c"
+          "sha256": "912e71e415c580fc"
         },
         {
           "id": "ellie_a5372e07db",
           "fichier": "ellie_a5372e07db.ogg",
-          "sha256": "8d7c5da544fa49e2"
+          "sha256": "d0c0d05575114f6f"
         },
         {
           "id": "ellie_a60969fad0",
           "fichier": "ellie_a60969fad0.ogg",
-          "sha256": "3345dac4c6bccfa8"
+          "sha256": "d75403d1b15f4406"
         },
         {
           "id": "ellie_a6761866e7",
           "fichier": "ellie_a6761866e7.ogg",
-          "sha256": "e0d25ab595c054e0"
+          "sha256": "f7caca7ec608167a"
         },
         {
           "id": "ellie_aa6afbcbac",
           "fichier": "ellie_aa6afbcbac.ogg",
-          "sha256": "25e4a56c2938f843"
+          "sha256": "8b2bff3967060ea5"
         },
         {
           "id": "ellie_ab5dae58a5",
           "fichier": "ellie_ab5dae58a5.ogg",
-          "sha256": "248df47695b5480f"
+          "sha256": "45bc9e7637c58c43"
         },
         {
           "id": "ellie_b57026be15",
           "fichier": "ellie_b57026be15.ogg",
-          "sha256": "a7a7088c47ef8342"
+          "sha256": "98ef67b5dd2ddba3"
         },
         {
           "id": "ellie_b778df9bd8",
           "fichier": "ellie_b778df9bd8.ogg",
-          "sha256": "313b50d612418556"
+          "sha256": "15d1203229e8fbc1"
         },
         {
           "id": "ellie_c1b2994f2c",
           "fichier": "ellie_c1b2994f2c.ogg",
-          "sha256": "6cc999f6276ac575"
+          "sha256": "21ca134136f04b48"
         },
         {
           "id": "ellie_c2e7416ed8",
           "fichier": "ellie_c2e7416ed8.ogg",
-          "sha256": "907103c30db8d383"
+          "sha256": "a5ab3032383d5e15"
         },
         {
           "id": "ellie_c5a09b3e9e",
           "fichier": "ellie_c5a09b3e9e.ogg",
-          "sha256": "ed358ed0c28573f7"
+          "sha256": "68c0bfc23c80dff2"
         },
         {
           "id": "ellie_c9c8e07d44",
           "fichier": "ellie_c9c8e07d44.ogg",
-          "sha256": "4b787ff09b5e54cf"
+          "sha256": "7c4ae28e46d46f90"
         },
         {
           "id": "ellie_ca9265c2dc",
           "fichier": "ellie_ca9265c2dc.ogg",
-          "sha256": "65ff0efdf109055d"
+          "sha256": "2ae3efe6f1c463b2"
         },
         {
           "id": "ellie_cb0cf48710",
           "fichier": "ellie_cb0cf48710.ogg",
-          "sha256": "cecc41906c81e6c3"
+          "sha256": "4d5fa1ee865448ac"
         },
         {
           "id": "ellie_d0f47f4d92",
           "fichier": "ellie_d0f47f4d92.ogg",
-          "sha256": "f93a9c12671048bd"
+          "sha256": "f2c06a7d584174f7"
         },
         {
           "id": "ellie_d393549c57",
           "fichier": "ellie_d393549c57.ogg",
-          "sha256": "db171576ea6dc911"
+          "sha256": "3d9661262c894ab3"
         },
         {
           "id": "ellie_d498d7696f",
           "fichier": "ellie_d498d7696f.ogg",
-          "sha256": "96e4cb3bb1b87791"
+          "sha256": "7554fa0d36a9b5d6"
         },
         {
           "id": "ellie_dc36d3a3d3",
           "fichier": "ellie_dc36d3a3d3.ogg",
-          "sha256": "b4ac155c2c69d205"
+          "sha256": "16f506571b9ac45e"
         },
         {
           "id": "ellie_dd18b45c27",
           "fichier": "ellie_dd18b45c27.ogg",
-          "sha256": "ef1e5efa223abd7c"
+          "sha256": "51379f9b3c9f7b34"
         },
         {
           "id": "ellie_df72070073",
           "fichier": "ellie_df72070073.ogg",
-          "sha256": "77b694394d17f3a2"
+          "sha256": "c8ec2fff8655ff48"
         },
         {
           "id": "ellie_e03163d599",
           "fichier": "ellie_e03163d599.ogg",
-          "sha256": "c275c4ddd0085df7"
+          "sha256": "3e2b29c41a7f342d"
         },
         {
           "id": "ellie_e1d6b8a930",
           "fichier": "ellie_e1d6b8a930.ogg",
-          "sha256": "c385bfcb11ec7c0b"
+          "sha256": "195441135e697270"
         },
         {
           "id": "ellie_e49819aa8a",
           "fichier": "ellie_e49819aa8a.ogg",
-          "sha256": "039dcdcb35c3c605"
+          "sha256": "e85bfe109bd98777"
         },
         {
           "id": "ellie_e5195fb663",
           "fichier": "ellie_e5195fb663.ogg",
-          "sha256": "3dae4a648fa0ffb1"
+          "sha256": "bb38168abf5e5e92"
         },
         {
           "id": "ellie_e841e84598",
           "fichier": "ellie_e841e84598.ogg",
-          "sha256": "7fe760d78da071b9"
+          "sha256": "bb167f0d09257ce2"
         },
         {
           "id": "ellie_ed23ef3359",
           "fichier": "ellie_ed23ef3359.ogg",
-          "sha256": "e450f57b6005c075"
+          "sha256": "5c7118630e315820"
         },
         {
           "id": "ellie_f070936ede",
           "fichier": "ellie_f070936ede.ogg",
-          "sha256": "cb1150dcd507f32d"
+          "sha256": "b3cabd1ee54f37da"
         },
         {
           "id": "ellie_f2114a4409",
           "fichier": "ellie_f2114a4409.ogg",
-          "sha256": "0f8fec3747c81a5b"
+          "sha256": "3ce67ed28f4a4ff5"
         },
         {
           "id": "ellie_f58ec96cba",
           "fichier": "ellie_f58ec96cba.ogg",
-          "sha256": "e5d6216cf0141fdc"
+          "sha256": "610045f63ee81ea2"
         },
         {
           "id": "ellie_f63ebf6d48",
           "fichier": "ellie_f63ebf6d48.ogg",
-          "sha256": "709beb638cc7ddb9"
+          "sha256": "68ddd4c63f6a1c43"
         },
         {
           "id": "ellie_f74fe345ff",
           "fichier": "ellie_f74fe345ff.ogg",
-          "sha256": "f5b3879c869ea296"
+          "sha256": "dc8ef52ca5a273c6"
         },
         {
           "id": "ellie_f875353028",
           "fichier": "ellie_f875353028.ogg",
-          "sha256": "7fdeb9ada5498025"
+          "sha256": "4f141ece3edc7a8e"
         },
         {
           "id": "ellie_fb23f08147",
           "fichier": "ellie_fb23f08147.ogg",
-          "sha256": "1a23e1041a52cb04"
+          "sha256": "dfb02e2b2cfe3e80"
         },
         {
           "id": "ellie_fb502b219d",
           "fichier": "ellie_fb502b219d.ogg",
-          "sha256": "39485dc449b1563c"
+          "sha256": "2c542b13f6df8efa"
         },
         {
           "id": "ellie_fc4b417c70",
           "fichier": "ellie_fc4b417c70.ogg",
-          "sha256": "c7919ab8e54b3b3e"
+          "sha256": "d16c62e6f34ee50e"
         },
         {
           "id": "ellie_fc598cf81d",
           "fichier": "ellie_fc598cf81d.ogg",
-          "sha256": "2a96ffea35930250"
+          "sha256": "e0c22ea363c8d8eb"
         },
         {
           "id": "ellie_fe7dc6cebb",
           "fichier": "ellie_fe7dc6cebb.ogg",
-          "sha256": "1414dc1d6c6fb0b1"
+          "sha256": "33c3e4e2e4d6d88c"
         },
         {
           "id": "ellie_feb961448b",
           "fichier": "ellie_feb961448b.ogg",
-          "sha256": "b3407176578424f9"
+          "sha256": "efd9b262cad8e593"
+        }
+      ]
+    },
+    "lise": {
+      "nom": "Lise",
+      "repliques": 42,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": [
+        {
+          "id": "lise_02a5713c8c",
+          "fichier": "lise_02a5713c8c.ogg",
+          "sha256": "936ccde65430e541"
+        },
+        {
+          "id": "lise_05f5a21dbb",
+          "fichier": "lise_05f5a21dbb.ogg",
+          "sha256": "42f6a51505dd6a2f"
+        },
+        {
+          "id": "lise_080801e4cc",
+          "fichier": "lise_080801e4cc.ogg",
+          "sha256": "568083298a4beb6d"
+        },
+        {
+          "id": "lise_0a440b3ae4",
+          "fichier": "lise_0a440b3ae4.ogg",
+          "sha256": "b97c167963ee7a1e"
+        },
+        {
+          "id": "lise_0a957a726a",
+          "fichier": "lise_0a957a726a.ogg",
+          "sha256": "f29783706b25f15a"
+        },
+        {
+          "id": "lise_0c0b6426ef",
+          "fichier": "lise_0c0b6426ef.ogg",
+          "sha256": "55334d47681c8a43"
+        },
+        {
+          "id": "lise_0eed8ad227",
+          "fichier": "lise_0eed8ad227.ogg",
+          "sha256": "84c8216343308f85"
+        },
+        {
+          "id": "lise_0fc09764e2",
+          "fichier": "lise_0fc09764e2.ogg",
+          "sha256": "ee92cfc1f38e116e"
+        },
+        {
+          "id": "lise_111bb4be8c",
+          "fichier": "lise_111bb4be8c.ogg",
+          "sha256": "e4a96a8115e60635"
+        },
+        {
+          "id": "lise_208a79bc27",
+          "fichier": "lise_208a79bc27.ogg",
+          "sha256": "8272f65c0a2244d4"
+        },
+        {
+          "id": "lise_2537dc301a",
+          "fichier": "lise_2537dc301a.ogg",
+          "sha256": "2c1219df7617cd1c"
+        },
+        {
+          "id": "lise_258e6ca85d",
+          "fichier": "lise_258e6ca85d.ogg",
+          "sha256": "ac3fe0d20bf65566"
+        },
+        {
+          "id": "lise_268a1a6f88",
+          "fichier": "lise_268a1a6f88.ogg",
+          "sha256": "8615d81c2f6aeb87"
+        },
+        {
+          "id": "lise_2a71a7281d",
+          "fichier": "lise_2a71a7281d.ogg",
+          "sha256": "c3a6ed143c661341"
+        },
+        {
+          "id": "lise_2b7bd02379",
+          "fichier": "lise_2b7bd02379.ogg",
+          "sha256": "ecddf5e0bbb52a5e"
+        },
+        {
+          "id": "lise_2d9274ea18",
+          "fichier": "lise_2d9274ea18.ogg",
+          "sha256": "657e8c55fac5ba58"
+        },
+        {
+          "id": "lise_36a49ed1db",
+          "fichier": "lise_36a49ed1db.ogg",
+          "sha256": "312d9d5fe3495636"
+        },
+        {
+          "id": "lise_3dc7f5d0c3",
+          "fichier": "lise_3dc7f5d0c3.ogg",
+          "sha256": "2b8e75cb9c0e4cf4"
+        },
+        {
+          "id": "lise_3ef8014022",
+          "fichier": "lise_3ef8014022.ogg",
+          "sha256": "8269340bd06c9839"
+        },
+        {
+          "id": "lise_483240debc",
+          "fichier": "lise_483240debc.ogg",
+          "sha256": "dc51bd77d293ba8b"
+        },
+        {
+          "id": "lise_4c6b7a8ea4",
+          "fichier": "lise_4c6b7a8ea4.ogg",
+          "sha256": "ca5c9307698f1e22"
+        },
+        {
+          "id": "lise_507b18dea2",
+          "fichier": "lise_507b18dea2.ogg",
+          "sha256": "2a96db638a27682f"
+        },
+        {
+          "id": "lise_50cc4bd745",
+          "fichier": "lise_50cc4bd745.ogg",
+          "sha256": "194dc8e7891b8f8e"
+        },
+        {
+          "id": "lise_595368aef4",
+          "fichier": "lise_595368aef4.ogg",
+          "sha256": "6b65edf51a274950"
+        },
+        {
+          "id": "lise_5b91a2f43c",
+          "fichier": "lise_5b91a2f43c.ogg",
+          "sha256": "7bef13db782cf9c0"
+        },
+        {
+          "id": "lise_61891a4e6c",
+          "fichier": "lise_61891a4e6c.ogg",
+          "sha256": "7ea721fb36bc556b"
+        },
+        {
+          "id": "lise_61bb18ba54",
+          "fichier": "lise_61bb18ba54.ogg",
+          "sha256": "3c7a56b0a83aa6fe"
+        },
+        {
+          "id": "lise_6ebc392638",
+          "fichier": "lise_6ebc392638.ogg",
+          "sha256": "d421e8d6bb89605c"
+        },
+        {
+          "id": "lise_77cb5a6225",
+          "fichier": "lise_77cb5a6225.ogg",
+          "sha256": "1fd5d968e9c1a0ac"
+        },
+        {
+          "id": "lise_7b32663c0d",
+          "fichier": "lise_7b32663c0d.ogg",
+          "sha256": "1c1c45a156a10cf9"
+        },
+        {
+          "id": "lise_87bd67e92b",
+          "fichier": "lise_87bd67e92b.ogg",
+          "sha256": "b62b2cd0d8f5028d"
+        },
+        {
+          "id": "lise_ab5df625bc",
+          "fichier": "lise_ab5df625bc.ogg",
+          "sha256": "053e4e9c71ad1467"
+        },
+        {
+          "id": "lise_ad6ddeb2f6",
+          "fichier": "lise_ad6ddeb2f6.ogg",
+          "sha256": "f488ccac6d012346"
+        },
+        {
+          "id": "lise_b2d0e6d2b0",
+          "fichier": "lise_b2d0e6d2b0.ogg",
+          "sha256": "5d48501a81a08ed5"
+        },
+        {
+          "id": "lise_b74247bead",
+          "fichier": "lise_b74247bead.ogg",
+          "sha256": "6b67344484aea9c0"
+        },
+        {
+          "id": "lise_d9220711cc",
+          "fichier": "lise_d9220711cc.ogg",
+          "sha256": "a415b8dc3ce9a553"
+        },
+        {
+          "id": "lise_e25b181c61",
+          "fichier": "lise_e25b181c61.ogg",
+          "sha256": "b4dcd3990e2101cb"
+        },
+        {
+          "id": "lise_e3ff5ac86c",
+          "fichier": "lise_e3ff5ac86c.ogg",
+          "sha256": "77c086ee1c76051b"
+        },
+        {
+          "id": "lise_e41b57bbaf",
+          "fichier": "lise_e41b57bbaf.ogg",
+          "sha256": "a02f8edbdb1889ed"
+        },
+        {
+          "id": "lise_e48f6e7445",
+          "fichier": "lise_e48f6e7445.ogg",
+          "sha256": "518cb7257a9e7630"
+        },
+        {
+          "id": "lise_f50c64f4fe",
+          "fichier": "lise_f50c64f4fe.ogg",
+          "sha256": "425cfdd0aea024b7"
+        },
+        {
+          "id": "lise_fdb7a6f456",
+          "fichier": "lise_fdb7a6f456.ogg",
+          "sha256": "c979e26235cad8b3"
+        }
+      ]
+    },
+    "luna": {
+      "nom": "Luna",
+      "repliques": 25,
+      "format": "ogg",
+      "convention": "voice-fingerprint-1.0",
+      "moteur_par_defaut": "qwen3-tts",
+      "fichiers": [
+        {
+          "id": "luna_088f43d97c",
+          "fichier": "luna_088f43d97c.ogg",
+          "sha256": "d960743e2cd45717"
+        },
+        {
+          "id": "luna_0f35e8af6a",
+          "fichier": "luna_0f35e8af6a.ogg",
+          "sha256": "d59c49657b404da4"
+        },
+        {
+          "id": "luna_10a6cc4a89",
+          "fichier": "luna_10a6cc4a89.ogg",
+          "sha256": "973ac5a78c3ab249"
+        },
+        {
+          "id": "luna_2f92897b22",
+          "fichier": "luna_2f92897b22.ogg",
+          "sha256": "ff639eed9b1182b6"
+        },
+        {
+          "id": "luna_364538d483",
+          "fichier": "luna_364538d483.ogg",
+          "sha256": "566151937f9dc75d"
+        },
+        {
+          "id": "luna_3b832f5678",
+          "fichier": "luna_3b832f5678.ogg",
+          "sha256": "a3df7b574f70b2a9"
+        },
+        {
+          "id": "luna_441278a322",
+          "fichier": "luna_441278a322.ogg",
+          "sha256": "b42fe30e54b15f4f"
+        },
+        {
+          "id": "luna_4aae3e6c75",
+          "fichier": "luna_4aae3e6c75.ogg",
+          "sha256": "09ea9f0f47bef70a"
+        },
+        {
+          "id": "luna_5043318534",
+          "fichier": "luna_5043318534.ogg",
+          "sha256": "fcff9b8319f2ac57"
+        },
+        {
+          "id": "luna_52cdce47db",
+          "fichier": "luna_52cdce47db.ogg",
+          "sha256": "f850cc0ff9dcd33d"
+        },
+        {
+          "id": "luna_53aac00623",
+          "fichier": "luna_53aac00623.ogg",
+          "sha256": "9fec979c15eac97c"
+        },
+        {
+          "id": "luna_76af5771fb",
+          "fichier": "luna_76af5771fb.ogg",
+          "sha256": "55e9d88ae25ca457"
+        },
+        {
+          "id": "luna_798d870867",
+          "fichier": "luna_798d870867.ogg",
+          "sha256": "93570f5f653e65ce"
+        },
+        {
+          "id": "luna_7b18088699",
+          "fichier": "luna_7b18088699.ogg",
+          "sha256": "3d54526ef9d02925"
+        },
+        {
+          "id": "luna_7e2fcf8a67",
+          "fichier": "luna_7e2fcf8a67.ogg",
+          "sha256": "4cc7b619d28d079a"
+        },
+        {
+          "id": "luna_90d3770619",
+          "fichier": "luna_90d3770619.ogg",
+          "sha256": "6a7b4a435b838bba"
+        },
+        {
+          "id": "luna_970b5aea99",
+          "fichier": "luna_970b5aea99.ogg",
+          "sha256": "595f22d2e09c36b5"
+        },
+        {
+          "id": "luna_a03edb55f2",
+          "fichier": "luna_a03edb55f2.ogg",
+          "sha256": "8f7a38f1f2404d62"
+        },
+        {
+          "id": "luna_a8bba40234",
+          "fichier": "luna_a8bba40234.ogg",
+          "sha256": "f961608f8efcf7bb"
+        },
+        {
+          "id": "luna_adbe32811c",
+          "fichier": "luna_adbe32811c.ogg",
+          "sha256": "7334d5df1758a4e3"
+        },
+        {
+          "id": "luna_bfb383b0f3",
+          "fichier": "luna_bfb383b0f3.ogg",
+          "sha256": "f68fc4e0cf91b3d0"
+        },
+        {
+          "id": "luna_cf8bbe4a80",
+          "fichier": "luna_cf8bbe4a80.ogg",
+          "sha256": "94750700a27ee104"
+        },
+        {
+          "id": "luna_db6f3f7e76",
+          "fichier": "luna_db6f3f7e76.ogg",
+          "sha256": "e3a814e4f903c402"
+        },
+        {
+          "id": "luna_dde8656a50",
+          "fichier": "luna_dde8656a50.ogg",
+          "sha256": "176574aaf9369a83"
+        },
+        {
+          "id": "luna_e2d94d0f28",
+          "fichier": "luna_e2d94d0f28.ogg",
+          "sha256": "c08b309934998eac"
         }
       ]
     }
@@ -63984,7 +64337,7 @@
     "video": [],
     "animation": []
   },
-  "construit": "2026-08-24T07:56:21",
+  "construit": "2026-08-26T12:35:26",
   "contenu": [
     "voices"
   ],
