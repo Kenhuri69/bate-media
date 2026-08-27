@@ -113,6 +113,22 @@ def reindexer(racine: Path, manifeste: dict) -> tuple[dict, list[str]]:
         etat = "inchangé" if (avant_n == len(neufs) and avant_r == len(neufs)) else "RÉINDEXÉ"
         rapport.append(f"  {cle:<10} {avant_n:>5} -> {len(neufs):<5} fichiers "
                        f"(repliques {avant_r} -> {len(neufs)}, {conserves} avec texte)  {etat}")
+    # UN DOSSIER PLEIN QUE PERSONNE NE DÉCLARE EST UNE ALERTE, pas un détail à ignorer. Deux
+    # causes possibles et les deux sont graves : un dossier de travail qui partirait dans le pack
+    # (celui qui a doublé le pack 0.4.0), ou — c'est arrivé le 2026-08-27 — des clips produits
+    # sous une clé que le jeu ne demande plus. Cent deux clips de sept personnages étaient dans
+    # `voices/l/`, `voices/le/`, `voices/maitre/`… quand le jeu réclamait `architecte/`,
+    # `tenancier/`, `orwin/` : le contrat de rôle avait été corrigé partout sauf dans le calcul
+    # du dossier de sortie de la production. Sans cette ligne, le pack se serait construit
+    # « complet » en les laissant sur le disque.
+    orphelins = []
+    for d in sorted((racine / "voices").iterdir() if (racine / "voices").is_dir() else []):
+        if d.is_dir() and d.name not in voix and any(d.glob("*.ogg")):
+            orphelins.append(f"{d.name} ({len(list(d.glob('*.ogg')))} clips)")
+    if orphelins:
+        rapport.append("")
+        rapport.append(f"  ⚠ {len(orphelins)} dossier(s) plein(s) NON déclaré(s), donc exclus du "
+                       f"pack : {', '.join(orphelins)}")
     manifeste["voix"] = voix
     return manifeste, rapport
 

@@ -1,0 +1,1399 @@
+{
+  "version": "casting-troupe-1.0",
+  "regle": "voix propre au-dessus de 30 répliques, archétype en dessous",
+  "archetypes": {
+    "m_grave": {
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136,
+      "cible": 150
+    },
+    "m_pose": {
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 151,
+      "cible": 150
+    },
+    "m_clair": {
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179,
+      "cible": 205
+    },
+    "m_rugueux": {
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180,
+      "cible": 300
+    },
+    "m_quelconque": {
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188,
+      "cible": 340
+    },
+    "m_jeune": {
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 211,
+      "cible": 340
+    },
+    "f_autorite": {
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 176,
+      "cible": 175
+    },
+    "f_mure": {
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 216,
+      "cible": 175
+    },
+    "f_adulte": {
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 243,
+      "cible": 300
+    },
+    "f_jeune": {
+      "timbre": "ono_anna:0.65+vivian:0.35",
+      "decalage": -2.0,
+      "f0": 268,
+      "cible": 380
+    },
+    "f_claire": {
+      "timbre": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "f0": 289,
+      "cible": 240
+    },
+    "f_enfant": {
+      "timbre": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "f0": 298,
+      "cible": 440
+    }
+  },
+  "personnages": {
+    "Élève": {
+      "roles": [
+        "Élève"
+      ],
+      "repliques": 28,
+      "manquants": 28,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Professeur Geist": {
+      "roles": [
+        "Professeur Geist"
+      ],
+      "repliques": 27,
+      "manquants": 27,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_clair",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "cible": 205
+    },
+    "Committee": {
+      "roles": [
+        "Committee"
+      ],
+      "repliques": 23,
+      "manquants": 23,
+      "genre": "m",
+      "genre_source": "pronom de voisinage (indice, 3/1)",
+      "archetype": "m_clair",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "cible": 205
+    },
+    "L'architecte du Dessein": {
+      "roles": [
+        "L'architecte du Dessein"
+      ],
+      "repliques": 21,
+      "manquants": 21,
+      "genre": "m",
+      "genre_source": "pronom de voisinage (indice, 2/1)",
+      "archetype": "m_clair",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "cible": 205
+    },
+    "Alduin": {
+      "roles": [
+        "Alduin",
+        "Alduin Eralith"
+      ],
+      "repliques": 18,
+      "manquants": 18,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Brald": {
+      "roles": [
+        "Brald"
+      ],
+      "repliques": 18,
+      "manquants": 18,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_clair",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "cible": 205
+    },
+    "Instructrice": {
+      "roles": [
+        "Instructrice"
+      ],
+      "repliques": 18,
+      "manquants": 18,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_autorite",
+      "archetype_source": "indice de libellé",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "La bête aux yeux d'or": {
+      "roles": [
+        "La bête aux yeux d'or"
+      ],
+      "repliques": 18,
+      "manquants": 18,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Clive": {
+      "roles": [
+        "Clive"
+      ],
+      "repliques": 17,
+      "manquants": 17,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Professeur Avius": {
+      "roles": [
+        "Professeur Avius"
+      ],
+      "repliques": 17,
+      "manquants": 17,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Térence Cabestan": {
+      "roles": [
+        "Térence Cabestan"
+      ],
+      "repliques": 17,
+      "manquants": 17,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Juge": {
+      "roles": [
+        "Juge"
+      ],
+      "repliques": 16,
+      "manquants": 16,
+      "genre": "m",
+      "genre_source": "pronom de voisinage (indice, 3/0)",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Wenna Sarre": {
+      "roles": [
+        "Wenna Sarre"
+      ],
+      "repliques": 15,
+      "manquants": 15,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_mure",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Le tenancier": {
+      "roles": [
+        "Le tenancier"
+      ],
+      "repliques": 14,
+      "manquants": 14,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Hadrien Sorne": {
+      "roles": [
+        "Hadrien Sorne"
+      ],
+      "repliques": 13,
+      "manquants": 13,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Réceptionniste": {
+      "roles": [
+        "Réceptionniste"
+      ],
+      "repliques": 12,
+      "manquants": 12,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "f_adulte",
+      "archetype_source": "indice de libellé",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Kai": {
+      "roles": [
+        "Kai"
+      ],
+      "repliques": 12,
+      "manquants": 12,
+      "genre": "m",
+      "genre_source": "timeline",
+      "archetype": "m_clair",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "cible": 205
+    },
+    "Theodore": {
+      "roles": [
+        "Theodore"
+      ],
+      "repliques": 12,
+      "manquants": 12,
+      "genre": "m",
+      "genre_source": "timeline",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Doyenne de Loriande": {
+      "roles": [
+        "Doyenne de Loriande"
+      ],
+      "repliques": 12,
+      "manquants": 12,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_autorite",
+      "archetype_source": "indice de libellé",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Maelis Orandre": {
+      "roles": [
+        "Maelis Orandre"
+      ],
+      "repliques": 12,
+      "manquants": 12,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_autorite",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Le renégat": {
+      "roles": [
+        "Le renégat"
+      ],
+      "repliques": 11,
+      "manquants": 11,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Professeure": {
+      "roles": [
+        "Professeure"
+      ],
+      "repliques": 10,
+      "manquants": 10,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_autorite",
+      "archetype_source": "indice de libellé",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Doradrea": {
+      "roles": [
+        "Doradrea"
+      ],
+      "repliques": 10,
+      "manquants": 10,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "ono_anna:0.65+vivian:0.35",
+      "decalage": -2.0,
+      "cible": 380
+    },
+    "Professeur Mayner": {
+      "roles": [
+        "Professeur Mayner"
+      ],
+      "repliques": 10,
+      "manquants": 10,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "L'homme au registre": {
+      "roles": [
+        "L'homme au registre"
+      ],
+      "repliques": 10,
+      "manquants": 10,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Aventurier": {
+      "roles": [
+        "Aventurier"
+      ],
+      "repliques": 9,
+      "manquants": 9,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "George": {
+      "roles": [
+        "George"
+      ],
+      "repliques": 9,
+      "manquants": 9,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Maître Orwin": {
+      "roles": [
+        "Maître Orwin"
+      ],
+      "repliques": 9,
+      "manquants": 9,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Meneur": {
+      "roles": [
+        "Meneur"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Sebastian": {
+      "roles": [
+        "Sebastian"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Crieur": {
+      "roles": [
+        "Crieur"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Examinatrice": {
+      "roles": [
+        "Examinatrice"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_adulte",
+      "archetype_source": "indice de libellé",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Reginald": {
+      "roles": [
+        "Reginald"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Antiquaire": {
+      "roles": [
+        "Antiquaire"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Jarrod": {
+      "roles": [
+        "Jarrod"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Charlotte": {
+      "roles": [
+        "Charlotte"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_autorite",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Draneeve": {
+      "roles": [
+        "Draneeve"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Bren Valcourt": {
+      "roles": [
+        "Bren Valcourt"
+      ],
+      "repliques": 8,
+      "manquants": 8,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Samantha": {
+      "roles": [
+        "Samantha"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_enfant",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "cible": 440
+    },
+    "Intendant": {
+      "roles": [
+        "Intendant"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Charles": {
+      "roles": [
+        "Charles"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Professeur Drywell": {
+      "roles": [
+        "Professeur Drywell"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Roland": {
+      "roles": [
+        "Roland"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Assaillant masqué": {
+      "roles": [
+        "Assaillant masqué"
+      ],
+      "repliques": 7,
+      "manquants": 7,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Nicolas": {
+      "roles": [
+        "Nicolas"
+      ],
+      "repliques": 6,
+      "manquants": 6,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Solene Herbin": {
+      "roles": [
+        "Solene Herbin"
+      ],
+      "repliques": 6,
+      "manquants": 6,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_mure",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Merial": {
+      "roles": [
+        "Merial",
+        "Merial Eralith"
+      ],
+      "repliques": 5,
+      "manquants": 5,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "ono_anna:0.65+vivian:0.35",
+      "decalage": -2.0,
+      "cible": 380
+    },
+    "Varay": {
+      "roles": [
+        "Varay"
+      ],
+      "repliques": 5,
+      "manquants": 5,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_mure",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Glaudera Greysunders": {
+      "roles": [
+        "Glaudera Greysunders"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_adulte",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Garde": {
+      "roles": [
+        "Garde"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "m",
+      "genre_source": "pronom de voisinage (indice, 10/0)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Mary": {
+      "roles": [
+        "Mary"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_claire",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "cible": 240
+    },
+    "Kriol": {
+      "roles": [
+        "Kriol"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Chloé": {
+      "roles": [
+        "Chloe",
+        "Chloé"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_autorite",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Le vieil homme": {
+      "roles": [
+        "Le vieil homme"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Officier de la porte": {
+      "roles": [
+        "Officier de la porte"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Lance du Conseil": {
+      "roles": [
+        "Lance du Conseil"
+      ],
+      "repliques": 4,
+      "manquants": 4,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Priscilla": {
+      "roles": [
+        "Priscilla"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_autorite",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Ivrogne": {
+      "roles": [
+        "Ivrogne"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Roi nain": {
+      "roles": [
+        "Roi nain"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Myrtle": {
+      "roles": [
+        "Myrtle"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_enfant",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "cible": 440
+    },
+    "Noble du cercle": {
+      "roles": [
+        "Noble du cercle"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Maître de guilde": {
+      "roles": [
+        "Maître de guilde"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Capitaine de la garde": {
+      "roles": [
+        "Capitaine de la garde"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Émissaire du Conseil": {
+      "roles": [
+        "Émissaire du Conseil"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Gardienne de la lignée": {
+      "roles": [
+        "Gardienne de la lignée"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_autorite",
+      "archetype_source": "indice de libellé",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Capitaine": {
+      "roles": [
+        "Capitaine"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Gardien du seuil": {
+      "roles": [
+        "Gardien du seuil"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Maître d'ouvrage": {
+      "roles": [
+        "Maître d'ouvrage"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Ansel Ferrand": {
+      "roles": [
+        "Ansel Ferrand"
+      ],
+      "repliques": 3,
+      "manquants": 3,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Doctor": {
+      "roles": [
+        "Doctor"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Danek": {
+      "roles": [
+        "Danek"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Émissaire": {
+      "roles": [
+        "Émissaire"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Himes": {
+      "roles": [
+        "Himes"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Broznean": {
+      "roles": [
+        "Broznean"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Professeur": {
+      "roles": [
+        "Professeur"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Chef des pillards": {
+      "roles": [
+        "Chef des pillards"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Incendiaire": {
+      "roles": [
+        "Incendiaire"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_quelconque",
+      "archetype_source": "indice de libellé",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Sentinelle": {
+      "roles": [
+        "Sentinelle"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Joss Aurelle": {
+      "roles": [
+        "Joss Aurelle"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "As": {
+      "roles": [
+        "As"
+      ],
+      "repliques": 2,
+      "manquants": 2,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_rugueux",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Guetteur": {
+      "roles": [
+        "Guetteur"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Elfe": {
+      "roles": [
+        "Elfe"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_jeune",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "cible": 340
+    },
+    "Tous": {
+      "roles": [
+        "Tous"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Fermier": {
+      "roles": [
+        "Fermier"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Serveuse": {
+      "roles": [
+        "Serveuse"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "f",
+      "genre_source": "libellé",
+      "archetype": "f_adulte",
+      "archetype_source": "indice de libellé",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Oliver": {
+      "roles": [
+        "Oliver"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Arthur et Reynolds": {
+      "roles": [
+        "Arthur et Reynolds"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_quelconque",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "cible": 340
+    },
+    "Domestique": {
+      "roles": [
+        "Domestique"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "f_adulte",
+      "archetype_source": "indice de libellé",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "cible": 300
+    },
+    "Héraut": {
+      "roles": [
+        "Héraut"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "libellé",
+      "archetype": "m_pose",
+      "archetype_source": "indice de libellé",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Jack": {
+      "roles": [
+        "Jack"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    },
+    "Dawsid Greysunders": {
+      "roles": [
+        "Dawsid Greysunders"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "m",
+      "genre_source": "prénom (indice)",
+      "archetype": "m_pose",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "cible": 150
+    },
+    "Perrine Kastel": {
+      "roles": [
+        "Perrine Kastel"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_mure",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Aldine Fresnaye": {
+      "roles": [
+        "Aldine Fresnaye"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "f",
+      "genre_source": "prénom (indice)",
+      "archetype": "f_autorite",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "cible": 175
+    },
+    "Instructeur de terrain": {
+      "roles": [
+        "Instructeur de terrain"
+      ],
+      "repliques": 1,
+      "manquants": 1,
+      "genre": "?",
+      "genre_source": "indéterminé",
+      "archetype": "m_grave",
+      "archetype_source": "répartition stable par empreinte du nom",
+      "timbre": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "cible": 150
+    }
+  }
+}
