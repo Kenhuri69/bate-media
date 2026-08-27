@@ -1,0 +1,1254 @@
+{
+  "genre": "m",
+  "seuils": {
+    "cosinus": 0.955,
+    "f0_hz": 18.0
+  },
+  "repliques": [
+    {
+      "id": "troupe_00",
+      "role": "Meneur",
+      "texte": "Recompte. Et cette fois compte-la elle, pas ce que tu voudrais qu'elle vaille."
+    },
+    {
+      "id": "troupe_01",
+      "role": "Garde",
+      "texte": "Nous avons vu que la porte royale avait servi, Altesse. Le roi et la reine sont —"
+    },
+    {
+      "id": "troupe_02",
+      "role": "Crieur",
+      "texte": "Mesdames, messieurs ! Que l'on veuille bien se tourner vers la loge du haut : le roi et la reine de Sapin nous font l'honneur d'être des nôtres !"
+    },
+    {
+      "id": "troupe_03",
+      "role": "Examinatrice",
+      "texte": "Diane Whitehall, dix-huit ans, conjureuse au stade orange plein, spécialisation unique en eau. Commençons."
+    },
+    {
+      "id": "troupe_04",
+      "role": "Réceptionniste",
+      "texte": "Une classe S. Dans un donjon classé AA. Ce n'est pas une erreur de cotation, ça — c'est autre chose, et il faudra que la guilde comprenne quoi."
+    },
+    {
+      "id": "troupe_05",
+      "role": "Juge",
+      "texte": "Il lui est en outre interdit de se réinscrire comme aventurier jusqu'à nouvel ordre de la guilde. Vous rendrez votre carte."
+    }
+  ],
+  "candidats_mesures": 644,
+  "en_service": 77,
+  "places_neuves": 44,
+  "retenues": [
+    {
+      "nom": "Adam",
+      "spec": "ryan:0.7+aiden:0.3",
+      "decalage": -1.0,
+      "f0": 143.71772805507746,
+      "plage": 54.24815395623659,
+      "ambitus": 6.736751993359288,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Alduin",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Ansel Ferrand",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Antiquaire",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Arthur",
+      "spec": "aiden:0.5+ryan:0.5",
+      "decalage": 0.0,
+      "f0": 125.0,
+      "plage": 17.386260261425463,
+      "ambitus": 7.661643424957852,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "As",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Assaillant masqué",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Aventurier",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Brald",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179.1144527986633,
+      "plage": 29.427628427040815,
+      "ambitus": 5.008350808825885,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Bren Valcourt",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Broznean",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Capitaine",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Capitaine de la garde",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Charles",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Chef des pillards",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Clive",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Committee",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179.1144527986633,
+      "plage": 29.427628427040815,
+      "ambitus": 5.008350808825885,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Crieur",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Danek",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Dawsid Greysunders",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Doctor",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Draneeve",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Durden",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 5.0,
+      "f0": 153.61963190184048,
+      "plage": 38.9688742629919,
+      "ambitus": 6.536929596392737,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Elfe",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Ennemi",
+      "spec": "uncle_fu:0.4+ryan:0.4+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 140.21385799828914,
+      "plage": 51.32543329520922,
+      "ambitus": 6.060389782748407,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Fermier",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Garde",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Gardien du seuil",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "George",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Guetteur",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Hadrien Sorne",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Himes",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Héraut",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Incendiaire",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Instructeur de terrain",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Intendant",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Ivrogne",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Jack",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Jarrod",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Joss Aurelle",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Juge",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Kai",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179.1144527986633,
+      "plage": 29.427628427040815,
+      "ambitus": 5.008350808825885,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Kriol",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "L'architecte du Dessein",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179.1144527986633,
+      "plage": 29.427628427040815,
+      "ambitus": 5.008350808825885,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "L'homme au registre",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "La bête aux yeux d'or",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Lance du Conseil",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Le renégat",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Le tenancier",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Le vieil homme",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Maître Orwin",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Maître d'ouvrage",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Maître de guilde",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Meneur",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Nicolas",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Noble du cercle",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Officier de la porte",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Oliver",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeur",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeur Avius",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 1.0,
+      "f0": 180.20247469066368,
+      "plage": 25.31773130873799,
+      "ambitus": 5.984637113084742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeur Drywell",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeur Geist",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 179.1144527986633,
+      "plage": 29.427628427040815,
+      "ambitus": 5.008350808825885,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeur Mayner",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Reginald",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Reynolds",
+      "spec": "uncle_fu:0.5+ryan:0.5",
+      "decalage": 0.0,
+      "f0": 154.25996521925634,
+      "plage": 78.50001246898341,
+      "ambitus": 5.282375487347539,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Roi nain",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Roland",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Sebastian",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Sentinelle",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Theodore",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Tous",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 2.0,
+      "f0": 136.00462338663073,
+      "plage": 21.282456536464196,
+      "ambitus": 5.160818066939145,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Térence Cabestan",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": 0.0,
+      "f0": 188.30769230769232,
+      "plage": 52.643975336540734,
+      "ambitus": 5.833079884976893,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Vincent",
+      "spec": "uncle_fu:0.6+aiden:0.4",
+      "decalage": 2.0,
+      "f0": 147.92899408284023,
+      "plage": 46.064922109430086,
+      "ambitus": 5.8474923489845105,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Virion",
+      "spec": "uncle_fu:0.5+aiden:0.5",
+      "decalage": 3.0,
+      "f0": 109.75601911458125,
+      "plage": 22.669335474943352,
+      "ambitus": 5.341263885916776,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Élève",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Émissaire",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.9433962264151,
+      "plage": 16.04872629736414,
+      "ambitus": 4.3511974537876945,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Émissaire du Conseil",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 42.09458659085527,
+      "ambitus": 5.496041741981793,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 +3st ×0.92",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": 3.0,
+      "f0": 109.84039210757823,
+      "plage": 9.562693626221943,
+      "ambitus": 5.44492282742985,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 +3st ×1.08",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": 3.0,
+      "f0": 109.33997509339974,
+      "plage": 9.975470435770191,
+      "ambitus": 5.372106992302747,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 +0st ×0.92",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": 0.0,
+      "f0": 128.86531997921236,
+      "plage": 12.893944805328061,
+      "ambitus": 4.716446385753391,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 +0st ×1.08",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": 0.0,
+      "f0": 129.03598785951726,
+      "plage": 13.61101370861978,
+      "ambitus": 4.884742520902446,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 -3st ×0.92",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 152.3824881077159,
+      "plage": 15.926235961214587,
+      "ambitus": 4.304011609081445,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "aiden:0.5+uncle_fu:0.3+ryan:0.2 -3st ×1.08",
+      "spec": "aiden:0.5+uncle_fu:0.3+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 150.24469409159082,
+      "plage": 16.543835406110844,
+      "ambitus": 4.3742976273336005,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.8+uncle_fu:0.2 +3st ×0.92",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 3.0,
+      "f0": 131.5078364258692,
+      "plage": 20.47555138096223,
+      "ambitus": 5.4593601433544645,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 +3st ×0.92",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 3.0,
+      "f0": 165.1063829787234,
+      "plage": 20.557062368817924,
+      "ambitus": 6.535609326367042,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 +3st ×0.92",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": 3.0,
+      "f0": 118.81479302992427,
+      "plage": 21.19874345208291,
+      "ambitus": 7.637126590841307,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 +3st ×1.08",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": 3.0,
+      "f0": 118.51924108667025,
+      "plage": 21.75010853197297,
+      "ambitus": 7.6681072263593135,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 +3st ×1.08",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 3.0,
+      "f0": 163.19641273855723,
+      "plage": 22.201300220386827,
+      "ambitus": 6.574576801001055,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.8+uncle_fu:0.2 +0st ×0.92",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 0.0,
+      "f0": 153.11432097693486,
+      "plage": 24.47514040593873,
+      "ambitus": 4.922972397247229,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 +0st ×1.08",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": 0.0,
+      "f0": 137.18317219754377,
+      "plage": 24.648488301373362,
+      "ambitus": 6.589483704402513,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.8+uncle_fu:0.2 +0st ×1.08",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": 0.0,
+      "f0": 151.66897007571205,
+      "plage": 24.6613601452311,
+      "ambitus": 5.062005659479261,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 +0st ×0.92",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": 0.0,
+      "f0": 138.1646527721461,
+      "plage": 25.108575717982518,
+      "ambitus": 6.569126028574541,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 -3st ×1.08",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 162.1917808219178,
+      "plage": 26.8776344012079,
+      "ambitus": 6.121275420357457,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 +0st ×0.92",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 0.0,
+      "f0": 190.08264462809916,
+      "plage": 26.968146097267663,
+      "ambitus": 5.88455721060435,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 -3st ×0.92",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 162.1917808219178,
+      "plage": 27.77437366575336,
+      "ambitus": 5.933642565543289,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.6+aiden:0.2+uncle_fu:0.2 -3st",
+      "spec": "ryan:0.6+aiden:0.2+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 162.75862068965517,
+      "plage": 28.407537106221355,
+      "ambitus": 6.027384965592525,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "aiden:0.8+uncle_fu:0.2 -3st ×1.08",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 178.1829722166123,
+      "plage": 28.973480048001676,
+      "ambitus": 5.144605006115343,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.8+uncle_fu:0.2 -3st ×0.92",
+      "spec": "aiden:0.8+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 180.54298642533936,
+      "plage": 29.653236029333357,
+      "ambitus": 5.045120198986221,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 +0st ×1.08",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": 0.0,
+      "f0": 189.3991176287827,
+      "plage": 29.89329511068641,
+      "ambitus": 5.904687856710227,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 -2st ×0.92",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 210.93207925371985,
+      "plage": 40.23008328412416,
+      "ambitus": 5.525079959469853,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "uncle_fu:0.65+ryan:0.35 -2st ×1.08",
+      "spec": "uncle_fu:0.65+ryan:0.35",
+      "decalage": -2.0,
+      "f0": 209.9312452253629,
+      "plage": 42.749627791028615,
+      "ambitus": 5.628170856636065,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.3+aiden:0.2 +1st ×0.92",
+      "spec": "ryan:0.5+uncle_fu:0.3+aiden:0.2",
+      "decalage": 1.0,
+      "f0": 157.45998967475475,
+      "plage": 44.17270785650493,
+      "ambitus": 5.740042769712127,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.3+aiden:0.2 +1st ×1.08",
+      "spec": "ryan:0.5+uncle_fu:0.3+aiden:0.2",
+      "decalage": 1.0,
+      "f0": 155.53691275167785,
+      "plage": 45.68735092961444,
+      "ambitus": 5.736030722907675,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ryan:0.65+uncle_fu:0.35 +3st",
+      "spec": "ryan:0.65+uncle_fu:0.35",
+      "decalage": 3.0,
+      "f0": 120.53296327774497,
+      "plage": 46.17305557927088,
+      "ambitus": 5.570157697892114,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.3+aiden:0.2 -2st ×0.92",
+      "spec": "ryan:0.5+uncle_fu:0.3+aiden:0.2",
+      "decalage": -2.0,
+      "f0": 181.4447107155084,
+      "plage": 48.826286532893505,
+      "ambitus": 5.092785390682295,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.3+aiden:0.2 -2st ×1.08",
+      "spec": "ryan:0.5+uncle_fu:0.3+aiden:0.2",
+      "decalage": -2.0,
+      "f0": 180.70652173913044,
+      "plage": 50.23352491469521,
+      "ambitus": 5.268855789731074,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.3+aiden:0.2 -2st",
+      "spec": "ryan:0.5+uncle_fu:0.3+aiden:0.2",
+      "decalage": -2.0,
+      "f0": 181.4447107155084,
+      "plage": 53.19013931454123,
+      "ambitus": 5.015266030481585,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "uncle_fu:0.8+aiden:0.2 -3st ×0.92",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": -3.0,
+      "f0": 216.23376623376623,
+      "plage": 57.4648643600878,
+      "ambitus": 5.3498400823961125,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "uncle_fu:0.8+aiden:0.2 -3st ×1.08",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": -3.0,
+      "f0": 214.30279837359484,
+      "plage": 57.71020848152409,
+      "ambitus": 5.5219753399318865,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "aiden:0.4+ryan:0.4+uncle_fu:0.2 -3st ×0.92",
+      "spec": "aiden:0.4+ryan:0.4+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 133.43629343629345,
+      "plage": 59.25131778790313,
+      "ambitus": 5.336526071942102,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "aiden:0.4+ryan:0.4+uncle_fu:0.2 -3st",
+      "spec": "aiden:0.4+ryan:0.4+uncle_fu:0.2",
+      "decalage": -3.0,
+      "f0": 132.69794721407624,
+      "plage": 59.25131778790313,
+      "ambitus": 5.386581111677101,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "uncle_fu:0.8+aiden:0.2 -3st",
+      "spec": "uncle_fu:0.8+aiden:0.2",
+      "decalage": -3.0,
+      "f0": 217.1990171990172,
+      "plage": 60.70353524143903,
+      "ambitus": 5.4764532178783725,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "aiden:0.65+uncle_fu:0.35 +0st",
+      "spec": "aiden:0.65+uncle_fu:0.35",
+      "decalage": 0.0,
+      "f0": 163.15893150585515,
+      "plage": 63.09309154603059,
+      "ambitus": 4.695706338961385,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "uncle_fu:0.6+aiden:0.2+ryan:0.2 -3st ×1.08",
+      "spec": "uncle_fu:0.6+aiden:0.2+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 187.19346810949864,
+      "plage": 71.25697464325671,
+      "ambitus": 5.358694347522742,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "uncle_fu:0.6+aiden:0.2+ryan:0.2 -3st",
+      "spec": "uncle_fu:0.6+aiden:0.2+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 192.01228878648234,
+      "plage": 71.77980489770079,
+      "ambitus": 5.258221431102325,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "uncle_fu:0.6+aiden:0.2+ryan:0.2 -3st ×0.92",
+      "spec": "uncle_fu:0.6+aiden:0.2+ryan:0.2",
+      "decalage": -3.0,
+      "f0": 192.79907084785134,
+      "plage": 71.78677596776004,
+      "ambitus": 5.238753969145401,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.5 +0st ×0.92",
+      "spec": "ryan:0.5+uncle_fu:0.5",
+      "decalage": 0.0,
+      "f0": 157.77628038064955,
+      "plage": 80.60409734469462,
+      "ambitus": 5.336724996100983,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.5 -3st",
+      "spec": "ryan:0.5+uncle_fu:0.5",
+      "decalage": -3.0,
+      "f0": 176.63698271346254,
+      "plage": 95.64276774539601,
+      "ambitus": 4.5316233034270486,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "uncle_fu:0.5+aiden:0.3+ryan:0.2 +1st ×1.08",
+      "spec": "uncle_fu:0.5+aiden:0.3+ryan:0.2",
+      "decalage": 1.0,
+      "f0": 154.70604773210044,
+      "plage": 98.62239210065296,
+      "ambitus": 5.0185016177005615,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ryan:0.5+uncle_fu:0.5 -3st ×0.92",
+      "spec": "ryan:0.5+uncle_fu:0.5",
+      "decalage": -3.0,
+      "f0": 176.63698271346254,
+      "plage": 99.91626876242259,
+      "ambitus": 4.542877755960788,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "uncle_fu:0.5+aiden:0.3+ryan:0.2 -1st ×1.08",
+      "spec": "uncle_fu:0.5+aiden:0.3+ryan:0.2",
+      "decalage": -1.0,
+      "f0": 172.8049728049728,
+      "plage": 111.12185515145501,
+      "ambitus": 4.958464811646182,
+      "en_service": false,
+      "debit": 1.08
+    }
+  ]
+}

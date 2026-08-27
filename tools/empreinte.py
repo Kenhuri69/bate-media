@@ -40,6 +40,45 @@ LONGUEUR_EMPREINTE = 10
 # du même timbre, sinon le personnage change de voix en cours de partie.
 ROLES_GROUPES = {"narrator": "arthur", "narrateur": "arthur", "note": "arthur"}
 
+# LE PREMIER MOT NE SUFFIT PAS, et le compter suffit à le montrer : dix-huit personnages du jeu
+# n'ont aucun dossier propre parce qu'ils partagent leur premier mot avec un autre. Les six
+# professeurs de l'Académie tombent tous dans `professeur/`, si bien que les clips de Glory
+# seraient joués pour Geist — un doublage FAUX, pas seulement muet. Trois personnages tombent
+# dans `le/` (le tenancier, le renégat, le vieil homme) et deux dans `l/`.
+#
+# La table est EXPLICITE et non une règle « sauter les titres » : « Capitaine de la garde »
+# donnerait alors `garde`, qui est déjà quelqu'un d'autre. Une règle qui se trompe en silence
+# coûte plus cher qu'une liste qu'on relit. `--selftest` vérifie qu'il ne reste aucune collision
+# sur les timelines réelles.
+#
+# Elle sert aussi aux personnages ÉCLATÉS — l'inverse du même problème : « Directrice Goodsky »
+# et « Goodsky » sont la même personne et donnaient deux dossiers, donc la moitié de ses
+# répliques muettes quel que soit le lot produit.
+LOCUTEURS = {
+    # les six professeurs, plus celui qui a déjà un nom ailleurs
+    "professeur gideon": "gideon", "professeur glory": "glory", "professeur geist": "geist",
+    "professeur avius": "avius", "professeur mayner": "mayner",
+    "professeur drywell": "drywell",
+    # les maîtres, dont un seul porte un nom
+    "maitre orwin": "orwin", "maitre de guilde": "maitre_guilde",
+    "maitre d'ouvrage": "maitre_ouvrage", "maitre d'ecluse": "maitre_ecluse",
+    # les silhouettes désignées par un article
+    "le tenancier": "tenancier", "le renegat": "renegat", "le vieil homme": "vieil_homme",
+    "l'architecte du dessein": "architecte", "l'homme au registre": "homme_registre",
+    # les fonctions, qui existent en version longue ET courte
+    "capitaine de la garde": "capitaine_garde", "emissaire du conseil": "emissaire_conseil",
+    "conseiller du continent": "conseiller_continent", "officier de liaison": "officier_liaison",
+    "officier de la porte": "officier_porte", "garde d'elenoir": "garde_elenoir",
+    "eclaireur boiteux": "eclaireur_boiteux", "eclaireur alacryen": "eclaireur_alacryen",
+    # libellés dont le premier mot est un article ou un mot vide : `la/` comme dossier de voix
+    # n'est pas seulement laid, il est illisible dans un pack de 9 000 fichiers.
+    "la bete aux yeux d'or": "bete_yeux_or", "roi nain": "roi_nain",
+    "chef des pillards": "chef_pillards",
+    # personnages éclatés : un titre devant le nom envoyait ailleurs
+    "directrice goodsky": "goodsky", "general varay": "varay", "elder rinia": "rinia",
+    "kathlyn glayder": "kathyln",
+}
+
 # Où trouver le dépôt du jeu : il porte les timelines et le contrat d'empreinte.
 JEU = Path(os.environ.get("BATE_JEU", Path.home() / "workspace/bate")).expanduser()
 
@@ -74,12 +113,41 @@ def role_du_locuteur(nom: str) -> str:
     return "".join(sortie)
 
 
+def _cle_locuteur(locuteur: str) -> str:
+    """Forme comparable d'un libellé de locuteur : sans accent, en minuscules, blancs compactés."""
+    plat = unicodedata.normalize("NFD", (locuteur or "").strip().lower())
+    plat = "".join(c for c in plat if unicodedata.category(c) != "Mn")
+    return re.sub(r"\s+", " ", plat)
+
+
 def dossier_de_voix(role: str) -> str:
     return ROLES_GROUPES.get(role, role)
 
 
+def dossier_du_locuteur(locuteur: str) -> str:
+    """Dossier de voix d'un LIBELLÉ complet — la table explicite d'abord, le premier mot ensuite.
+
+    C'est cette fonction que la production et les contrôles doivent appeler : `dossier_de_voix`
+    ne voit que le rôle, donc que le premier mot, et ne peut pas distinguer deux professeurs.
+    """
+    special = LOCUTEURS.get(_cle_locuteur(locuteur))
+    if special:
+        return special
+    return dossier_de_voix(role_du_locuteur(locuteur))
+
+
 def clip_id(locuteur: str, texte: str) -> str | None:
-    """`<rôle>_<empreinte>`, ou None si le locuteur ou le texte ne donne rien."""
+    """`<rôle>_<empreinte>`, ou None si le locuteur ou le texte ne donne rien.
+
+    LE RÔLE, PAS LE DOSSIER — et l'écart a failli coûter cher. Faire porter le dossier à
+    l'identifiant renommait d'un coup les 7 914 clips d'Arthur, dont la narration s'appelle
+    `narrator_…` dans un dossier `arthur/` : l'identifiant désigne QUI parle, le dossier désigne
+    la voix qui le dit, et le pack en service repose sur cette distinction.
+
+    Deux professeurs ne se mélangent donc pas au niveau du fichier : leurs textes diffèrent, donc
+    leurs empreintes aussi. Ce qu'ils partageaient, c'est le DOSSIER, c'est-à-dire le timbre —
+    corrigé par `dossier_du_locuteur`, et là seulement.
+    """
     role = role_du_locuteur(locuteur)
     emp = empreinte(texte)
     return f"{role}_{emp}" if role and emp else None
@@ -90,7 +158,7 @@ def chemin_relatif(locuteur: str, texte: str) -> str | None:
     ident = clip_id(locuteur, texte)
     if ident is None:
         return None
-    return f"{dossier_de_voix(role_du_locuteur(locuteur))}/{ident}.ogg"
+    return f"{dossier_du_locuteur(locuteur)}/{ident}.ogg"
 
 
 # --- répliques du jeu ---------------------------------------------------------
@@ -176,6 +244,39 @@ def selftest() -> int:
     verifie(f"contrat : {len(vecteurs)} vecteurs partagés rejoués sans écart", not ecarts)
     for e in ecarts:
         print(f"        {e}")
+
+    # AUCUNE COLLISION RÉSIDUELLE, mesurée sur les timelines RÉELLES. C'est le seul contrôle qui
+    # puisse voir un personnage NOUVEAU tomber dans le dossier d'un autre : la table est
+    # explicite, donc elle ne couvre que ce qu'on lui a appris, et une timeline écrite demain
+    # peut introduire « Professeur Kaine ». Un doublage faux ne s'entend pas comme une erreur,
+    # il s'entend comme un mauvais comédien — c'est pire qu'un silence, qui se voit.
+    motif = re.compile(r"^\s*([A-Za-zÀ-ÿ][\w '\-À-ÿ]*)\s*:\s*(.+)$")
+    par_dossier = {}
+    for fichier in sorted((JEU / "dialogues").rglob("*.dtl")):
+        for ligne in fichier.read_text(encoding="utf-8").splitlines():
+            mm = motif.match(ligne)
+            if mm:
+                loc = mm.group(1).strip()
+                par_dossier.setdefault(dossier_du_locuteur(loc), set()).add(loc)
+    # Regroupements VOULUS : plusieurs libellés pour une seule personne.
+    attendues = {
+        "arthur": {"Arthur", "narrator", "Note", "Arthur et Reynolds"},
+        "alice": {"Alice", "Alice Leywin"}, "ellie": {"Ellie", "Ellie Leywin"},
+        "reynolds": {"Reynolds", "Reynolds Leywin"}, "tessia": {"Tessia", "Tessia Eralith"},
+        "virion": {"Virion", "Virion Eralith"}, "elijah": {"Elijah", "Elijah Knight"},
+        "blaine": {"Blaine", "Blaine Glayder"}, "alduin": {"Alduin", "Alduin Eralith"},
+        "merial": {"Merial", "Merial Eralith"}, "chloe": {"Chloé", "Chloe"},
+        "curtis": {"Curtis", "Curtis Glayder"}, "claire": {"Claire", "Claire Bladeheart"},
+        "gideon": {"Gideon", "Professeur Gideon"}, "goodsky": {"Goodsky", "Directrice Goodsky"},
+        "varay": {"Varay", "Général Varay"}, "rinia": {"Rinia", "Elder Rinia"},
+        "kathyln": {"Kathyln", "Kathlyn Glayder"},
+    }
+    fautives = {d: sorted(l) for d, l in par_dossier.items()
+                if len(l) > 1 and not l <= attendues.get(d, set())}
+    verifie(f"collisions : aucune hors regroupement déclaré ({len(par_dossier)} dossiers)",
+            not fautives)
+    for d, l in fautives.items():
+        print(f"         {d} <- {' | '.join(l)}", file=sys.stderr)
 
     print("selftest :", "OK" if ok else "ÉCHEC")
     return 0 if ok else 1

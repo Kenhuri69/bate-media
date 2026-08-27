@@ -1,0 +1,684 @@
+{
+  "genre": "f",
+  "seuils": {
+    "cosinus": 0.955,
+    "f0_hz": 18.0
+  },
+  "repliques": [
+    {
+      "id": "troupe_00",
+      "role": "Meneur",
+      "texte": "Recompte. Et cette fois compte-la elle, pas ce que tu voudrais qu'elle vaille."
+    },
+    {
+      "id": "troupe_01",
+      "role": "Garde",
+      "texte": "Nous avons vu que la porte royale avait servi, Altesse. Le roi et la reine sont —"
+    },
+    {
+      "id": "troupe_02",
+      "role": "Crieur",
+      "texte": "Mesdames, messieurs ! Que l'on veuille bien se tourner vers la loge du haut : le roi et la reine de Sapin nous font l'honneur d'être des nôtres !"
+    },
+    {
+      "id": "troupe_03",
+      "role": "Examinatrice",
+      "texte": "Diane Whitehall, dix-huit ans, conjureuse au stade orange plein, spécialisation unique en eau. Commençons."
+    },
+    {
+      "id": "troupe_04",
+      "role": "Réceptionniste",
+      "texte": "Une classe S. Dans un donjon classé AA. Ce n'est pas une erreur de cotation, ça — c'est autre chose, et il faudra que la guilde comprenne quoi."
+    },
+    {
+      "id": "troupe_05",
+      "role": "Juge",
+      "texte": "Il lui est en outre interdit de se réinscrire comme aventurier jusqu'à nouvel ordre de la guilde. Vous rendrez votre carte."
+    }
+  ],
+  "candidats_mesures": 1692,
+  "en_service": 33,
+  "places_neuves": 31,
+  "retenues": [
+    {
+      "nom": "Aldine Fresnaye",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Alice",
+      "spec": "vivian",
+      "decalage": 0.0,
+      "f0": 239.09595559080094,
+      "plage": 84.66413391509198,
+      "ambitus": 3.4505221158082278,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Angela",
+      "spec": "sohee:0.7+ono_anna:0.3",
+      "decalage": -2.0,
+      "f0": 243.66110080395794,
+      "plage": 11.892869035726164,
+      "ambitus": 2.459314903991311,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Charlotte",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Chloé",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Domestique",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 242.6470588235294,
+      "plage": 57.2014999339236,
+      "ambitus": 3.277351601079152,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Doradrea",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": -2.0,
+      "f0": 268.1647940074906,
+      "plage": 38.77315691863754,
+      "ambitus": 3.199363734297316,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Doyenne de Loriande",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Ellie",
+      "spec": "vivian:0.7+serena:0.3",
+      "decalage": -2.0,
+      "f0": 260.9929078014185,
+      "plage": 46.37809971902453,
+      "ambitus": 3.4511479102077742,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Examinatrice",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 242.6470588235294,
+      "plage": 57.2014999339236,
+      "ambitus": 3.277351601079152,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Gardienne de la lignée",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Glaudera Greysunders",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 242.6470588235294,
+      "plage": 57.2014999339236,
+      "ambitus": 3.277351601079152,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Helen",
+      "spec": "ono_anna:0.5+serena:0.5",
+      "decalage": 1.0,
+      "f0": 229.6703296703297,
+      "plage": 40.906171260146095,
+      "ambitus": 2.7842398618778397,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Instructrice",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Jasmine",
+      "spec": "serena:0.6+vivian:0.4",
+      "decalage": 2.0,
+      "f0": 212.38938053097345,
+      "plage": 25.204413749305388,
+      "ambitus": 3.033439761662386,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Lilia",
+      "spec": "sohee:0.6+serena:0.4",
+      "decalage": 1.0,
+      "f0": 204.25901781833986,
+      "plage": 17.66757928591784,
+      "ambitus": 2.830064228183816,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Lise",
+      "spec": "vivian:0.8+ono_anna:0.2",
+      "decalage": 0.0,
+      "f0": 238.64138438880707,
+      "plage": 56.1089029174135,
+      "ambitus": 3.5926014842063223,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Luna",
+      "spec": "ono_anna:0.8+vivian:0.2",
+      "decalage": 2.0,
+      "f0": 219.2192192192192,
+      "plage": 39.8648524191575,
+      "ambitus": 3.2092685097329685,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Maelis Orandre",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Mary",
+      "spec": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "f0": 289.198606271777,
+      "plage": 18.92736892736889,
+      "ambitus": 3.5348528078198695,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Merial",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": -2.0,
+      "f0": 268.1647940074906,
+      "plage": 38.77315691863754,
+      "ambitus": 3.199363734297316,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Myrtle",
+      "spec": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "f0": 298.2401975918493,
+      "plage": 24.934526848063342,
+      "ambitus": 3.4981004151772934,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Perrine Kastel",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 216.37426900584796,
+      "plage": 50.48738796436885,
+      "ambitus": 3.3866828359345043,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Priscilla",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Professeure",
+      "spec": "sohee:0.65+serena:0.35",
+      "decalage": 3.0,
+      "f0": 175.82653499355945,
+      "plage": 27.709989726356724,
+      "ambitus": 3.808173891121815,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Réceptionniste",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 242.6470588235294,
+      "plage": 57.2014999339236,
+      "ambitus": 3.277351601079152,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Samantha",
+      "spec": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "f0": 298.2401975918493,
+      "plage": 24.934526848063342,
+      "ambitus": 3.4981004151772934,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Serveuse",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 242.6470588235294,
+      "plage": 57.2014999339236,
+      "ambitus": 3.277351601079152,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Solene Herbin",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 216.37426900584796,
+      "plage": 50.48738796436885,
+      "ambitus": 3.3866828359345043,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Sylvie",
+      "spec": "ono_anna:0.5+serena:0.5",
+      "decalage": 0.0,
+      "f0": 243.66110080395794,
+      "plage": 43.131230987018455,
+      "ambitus": 2.8146148352625797,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Tessia",
+      "spec": "sohee",
+      "decalage": 0.0,
+      "f0": 221.42857142857144,
+      "plage": 20.81436578411757,
+      "ambitus": 3.369808081139812,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Varay",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 216.37426900584796,
+      "plage": 50.48738796436885,
+      "ambitus": 3.3866828359345043,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "Wenna Sarre",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 216.37426900584796,
+      "plage": 50.48738796436885,
+      "ambitus": 3.3866828359345043,
+      "en_service": true,
+      "debit": 1.0
+    },
+    {
+      "nom": "vivian:0.65+sohee:0.35 -3st ×0.92",
+      "spec": "vivian:0.65+sohee:0.35",
+      "decalage": -3.0,
+      "f0": 266.6666666666667,
+      "plage": 2.9962546816479403,
+      "ambitus": 3.253184946289012,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "sohee:0.65+vivian:0.35 +3st ×1.08",
+      "spec": "sohee:0.65+vivian:0.35",
+      "decalage": 3.0,
+      "f0": 188.23818897637796,
+      "plage": 5.931434403119255,
+      "ambitus": 3.8768113157113024,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "sohee:0.65+vivian:0.35 +1st ×1.08",
+      "spec": "sohee:0.65+vivian:0.35",
+      "decalage": 1.0,
+      "f0": 210.0686498855835,
+      "plage": 6.557965036620459,
+      "ambitus": 3.5334381141796882,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "vivian:0.65+sohee:0.35 -3st ×1.08",
+      "spec": "vivian:0.65+sohee:0.35",
+      "decalage": -3.0,
+      "f0": 265.934065934066,
+      "plage": 7.360006871487144,
+      "ambitus": 3.6640943167136797,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "sohee:0.65+vivian:0.35 +1st ×0.92",
+      "spec": "sohee:0.65+vivian:0.35",
+      "decalage": 1.0,
+      "f0": 211.45784816022356,
+      "plage": 8.040556323283539,
+      "ambitus": 3.5027145303391167,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "sohee:0.65+vivian:0.35 +3st ×0.92",
+      "spec": "sohee:0.65+vivian:0.35",
+      "decalage": 3.0,
+      "f0": 188.9763779527559,
+      "plage": 8.230027488110295,
+      "ambitus": 3.7920554226431835,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.5+sohee:0.3+ono_anna:0.2 +1st ×1.08",
+      "spec": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": 1.0,
+      "f0": 233.0316742081448,
+      "plage": 10.130500920712024,
+      "ambitus": 3.3114316890553157,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "serena:0.5+sohee:0.3+ono_anna:0.2 +1st ×0.92",
+      "spec": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": 1.0,
+      "f0": 234.1964965727342,
+      "plage": 10.219718633692139,
+      "ambitus": 3.074434063945145,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.5+sohee:0.3+ono_anna:0.2 -3st ×0.92",
+      "spec": "serena:0.5+sohee:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "f0": 290.9197766676462,
+      "plage": 17.359970808246658,
+      "ambitus": 3.5473592100208418,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.5+vivian:0.3+ono_anna:0.2 -3st ×1.08",
+      "spec": "serena:0.5+vivian:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "f0": 285.7142857142857,
+      "plage": 17.875174211279045,
+      "ambitus": 3.5212263015109784,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ono_anna:0.8+serena:0.2 +0st ×0.92",
+      "spec": "ono_anna:0.8+serena:0.2",
+      "decalage": 0.0,
+      "f0": 262.36559139784947,
+      "plage": 18.787131215146644,
+      "ambitus": 3.1800565507949736,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ono_anna:0.8+serena:0.2 +0st ×1.08",
+      "spec": "ono_anna:0.8+serena:0.2",
+      "decalage": 0.0,
+      "f0": 260.90038993264795,
+      "plage": 18.787131215146644,
+      "ambitus": 3.422800845687793,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "ono_anna:0.8+sohee:0.2 -3st ×0.92",
+      "spec": "ono_anna:0.8+sohee:0.2",
+      "decalage": -3.0,
+      "f0": 296.3414634146342,
+      "plage": 23.17137668644125,
+      "ambitus": 3.5969255897632593,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "vivian:0.6+ono_anna:0.2+sohee:0.2 +3st ×0.92",
+      "spec": "vivian:0.6+ono_anna:0.2+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 203.62381363244174,
+      "plage": 24.67647692095909,
+      "ambitus": 3.5280297287974314,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.4+vivian:0.4+ono_anna:0.2 +3st ×1.08",
+      "spec": "serena:0.4+vivian:0.4+ono_anna:0.2",
+      "decalage": 3.0,
+      "f0": 192.04916458613405,
+      "plage": 25.928276073547067,
+      "ambitus": 3.4600507922257275,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "vivian:0.6+ono_anna:0.2+sohee:0.2 +2st ×1.08",
+      "spec": "vivian:0.6+ono_anna:0.2+sohee:0.2",
+      "decalage": 2.0,
+      "f0": 213.54001898133504,
+      "plage": 26.92771659420103,
+      "ambitus": 3.5375568105388524,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "vivian:0.5+serena:0.3+sohee:0.2 +3st",
+      "spec": "vivian:0.5+serena:0.3+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 180.45112781954887,
+      "plage": 33.39917148841829,
+      "ambitus": 3.251428958130621,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "serena:0.5+sohee:0.3+vivian:0.2 -2st",
+      "spec": "serena:0.5+sohee:0.3+vivian:0.2",
+      "decalage": -2.0,
+      "f0": 262.36559139784947,
+      "plage": 38.690019627443746,
+      "ambitus": 3.2188722769625993,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "ono_anna:0.65+vivian:0.35 -3st ×1.08",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": -3.0,
+      "f0": 282.3920265780731,
+      "plage": 39.171461449942456,
+      "ambitus": 3.166670601294855,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "serena:0.5+vivian:0.3+sohee:0.2 +3st ×0.92",
+      "spec": "serena:0.5+vivian:0.3+sohee:0.2",
+      "decalage": 3.0,
+      "f0": 190.5241935483871,
+      "plage": 40.05195821989716,
+      "ambitus": 3.270677122793516,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.5+vivian:0.3+sohee:0.2 +1st ×0.92",
+      "spec": "serena:0.5+vivian:0.3+sohee:0.2",
+      "decalage": 1.0,
+      "f0": 213.37126600284495,
+      "plage": 44.21460892049129,
+      "ambitus": 3.0782022855247755,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ono_anna:0.65+vivian:0.35 +1st",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": 1.0,
+      "f0": 245.81939799331104,
+      "plage": 50.99307683577348,
+      "ambitus": 3.5598532416451616,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "serena:0.4+vivian:0.4+sohee:0.2 +2st ×0.92",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 2.0,
+      "f0": 228.75816993464053,
+      "plage": 53.07729666083176,
+      "ambitus": 3.29047295906157,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "vivian:0.5+serena:0.3+ono_anna:0.2 -3st ×1.08",
+      "spec": "vivian:0.5+serena:0.3+ono_anna:0.2",
+      "decalage": -3.0,
+      "f0": 304.2362002567394,
+      "plage": 53.326117105841774,
+      "ambitus": 3.841617478697601,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "vivian:0.5+serena:0.3+ono_anna:0.2 +0st ×0.92",
+      "spec": "vivian:0.5+serena:0.3+ono_anna:0.2",
+      "decalage": 0.0,
+      "f0": 264.2468239564428,
+      "plage": 54.180754778126726,
+      "ambitus": 3.500345526507779,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ono_anna:0.65+vivian:0.35 +2st ×0.92",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": 2.0,
+      "f0": 236.9188873759969,
+      "plage": 56.067616789647985,
+      "ambitus": 3.6858159220294215,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "ono_anna:0.65+vivian:0.35 +2st ×1.08",
+      "spec": "ono_anna:0.65+vivian:0.35",
+      "decalage": 2.0,
+      "f0": 235.86087291646595,
+      "plage": 56.067616789647985,
+      "ambitus": 3.697350741011754,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "serena:0.4+vivian:0.4+sohee:0.2 +0st ×0.92",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 0.0,
+      "f0": 255.57947207431744,
+      "plage": 60.381394268096386,
+      "ambitus": 3.1911300667254476,
+      "en_service": false,
+      "debit": 0.92
+    },
+    {
+      "nom": "serena:0.4+vivian:0.4+sohee:0.2 +0st ×1.08",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": 0.0,
+      "f0": 255.57947207431744,
+      "plage": 61.91356995757539,
+      "ambitus": 3.3766365565168535,
+      "en_service": false,
+      "debit": 1.08
+    },
+    {
+      "nom": "serena:0.4+vivian:0.4+sohee:0.2 -2st",
+      "spec": "serena:0.4+vivian:0.4+sohee:0.2",
+      "decalage": -2.0,
+      "f0": 284.2724978973928,
+      "plage": 67.79877663898912,
+      "ambitus": 3.493211901108241,
+      "en_service": false,
+      "debit": 1.0
+    },
+    {
+      "nom": "ono_anna:0.65+sohee:0.35 +2st ×1.08",
+      "spec": "ono_anna:0.65+sohee:0.35",
+      "decalage": 2.0,
+      "f0": 217.1990171990172,
+      "plage": 76.59822018175527,
+      "ambitus": 3.4577922348035033,
+      "en_service": false,
+      "debit": 1.08
+    }
+  ]
+}
