@@ -49,8 +49,27 @@ MEDIA = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE / "voice-agent/training"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from empreinte import clip_id, dossier_de_voix, role_du_locuteur  # noqa: E402
-from descente_voix import descendre  # noqa: E402
+from empreinte import (clip_id, dossier_de_voix, dossier_du_locuteur,  # noqa: E402
+                       role_du_locuteur)
+from descente_voix import _comprimer_wsola, descendre  # noqa: E402
+
+
+def _traite(onde, perso: dict, sr: int):
+    """Décalage de hauteur puis DÉBIT — le post-traitement d'un personnage, en un seul endroit.
+
+    Le débit est le troisième axe de distinction des voix, après le timbre et la hauteur, et le
+    dernier qui ne coûte aucun calcul de modèle : WSOLA change la durée sans toucher au
+    fondamental. Il a été ouvert quand la mesure a montré qu'il ne restait que quatre places
+    masculines libres et zéro féminine — deux personnages au même timbre et à la même hauteur
+    restent distincts s'ils ne parlent pas à la même vitesse.
+
+    Un seul endroit, parce que `livrer` et `reprendre` appliquaient déjà `descendre` chacun de
+    son côté : ajouter le débit deux fois aurait fini par produire des clips repris sans lui,
+    au milieu d'un lot qui l'a — et rien ne l'aurait signalé.
+    """
+    y = descendre(onde, perso.get("grave_demi_tons", 0.0) or 0.0, sr)
+    debit = float(perso.get("debit", 1.0) or 1.0)
+    return y if debit == 1.0 else _comprimer_wsola(y, debit, sr)
 
 # --- casting ------------------------------------------------------------------
 # Le timbre de chaque personnage, sa date de validation à l'oreille, et la cible du contrôle
@@ -62,7 +81,11 @@ PERSONNAGES = {
         "slug": "bate-arthur",
         # « Note » est son pseudonyme d'aventurier et le jeu est narré à la première personne :
         # les trois rôles sortent du même timbre, sinon le personnage change de voix en jeu.
-        "roles": ("Arthur", "Note", "narrator"),
+        # « Arthur et Reynolds » est une anomalie d'écriture — un libellé pour deux personnes,
+        # une seule réplique dans tout le jeu (« On s'entraîne. », ch38). Le premier mot l'envoie
+        # déjà dans le dossier d'Arthur ; l'ajouter ici est ce qui fait qu'elle est EXTRAITE,
+        # donc produite. Sans ça, elle reste muette et aucun contrôle ne la réclame.
+        "roles": ("Arthur", "Note", "narrator", "Arthur et Reynolds"),
         "timbre": "aiden:0.5+ryan:0.5",       # validé à l'oreille le 2026-08-08
         # Écrites en dur, et SURTOUT PAS remplacées par la F0 mesurée : sur les répliques
         # parlées d'Arthur l'autocorrélation rend ~140 Hz alors que la bande dominante est bien
@@ -264,6 +287,259 @@ PERSONNAGES = {
 	        "grave_demi_tons": 1.0,
 	        "cibles": None,
 	    },
+	    # --- les dix principales féminines de ch1-100 -------------------------------------------
+	    # SIX PLACES POUR DIX PERSONNAGES, et ce n'est pas un renoncement : c'est ce que vingt
+	    # candidates mesurées ont donné. Elles couvraient tout le registre, sur les trois axes
+	    # (timbre, hauteur, débit) ; quatorze ont été refusées pour proximité avec l'une des
+	    # trente-trois voix féminines déjà en service. Quatre timbres féminins ne font pas
+	    # quarante voix, et l'axe débit — qui a triplé l'espace masculin — ne suffit pas ici.
+	    #
+	    # Les six places vont aux six personnages dont le REGISTRE colle, et non aux six plus
+	    # bavards : Sylvia est une dragonne ancienne, lui donner la place la plus aiguë pour la
+	    # seule raison qu'elle parle beaucoup aurait été absurde. Les quatre restants partagent
+	    # une voix d'archétype de troupe choisie pour son registre, ce qui est déclaré ici et
+	    # dans `docs/casting-troupe.md` — pas caché derrière un timbre inventé.
+	    "sylvia": {
+	        "nom": "Sylvia", "slug": "bate-sylvia", "roles": ("Sylvia",),
+	        # La dragonne : la place la plus grave et la plus posée du lot (203 Hz, plage 20 Hz,
+	        # débit ralenti). C'est la seule des dix dont le registre l'exigeait vraiment.
+	        "timbre": "serena:0.8+sohee:0.2", "grave_demi_tons": 3.0, "debit": 0.92,
+	        "cibles": None,
+	    },
+	    "goodsky": {
+	        "nom": "Goodsky", "slug": "bate-goodsky",
+	        "roles": ("Goodsky", "Directrice Goodsky"),
+	        # 170 répliques, la plus bavarde des dix. Directrice de l'Académie : autorité, débit
+	        # vif — elle tranche et passe à la suite. Les deux libellés partagent son dossier via
+	        # la table `LOCUTEURS` d'empreinte.py, sans quoi la moitié de ses répliques serait
+	        # restée muette quel que soit le lot produit.
+	        "timbre": "serena:0.65+ono_anna:0.35", "grave_demi_tons": 2.0, "debit": 1.08,
+	        "cibles": None,
+	    },
+	    "claire": {
+	        "nom": "Claire", "slug": "bate-claire",
+	        "roles": ("Claire", "Claire Bladeheart"),
+	        # Lance de Dicathen : la place la plus STABLE des vingt candidates (13 Hz de plage),
+	        # ce qui convient à un personnage qui ne s'emporte jamais.
+	        "timbre": "sohee:0.8+vivian:0.2", "grave_demi_tons": -1.0, "debit": 0.92,
+	        "cibles": None,
+	    },
+	    "glory": {
+	        "nom": "Professeur Glory", "slug": "bate-glory", "roles": ("Professeur Glory",),
+	        # 54 Hz de plage, la plus dispersée des six retenues — assumé pour une professeure qui
+	        # joue beaucoup en cours. À surveiller au contrôle : si le lot livré dépasse 70 Hz,
+	        # c'est le piège de Sylvie qui recommence et il faudra changer de place.
+	        "timbre": "vivian:0.5+serena:0.3+ono_anna:0.2", "grave_demi_tons": 0.0, "debit": 0.92,
+	        "cibles": None,
+	    },
+	    "alea": {
+	        "nom": "Alea Triscan", "slug": "bate-alea", "roles": ("Alea Triscan",),
+	        "timbre": "vivian:0.6+ono_anna:0.2+sohee:0.2", "grave_demi_tons": -2.0, "debit": 1.08,
+	        "cibles": None,
+	    },
+	    "kathyln": {
+	        "nom": "Kathyln", "slug": "bate-kathyln",
+	        "roles": ("Kathyln", "Kathlyn Glayder"),
+	        # Princesse adolescente : la place la plus claire (283 Hz). Les deux orthographes du
+	        # nom vivent dans les timelines — coquille jamais corrigée, réunie par `LOCUTEURS`.
+	        "timbre": "ono_anna:0.5+vivian:0.5", "grave_demi_tons": -3.0, "debit": 0.92,
+	        "cibles": None,
+	    },
+	    # LES QUATRE QUI PARTAGENT, faute de place. Chacune prend l'archétype de troupe dont le
+	    # registre correspond : le timbre est juste, il n'est simplement pas exclusif.
+	    "rinia": {
+	        "nom": "Rinia", "slug": "bate-rinia", "roles": ("Rinia", "Elder Rinia"),
+	        # Voyante âgée : l'archétype « f_autorite » (176 Hz) est le plus grave du jeu, et
+	        # c'est exactement son registre. Partagé avec neuf figurants qu'elle ne croise pas.
+	        "timbre": "sohee:0.65+serena:0.35", "grave_demi_tons": 3.0,
+	        "partage": "f_autorite", "cibles": None,
+	    },
+	    "nima": {
+	        "nom": "Nima Orsel", "slug": "bate-nima", "roles": ("Nima Orsel",),
+	        "timbre": "serena:0.4+vivian:0.4+sohee:0.2", "grave_demi_tons": 3.0,
+	        "partage": "f_mure", "cibles": None,
+	    },
+	    "tabitha": {
+	        "nom": "Tabitha", "slug": "bate-tabitha", "roles": ("Tabitha",),
+	        # Mère de Lilia : l'archétype adulte (243 Hz).
+	        "timbre": "serena:0.4+vivian:0.4+sohee:0.2", "grave_demi_tons": 1.0,
+	        "partage": "f_adulte", "cibles": None,
+	    },
+	    "emily": {
+	        "nom": "Emily", "slug": "bate-emily", "roles": ("Emily",),
+	        # Élève : l'archétype jeune (268 Hz).
+	        "timbre": "ono_anna:0.65+vivian:0.35", "grave_demi_tons": -2.0,
+	        "partage": "f_jeune", "cibles": None,
+	    },
+	    "elijah": {
+	        "nom": "Elijah",
+	        "slug": "bate-elijah",
+	        "roles": ("Elijah", "Elijah Knight"),
+	        # 232 répliques sur 30 timelines (ch32 → ch248) : le personnage non doublé le plus
+	        # bavard du jeu, et le seul de cette vague à avoir eu un casting complet — timbres
+	        # purs (lot 21) puis balayage de doses sur 20 répliques réelles (lots 22-24).
+	        #
+	        # `uncle_fu` pur gagnait sur la distance à Arthur (0,905) mais les purs sont écartés
+	        # par principe. Parmi les mélanges, celui-ci domine : plage 61 Hz (la plus basse),
+	        # Arthur 0,922, et surtout TESSIA 0,915 — c'est-à-dire plus loin d'elle que d'Arthur.
+	        # Le contrôle était nécessaire : à 190 Hz il n'est qu'à 23 Hz sous Tessia, et ils
+	        # partagent 60 répliques de scène. C'est le piège payé sur Virion, qui fuyait Arthur
+	        # par le haut et atterrissait sur Tessia ; ici il est évité, mesuré.
+	        #
+	        # Sa hauteur le sépare aussi de tous les autres hommes du jeu (Arthur 131, Vincent 150,
+	        # Virion 109, Durden 112) : c'est un adolescent, et il sonne comme tel.
+	        "timbre": "uncle_fu:0.8+ryan:0.2",
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # étalonnage PLAT (3,1 à 3,6 de 175 à 380 Hz) : il ne discrimine pas, et son
+	        # maximum nominal — 340 Hz — serait absurde pour une voix dont la F0 est à 190. On
+	        # retient le plateau cohérent avec la hauteur mesurée.
+	        "cibles": {"*": 205.0},
+	    },
+	    # --- les principaux masculins de ch1-100, castés sur le catalogue mesuré -----------------
+	    # Aucun casting individuel pour eux, et c'est un choix argumenté : `catalogue_voix.py` a
+	    # mesuré 644 variantes masculines et n'a dégagé que QUATRE places libres au-delà des six
+	    # archétypes de troupe et des sept voix en service. Auditionner trois timbres par
+	    # personnage aurait redécouvert huit fois la même contrainte. Ce qui décide ici est donc
+	    # l'affectation sous contrainte : la place la plus distincte disponible, choisie selon le
+	    # registre du personnage. Le verdict d'écoute reste à rendre — la mesure écarte, elle ne
+	    # tranche pas.
+	    #
+	    # LE DÉBIT est ce qui a rendu l'affectation possible : 14 places sans lui, 44 avec. Trente
+	    # de ces places ne tiennent QUE par lui, et le seuil de 8 % n'a PAS été calibré à
+	    # l'oreille, contrairement au cosinus (0,955, calé sur Luna/Lise accepté et Lise/Ellie
+	    # refusé). Les voix ci-dessous privilégient donc les places qui tiennent aussi par le
+	    # timbre ou la hauteur.
+	    "windsom": {
+	        "nom": "Windsom", "slug": "bate-windsom", "roles": ("Windsom",),
+	        # Asura, hautain, sans âge : la place la plus grave et la plus stable du catalogue
+	        # (109 Hz, plage 10 Hz — la plus faible des 644 variantes mesurées).
+	        "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2", "grave_demi_tons": 3.0, "debit": 1.08,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic net à 7,4, décroissant ensuite — et c'est exactement sa F0 mesurée (109 Hz)
+	        "cibles": {"*": 110.0},
+	    },
+	    "blaine": {
+	        "nom": "Blaine", "slug": "bate-blaine", "roles": ("Blaine", "Blaine Glayder"),
+	        # Roi de Sapin : un débit ralenti pour l'autorité, 119 Hz.
+	        "timbre": "ryan:0.6+aiden:0.2+uncle_fu:0.2", "grave_demi_tons": 3.0, "debit": 0.92,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic à 4,9
+	        "cibles": {"*": 205.0},
+	    },
+	    "gideon": {
+	        "nom": "Gideon", "slug": "bate-gideon", "roles": ("Gideon", "Professeur Gideon"),
+	        # Inventeur, parle vite et par-dessus les autres : même timbre que Windsom, trois
+	        # demi-tons plus haut (129 Hz) et débit accéléré. Trois demi-tons, c'est le minimum
+	        # que je m'autorise entre deux voix de MÊME timbre — en dessous, c'est la même
+	        # personne transposée, pas un second comédien.
+	        "timbre": "aiden:0.5+uncle_fu:0.3+ryan:0.2", "grave_demi_tons": 0.0, "debit": 1.08,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic net à 5,5
+	        "cibles": {"*": 175.0},
+	    },
+	    "kaspian": {
+	        "nom": "Kaspian", "slug": "bate-kaspian", "roles": ("Kaspian",),
+	        "timbre": "ryan:0.6+aiden:0.2+uncle_fu:0.2", "grave_demi_tons": 0.0, "debit": 0.92,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic à 4,9
+	        "cibles": {"*": 205.0},
+	    },
+	    "lucas": {
+	        "nom": "Lucas", "slug": "bate-lucas", "roles": ("Lucas",),
+	        # Élève arrogant : débit pressé, 152 Hz.
+	        "timbre": "aiden:0.8+uncle_fu:0.2", "grave_demi_tons": 0.0, "debit": 1.08,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic net à 5,7
+	        "cibles": {"*": 175.0},
+	    },
+	    "feyrith": {
+	        "nom": "Feyrith", "slug": "bate-feyrith", "roles": ("Feyrith",),
+	        "timbre": "ryan:0.6+aiden:0.2+uncle_fu:0.2", "grave_demi_tons": -3.0, "debit": 1.0,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic à 3,5
+	        "cibles": {"*": 270.0},
+	    },
+	    "perrin": {
+	        "nom": "Perrin", "slug": "bate-perrin", "roles": ("Perrin",),
+	        # ⚠ 181 Hz, à NEUF hertz d'Elijah (190) — la paire la plus serrée de cette vague, et
+	        # les deux sont camarades de classe d'Arthur, donc ils se croisent. Les timbres
+	        # diffèrent nettement (ryan dominant contre uncle_fu dominant) et c'est ce qui la fait
+	        # passer au critère. À écouter EN PREMIER : si la confusion s'entend, c'est cette
+	        # voix-là qu'il faut changer.
+	        "timbre": "ryan:0.5+uncle_fu:0.3+aiden:0.2", "grave_demi_tons": -2.0, "debit": 1.0,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # pic à 3,7
+	        "cibles": {"*": 205.0},
+	    },
+	    "curtis": {
+	        "nom": "Curtis", "slug": "bate-curtis", "roles": ("Curtis", "Curtis Glayder"),
+	        # Prince adolescent : la place la plus claire du catalogue masculin (219 Hz), à
+	        # 29 Hz au-dessus d'Elijah dont il partage le timbre de base.
+	        "timbre": "uncle_fu:0.8+ryan:0.2", "grave_demi_tons": -3.0, "debit": 1.0,
+	        	        # Cible ÉTALONNÉE, et non mesurée par F0 : à cette hauteur, plus de 5 % de
+	        # l'énergie passe sous 150 Hz et `_cible` REFUSE alors de rendre une valeur —
+	        # elle signalerait des clips sains, comme sur les narrations d'Arthur (13 sur
+	        # 13 déclarés défectueux par une cible fausse). Tous les masculins du dépôt en
+	        # déclarent une pour cette raison.
+	        # étalonnage CROISSANT jusqu'à 440 Hz, donc sans pic exploitable : on prend le
+	        # premier plateau au-dessus de sa F0 (219 Hz).
+	        "cibles": {"*": 240.0},
+	    },
+	    "ennemi": {
+	        "nom": "Ennemi",
+	        "slug": "bate-ennemi",
+	        "roles": ("Ennemi",),
+	        # LA VOIX GÉNÉRIQUE DES ENNEMIS DE COMBAT, et c'est un choix de production : une seule
+	        # voix pour toutes les rencontres, réutilisée telle quelle. Ses 33 répliques viennent
+	        # de `bate/resources/combat_barks.json` (via `tools/extraire_barks.py`) et non d'une
+	        # timeline — elles se déclenchent sur l'état du combat, pas sur un tour de dialogue.
+	        #
+	        # Timbre à TROIS composants, le premier du dépôt : `_parse_timbre` les accepte depuis
+	        # toujours (il boucle sur `split("+")`), personne ne les avait essayés. Un mélange à
+	        # trois donne exactement ce qu'un figurant demande — une voix sans caractère marqué,
+	        # qui n'évoque aucun des six personnages masculins déjà en service.
+	        "timbre": "uncle_fu:0.4+ryan:0.4+aiden:0.2",
+	        # Le registre PAR LOT, l'étiquette de lot étant la catégorie de bark. Un
+	        # « Tu t'es perdu, gamin ? » d'ouverture et un « Gah ! Tu vas me le payer ! » de coup
+	        # critique ne se jouent pas sur le même ton, et c'est tout l'intérêt d'un bark : sans
+	        # le ton, la ligne tombe à plat et le combat reste aussi mort qu'avant.
+	        "registres_par_lot": {"ouverture": "dialogue", "attaque": "determination",
+	                              "touche": "colere", "critique": "peur", "bas": "peur",
+	                              "vaincu": "emu", "fuite": "peur"},
+	        "cibles": None,
+	    },
 	    "luna": {
 	        "nom": "Luna",
 	        "slug": "bate-luna",
@@ -319,15 +595,69 @@ PERSONNAGES = {
 	}
 
 
+# --- la troupe, déclarée en DONNÉES et non en code ------------------------------------------
+# Les personnages ci-dessus portent chacun une décision argumentée : un casting, une mesure, une
+# réserve. Les figurants, non — ils reçoivent une voix d'archétype attribuée par
+# `tools/casting_troupe.py`, et ils sont quatre-vingt-quatorze. Les écrire ici noierait les
+# quinze décisions qui comptent sous quatre-vingt-quatorze lignes qui n'en portent aucune ; le
+# registre `resources/casting_troupe.json` les tient, et se régénère.
+TROUPE = MEDIA / "resources" / "casting_troupe.json"
+
+
+def _charge_troupe() -> dict:
+    """Ajoute les personnages de troupe à `PERSONNAGES`, sans jamais écraser une voix castée.
+
+    L'ordre compte : une entrée écrite en dur gagne toujours. Le registre est produit par un
+    outil qui recense les timelines, donc il peut proposer un personnage qu'on a entre-temps
+    casté à la main — et c'est le casting qui décide, pas le recensement.
+    """
+    if not TROUPE.exists():
+        return {}
+    registre = json.loads(TROUPE.read_text(encoding="utf-8"))
+    ajoutes = {}
+    for nom, fiche in registre.get("personnages", {}).items():
+        if not fiche.get("timbre"):
+            continue                                  # « À CASTER » : pas encore de voix
+        # `dossier_du_locuteur` et non `dossier_de_voix(role…)` : le libellé complet décide, sinon
+        # les six professeurs et les trois « Le … » retombent tous sur la même clé et douze
+        # figurants disparaissent du registre en silence (mesuré : 82 chargés sur 94).
+        cle = dossier_du_locuteur(nom)
+        if not cle or cle in PERSONNAGES:
+            continue
+        ajoutes[cle] = {
+            "nom": nom,
+            "slug": f"bate-{cle}",
+            "roles": tuple(fiche.get("roles") or (nom,)),
+            "timbre": fiche["timbre"],
+            "grave_demi_tons": float(fiche.get("decalage", 0.0)),
+            # La cible vient de l'ARCHÉTYPE : sans elle, `_cible` refuse de juger les voix
+            # graves (34 des 93) et le lot passe pour contrôlé alors qu'il ne l'est pas.
+            "cibles": ({"*": float(fiche["cible"])} if fiche.get("cible") else None),
+            "troupe": fiche.get("archetype"),
+        }
+    PERSONNAGES.update(ajoutes)
+    return ajoutes
+
+
+_TROUPE_AJOUTEE = _charge_troupe()
+
+
 def _perso(cle: str) -> dict:
     if cle not in PERSONNAGES:
         raise SystemExit(f"personnage inconnu : {cle} (parmi {', '.join(PERSONNAGES)})")
     p = dict(PERSONNAGES[cle])
     p["lignes"] = RACINE / f"voice-agent/training/forge/{p['slug']}/lines.json"
-    # Le dossier de voix se DÉDUIT du rôle par la règle du jeu, il ne se choisit pas :
+    # Le dossier de voix se DÉDUIT du LIBELLÉ par la règle du jeu, il ne se choisit pas :
     # `AudioManager` cherche `voice/<dossier>/<id>`, et un dossier inventé ici produirait un
     # pack complet que personne n'appelle — construit sans erreur, muet en jeu.
-    p["sortie"] = MEDIA / "voices" / dossier_de_voix(role_du_locuteur(p["roles"][0]))
+    #
+    # `dossier_du_locuteur` et non `dossier_de_voix(role_du_locuteur(…))`, et l'écart n'était pas
+    # théorique : la seconde forme ne voit que le PREMIER MOT, donc « L'architecte du Dessein »
+    # écrivait dans `voices/l/` quand le jeu, lui, cherche `voices/architecte/`. Cent deux clips
+    # de sept personnages ont été produits dans le mauvais dossier avant que le réindexage du
+    # manifeste ne le révèle — sept dossiers pleins que plus rien ne réclamait, et sept dossiers
+    # attendus restés vides. Le contrat de rôle avait été corrigé partout SAUF ici.
+    p["sortie"] = MEDIA / "voices" / dossier_du_locuteur(p["roles"][0])
     return p
 
 
@@ -356,7 +686,13 @@ def _lignes(perso: dict, max_chapitre: int = None) -> list:
                   if (n := _numero_chapitre(l["chapitre"])) is None or n <= max_chapitre]
     vues, lot = set(), []
     for l in brutes:
-        ident = clip_id(l["role"], l["texte"])
+        # L'identifiant se calcule sur le texte BRUT quand l'extraction l'a conservé : c'est
+        # celui que le jeu demandera (`event.text`, balises comprises). Le texte prononcé, lui,
+        # reste la version nettoyée. Sans cette distinction, une réplique portant une balise de
+        # style était produite sous un identifiant introuvable côté jeu — 75 répliques muettes
+        # à 100 %, dont 66 de Sylvie. Le repli sur `texte` couvre les extractions antérieures,
+        # qui n'ont pas le champ.
+        ident = clip_id(l["role"], l.get("texte_brut") or l["texte"])
         if ident is None or ident in vues:
             continue
         vues.add(ident)
@@ -364,14 +700,31 @@ def _lignes(perso: dict, max_chapitre: int = None) -> list:
     return lot
 
 
-def _instruct(qwen3tts, ligne: dict) -> str:
-    """Le registre du rôle, et rien d'autre.
+def _instruct(qwen3tts, ligne: dict, perso: dict = None) -> str:
+    """Le registre du rôle — et, quand le personnage en déclare un PAR LOT, celui du lot.
 
     Plus aucun prompt d'âge : c'est LA standardisation. Le registre, lui, reste — il ne fait
     pas varier la voix dans le temps, il distingue ce qu'Arthur DIT de ce qu'il PENSE, et cette
     distinction-là est permanente.
+
+    LE CHAMP `registre` DES LIGNES EXTRAITES EST VOLONTAIREMENT IGNORÉ. `voice_forge` le remplit
+    par défaut à « narration » : il vaut « narration » pour les 232 répliques d'Elijah, qui
+    parle, et pour les 124 de Sylvie. Le respecter reviendrait à faire murmurer tout le monde
+    comme un narrateur intérieur — une régression déguisée en correction.
+
+    Ce qui est respecté, c'est `registres_par_lot` déclaré par le PERSONNAGE, indexé par
+    l'étiquette de lot (le champ `chapitre`). Les répliques de combat en ont besoin : un
+    « Tu t'es perdu, gamin ? » d'ouverture et un « Gah ! Tu vas me le payer ! » de coup
+    critique ne se jouent pas sur le même ton, et un registre unique par personnage ne saurait
+    pas les séparer.
     """
-    registre = qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"], qwen3tts.REGISTRE_DEFAUT)
+    par_lot = (perso or {}).get("registres_par_lot") or {}
+    registre = (par_lot.get(ligne.get("chapitre"))
+                or (perso or {}).get("registre")
+                or qwen3tts.REGISTRE_PAR_ROLE.get(ligne["role"], qwen3tts.REGISTRE_DEFAUT))
+    if registre not in qwen3tts.REGISTRES:
+        raise SystemExit(f"registre inconnu : {registre} "
+                         f"(parmi {', '.join(qwen3tts.REGISTRES)})")
     return qwen3tts.REGISTRES[registre]
 
 
@@ -519,7 +872,7 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
     for i, ligne in enumerate(a_faire):
         cible = perso["sortie"] / f"{ligne['clip']}.ogg"
         onde, essais = qwen3tts._genere(
-            modele, "customvoice", ligne["texte"], _instruct(qwen3tts, ligne),
+            modele, "customvoice", ligne["texte"], _instruct(qwen3tts, ligne, perso),
             perso["timbre"],
             # Graine dérivée de l'IDENTIFIANT, pas du rang dans le lot. Le rang change dès
             # qu'une réplique est ajoutée en amont : le même clip regénéré plus tard sortirait
@@ -527,7 +880,7 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
             # même son.
             seed=qwen3tts._seed_de(ligne["clip"], 2000), temperature=0.7)
         relances += essais
-        qwen3tts._ecrit(descendre(onde, grave, modele.sample_rate), modele.sample_rate,
+        qwen3tts._ecrit(_traite(onde, perso, modele.sample_rate), modele.sample_rate,
                         cible, "ogg")
         if (i + 1) % 25 == 0 or i + 1 == len(a_faire):
             ecoule = time.time() - debut
@@ -664,9 +1017,9 @@ def reprendre(cle: str, essais: int = 4) -> int:
         meilleur, meilleure_part = None, part0
         for essai in range(essais):
             onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"],
-                                       _instruct(qwen3tts, ligne), perso["timbre"],
+                                       _instruct(qwen3tts, ligne, perso), perso["timbre"],
                                        seed=7000 + essai * 613, temperature=0.7)
-            onde = descendre(onde, perso.get("grave_demi_tons", 0.0), modele.sample_rate)
+            onde = _traite(onde, perso, modele.sample_rate)
             tmp = chemin.with_suffix(".essai.ogg")
             qwen3tts._ecrit(onde, modele.sample_rate, tmp, "ogg")
             part = _part_bande(tmp, cible)

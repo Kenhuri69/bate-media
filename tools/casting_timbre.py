@@ -75,6 +75,26 @@ PERSONNAGES = {
     # aussi qu'elles soient loin l'une de l'autre, ce que la seule proximité aux références ne
     # dit pas. D'où la matrice candidat × candidat imprimée en fin de casting : elle se lit sur
     # les MÊMES textes aux MÊMES graines, donc elle mesure des timbres et non des phrases.
+    # Elijah Knight, 232 répliques sur 30 timelines (ch32 → ch248) : le locuteur non doublé le
+    # plus bavard du jeu, et de loin (le suivant en compte la moitié). Il partage l'essentiel de
+    # ses scènes avec ARTHUR — 790 répliques d'Arthur et 1 563 de narration dans les mêmes
+    # timelines — donc c'est de lui qu'il doit d'abord se distinguer, puis de Reynolds et de
+    # Vincent, les deux autres voix masculines qu'il croise et qui existent.
+    #
+    # LA CONTRAINTE EST ICI À SON MAXIMUM : CustomVoice n'a que trois timbres masculins
+    # utilisables et SIX voix en sont déjà tirées (arthur, virion, reynolds, adam, durden,
+    # vincent). Elijah sera la septième. Ce qui reste à faire varier est la dose et la hauteur,
+    # plus aucun timbre neuf.
+    "elijah": {"nom": "Elijah", "slug": "bate-elijah", "lot": 21,
+               "candidats": MASCULINS,
+               # TESSIA EN QUATRIÈME RÉFÉRENCE, et ce n'est pas un excès de prudence : les
+               # doses retenues pour Elijah sortent à 190 Hz, quand Tessia est à 213 et qu'ils
+               # partagent 60 répliques de scène. C'est le piège payé sur Virion — s'éloigner
+               # d'Arthur PAR LE HAUT et atterrir sur une voix féminine.
+               "references": [("Arthur", "aiden:0.5+ryan:0.5"),
+                              ("Reynolds", "uncle_fu:0.5+ryan:0.5"),
+                              ("Vincent", "uncle_fu:0.6+aiden:0.4"),
+                              ("Tessia", "sohee")]},
     "luna": {"nom": "Luna", "slug": "bate-luna", "lot": 14,
              "candidats": [t for t in FEMININS if t != "sohee"],
              "references": [("Tessia", "sohee"), ("Arthur", "aiden:0.5+ryan:0.5")]},

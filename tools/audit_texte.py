@@ -361,7 +361,6 @@ def regenerer(rapport_chemin: Path, essais: int = 4, limite: int = 0) -> int:
     import bench_qwen3tts as mesures
     import voix_personnage
     import qwen3tts
-    from descente_voix import descendre
 
     rapport = json.loads(rapport_chemin.read_text(encoding="utf-8"))
     a_faire, portes = [], {}
@@ -417,10 +416,13 @@ def regenerer(rapport_chemin: Path, essais: int = 4, limite: int = 0) -> int:
         accepte = False
         for n in range(essais):
             onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"],
-                                       voix_personnage._instruct(qwen3tts, ligne),
+                                       voix_personnage._instruct(qwen3tts, ligne, perso),
                                        perso["timbre"], seed=7000 + n * 613,
                                        temperature=0.7)
-            onde = descendre(onde, perso.get("grave_demi_tons", 0.0), modele.sample_rate)
+            # Le MÊME post-traitement que la production : décalage puis débit. Reprendre un
+            # clip sans le débit du personnage le rendrait plus rapide ou plus lent que ses
+            # voisins, sur une seule réplique.
+            onde = voix_personnage._traite(onde, perso, modele.sample_rate)
             essai = chemin.with_suffix(".essai.ogg")
             qwen3tts._ecrit(onde, modele.sample_rate, essai, "ogg")
             mesure = couverture(ligne["texte"], transcrire(essai))

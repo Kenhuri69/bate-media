@@ -1,0 +1,173 @@
+{
+  "personnage": "Elijah",
+  "candidats": [
+    "uncle_fu",
+    "ryan",
+    "aiden"
+  ],
+  "references": [
+    {
+      "personnage": "Arthur",
+      "timbre": "aiden:0.5+ryan:0.5"
+    },
+    {
+      "personnage": "Reynolds",
+      "timbre": "uncle_fu:0.5+ryan:0.5"
+    },
+    {
+      "personnage": "Vincent",
+      "timbre": "uncle_fu:0.6+aiden:0.4"
+    }
+  ],
+  "repliques": [
+    {
+      "id": "elijah_ch34_04",
+      "chapitre": "ch34",
+      "texte": "Elle a pris le sort de Lucas beaucoup plus fort que toi, et elle n'était pas renforcée. J'avais une trousse, j'ai soigné la brûlure au ventre. Je crois qu'il y a des dégâts à l'intérieur."
+    },
+    {
+      "id": "elijah_ch34_19",
+      "chapitre": "ch34",
+      "texte": "On m'a fait travailler un peu, et on a vu que j'étais anormalement bon en terre. À côté, je ne peux rien lancer d'autre que les formes les plus élémentaires en eau, en feu ou en vent. Aujourd'hui encore."
+    },
+    {
+      "id": "elijah_ch35_03",
+      "chapitre": "ch35",
+      "texte": "Quand la vague l'a arrachée de ton épaule, elle est tombée près du gardien. Je n'ai pas pu aller la chercher. J'ai fait la seule chose que je savais faire : j'ai monté du métal autour d'elle avant que le plafond ne descende."
+    },
+    {
+      "id": "elijah_ch35_05",
+      "chapitre": "ch35",
+      "texte": "Depuis que tu t'es réveillé. Je n'arrivais pas à choisir entre te donner de l'espoir et t'en donner un faux. J'ai choisi le silence, et c'était le pire des trois."
+    },
+    {
+      "id": "elijah_ch36_08",
+      "chapitre": "ch36",
+      "texte": "...D'accord ! D'accord ! Si tu arrives à m'y faire entrer, je viens. Et il faudra bien quelqu'un pour t'empêcher de l'assassiner le premier jour."
+    },
+    {
+      "id": "elijah_ch37_07",
+      "chapitre": "ch37",
+      "texte": "Ce qui m'intéresse, c'est d'apprendre à contrôler ce que je fais. Il y a des mages célèbres là-bas. Je veux qu'on m'explique."
+    },
+    {
+      "id": "elijah_ch42_01",
+      "chapitre": "ch42",
+      "texte": "Troisième tentative. Troisième fille qui se souvient d'avoir quelque chose à faire ailleurs."
+    },
+    {
+      "id": "elijah_ch43_10",
+      "chapitre": "ch43",
+      "texte": "Une rayure : premier niveau. Elles montent avec toi. Et je te préviens tout de suite, la mienne ne restera pas seule très longtemps."
+    },
+    {
+      "id": "elijah_ch44_05",
+      "chapitre": "ch44",
+      "texte": "Tu as passé un examen dont tu étais dispensé. Pour la forme. Alors que tu vaux plus que toute cette cour réunie."
+    },
+    {
+      "id": "elijah_ch45_07",
+      "chapitre": "ch45",
+      "texte": "Tu réalises ce que tu viens de faire ? Le donjon, et maintenant ça. Tu as un vrai don pour ces choses-là."
+    },
+    {
+      "id": "elijah_ch46_05",
+      "chapitre": "ch46",
+      "texte": "Attendez. La présidente empêche qu'on punisse le type qui vient de la reprendre en public devant quatre mille personnes ?"
+    },
+    {
+      "id": "elijah_ch48_08",
+      "chapitre": "ch48",
+      "texte": "À huit ans, l'ancien qui m'a élevé m'a présenté celle qu'il voyait pour moi. Il m'avait vanté sa grâce pendant une semaine entière."
+    },
+    {
+      "id": "elijah_ch48_18",
+      "chapitre": "ch48",
+      "texte": "Deuxièmement, pourquoi irais-je avec quelqu'un qui méprise ouvertement mon meilleur ami et mon camarade de chambre ?"
+    },
+    {
+      "id": "elijah_ch49_07",
+      "chapitre": "ch49",
+      "texte": "Après ton départ, tout le monde a compris que les lianes venaient d'elle. Personne d'autre dans cette école ne fait ça à ce niveau. Et tu sais comment on l'appelle, ici ?"
+    },
+    {
+      "id": "elijah_ch54_02",
+      "chapitre": "ch54",
+      "texte": "Mes cours étaient géniaux ! J'aime bien l'incantation en chaîne et l'utilisation du mana. Cela dit, en utilisation, le professeur explique exactement ce que tu m'avais déjà fait faire. C'est en chaîne que j'ai rencontré Charlotte ! Elle est très douée."
+    },
+    {
+      "id": "elijah_ch60_03",
+      "chapitre": "ch60",
+      "texte": "Bref. Art, il faut que tu ailles... euh... à ta salle d'entraînement. La directrice, tu te souviens ?"
+    },
+    {
+      "id": "elijah_ch79_02",
+      "chapitre": "ch79",
+      "texte": "« Xyrus Elixirs » ? Tu voulais acheter quelque chose ? Il est presque minuit, évidemment que c'est fermé."
+    },
+    {
+      "id": "elijah_ch79_10",
+      "chapitre": "ch79",
+      "texte": "Ils l'ont emmené dans une des ruelles derrière les bâtiments et ils l'ont battu. Quand il a résisté, ils s'en sont servi comme d'une cible d'entraînement pour leurs sorts. Après, ils l'ont pendu par les pieds à la statue, sans rien sur lui, pour que tout le monde le voie en passant."
+    },
+    {
+      "id": "elijah_ch82_07",
+      "chapitre": "ch82",
+      "texte": "Une dernière chose et je n'en ai jamais parlé à personne, alors ne te moque pas. La terre, pour moi, c'est comme un prolongement du bras. Je pensais que c'était d'avoir grandi chez les nains. Sauf que même chez eux je n'étais pas normal, et pas dans ton genre à toi. Dans l'autre genre."
+    },
+    {
+      "id": "elijah-knight_ch246_06",
+      "chapitre": "ch246",
+      "texte": "Non. Et vous n'en aurez pas, pas parce que je la protège, mais parce que je ne peux pas vous la donner dans une langue où elle veuille dire quelque chose. Vous n'avez pas les mots. Il y a un refuge, sous un désert, dont les murs ont essayé de les écrire."
+    }
+  ],
+  "timbres": {
+    "uncle_fu": {
+      "f0_median": 195.13484928609202,
+      "f0_plage": 52.05555008371911,
+      "ambitus_st": 5.750102970286397,
+      "proximite": {
+        "Arthur": 0.9048428814357091,
+        "Reynolds": 0.9497864979102004,
+        "Vincent": 0.9427020419501991
+      },
+      "proximite_pire": 0.9497864979102004
+    },
+    "ryan": {
+      "f0_median": 151.45723841376014,
+      "f0_plage": 57.17121721534588,
+      "ambitus_st": 7.107352928695688,
+      "proximite": {
+        "Arthur": 0.9710163979776804,
+        "Reynolds": 0.973722668206441,
+        "Vincent": 0.9249787776066334
+      },
+      "proximite_pire": 0.973722668206441
+    },
+    "aiden": {
+      "f0_median": 139.13160371017608,
+      "f0_plage": 49.44121432026057,
+      "ambitus_st": 4.739933982049727,
+      "proximite": {
+        "Arthur": 0.9749576357529621,
+        "Reynolds": 0.9449887574928573,
+        "Vincent": 0.9524748044738158
+      },
+      "proximite_pire": 0.9749576357529621
+    }
+  },
+  "entre_candidats": {
+    "uncle_fu": {
+      "ryan": 0.9135451707363064,
+      "aiden": 0.9030016633500553
+    },
+    "ryan": {
+      "uncle_fu": 0.9135451707363064,
+      "aiden": 0.9396623039959966
+    },
+    "aiden": {
+      "uncle_fu": 0.9030016633500553,
+      "ryan": 0.9396623039959966
+    }
+  }
+}
