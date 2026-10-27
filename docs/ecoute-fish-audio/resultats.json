@@ -1,0 +1,358 @@
+{
+  "resumes": [
+    {
+      "modele": "s2-pro",
+      "chargement_s": 4.03982154186815,
+      "empreintes": {
+        "arthur:parle": {
+          "encodage_s": 0.746118082664907,
+          "depuis_cache": false
+        },
+        "arthur:narration": {
+          "encodage_s": 2.534617292229086,
+          "depuis_cache": false
+        },
+        "tessia:parle": {
+          "encodage_s": 1.9874885841272771,
+          "depuis_cache": false
+        }
+      },
+      "prechauffage_s": 2.4660375411622226,
+      "rss_max_go": 6.80935424
+    },
+    {
+      "modele": "drama-3",
+      "chargement_s": 7.917926957830787,
+      "empreintes": {
+        "arthur:parle": {
+          "encodage_s": 0.9605251671746373,
+          "depuis_cache": false
+        },
+        "arthur:narration": {
+          "encodage_s": 1.1924620000645518,
+          "depuis_cache": false
+        },
+        "tessia:parle": {
+          "encodage_s": 0.8744306247681379,
+          "depuis_cache": false
+        }
+      },
+      "prechauffage_s": 4.61078979074955,
+      "rss_max_go": 24.208932864
+    }
+  ],
+  "lignes": [
+    {
+      "perso": "arthur",
+      "modele": "qwen3-tts",
+      "test": "01 original",
+      "fichier": "arthur/01_original_qwen_tts.ogg",
+      "duree": 6.64,
+      "cer": 0.06315789473684211,
+      "sim_ref": 0.9965190016383013,
+      "sim_autre": 0.791006580459973
+    },
+    {
+      "perso": "tessia",
+      "modele": "qwen3-tts",
+      "test": "01 original",
+      "fichier": "tessia/01_original_qwen_tts.ogg",
+      "duree": 7.36,
+      "cer": 0.0,
+      "sim_ref": 0.9744427011679537,
+      "sim_autre": 0.7995797482310215
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "01 duel",
+      "fichier": "arthur/01_clone_fish_s2_pro.ogg",
+      "duree": 6.408707482993197,
+      "rtf": 3.5758417777431175,
+      "pic_metal_go": 12.341909415,
+      "cer": 0.010526315789473684,
+      "sim_ref": 0.9841334706614354,
+      "sim_autre": 0.8332952243489247
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "02 articulation",
+      "fichier": "arthur/02_articulation_s2_pro.ogg",
+      "duree": 11.284897959183674,
+      "rtf": 2.5466409270031227,
+      "pic_metal_go": 12.792943159,
+      "cer": 0.03896103896103896,
+      "sim_ref": 0.9794529260997539,
+      "sim_autre": 0.8313988046264269
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "03a murmure",
+      "fichier": "arthur/03a_fish_murmure_s2_pro.ogg",
+      "duree": 4.2260317460317465,
+      "rtf": 2.086940487017203,
+      "pic_metal_go": 11.268247703,
+      "cer": 0.0,
+      "sim_ref": 0.9720032416253146,
+      "sim_autre": 0.8176280578617209
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "03b colere",
+      "fichier": "arthur/03b_fish_colere_s2_pro.ogg",
+      "duree": 4.365351473922902,
+      "rtf": 1.8462162415350114,
+      "pic_metal_go": 9.655912635,
+      "cer": 0.0,
+      "sim_ref": 0.9840668805748821,
+      "sim_autre": 0.7872638183187824
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "03c enthousiaste",
+      "fichier": "arthur/03c_fish_enthousiaste_s2_pro.ogg",
+      "duree": 3.900952380952381,
+      "rtf": 1.980134014866053,
+      "pic_metal_go": 10.930901819,
+      "cer": 0.0,
+      "sim_ref": 0.9851988165783931,
+      "sim_autre": 0.8167015390136351
+    },
+    {
+      "perso": "arthur",
+      "modele": "s2-pro",
+      "test": "04 narration",
+      "fichier": "arthur/04_narration_longue_s2_pro.ogg",
+      "duree": 22.632675736961453,
+      "rtf": 1.9036602359608337,
+      "pic_metal_go": 13.109691959,
+      "cer": 0.005797101449275362,
+      "sim_ref": 0.9770100502811523,
+      "sim_autre": 0.7944902500125951,
+      "stab_min": 0.9557266817089706
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "01 duel",
+      "fichier": "tessia/01_clone_fish_s2_pro.ogg",
+      "duree": 6.594467120181406,
+      "rtf": 1.9768571851729357,
+      "pic_metal_go": 12.421837687,
+      "cer": 0.0,
+      "sim_ref": 0.9725721390848915,
+      "sim_autre": 0.7283045876274568
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "02 articulation",
+      "fichier": "tessia/02_articulation_s2_pro.ogg",
+      "duree": 10.727619047619047,
+      "rtf": 1.919067548111674,
+      "pic_metal_go": 12.026421083,
+      "cer": 0.012987012987012988,
+      "sim_ref": 0.9854613378640174,
+      "sim_autre": 0.7483351491775664
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "03a murmure",
+      "fichier": "tessia/03a_fish_murmure_s2_pro.ogg",
+      "duree": 3.5294331065759637,
+      "rtf": 2.346595909618169,
+      "pic_metal_go": 9.662646191,
+      "cer": 0.0,
+      "sim_ref": 0.9804617612028756,
+      "sim_autre": 0.7947179077214985
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "03b colere",
+      "fichier": "tessia/03b_fish_colere_s2_pro.ogg",
+      "duree": 3.7616326530612243,
+      "rtf": 1.9833130375066808,
+      "pic_metal_go": 10.600387387,
+      "cer": 0.0,
+      "sim_ref": 0.9860260744406726,
+      "sim_autre": 0.7339944110003656
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "03c enthousiaste",
+      "fichier": "tessia/03c_fish_enthousiaste_s2_pro.ogg",
+      "duree": 3.8545124716553287,
+      "rtf": 1.9840783406925218,
+      "pic_metal_go": 10.276816967,
+      "cer": 0.0,
+      "sim_ref": 0.984072025341713,
+      "sim_autre": 0.7801618682315425
+    },
+    {
+      "perso": "tessia",
+      "modele": "s2-pro",
+      "test": "04 narration",
+      "fichier": "tessia/04_narration_longue_s2_pro.ogg",
+      "duree": 16.36328798185941,
+      "rtf": 1.8990797489644875,
+      "pic_metal_go": 11.788525403,
+      "cer": 0.003215434083601286,
+      "sim_ref": 0.9848420084700649,
+      "sim_autre": 0.7415079141480226,
+      "stab_min": 0.8626046571245922
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "01 duel",
+      "fichier": "arthur/01_clone_fish_drama_3.ogg",
+      "duree": 6.594467120181406,
+      "rtf": 1.4856038196235588,
+      "pic_metal_go": 28.588698753,
+      "cer": 0.021052631578947368,
+      "sim_ref": 0.9906440696147967,
+      "sim_autre": 0.8112808660842034
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "02 articulation",
+      "fichier": "arthur/02_articulation_drama_3.ogg",
+      "duree": 11.517097505668934,
+      "rtf": 1.6737565381014696,
+      "pic_metal_go": 28.593454389,
+      "cer": 0.012987012987012988,
+      "sim_ref": 0.9895092779176166,
+      "sim_autre": 0.7959910207672856
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "03a murmure",
+      "fichier": "arthur/03a_fish_murmure_drama_3.ogg",
+      "duree": 21.269478458049885,
+      "rtf": 1.7731510177649137,
+      "pic_metal_go": 28.595495389,
+      "cer": 0.3411764705882353,
+      "sim_ref": 0.862845656797464,
+      "sim_autre": 0.6400932501206681
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "03b colere",
+      "fichier": "arthur/03b_fish_colere_drama_3.ogg",
+      "duree": 4.690430839002268,
+      "rtf": 1.7034323409274796,
+      "pic_metal_go": 27.698488269,
+      "cer": 0.0,
+      "sim_ref": 0.9883193211076735,
+      "sim_autre": 0.7782894761584248
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "03c enthousiaste",
+      "fichier": "arthur/03c_fish_enthousiaste_drama_3.ogg",
+      "duree": 4.829750566893424,
+      "rtf": 1.8876472152413724,
+      "pic_metal_go": 27.862848261,
+      "cer": 0.0,
+      "sim_ref": 0.9728139543583659,
+      "sim_autre": 0.7856972628779216
+    },
+    {
+      "perso": "arthur",
+      "modele": "drama-3",
+      "test": "04 narration",
+      "fichier": "arthur/04_narration_longue_drama_3.ogg",
+      "duree": 25.326190476190476,
+      "rtf": 1.5996712868079044,
+      "pic_metal_go": 28.696236591,
+      "cer": 0.005797101449275362,
+      "sim_ref": 0.9929754901226325,
+      "sim_autre": 0.7620658262906908,
+      "stab_min": 0.984326092177841
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "01 duel",
+      "fichier": "tessia/01_clone_fish_drama_3.ogg",
+      "duree": 8.870022675736962,
+      "rtf": 2.0148340779119587,
+      "pic_metal_go": 28.790154169,
+      "cer": 0.01,
+      "sim_ref": 0.9769599211043083,
+      "sim_autre": 0.7877933794359039
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "02 articulation",
+      "fichier": "tessia/02_articulation_drama_3.ogg",
+      "duree": 17.2756462585034,
+      "rtf": 2.0550901908849952,
+      "pic_metal_go": 28.795998989,
+      "cer": 0.07792207792207792,
+      "sim_ref": 0.9820668107233027,
+      "sim_autre": 0.7156871067106129
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "03a murmure",
+      "fichier": "tessia/03a_fish_murmure_drama_3.ogg",
+      "duree": 4.829750566893424,
+      "rtf": 2.877924753225504,
+      "pic_metal_go": 28.064322093,
+      "cer": 0.0,
+      "sim_ref": 0.9474452714881404,
+      "sim_autre": 0.7315513050180461
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "03b colere",
+      "fichier": "tessia/03b_fish_colere_drama_3.ogg",
+      "duree": 3.7151927437641725,
+      "rtf": 1.0680643707650006,
+      "pic_metal_go": 27.900092445,
+      "cer": 0.0,
+      "sim_ref": 0.9571630803267213,
+      "sim_autre": 0.7184496079450208
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "03c enthousiaste",
+      "fichier": "tessia/03c_fish_enthousiaste_drama_3.ogg",
+      "duree": 4.597551020408163,
+      "rtf": 1.5163024677349313,
+      "pic_metal_go": 27.900142569,
+      "cer": 0.0,
+      "sim_ref": 0.9547859858143118,
+      "sim_autre": 0.6477191743681134
+    },
+    {
+      "perso": "tessia",
+      "modele": "drama-3",
+      "test": "04 narration",
+      "fichier": "tessia/04_narration_longue_drama_3.ogg",
+      "duree": 21.193038548752835,
+      "rtf": 1.5677103064440476,
+      "pic_metal_go": 28.796098651,
+      "cer": 0.003215434083601286,
+      "sim_ref": 0.9901617817583555,
+      "sim_autre": 0.7397151916439724,
+      "stab_min": 0.965557750444208
+    }
+  ]
+}
