@@ -72,9 +72,13 @@ réécrite perd la sienne et se tait, au lieu de décaler silencieusement toutes
 règle est partagée avec le jeu et vérifiable : `python3 tools/empreinte.py --selftest` rejoue les
 vecteurs que `bate` publie.
 
+Depuis la 0.9.0, les chapitres 0 à 20 sont produits par **Drama-3** (Fish Audio), qui clone
+la voix déjà livrée de chaque personnage à partir de ses propres clips Qwen3 — voir
+[`docs/notes-release-0.9.0.md`](docs/notes-release-0.9.0.md).
+
 Aucune voix ne reproduit celle d'une personne réelle : chaque timbre est synthétisé depuis
 une **description écrite** ou choisi parmi les timbres premium du modèle, jamais cloné d'un
-enregistrement humain.
+enregistrement humain. Drama-3 ne clone que ces voix synthétiques.
 
 ## Statut juridique
 

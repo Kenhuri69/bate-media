@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
-"""Production des répliques d'un personnage de BATE — à lancer avec .venv-mlx.
+"""Production des répliques d'un personnage de BATE — à lancer avec .venv-fish.
 
-    ../.venv-mlx/bin/python tools/voix_personnage.py livrer    arthur
-    ../.venv-mlx/bin/python tools/voix_personnage.py verifier  arthur
-    ../.venv-mlx/bin/python tools/voix_personnage.py reprendre arthur
-    ../.venv-mlx/bin/python tools/voix_personnage.py etalonner arthur --limite 40
+    ../.venv-fish/bin/python tools/voix_personnage.py livrer    arthur
+    ../.venv-fish/bin/python tools/voix_personnage.py verifier  arthur
+    ../.venv-fish/bin/python tools/voix_personnage.py reprendre arthur
+    ../.venv-fish/bin/python tools/voix_personnage.py etalonner arthur --limite 40
+
+DRAMA-3 (Fish Audio), retenu à l'oreille le 2026-10-27, remplace Qwen3-TTS pour les personnages
+qui déclarent `"moteur": "drama-3"` (banc : `docs/ecoute-fish-audio/`). Il ne synthétise pas
+un timbre : il CLONE la voix déjà livrée, à partir d'une empreinte construite sur ses propres
+clips (`voice-agent/training/migrer_voix_fish.py <perso>`, à lancer AVANT `livrer`). Il écrit
+dans `voices/<dossier>-drama3/` et jamais dans `voices/<dossier>/` : les clips Qwen3 ne sont
+pas dans git, les poids Qwen3 sont supprimés, et ces clips sont la source du clonage — les
+écraser serait sans retour. La bascule se fait en renommant les dossiers une fois `verifier`
+passé, comme pour `voices/arthur-qwen3/`, que `build_pack` ignore pour la même raison.
 
 Le chemin de production STANDARDISÉ, et le seul : une voix par personnage, la même du premier
 chapitre au dernier, histoires secondaires comprises. Il remplace `voix_tessia.py` (dont il est
@@ -66,10 +75,47 @@ def _traite(onde, perso: dict, sr: int):
     Un seul endroit, parce que `livrer` et `reprendre` appliquaient déjà `descendre` chacun de
     son côté : ajouter le débit deux fois aurait fini par produire des clips repris sans lui,
     au milieu d'un lot qui l'a — et rien ne l'aurait signalé.
+
+    Rien pour Drama-3 : il clone la voix LIVRÉE, qui porte déjà sa hauteur et son débit. Les
+    réappliquer décalerait le personnage une seconde fois.
     """
+    if _fish(perso):
+        return onde
     y = descendre(onde, perso.get("grave_demi_tons", 0.0) or 0.0, sr)
     debit = float(perso.get("debit", 1.0) or 1.0)
     return y if debit == 1.0 else _comprimer_wsola(y, debit, sr)
+
+# --- moteur -------------------------------------------------------------------
+# Drama-3 est le moteur PAR DÉFAUT depuis le 2026-10-27 : les poids Qwen3-TTS sont supprimés,
+# et un chapitre dont la moitié des voix viendrait d'un moteur et l'autre moitié d'un autre
+# s'entendrait. `"moteur": "qwen3"` sur un personnage le ramène à l'ancien chemin.
+MOTEUR_FISH = "drama-3"
+
+
+def _fish(perso: dict) -> bool:
+    return perso.get("moteur", MOTEUR_FISH) == MOTEUR_FISH
+
+
+def _moteur(perso: dict):
+    """(module, mode) : `fishtts` et `qwen3tts` exposent la même API (`_charge`, `_genere`, `_ecrit`)."""
+    if _fish(perso):
+        import fishtts
+        return fishtts, MOTEUR_FISH
+    import qwen3tts
+    return qwen3tts, "customvoice"
+
+
+def _voix(perso: dict, ligne: dict) -> str:
+    """Ce que le moteur reçoit comme `speaker` : un timbre Qwen, ou une empreinte Fish par REGISTRE.
+
+    Une empreinte par registre parce qu'Arthur parle vers 205 Hz et narre vers 132 Hz : une
+    seule référence ferait dériver l'un des deux vers l'autre.
+    """
+    if _fish(perso):
+        from migrer_voix_fish import registre_du_role
+        return f"{perso['cle']}:{registre_du_role(ligne['role'])}"
+    return perso["timbre"]
+
 
 # --- casting ------------------------------------------------------------------
 # Le timbre de chaque personnage, sa date de validation à l'oreille, et la cible du contrôle
@@ -645,7 +691,7 @@ _TROUPE_AJOUTEE = _charge_troupe()
 def _perso(cle: str) -> dict:
     if cle not in PERSONNAGES:
         raise SystemExit(f"personnage inconnu : {cle} (parmi {', '.join(PERSONNAGES)})")
-    p = dict(PERSONNAGES[cle])
+    p = dict(PERSONNAGES[cle], cle=cle)
     p["lignes"] = RACINE / f"voice-agent/training/forge/{p['slug']}/lines.json"
     # Le dossier de voix se DÉDUIT du LIBELLÉ par la règle du jeu, il ne se choisit pas :
     # `AudioManager` cherche `voice/<dossier>/<id>`, et un dossier inventé ici produirait un
@@ -658,6 +704,11 @@ def _perso(cle: str) -> dict:
     # manifeste ne le révèle — sept dossiers pleins que plus rien ne réclamait, et sept dossiers
     # attendus restés vides. Le contrat de rôle avait été corrigé partout SAUF ici.
     p["sortie"] = MEDIA / "voices" / dossier_du_locuteur(p["roles"][0])
+    # `source` : les clips LIVRÉS, ceux du pack. Drama-3 les clone et écrit à côté ; le
+    # migrateur d'empreintes doit lire `source`, jamais `sortie` (vide avant la production).
+    p["source"] = p["sortie"]
+    if _fish(p):
+        p["sortie"] = p["sortie"].with_name(p["sortie"].name + "-drama3")
     return p
 
 
@@ -835,20 +886,25 @@ def _numero_chapitre(etiquette: str):
     return int(m.group(1)) if m else None
 
 
-def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
+def livrer(cle: str, limite: int = 0, max_chapitre: int = None, sans_arcs: bool = False) -> int:
     """Génère ce qui manque, et RIEN d'autre.
 
     `max_chapitre` borne la TRAME, pas le lot : une histoire secondaire n'est datée d'aucun
     chapitre, elle n'est donc jamais « au-delà » d'une borne et reste toujours produite. C'est
     la sémantique voulue — on repousse la fin du récit sans repousser les arcs, qui sont un
     contenu à part et complet en lui-même. Pour ne produire QUE la trame, il faudrait une autre
-    option ; personne n'en a eu besoin.
+    option : c'est `sans_arcs`, ajoutée le 2026-10-27 pour produire les vingt premiers chapitres
+    sous Drama-3 sans les 858 répliques d'arcs d'Arthur, qui en auraient doublé le temps.
     """
     import bench_qwen3tts as mesures
     import qwen3tts
 
     perso = _perso(cle)
     lignes = _lignes(perso, max_chapitre)
+    if sans_arcs:
+        avant = len(lignes)
+        lignes = [l for l in lignes if _numero_chapitre(l["chapitre"]) is not None]
+        print(f"arcs secondaires écartés : {avant - len(lignes)} clips")
     if max_chapitre is not None:
         print(f"borne ch{max_chapitre} : {len(_lignes(perso)) - len(lignes)} clips écartés "
               f"(arcs secondaires conservés, ils ne portent pas de chapitre)")
@@ -860,27 +916,28 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
     a_faire = [l for l in lignes if _absent(l)]
     if limite:
         a_faire = a_faire[:limite]
-    print(f"{perso['nom']} · timbre {perso['timbre']} · aucun prompt d'âge")
+    moteur, mode = _moteur(perso)
+    print(f"{perso['nom']} · {mode} · timbre {perso['timbre']} · aucun prompt d'âge")
     print(f"{len(lignes)} clips attendus, {len(lignes) - len(a_faire)} déjà produits, "
           f"{len(a_faire)} à générer vers {perso['sortie'].relative_to(MEDIA)}", flush=True)
     if not a_faire:
         return 0
 
-    modele = qwen3tts._charge("customvoice")
+    modele = moteur._charge(mode)
     grave = perso.get("grave_demi_tons", 0.0)
     relances, debut = 0, time.time()
     for i, ligne in enumerate(a_faire):
         cible = perso["sortie"] / f"{ligne['clip']}.ogg"
-        onde, essais = qwen3tts._genere(
-            modele, "customvoice", ligne["texte"], _instruct(qwen3tts, ligne, perso),
-            perso["timbre"],
+        onde, essais = moteur._genere(
+            modele, mode, ligne["texte"], _instruct(qwen3tts, ligne, perso),
+            _voix(perso, ligne),
             # Graine dérivée de l'IDENTIFIANT, pas du rang dans le lot. Le rang change dès
             # qu'une réplique est ajoutée en amont : le même clip regénéré plus tard sortirait
             # d'une autre graine, donc d'une autre prise. Reprendre un lot doit redonner le
             # même son.
             seed=qwen3tts._seed_de(ligne["clip"], 2000), temperature=0.7)
         relances += essais
-        qwen3tts._ecrit(_traite(onde, perso, modele.sample_rate), modele.sample_rate,
+        moteur._ecrit(_traite(onde, perso, modele.sample_rate), modele.sample_rate,
                         cible, "ogg")
         if (i + 1) % 25 == 0 or i + 1 == len(a_faire):
             ecoule = time.time() - debut
@@ -889,7 +946,8 @@ def livrer(cle: str, limite: int = 0, max_chapitre: int = None) -> int:
                   f"reste ~{reste / 3600:.1f} h)", flush=True)
     del modele
 
-    rapport = {"personnage": perso["nom"], "timbre": perso["timbre"], "prompt_age": False,
+    rapport = {"personnage": perso["nom"], "moteur": mode, "timbre": perso["timbre"],
+               "prompt_age": False,
                "clips_attendus": len(lignes), "clips_generes": len(a_faire),
                "relances": relances, "secondes": round(time.time() - debut, 1)}
     # Dans la FORGE, pas dans `voices/<perso>/` : `build_pack._declaree` filtre au dossier et
@@ -1005,7 +1063,8 @@ def reprendre(cle: str, essais: int = 4) -> int:
     if not mauvais:
         return 0
 
-    modele = qwen3tts._charge("customvoice")
+    moteur, mode = _moteur(perso)
+    modele = moteur._charge(mode)
     sauves, restants = 0, []
     for part0, chemin in mauvais:
         ligne = par_clip.get(chemin.stem)
@@ -1016,8 +1075,8 @@ def reprendre(cle: str, essais: int = 4) -> int:
         cible, seuil = cibles[role], 0.5 * medianes[role]
         meilleur, meilleure_part = None, part0
         for essai in range(essais):
-            onde, _ = qwen3tts._genere(modele, "customvoice", ligne["texte"],
-                                       _instruct(qwen3tts, ligne, perso), perso["timbre"],
+            onde, _ = moteur._genere(modele, mode, ligne["texte"],
+                                     _instruct(qwen3tts, ligne, perso), _voix(perso, ligne),
                                        seed=7000 + essai * 613, temperature=0.7)
             onde = _traite(onde, perso, modele.sample_rate)
             tmp = chemin.with_suffix(".essai.ogg")
@@ -1043,22 +1102,105 @@ def reprendre(cle: str, essais: int = 4) -> int:
     return 0
 
 
+def integrer(cle: str) -> int:
+    """Remplace dans `voices/<dossier>/` les clips que Drama-3 a produits ET qui passent le contrôle.
+
+    Trois portes, parce qu'un clip cassé dans le pack public se tait en jeu sans que rien ne
+    le signale : forme (`fishtts._suspect`), intelligibilité (whisper, CER ≤ 50 % au-delà de
+    6 caractères) et fichier stable (rien de modifié depuis deux minutes : la production peut
+    être en train de l'écrire). Un clip qui échoue garde sa version Qwen3.
+
+    L'original Qwen3 est SAUVEGARDÉ dans `voices/<dossier>-qwen3/` avant d'être remplacé : ces
+    clips ne sont pas dans git et les poids qui les ont produits sont supprimés. `build_pack`
+    ignore ce dossier, non déclaré au manifeste. Le champ `moteur` de l'entrée passe à
+    `drama-3` ; `reindexer_manifeste.py` recalcule ensuite les sha256 et le reporte.
+
+    Idempotent : un clip déjà en place à l'identique est sauté, donc la commande se relance
+    à chaque avancée de la production.
+    """
+    import filecmp
+    import shutil
+
+    import fishtts
+    import soundfile as sf
+
+    perso = _perso(cle)
+    if not _fish(perso):
+        raise SystemExit(f"{cle} n'est pas produit par Drama-3")
+    source, dest = perso["sortie"], perso["source"]
+    sauvegarde = dest.with_name(dest.name + "-qwen3")
+    par_clip = {l["clip"]: l for l in _lignes(perso)}
+    manifeste_chemin = MEDIA / "manifest.json"
+    manifeste = json.loads(manifeste_chemin.read_text(encoding="utf-8"))
+    voix = manifeste["voix"].get(dest.name)
+    if voix is None:
+        raise SystemExit(f"voices/{dest.name}/ n'est pas déclaré au manifeste")
+    entrees = {e["id"]: e for e in voix["fichiers"]}
+    integres, identiques, ecartes = 0, 0, []
+    for clip in sorted(source.glob("*.ogg")):
+        if time.time() - clip.stat().st_mtime < 120:
+            continue
+        cible = dest / clip.name
+        if cible.exists() and filecmp.cmp(clip, cible, shallow=False):
+            identiques += 1
+            continue
+        ligne = par_clip.get(clip.stem)
+        if ligne is None:
+            ecartes.append((clip.stem, "absent de l'extraction"))
+            continue
+        try:
+            onde, sr = sf.read(str(clip), dtype="float32")
+        except RuntimeError as e:
+            ecartes.append((clip.stem, f"illisible : {e}"))
+            continue
+        raison = fishtts._suspect(onde, sr, ligne["texte"])
+        if not raison and len(fishtts._normalise(ligne["texte"])) >= 6:
+            erreur = fishtts.cer(ligne["texte"], fishtts.transcrire(onde, sr))
+            if erreur is not None and erreur > fishtts.SEUIL_CER:
+                raison = f"CER {erreur:.0%}"
+        if raison:
+            ecartes.append((clip.stem, raison))
+            continue
+        if cible.exists() and not (sauvegarde / clip.name).exists():
+            sauvegarde.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(cible, sauvegarde / clip.name)
+        shutil.copy2(clip, cible)
+        entree = entrees.get(clip.stem)
+        if entree is None:
+            entree = {"id": clip.stem, "fichier": clip.name}
+            voix["fichiers"].append(entree)
+            entrees[clip.stem] = entree
+        entree["moteur"] = MOTEUR_FISH
+        integres += 1
+    manifeste_chemin.write_text(json.dumps(manifeste, ensure_ascii=False, indent=2),
+                                encoding="utf-8")
+    print(f"{perso['nom']:10s} {integres:4d} intégrés · {identiques:4d} déjà en place · "
+          f"{len(ecartes)} écartés (gardent leur version Qwen3)")
+    for stem, raison in ecartes:
+        print(f"    écarté {stem} : {raison}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("commande", choices=["livrer", "verifier", "reprendre", "etalonner"])
+    ap.add_argument("commande", choices=["livrer", "verifier", "reprendre", "etalonner", "integrer"])
     ap.add_argument("personnage", choices=sorted(PERSONNAGES))
     ap.add_argument("--limite", type=int, default=0,
                     help="ne traiter que N clips (livrer), N par rôle (etalonner)")
     ap.add_argument("--max-chapitre", type=int, default=None,
                     help="borner la TRAME à ce chapitre ; les histoires secondaires, qui ne "
                          "portent pas de numéro, sont produites quoi qu'il arrive")
+    ap.add_argument("--sans-arcs", action="store_true",
+                    help="ne produire que la trame datée (écarte les histoires secondaires)")
     args = ap.parse_args()
 
     if args.commande == "livrer":
-        return livrer(args.personnage, args.limite, args.max_chapitre)
+        return livrer(args.personnage, args.limite, args.max_chapitre, args.sans_arcs)
     if args.commande == "verifier":
         return verifier(args.personnage)
+    if args.commande == "integrer":
+        return integrer(args.personnage)
     if args.commande == "etalonner":
         return etalonner(args.personnage, args.limite or 40)
     return reprendre(args.personnage)
